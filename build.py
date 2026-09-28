@@ -487,7 +487,12 @@ def hi_tide_product(p):
     hero = f'''<section class="page-hero on-dark"><div class="wrap">{crumbs(trail)}<div class="page-hero-grid"><div><p class="eyebrow">{c['name']}</p><h1>Hi-Tide {p['name']}</h1><p class="lead">{lead}</p>
 <div class="btn-row"><a class="btn btn-primary" href="/contact/">Get a free quote</a>{tel('btn btn-ghost', 'Call ' + SITE['phone'], True)}</div></div>
 <figure class="page-hero-media">{ht_photo(p, '(min-width:940px) 46vw, 92vw')}</figure></div></div></section>'''
-    if has_specs:
+    accessories = p.get('accessories')
+    if accessories:
+        acc_grid = ''.join(f'''<li class="acc-card"><span class="product-photo-frame">{ht_photo(dict(img=a["img"], name=a["name"]), "(min-width:800px) 30vw, 46vw")}</span>
+<div class="acc-card-body"><h3>{a["name"]}</h3><p>{a["desc"]}</p></div></li>''' for a in accessories)
+        specs_html = f'<div class="prose"><p>{p["desc"]}</p></div><h3 class="mt-m">Available Accessories</h3><p class="measure">Send us which accessories you want with your quote request.</p><ul class="acc-grid">{acc_grid}</ul>'
+    elif has_specs:
         cap = f'<p class="cap-line"><strong>Capacity:</strong> {p["capacity"]}</p>' if p.get('capacity') else ''
         warranty = (('<ul class="warranty-grid">' + ''.join(f'<li><span class="w-label">{lbl}</span><strong>{val}</strong></li>' for lbl, val in p['warranty']) + '</ul>') if p.get('warranty') else '')
         specs_html = f'<div class="prose">{cap}<p>{p["desc"]}</p></div>{warranty}<h3 class="mt-m">Features</h3>{ul(p["features"])}'
@@ -497,7 +502,9 @@ def hi_tide_product(p):
 <a class="phone" href="tel:{SITE['phone_e164']}">{SITE['phone']}</a><a class="btn btn-primary" href="/contact/">Send Project Details</a><p class="fin-line">Financing available. <a href="/financing/">See options</a></p></div>
 <div class="panel"><h3>More {c['name']}</h3><ul class="related">{''.join(f'<li><a href="{HT_ROOT}{q["slug"]}/"><b>{q["name"]}</b><span>{HI_TIDE_CATS[q["cat"]]["name"]}</span></a></li>' for q in others) or f'<li><a href="{HT_ROOT}"><b>See the full lineup</b><span>All Hi-Tide models</span></a></li>'}</ul>
 <p class="mt-s"><a class="textlink" href="{HT_ROOT}">All Hi-Tide boat lifts</a></p></div></aside>'''
-    main = f'<div class="main"><section><h2>About the {p["name"]}</h2>{specs_html}</section><section><h2>Installed and Serviced by Stier’s Construction</h2><div class="prose"><p>Buying a Hi-Tide {p["name"]} through Stier’s Construction means one contractor for the lift, the install and everything after: cable change-out, motor maintenance and welding repairs to the frame, all done in-house. See our <a href="/services/boat-hoists/">full boat hoist service</a>.</p></div></section></div>'
+    buy_line = (f'Buying Hi-Tide {p["name"].lower()} through Stier’s Construction means one contractor for the parts, the install and everything after.' if accessories else
+                f'Buying a Hi-Tide {p["name"]} through Stier’s Construction means one contractor for the lift, the install and everything after: cable change-out, motor maintenance and welding repairs to the frame, all done in-house.')
+    main = f'<div class="main"><section><h2>About the {p["name"]}</h2>{specs_html}</section><section><h2>Installed and Serviced by Stier’s Construction</h2><div class="prose"><p>{buy_line} See our <a href="/services/boat-hoists/">full boat hoist service</a>.</p></div></section></div>'
     body = hero + f'<div class="section"><div class="wrap content-grid">{main}{aside}</div></div>' + cta_band(f'Ready to talk about a {p["name"]}?')
     svc = {'@type': 'Product', '@id': f'{URL}{path}#product', 'name': f'Hi-Tide {p["name"]}', 'category': c['name'], 'description': p.get('desc') or c['desc'],
            'brand': {'@type': 'Brand', 'name': 'Hi-Tide'}, 'url': f'{URL}{path}'}

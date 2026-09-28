@@ -1306,5 +1306,281 @@
 "hitide-spinner-x2-383.e2c3df8f.webp"
 ]
 ]
+},
+"hitide-boat-house-lifts": {
+"w": 383,
+"h": 287,
+"alt": "A Hi-Tide Boat House Lift holding two personal watercraft under a covered boat house",
+"files": [
+[
+260,
+"hitide-boat-house-lifts-260.92cba7ae.webp"
+],
+[
+383,
+"hitide-boat-house-lifts-383.45057635.webp"
+]
+]
+},
+"hitide-galvanized-pwl": {
+"w": 383,
+"h": 287,
+"alt": "A Hi-Tide Galvanized PWL personal watercraft lift at the end of a dock",
+"files": [
+[
+260,
+"hitide-galvanized-pwl-260.54efbc1f.webp"
+],
+[
+383,
+"hitide-galvanized-pwl-383.a10b9460.webp"
+]
+]
+},
+"hitide-davits": {
+"w": 383,
+"h": 287,
+"alt": "A Hi-Tide Davit lift arm extended over a marina channel",
+"files": [
+[
+260,
+"hitide-davits-260.ae8c2639.webp"
+],
+[
+383,
+"hitide-davits-383.d7b958ec.webp"
+]
+]
+},
+"hitide-acc-bunk-riser-brackets": {
+"w": 248,
+"h": 133,
+"alt": "Hi-Tide bunk riser brackets accessory",
+"files": [
+[
+248,
+"hitide-acc-bunk-riser-brackets-248.ef28d270.webp"
+]
+]
+},
+"hitide-acc-tunnel-hull-brackets": {
+"w": 248,
+"h": 133,
+"alt": "Hi-Tide tunnel hull brackets accessory",
+"files": [
+[
+248,
+"hitide-acc-tunnel-hull-brackets-248.1ea4163d.webp"
+]
+]
+},
+"hitide-acc-adjustable-chock-brackets": {
+"w": 248,
+"h": 133,
+"alt": "Hi-Tide adjustable chock brackets accessory",
+"files": [
+[
+248,
+"hitide-acc-adjustable-chock-brackets-248.942396dd.webp"
+]
+]
+},
+"hitide-acc-keel-pad-sailboat-stanchion": {
+"w": 248,
+"h": 133,
+"alt": "Hi-Tide keel pad sailboat stanchion accessory",
+"files": [
+[
+248,
+"hitide-acc-keel-pad-sailboat-stanchion-248.42596137.webp"
+]
+]
+},
+"hitide-acc-aluminum-service-platform": {
+"w": 248,
+"h": 133,
+"alt": "Hi-Tide aluminum service platform accessory",
+"files": [
+[
+248,
+"hitide-acc-aluminum-service-platform-248.92257339.webp"
+]
+]
+},
+"hitide-acc-boarding-platform": {
+"w": 248,
+"h": 133,
+"alt": "Hi-Tide boarding platform accessory",
+"files": [
+[
+248,
+"hitide-acc-boarding-platform-248.40313f5c.webp"
+]
+]
+},
+"hitide-acc-cable-keepers": {
+"w": 248,
+"h": 133,
+"alt": "Hi-Tide cable keepers accessory",
+"files": [
+[
+248,
+"hitide-acc-cable-keepers-248.e89d8580.webp"
+]
+]
+},
+"hitide-acc-dock-ladders": {
+"w": 248,
+"h": 133,
+"alt": "Hi-Tide dock ladders accessory",
+"files": [
+[
+248,
+"hitide-acc-dock-ladders-248.c4ad3fc9.webp"
+]
+]
+},
+"hitide-acc-floating-dock-ladder": {
+"w": 248,
+"h": 133,
+"alt": "Hi-Tide floating dock ladder accessory",
+"files": [
+[
+248,
+"hitide-acc-floating-dock-ladder-248.e8d4157e.webp"
+]
+]
+},
+"hitide-acc-finger-pier-ladders": {
+"w": 248,
+"h": 133,
+"alt": "Hi-Tide finger pier ladders accessory",
+"files": [
+[
+248,
+"hitide-acc-finger-pier-ladders-248.e8099615.webp"
+]
+]
+},
+"hitide-acc-angled-lifter-beams": {
+"w": 248,
+"h": 133,
+"alt": "Hi-Tide angled lifter beams accessory",
+"files": [
+[
+248,
+"hitide-acc-angled-lifter-beams-248.7dc9d2d4.webp"
+]
+]
+},
+"hitide-acc-flare-guides": {
+"w": 248,
+"h": 133,
+"alt": "Hi-Tide flare guides accessory",
+"files": [
+[
+248,
+"hitide-acc-flare-guides-248.e3dd3af8.webp"
+]
+]
+},
+"hitide-acc-cradle-stabilizer": {
+"w": 248,
+"h": 133,
+"alt": "Hi-Tide cradle stabilizer accessory",
+"files": [
+[
+248,
+"hitide-acc-cradle-stabilizer-248.e6983c7f.webp"
+]
+]
+},
+"hitide-acc-aluminum-drive-shaft-cover": {
+"w": 248,
+"h": 133,
+"alt": "Hi-Tide aluminum drive shaft cover accessory",
+"files": [
+[
+248,
+"hitide-acc-aluminum-drive-shaft-cover-248.2d9aae89.webp"
+]
+]
+},
+"hitide-acc-aluminum-catwalk": {
+"w": 248,
+"h": 133,
+"alt": "Hi-Tide aluminum catwalk accessory",
+"files": [
+[
+248,
+"hitide-acc-aluminum-catwalk-248.568ed3d2.webp"
+]
+]
+},
+"hitide-acc-catwalk-steps": {
+"w": 248,
+"h": 133,
+"alt": "Hi-Tide catwalk steps accessory",
+"files": [
+[
+248,
+"hitide-acc-catwalk-steps-248.4bf63e2b.webp"
+]
+]
+},
+"hitide-acc-catwalk-ladder": {
+"w": 248,
+"h": 133,
+"alt": "Hi-Tide catwalk ladder accessory",
+"files": [
+[
+248,
+"hitide-acc-catwalk-ladder-248.6649d8e6.webp"
+]
+]
+},
+"hitide-acc-remote-control": {
+"w": 248,
+"h": 133,
+"alt": "Hi-Tide remote control accessory",
+"files": [
+[
+248,
+"hitide-acc-remote-control-248.28f6dfb2.webp"
+]
+]
+},
+"hitide-acc-standard-limit-switch": {
+"w": 248,
+"h": 133,
+"alt": "Hi-Tide standard limit switch accessory",
+"files": [
+[
+248,
+"hitide-acc-standard-limit-switch-248.82f0d8da.webp"
+]
+]
+},
+"hitide-acc-boathouse-brackets": {
+"w": 248,
+"h": 133,
+"alt": "Hi-Tide boathouse brackets accessory",
+"files": [
+[
+248,
+"hitide-acc-boathouse-brackets-248.55b6ea18.webp"
+]
+]
+},
+"hitide-acc-marina-brackets": {
+"w": 248,
+"h": 133,
+"alt": "Hi-Tide marina brackets accessory",
+"files": [
+[
+248,
+"hitide-acc-marina-brackets-248.32bdadd8.webp"
+]
+]
 }
 }

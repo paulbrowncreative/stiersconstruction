@@ -394,6 +394,12 @@ dialog.lightbox::backdrop{background:rgba(9,28,37,.92)}
 .warranty-grid li{background:var(--concrete-100);border-radius:var(--r-sm);padding:10px 12px;text-align:center}
 .warranty-grid .w-label{display:block;font-size:.7rem;font-weight:700;letter-spacing:.04em;text-transform:uppercase;color:var(--muted)}
 .warranty-grid strong{display:block;margin-top:2px}
+.acc-grid{list-style:none;display:grid;gap:18px;grid-template-columns:repeat(2,1fr);margin-top:16px}
+@media (min-width:640px){.acc-grid{grid-template-columns:repeat(3,1fr)}}
+.acc-card{background:#fff;border:1px solid var(--concrete-300);border-radius:var(--r-md);overflow:hidden}
+.acc-card-body{padding:12px 14px 16px}
+.acc-card-body h3{font-size:.98rem;font-stretch:100%;margin:0 0 4px}
+.acc-card-body p{margin:0;font-size:.88rem;color:var(--muted)}
 
 /* ---------- footer ---------- */
 .site-footer{background:var(--harbor-950);color:#B9CBD2;padding-top:clamp(48px,6vw,84px)}
