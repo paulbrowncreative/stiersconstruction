@@ -457,9 +457,12 @@ def services_hub():
 
 # ============================================================ HI-TIDE BOAT LIFTS
 HT_ROOT = '/services/boat-hoists/hi-tide/'
+def ht_photo(p, sizes='260px'):
+    return img(p['img'], sizes, cls='product-photo-img', alt=f'Hi-Tide {p["name"]} boat lift') if p.get('img') else product_photo(p['name'])
+
 def hi_tide_card(p):
     c = HI_TIDE_CATS[p['cat']]
-    return f'''<li class="product-card"><a class="product-card-link" href="{HT_ROOT}{p['slug']}/">{product_photo(p['name'])}
+    return f'''<li class="product-card"><a class="product-card-link" href="{HT_ROOT}{p['slug']}/"><span class="product-photo-frame">{ht_photo(p, '(min-width:1000px) 22vw, (min-width:640px) 30vw, 46vw')}</span>
 <div class="product-card-body"><p class="eyebrow">{c['name']}</p><h3>{p['name']}</h3><span class="textlink">View details</span></div></a></li>'''
 
 def hi_tide_hub():
@@ -472,29 +475,35 @@ def hi_tide_hub():
 {cta_band('Not sure which Hi-Tide lift fits your boat?', 'Send your boat’s make, length and weight, plus your slip or water depth, and we will match the lift and quote the install.')}'''
     ld = [{'@type': 'ItemList', 'itemListElement': [{'@type': 'ListItem', 'position': i + 1, 'url': f'{URL}{HT_ROOT}{p["slug"]}/', 'name': p['name']} for i, p in enumerate(HI_TIDE_PRODUCTS)]}]
     page(HT_ROOT, 'Hi-Tide Boat Lifts', 'Stier’s Construction is an authorized Hi-Tide boat lift dealer: 4-post cable lifts, yacht lifts, elevator lifts, PWC lifts and specialty configurations, installed and serviced by our own crew.',
-         body, active='services', trail=trail, ld=ld, ptype='CollectionPage', prio=0.8)
+         body, active='services', trail=trail, ld=ld, ptype='CollectionPage', prio=0.8, sm_images=[img_url(p['img']) for p in HI_TIDE_PRODUCTS if p.get('img')])
 
 def hi_tide_product(p):
     path = f'{HT_ROOT}{p["slug"]}/'
     c = HI_TIDE_CATS[p['cat']]
+    has_specs = bool(p.get('features'))
+    lead = p.get('tagline') or c['desc']
     trail = [('Home', '/'), ('Services', '/services/'), ('Boat Hoists', '/services/boat-hoists/'), ('Hi-Tide Boat Lifts', HT_ROOT), (p['name'], None)]
     others = [q for q in HI_TIDE_PRODUCTS if q['cat'] == p['cat'] and q['slug'] != p['slug']][:4]
-    hero = f'''<section class="page-hero on-dark"><div class="wrap">{crumbs(trail)}<div class="page-hero-grid"><div><p class="eyebrow">{c['name']}</p><h1>Hi-Tide {p['name']}</h1><p class="lead">{c['desc']}</p>
+    hero = f'''<section class="page-hero on-dark"><div class="wrap">{crumbs(trail)}<div class="page-hero-grid"><div><p class="eyebrow">{c['name']}</p><h1>Hi-Tide {p['name']}</h1><p class="lead">{lead}</p>
 <div class="btn-row"><a class="btn btn-primary" href="/contact/">Get a free quote</a>{tel('btn btn-ghost', 'Call ' + SITE['phone'], True)}</div></div>
-<figure class="page-hero-media">{product_photo(p['name'])}</figure></div></div></section>'''
-    specs = p.get('specs')
-    specs_html = (f'<div class="prose">{specs}</div>' if specs else
-                  note('<p><strong>Specs and pricing for this model are being confirmed with Hi-Tide.</strong> Send your boat’s make, length and weight, plus your slip or water depth, and we will match capacity and quote the install and any site work it needs.</p>'))
+<figure class="page-hero-media">{ht_photo(p, '(min-width:940px) 46vw, 92vw')}</figure></div></div></section>'''
+    if has_specs:
+        cap = f'<p class="cap-line"><strong>Capacity:</strong> {p["capacity"]}</p>' if p.get('capacity') else ''
+        warranty = (('<ul class="warranty-grid">' + ''.join(f'<li><span class="w-label">{lbl}</span><strong>{val}</strong></li>' for lbl, val in p['warranty']) + '</ul>') if p.get('warranty') else '')
+        specs_html = f'<div class="prose">{cap}<p>{p["desc"]}</p></div>{warranty}<h3 class="mt-m">Features</h3>{ul(p["features"])}'
+    else:
+        specs_html = note('<p><strong>Specs and pricing for this model are being confirmed with Hi-Tide.</strong> Send your boat’s make, length and weight, plus your slip or water depth, and we will match capacity and quote the install and any site work it needs.</p>')
     aside = f'''<aside class="aside-sticky aside-stack" aria-label="Quote and related lifts"><div class="panel panel-dark"><h3>Ask About the {p['name']}</h3><small>Mon to Fri, 8am to 5pm</small>
 <a class="phone" href="tel:{SITE['phone_e164']}">{SITE['phone']}</a><a class="btn btn-primary" href="/contact/">Send Project Details</a><p class="fin-line">Financing available. <a href="/financing/">See options</a></p></div>
 <div class="panel"><h3>More {c['name']}</h3><ul class="related">{''.join(f'<li><a href="{HT_ROOT}{q["slug"]}/"><b>{q["name"]}</b><span>{HI_TIDE_CATS[q["cat"]]["name"]}</span></a></li>' for q in others) or f'<li><a href="{HT_ROOT}"><b>See the full lineup</b><span>All Hi-Tide models</span></a></li>'}</ul>
 <p class="mt-s"><a class="textlink" href="{HT_ROOT}">All Hi-Tide boat lifts</a></p></div></aside>'''
     main = f'<div class="main"><section><h2>About the {p["name"]}</h2>{specs_html}</section><section><h2>Installed and Serviced by Stier’s Construction</h2><div class="prose"><p>Buying a Hi-Tide {p["name"]} through Stier’s Construction means one contractor for the lift, the install and everything after: cable change-out, motor maintenance and welding repairs to the frame, all done in-house. See our <a href="/services/boat-hoists/">full boat hoist service</a>.</p></div></section></div>'
     body = hero + f'<div class="section"><div class="wrap content-grid">{main}{aside}</div></div>' + cta_band(f'Ready to talk about a {p["name"]}?')
-    svc = {'@type': 'Product', '@id': f'{URL}{path}#product', 'name': f'Hi-Tide {p["name"]}', 'category': c['name'], 'description': c['desc'],
+    svc = {'@type': 'Product', '@id': f'{URL}{path}#product', 'name': f'Hi-Tide {p["name"]}', 'category': c['name'], 'description': p.get('desc') or c['desc'],
            'brand': {'@type': 'Brand', 'name': 'Hi-Tide'}, 'url': f'{URL}{path}'}
+    if p.get('img'): svc['image'] = f'{URL}{img_url(p["img"])}'
     page(path, f'Hi-Tide {p["name"]}', f'Hi-Tide {p["name"]} ({c["name"]}): sold, installed and serviced by Stier’s Construction, an authorized Hi-Tide dealer in Metro Detroit. Free quotes.',
-         body, active='services', trail=trail, ld=[svc], prio=0.6)
+         body, active='services', trail=trail, ld=[svc], prio=0.6, sm_images=[img_url(p['img'])] if p.get('img') else None)
 
 # ============================================================ PROJECTS
 def projects():

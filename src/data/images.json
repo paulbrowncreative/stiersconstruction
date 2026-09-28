@@ -1,1160 +1,1235 @@
 {
- "sheet-pile-excavator-canal-home": {
-  "w": 1500,
-  "h": 844,
-  "alt": "Stier\u2019s excavator setting a steel sheet pile beside a canal-side home",
-  "files": [
-   [
-    480,
-    "sheet-pile-excavator-canal-home-480.9e0ef733.webp"
-   ],
-   [
-    800,
-    "sheet-pile-excavator-canal-home-800.9e0ef733.webp"
-   ],
-   [
-    1200,
-    "sheet-pile-excavator-canal-home-1200.9e0ef733.webp"
-   ],
-   [
-    1500,
-    "sheet-pile-excavator-canal-home-1500.9e0ef733.webp"
-   ]
-  ]
- },
- "sheet-pile-staging-seawall": {
-  "w": 1500,
-  "h": 1268,
-  "alt": "Steel sheet piles staged next to an excavator on a seawall job",
-  "files": [
-   [
-    480,
-    "sheet-pile-staging-seawall-480.76dc0ff2.webp"
-   ],
-   [
-    800,
-    "sheet-pile-staging-seawall-800.76dc0ff2.webp"
-   ],
-   [
-    1200,
-    "sheet-pile-staging-seawall-1200.76dc0ff2.webp"
-   ],
-   [
-    1500,
-    "sheet-pile-staging-seawall-1500.76dc0ff2.webp"
-   ]
-  ]
- },
- "vibratory-hammer-steel-pile": {
-  "w": 1206,
-  "h": 904,
-  "alt": "Excavator with a vibratory hammer clamped to a steel pile",
-  "files": [
-   [
-    480,
-    "vibratory-hammer-steel-pile-480.f5dca034.webp"
-   ],
-   [
-    800,
-    "vibratory-hammer-steel-pile-800.f5dca034.webp"
-   ],
-   [
-    1200,
-    "vibratory-hammer-steel-pile-1200.f5dca034.webp"
-   ]
-  ]
- },
- "excavator-barge-timber-pilings": {
-  "w": 1500,
-  "h": 2000,
-  "alt": "Stier\u2019s excavator on a work barge with a load of timber pilings",
-  "files": [
-   [
-    400,
-    "excavator-barge-timber-pilings-400.15178f64.webp"
-   ],
-   [
-    720,
-    "excavator-barge-timber-pilings-720.15178f64.webp"
-   ],
-   [
-    1000,
-    "excavator-barge-timber-pilings-1000.15178f64.webp"
-   ],
-   [
-    1500,
-    "excavator-barge-timber-pilings-1500.15178f64.webp"
-   ]
-  ]
- },
- "pipe-pilings-barge-sunset": {
-  "w": 1206,
-  "h": 1589,
-  "alt": "Steel pipe pilings stacked on a work barge in a canal at sunset",
-  "files": [
-   [
-    400,
-    "pipe-pilings-barge-sunset-400.9a1bef42.webp"
-   ],
-   [
-    720,
-    "pipe-pilings-barge-sunset-720.9a1bef42.webp"
-   ],
-   [
-    1000,
-    "pipe-pilings-barge-sunset-1000.9a1bef42.webp"
-   ],
-   [
-    1206,
-    "pipe-pilings-barge-sunset-1206.9a1bef42.webp"
-   ]
-  ]
- },
- "barge-excavator-canal": {
-  "w": 1500,
-  "h": 2000,
-  "alt": "Excavator working from a barge in a residential canal",
-  "files": [
-   [
-    400,
-    "barge-excavator-canal-400.3e07eea2.webp"
-   ],
-   [
-    720,
-    "barge-excavator-canal-720.3e07eea2.webp"
-   ],
-   [
-    1000,
-    "barge-excavator-canal-1000.3e07eea2.webp"
-   ],
-   [
-    1500,
-    "barge-excavator-canal-1500.3e07eea2.webp"
-   ]
-  ]
- },
- "barge-open-water": {
-  "w": 1500,
-  "h": 2000,
-  "alt": "Work barge with a small excavator on open water",
-  "files": [
-   [
-    400,
-    "barge-open-water-400.ab1327a2.webp"
-   ],
-   [
-    720,
-    "barge-open-water-720.ab1327a2.webp"
-   ],
-   [
-    1000,
-    "barge-open-water-1000.ab1327a2.webp"
-   ],
-   [
-    1500,
-    "barge-open-water-1500.ab1327a2.webp"
-   ]
-  ]
- },
- "barge-excavator-snow": {
-  "w": 1500,
-  "h": 2000,
-  "alt": "Excavator on a work barge on a snowy day",
-  "files": [
-   [
-    400,
-    "barge-excavator-snow-400.48fe4da4.webp"
-   ],
-   [
-    720,
-    "barge-excavator-snow-720.48fe4da4.webp"
-   ],
-   [
-    1000,
-    "barge-excavator-snow-1000.48fe4da4.webp"
-   ],
-   [
-    1500,
-    "barge-excavator-snow-1500.48fe4da4.webp"
-   ]
-  ]
- },
- "excavator-pipe-pilings-dusk": {
-  "w": 1500,
-  "h": 2000,
-  "alt": "Stier\u2019s excavator beside a stack of steel pipe pilings at dusk",
-  "files": [
-   [
-    400,
-    "excavator-pipe-pilings-dusk-400.57b7e5ee.webp"
-   ],
-   [
-    720,
-    "excavator-pipe-pilings-dusk-720.57b7e5ee.webp"
-   ],
-   [
-    1000,
-    "excavator-pipe-pilings-dusk-1000.57b7e5ee.webp"
-   ],
-   [
-    1500,
-    "excavator-pipe-pilings-dusk-1500.57b7e5ee.webp"
-   ]
-  ]
- },
- "barge-boathouse-excavator": {
-  "w": 1500,
-  "h": 2000,
-  "alt": "Work barge with an excavator beside a covered boat house",
-  "files": [
-   [
-    400,
-    "barge-boathouse-excavator-400.b17bdfcf.webp"
-   ],
-   [
-    720,
-    "barge-boathouse-excavator-720.b17bdfcf.webp"
-   ],
-   [
-    1000,
-    "barge-boathouse-excavator-1000.b17bdfcf.webp"
-   ],
-   [
-    1500,
-    "barge-boathouse-excavator-1500.b17bdfcf.webp"
-   ]
-  ]
- },
- "wood-dock-yellow-flag": {
-  "w": 1500,
-  "h": 1125,
-  "alt": "New wooden dock with a yellow flag extending over open water",
-  "files": [
-   [
-    480,
-    "wood-dock-yellow-flag-480.e06110fb.webp"
-   ],
-   [
-    800,
-    "wood-dock-yellow-flag-800.e06110fb.webp"
-   ],
-   [
-    1200,
-    "wood-dock-yellow-flag-1200.e06110fb.webp"
-   ],
-   [
-    1500,
-    "wood-dock-yellow-flag-1500.e06110fb.webp"
-   ]
-  ]
- },
- "l-shaped-dock-choppy-water": {
-  "w": 1170,
-  "h": 863,
-  "alt": "L-shaped wooden dock on pilings over choppy open water",
-  "files": [
-   [
-    480,
-    "l-shaped-dock-choppy-water-480.d7580342.webp"
-   ],
-   [
-    800,
-    "l-shaped-dock-choppy-water-800.d7580342.webp"
-   ],
-   [
-    1170,
-    "l-shaped-dock-choppy-water-1170.d7580342.webp"
-   ]
-  ]
- },
- "new-deck-over-seawall": {
-  "w": 1440,
-  "h": 1080,
-  "alt": "New wood deck built along a seawall between waterfront homes",
-  "files": [
-   [
-    480,
-    "new-deck-over-seawall-480.92fd1da3.webp"
-   ],
-   [
-    800,
-    "new-deck-over-seawall-800.92fd1da3.webp"
-   ],
-   [
-    1200,
-    "new-deck-over-seawall-1200.92fd1da3.webp"
-   ],
-   [
-    1440,
-    "new-deck-over-seawall-1440.92fd1da3.webp"
-   ]
-  ]
- },
- "gray-dock-walkway-canal": {
-  "w": 1206,
-  "h": 1578,
-  "alt": "Long gray dock walkway running along a canal",
-  "files": [
-   [
-    400,
-    "gray-dock-walkway-canal-400.0e0bf9bc.webp"
-   ],
-   [
-    720,
-    "gray-dock-walkway-canal-720.0e0bf9bc.webp"
-   ],
-   [
-    1000,
-    "gray-dock-walkway-canal-1000.0e0bf9bc.webp"
-   ],
-   [
-    1206,
-    "gray-dock-walkway-canal-1206.0e0bf9bc.webp"
-   ]
-  ]
- },
- "dock-boxes-moored-boat": {
-  "w": 1206,
-  "h": 663,
-  "alt": "Wood dock with white dock boxes beside a moored boat",
-  "files": [
-   [
-    480,
-    "dock-boxes-moored-boat-480.4d8d1468.webp"
-   ],
-   [
-    800,
-    "dock-boxes-moored-boat-800.4d8d1468.webp"
-   ],
-   [
-    1200,
-    "dock-boxes-moored-boat-1200.4d8d1468.webp"
-   ]
-  ]
- },
- "dock-work-through-ice": {
-  "w": 1206,
-  "h": 1354,
-  "alt": "Excavator working from a marina dock with ice on the water",
-  "files": [
-   [
-    480,
-    "dock-work-through-ice-480.b6c915ba.webp"
-   ],
-   [
-    800,
-    "dock-work-through-ice-800.b6c915ba.webp"
-   ],
-   [
-    1200,
-    "dock-work-through-ice-1200.b6c915ba.webp"
-   ]
-  ]
- },
- "winter-dock-edge": {
-  "w": 1206,
-  "h": 1595,
-  "alt": "Snowy dock edge with yellow equipment on a marina in winter",
-  "files": [
-   [
-    400,
-    "winter-dock-edge-400.2207f898.webp"
-   ],
-   [
-    720,
-    "winter-dock-edge-720.2207f898.webp"
-   ],
-   [
-    1000,
-    "winter-dock-edge-1000.2207f898.webp"
-   ],
-   [
-    1206,
-    "winter-dock-edge-1206.2207f898.webp"
-   ]
-  ]
- },
- "covered-marina-walkway-sunset": {
-  "w": 1206,
-  "h": 1591,
-  "alt": "Covered marina dock walkway at sunset",
-  "files": [
-   [
-    400,
-    "covered-marina-walkway-sunset-400.1cb1d377.webp"
-   ],
-   [
-    720,
-    "covered-marina-walkway-sunset-720.1cb1d377.webp"
-   ],
-   [
-    1000,
-    "covered-marina-walkway-sunset-1000.1cb1d377.webp"
-   ],
-   [
-    1206,
-    "covered-marina-walkway-sunset-1206.1cb1d377.webp"
-   ]
-  ]
- },
- "boat-lift-covered-slip": {
-  "w": 723,
-  "h": 904,
-  "alt": "Boat lift bunks and a pontoon boat in a covered canal slip",
-  "files": [
-   [
-    400,
-    "boat-lift-covered-slip-400.4a6b655e.webp"
-   ],
-   [
-    720,
-    "boat-lift-covered-slip-720.4a6b655e.webp"
-   ]
-  ]
- },
- "boat-house-hoist-tarped-boat": {
-  "w": 1206,
-  "h": 895,
-  "alt": "Tarp-covered boat on a hoist inside a covered boat house",
-  "files": [
-   [
-    480,
-    "boat-house-hoist-tarped-boat-480.47c9d068.webp"
-   ],
-   [
-    800,
-    "boat-house-hoist-tarped-boat-800.47c9d068.webp"
-   ],
-   [
-    1200,
-    "boat-house-hoist-tarped-boat-1200.47c9d068.webp"
-   ]
-  ]
- },
- "welding-at-night-waterfront": {
-  "w": 1206,
-  "h": 904,
-  "alt": "Welder working at night beside the water with sparks flying",
-  "files": [
-   [
-    480,
-    "welding-at-night-waterfront-480.1539c59a.webp"
-   ],
-   [
-    800,
-    "welding-at-night-waterfront-800.1539c59a.webp"
-   ],
-   [
-    1200,
-    "welding-at-night-waterfront-1200.1539c59a.webp"
-   ]
-  ]
- },
- "welding-shop-grinding-sparks": {
-  "w": 1206,
-  "h": 904,
-  "alt": "Welder grinding in a steel shop with sparks flying",
-  "files": [
-   [
-    480,
-    "welding-shop-grinding-sparks-480.a91eff8c.webp"
-   ],
-   [
-    800,
-    "welding-shop-grinding-sparks-800.a91eff8c.webp"
-   ],
-   [
-    1200,
-    "welding-shop-grinding-sparks-1200.a91eff8c.webp"
-   ]
-  ]
- },
- "welders-frozen-shoreline": {
-  "w": 1206,
-  "h": 890,
-  "alt": "Crew welding on a snowy shoreline in winter",
-  "files": [
-   [
-    480,
-    "welders-frozen-shoreline-480.ad3e2de2.webp"
-   ],
-   [
-    800,
-    "welders-frozen-shoreline-800.ad3e2de2.webp"
-   ],
-   [
-    1200,
-    "welders-frozen-shoreline-1200.ad3e2de2.webp"
-   ]
-  ]
- },
- "welder-helmet-sparks": {
-  "w": 1212,
-  "h": 611,
-  "alt": "Welder in a helmet with bright sparks in a dark shop",
-  "files": [
-   [
-    480,
-    "welder-helmet-sparks-480.d6c658b0.webp"
-   ],
-   [
-    800,
-    "welder-helmet-sparks-800.d6c658b0.webp"
-   ],
-   [
-    1200,
-    "welder-helmet-sparks-1200.d6c658b0.webp"
-   ]
-  ]
- },
- "welder-under-dock": {
-  "w": 1206,
-  "h": 664,
-  "alt": "Welder working beneath a dock near the water",
-  "files": [
-   [
-    480,
-    "welder-under-dock-480.58ec242e.webp"
-   ],
-   [
-    800,
-    "welder-under-dock-800.58ec242e.webp"
-   ],
-   [
-    1200,
-    "welder-under-dock-1200.58ec242e.webp"
-   ]
-  ]
- },
- "welding-large-pipe-fabrication": {
-  "w": 1050,
-  "h": 1604,
-  "alt": "Welder building a large custom metal pipe structure",
-  "files": [
-   [
-    400,
-    "welding-large-pipe-fabrication-400.e3a080f3.webp"
-   ],
-   [
-    720,
-    "welding-large-pipe-fabrication-720.e3a080f3.webp"
-   ],
-   [
-    1000,
-    "welding-large-pipe-fabrication-1000.e3a080f3.webp"
-   ]
-  ]
- },
- "steel-table-frame-fabrication": {
-  "w": 1206,
-  "h": 1192,
-  "alt": "Custom black steel table frame fabricated in a shop",
-  "files": [
-   [
-    480,
-    "steel-table-frame-fabrication-480.f164dd18.webp"
-   ],
-   [
-    800,
-    "steel-table-frame-fabrication-800.f164dd18.webp"
-   ],
-   [
-    1200,
-    "steel-table-frame-fabrication-1200.f164dd18.webp"
-   ]
-  ]
- },
- "steel-stair-railing-brick-home": {
-  "w": 1206,
-  "h": 888,
-  "alt": "Black steel stair railing at a brick home entry",
-  "files": [
-   [
-    480,
-    "steel-stair-railing-brick-home-480.df8552d8.webp"
-   ],
-   [
-    800,
-    "steel-stair-railing-brick-home-800.df8552d8.webp"
-   ],
-   [
-    1200,
-    "steel-stair-railing-brick-home-1200.df8552d8.webp"
-   ]
-  ]
- },
- "black-steel-railing-porch": {
-  "w": 1500,
-  "h": 1125,
-  "alt": "Black steel railing at a home entrance",
-  "files": [
-   [
-    480,
-    "black-steel-railing-porch-480.ae946636.webp"
-   ],
-   [
-    800,
-    "black-steel-railing-porch-800.ae946636.webp"
-   ],
-   [
-    1200,
-    "black-steel-railing-porch-1200.ae946636.webp"
-   ],
-   [
-    1500,
-    "black-steel-railing-porch-1500.ae946636.webp"
-   ]
-  ]
- },
- "steel-pool-gate": {
-  "w": 1206,
-  "h": 1553,
-  "alt": "Black steel gate at a pool enclosure",
-  "files": [
-   [
-    400,
-    "steel-pool-gate-400.7ed3a811.webp"
-   ],
-   [
-    720,
-    "steel-pool-gate-720.7ed3a811.webp"
-   ],
-   [
-    1000,
-    "steel-pool-gate-1000.7ed3a811.webp"
-   ],
-   [
-    1206,
-    "steel-pool-gate-1206.7ed3a811.webp"
-   ]
-  ]
- },
- "rust-finish-steel-sign-arch": {
-  "w": 1500,
-  "h": 2000,
-  "alt": "Custom rust-finish steel sign with an arched cutout",
-  "files": [
-   [
-    400,
-    "rust-finish-steel-sign-arch-400.63a5c2a1.webp"
-   ],
-   [
-    720,
-    "rust-finish-steel-sign-arch-720.63a5c2a1.webp"
-   ],
-   [
-    1000,
-    "rust-finish-steel-sign-arch-1000.63a5c2a1.webp"
-   ],
-   [
-    1500,
-    "rust-finish-steel-sign-arch-1500.63a5c2a1.webp"
-   ]
-  ]
- },
- "rust-finish-steel-sign-cutout": {
-  "w": 1500,
-  "h": 2000,
-  "alt": "Rust-finish steel sign with cut-out lettering",
-  "files": [
-   [
-    400,
-    "rust-finish-steel-sign-cutout-400.1b496ba6.webp"
-   ],
-   [
-    720,
-    "rust-finish-steel-sign-cutout-720.1b496ba6.webp"
-   ],
-   [
-    1000,
-    "rust-finish-steel-sign-cutout-1000.1b496ba6.webp"
-   ],
-   [
-    1500,
-    "rust-finish-steel-sign-cutout-1500.1b496ba6.webp"
-   ]
-  ]
- },
- "new-concrete-patio": {
-  "w": 1500,
-  "h": 1000,
-  "alt": "Freshly poured concrete patio behind a brick home",
-  "files": [
-   [
-    480,
-    "new-concrete-patio-480.8321a135.webp"
-   ],
-   [
-    800,
-    "new-concrete-patio-800.8321a135.webp"
-   ],
-   [
-    1200,
-    "new-concrete-patio-1200.8321a135.webp"
-   ],
-   [
-    1500,
-    "new-concrete-patio-1500.8321a135.webp"
-   ]
-  ]
- },
- "concrete-finisher-trowel": {
-  "w": 1206,
-  "h": 2104,
-  "alt": "Finisher smoothing wet concrete with a hand trowel",
-  "files": [
-   [
-    400,
-    "concrete-finisher-trowel-400.3538f59c.webp"
-   ],
-   [
-    720,
-    "concrete-finisher-trowel-720.3538f59c.webp"
-   ],
-   [
-    1000,
-    "concrete-finisher-trowel-1000.3538f59c.webp"
-   ],
-   [
-    1206,
-    "concrete-finisher-trowel-1206.3538f59c.webp"
-   ]
-  ]
- },
- "concrete-slab-finishing": {
-  "w": 776,
-  "h": 1396,
-  "alt": "Crew finishing a freshly poured concrete slab",
-  "files": [
-   [
-    400,
-    "concrete-slab-finishing-400.b7e5f0d0.webp"
-   ],
-   [
-    720,
-    "concrete-slab-finishing-720.b7e5f0d0.webp"
-   ]
-  ]
- },
- "concrete-saw-cutting": {
-  "w": 1206,
-  "h": 2144,
-  "alt": "Worker cutting concrete with a saw near a canal",
-  "files": [
-   [
-    400,
-    "concrete-saw-cutting-400.9714dfdf.webp"
-   ],
-   [
-    720,
-    "concrete-saw-cutting-720.9714dfdf.webp"
-   ],
-   [
-    1000,
-    "concrete-saw-cutting-1000.9714dfdf.webp"
-   ],
-   [
-    1206,
-    "concrete-saw-cutting-1206.9714dfdf.webp"
-   ]
-  ]
- },
- "broken-concrete-slabs-canal": {
-  "w": 1500,
-  "h": 2000,
-  "alt": "Broken concrete slabs stacked beside a canal after removal",
-  "files": [
-   [
-    400,
-    "broken-concrete-slabs-canal-400.f0ca4eaf.webp"
-   ],
-   [
-    720,
-    "broken-concrete-slabs-canal-720.f0ca4eaf.webp"
-   ],
-   [
-    1000,
-    "broken-concrete-slabs-canal-1000.f0ca4eaf.webp"
-   ],
-   [
-    1500,
-    "broken-concrete-slabs-canal-1500.f0ca4eaf.webp"
-   ]
-  ]
- },
- "concrete-work-crew": {
-  "w": 1206,
-  "h": 2094,
-  "alt": "Crew working a fresh concrete pour",
-  "files": [
-   [
-    400,
-    "concrete-work-crew-400.ca35d41b.webp"
-   ],
-   [
-    720,
-    "concrete-work-crew-720.ca35d41b.webp"
-   ],
-   [
-    1000,
-    "concrete-work-crew-1000.ca35d41b.webp"
-   ],
-   [
-    1206,
-    "concrete-work-crew-1206.ca35d41b.webp"
-   ]
-  ]
- },
- "deck-cabin-white-railing": {
-  "w": 1206,
-  "h": 892,
-  "alt": "Wood deck with a white railing on a cabin",
-  "files": [
-   [
-    480,
-    "deck-cabin-white-railing-480.bd51fab3.webp"
-   ],
-   [
-    800,
-    "deck-cabin-white-railing-800.bd51fab3.webp"
-   ],
-   [
-    1200,
-    "deck-cabin-white-railing-1200.bd51fab3.webp"
-   ]
-  ]
- },
- "red-stained-log-cabin-deck": {
-  "w": 1206,
-  "h": 884,
-  "alt": "Red-stained deck and railing on a log cabin",
-  "files": [
-   [
-    480,
-    "red-stained-log-cabin-deck-480.82b19add.webp"
-   ],
-   [
-    800,
-    "red-stained-log-cabin-deck-800.82b19add.webp"
-   ],
-   [
-    1200,
-    "red-stained-log-cabin-deck-1200.82b19add.webp"
-   ]
-  ]
- },
- "beach-stairs-wood-platform": {
-  "w": 1206,
-  "h": 1209,
-  "alt": "Wood stairs and platform leading to a beach shoreline",
-  "files": [
-   [
-    480,
-    "beach-stairs-wood-platform-480.8534c08c.webp"
-   ],
-   [
-    800,
-    "beach-stairs-wood-platform-800.8534c08c.webp"
-   ],
-   [
-    1200,
-    "beach-stairs-wood-platform-1200.8534c08c.webp"
-   ]
-  ]
- },
- "excavator-site-dusk": {
-  "w": 1500,
-  "h": 1125,
-  "alt": "Yellow excavator on a graded site at dusk",
-  "files": [
-   [
-    480,
-    "excavator-site-dusk-480.e5b72a61.webp"
-   ],
-   [
-    800,
-    "excavator-site-dusk-800.e5b72a61.webp"
-   ],
-   [
-    1200,
-    "excavator-site-dusk-1200.e5b72a61.webp"
-   ],
-   [
-    1500,
-    "excavator-site-dusk-1500.e5b72a61.webp"
-   ]
-  ]
- },
- "dump-trucks-yard": {
-  "w": 1500,
-  "h": 1125,
-  "alt": "Two dump trucks parked in a work yard",
-  "files": [
-   [
-    480,
-    "dump-trucks-yard-480.adea1cb3.webp"
-   ],
-   [
-    800,
-    "dump-trucks-yard-800.adea1cb3.webp"
-   ],
-   [
-    1200,
-    "dump-trucks-yard-1200.adea1cb3.webp"
-   ],
-   [
-    1500,
-    "dump-trucks-yard-1500.adea1cb3.webp"
-   ]
-  ]
- },
- "excavator-loading-dump-trailer": {
-  "w": 1500,
-  "h": 1125,
-  "alt": "Excavator loading a red dump trailer beside traffic cones",
-  "files": [
-   [
-    480,
-    "excavator-loading-dump-trailer-480.fd6d81ee.webp"
-   ],
-   [
-    800,
-    "excavator-loading-dump-trailer-800.fd6d81ee.webp"
-   ],
-   [
-    1200,
-    "excavator-loading-dump-trailer-1200.fd6d81ee.webp"
-   ],
-   [
-    1500,
-    "excavator-loading-dump-trailer-1500.fd6d81ee.webp"
-   ]
-  ]
- },
- "skid-steer-yard": {
-  "w": 1206,
-  "h": 879,
-  "alt": "Skid-steer loader on a dirt lot beside a covered boat slip",
-  "files": [
-   [
-    480,
-    "skid-steer-yard-480.29abeedb.webp"
-   ],
-   [
-    800,
-    "skid-steer-yard-800.29abeedb.webp"
-   ],
-   [
-    1200,
-    "skid-steer-yard-1200.29abeedb.webp"
-   ]
-  ]
- },
- "graded-gravel-yard-boathouse": {
-  "w": 1500,
-  "h": 1125,
-  "alt": "Graded gravel yard next to a boat house",
-  "files": [
-   [
-    480,
-    "graded-gravel-yard-boathouse-480.73990219.webp"
-   ],
-   [
-    800,
-    "graded-gravel-yard-boathouse-800.73990219.webp"
-   ],
-   [
-    1200,
-    "graded-gravel-yard-boathouse-1200.73990219.webp"
-   ],
-   [
-    1500,
-    "graded-gravel-yard-boathouse-1500.73990219.webp"
-   ]
-  ]
- },
- "excavator-trench-lawn": {
-  "w": 1206,
-  "h": 1556,
-  "alt": "Compact excavator digging a trench in a lawn",
-  "files": [
-   [
-    400,
-    "excavator-trench-lawn-400.9a66bc0d.webp"
-   ],
-   [
-    720,
-    "excavator-trench-lawn-720.9a66bc0d.webp"
-   ],
-   [
-    1000,
-    "excavator-trench-lawn-1000.9a66bc0d.webp"
-   ],
-   [
-    1206,
-    "excavator-trench-lawn-1206.9a66bc0d.webp"
-   ]
-  ]
- },
- "dozer-clearing-field": {
-  "w": 1206,
-  "h": 1587,
-  "alt": "Compact dozer clearing a grassy field",
-  "files": [
-   [
-    400,
-    "dozer-clearing-field-400.156d084a.webp"
-   ],
-   [
-    720,
-    "dozer-clearing-field-720.156d084a.webp"
-   ],
-   [
-    1000,
-    "dozer-clearing-field-1000.156d084a.webp"
-   ],
-   [
-    1206,
-    "dozer-clearing-field-1206.156d084a.webp"
-   ]
-  ]
- },
- "dump-truck-unloading": {
-  "w": 1206,
-  "h": 1809,
-  "alt": "Dump truck raising its bed to unload dirt",
-  "files": [
-   [
-    400,
-    "dump-truck-unloading-400.aaf386c9.webp"
-   ],
-   [
-    720,
-    "dump-truck-unloading-720.aaf386c9.webp"
-   ],
-   [
-    1000,
-    "dump-truck-unloading-1000.aaf386c9.webp"
-   ],
-   [
-    1206,
-    "dump-truck-unloading-1206.aaf386c9.webp"
-   ]
-  ]
- },
- "demolition-excavator-canal": {
-  "w": 1500,
-  "h": 1125,
-  "alt": "Excavator breaking up concrete beside a canal",
-  "files": [
-   [
-    480,
-    "demolition-excavator-canal-480.bd7eeeb0.webp"
-   ],
-   [
-    800,
-    "demolition-excavator-canal-800.bd7eeeb0.webp"
-   ],
-   [
-    1200,
-    "demolition-excavator-canal-1200.bd7eeeb0.webp"
-   ],
-   [
-    1500,
-    "demolition-excavator-canal-1500.bd7eeeb0.webp"
-   ]
-  ]
- },
- "demolition-excavator-tanks": {
-  "w": 1500,
-  "h": 1125,
-  "alt": "Excavator demolishing concrete next to old steel tanks",
-  "files": [
-   [
-    480,
-    "demolition-excavator-tanks-480.d9003c04.webp"
-   ],
-   [
-    800,
-    "demolition-excavator-tanks-800.d9003c04.webp"
-   ],
-   [
-    1200,
-    "demolition-excavator-tanks-1200.d9003c04.webp"
-   ],
-   [
-    1500,
-    "demolition-excavator-tanks-1500.d9003c04.webp"
-   ]
-  ]
- },
- "stiers-excavator-demo-site": {
-  "w": 1500,
-  "h": 1125,
-  "alt": "Stier\u2019s excavator, skid-steer and dump truck at a demolition site",
-  "files": [
-   [
-    480,
-    "stiers-excavator-demo-site-480.fbf1639c.webp"
-   ],
-   [
-    800,
-    "stiers-excavator-demo-site-800.fbf1639c.webp"
-   ],
-   [
-    1200,
-    "stiers-excavator-demo-site-1200.fbf1639c.webp"
-   ],
-   [
-    1500,
-    "stiers-excavator-demo-site-1500.fbf1639c.webp"
-   ]
-  ]
- },
- "demolition-debris-pile": {
-  "w": 1130,
-  "h": 2026,
-  "alt": "Excavator sorting a debris pile on a demolition job",
-  "files": [
-   [
-    400,
-    "demolition-debris-pile-400.03643323.webp"
-   ],
-   [
-    720,
-    "demolition-debris-pile-720.03643323.webp"
-   ],
-   [
-    1000,
-    "demolition-debris-pile-1000.03643323.webp"
-   ],
-   [
-    1130,
-    "demolition-debris-pile-1130.03643323.webp"
-   ]
-  ]
- },
- "excavator-dock-removal": {
-  "w": 1500,
-  "h": 2000,
-  "alt": "Excavator removing old dock decking",
-  "files": [
-   [
-    400,
-    "excavator-dock-removal-400.09eadfb7.webp"
-   ],
-   [
-    720,
-    "excavator-dock-removal-720.09eadfb7.webp"
-   ],
-   [
-    1000,
-    "excavator-dock-removal-1000.09eadfb7.webp"
-   ],
-   [
-    1500,
-    "excavator-dock-removal-1500.09eadfb7.webp"
-   ]
-  ]
- }
+"sheet-pile-excavator-canal-home": {
+"w": 1500,
+"h": 844,
+"alt": "Stier’s excavator setting a steel sheet pile beside a canal-side home",
+"files": [
+[
+480,
+"sheet-pile-excavator-canal-home-480.9e0ef733.webp"
+],
+[
+800,
+"sheet-pile-excavator-canal-home-800.9e0ef733.webp"
+],
+[
+1200,
+"sheet-pile-excavator-canal-home-1200.9e0ef733.webp"
+],
+[
+1500,
+"sheet-pile-excavator-canal-home-1500.9e0ef733.webp"
+]
+]
+},
+"sheet-pile-staging-seawall": {
+"w": 1500,
+"h": 1268,
+"alt": "Steel sheet piles staged next to an excavator on a seawall job",
+"files": [
+[
+480,
+"sheet-pile-staging-seawall-480.76dc0ff2.webp"
+],
+[
+800,
+"sheet-pile-staging-seawall-800.76dc0ff2.webp"
+],
+[
+1200,
+"sheet-pile-staging-seawall-1200.76dc0ff2.webp"
+],
+[
+1500,
+"sheet-pile-staging-seawall-1500.76dc0ff2.webp"
+]
+]
+},
+"vibratory-hammer-steel-pile": {
+"w": 1206,
+"h": 904,
+"alt": "Excavator with a vibratory hammer clamped to a steel pile",
+"files": [
+[
+480,
+"vibratory-hammer-steel-pile-480.f5dca034.webp"
+],
+[
+800,
+"vibratory-hammer-steel-pile-800.f5dca034.webp"
+],
+[
+1200,
+"vibratory-hammer-steel-pile-1200.f5dca034.webp"
+]
+]
+},
+"excavator-barge-timber-pilings": {
+"w": 1500,
+"h": 2000,
+"alt": "Stier’s excavator on a work barge with a load of timber pilings",
+"files": [
+[
+400,
+"excavator-barge-timber-pilings-400.15178f64.webp"
+],
+[
+720,
+"excavator-barge-timber-pilings-720.15178f64.webp"
+],
+[
+1000,
+"excavator-barge-timber-pilings-1000.15178f64.webp"
+],
+[
+1500,
+"excavator-barge-timber-pilings-1500.15178f64.webp"
+]
+]
+},
+"pipe-pilings-barge-sunset": {
+"w": 1206,
+"h": 1589,
+"alt": "Steel pipe pilings stacked on a work barge in a canal at sunset",
+"files": [
+[
+400,
+"pipe-pilings-barge-sunset-400.9a1bef42.webp"
+],
+[
+720,
+"pipe-pilings-barge-sunset-720.9a1bef42.webp"
+],
+[
+1000,
+"pipe-pilings-barge-sunset-1000.9a1bef42.webp"
+],
+[
+1206,
+"pipe-pilings-barge-sunset-1206.9a1bef42.webp"
+]
+]
+},
+"barge-excavator-canal": {
+"w": 1500,
+"h": 2000,
+"alt": "Excavator working from a barge in a residential canal",
+"files": [
+[
+400,
+"barge-excavator-canal-400.3e07eea2.webp"
+],
+[
+720,
+"barge-excavator-canal-720.3e07eea2.webp"
+],
+[
+1000,
+"barge-excavator-canal-1000.3e07eea2.webp"
+],
+[
+1500,
+"barge-excavator-canal-1500.3e07eea2.webp"
+]
+]
+},
+"barge-open-water": {
+"w": 1500,
+"h": 2000,
+"alt": "Work barge with a small excavator on open water",
+"files": [
+[
+400,
+"barge-open-water-400.ab1327a2.webp"
+],
+[
+720,
+"barge-open-water-720.ab1327a2.webp"
+],
+[
+1000,
+"barge-open-water-1000.ab1327a2.webp"
+],
+[
+1500,
+"barge-open-water-1500.ab1327a2.webp"
+]
+]
+},
+"barge-excavator-snow": {
+"w": 1500,
+"h": 2000,
+"alt": "Excavator on a work barge on a snowy day",
+"files": [
+[
+400,
+"barge-excavator-snow-400.48fe4da4.webp"
+],
+[
+720,
+"barge-excavator-snow-720.48fe4da4.webp"
+],
+[
+1000,
+"barge-excavator-snow-1000.48fe4da4.webp"
+],
+[
+1500,
+"barge-excavator-snow-1500.48fe4da4.webp"
+]
+]
+},
+"excavator-pipe-pilings-dusk": {
+"w": 1500,
+"h": 2000,
+"alt": "Stier’s excavator beside a stack of steel pipe pilings at dusk",
+"files": [
+[
+400,
+"excavator-pipe-pilings-dusk-400.57b7e5ee.webp"
+],
+[
+720,
+"excavator-pipe-pilings-dusk-720.57b7e5ee.webp"
+],
+[
+1000,
+"excavator-pipe-pilings-dusk-1000.57b7e5ee.webp"
+],
+[
+1500,
+"excavator-pipe-pilings-dusk-1500.57b7e5ee.webp"
+]
+]
+},
+"barge-boathouse-excavator": {
+"w": 1500,
+"h": 2000,
+"alt": "Work barge with an excavator beside a covered boat house",
+"files": [
+[
+400,
+"barge-boathouse-excavator-400.b17bdfcf.webp"
+],
+[
+720,
+"barge-boathouse-excavator-720.b17bdfcf.webp"
+],
+[
+1000,
+"barge-boathouse-excavator-1000.b17bdfcf.webp"
+],
+[
+1500,
+"barge-boathouse-excavator-1500.b17bdfcf.webp"
+]
+]
+},
+"wood-dock-yellow-flag": {
+"w": 1500,
+"h": 1125,
+"alt": "New wooden dock with a yellow flag extending over open water",
+"files": [
+[
+480,
+"wood-dock-yellow-flag-480.e06110fb.webp"
+],
+[
+800,
+"wood-dock-yellow-flag-800.e06110fb.webp"
+],
+[
+1200,
+"wood-dock-yellow-flag-1200.e06110fb.webp"
+],
+[
+1500,
+"wood-dock-yellow-flag-1500.e06110fb.webp"
+]
+]
+},
+"l-shaped-dock-choppy-water": {
+"w": 1170,
+"h": 863,
+"alt": "L-shaped wooden dock on pilings over choppy open water",
+"files": [
+[
+480,
+"l-shaped-dock-choppy-water-480.d7580342.webp"
+],
+[
+800,
+"l-shaped-dock-choppy-water-800.d7580342.webp"
+],
+[
+1170,
+"l-shaped-dock-choppy-water-1170.d7580342.webp"
+]
+]
+},
+"new-deck-over-seawall": {
+"w": 1440,
+"h": 1080,
+"alt": "New wood deck built along a seawall between waterfront homes",
+"files": [
+[
+480,
+"new-deck-over-seawall-480.92fd1da3.webp"
+],
+[
+800,
+"new-deck-over-seawall-800.92fd1da3.webp"
+],
+[
+1200,
+"new-deck-over-seawall-1200.92fd1da3.webp"
+],
+[
+1440,
+"new-deck-over-seawall-1440.92fd1da3.webp"
+]
+]
+},
+"gray-dock-walkway-canal": {
+"w": 1206,
+"h": 1578,
+"alt": "Long gray dock walkway running along a canal",
+"files": [
+[
+400,
+"gray-dock-walkway-canal-400.0e0bf9bc.webp"
+],
+[
+720,
+"gray-dock-walkway-canal-720.0e0bf9bc.webp"
+],
+[
+1000,
+"gray-dock-walkway-canal-1000.0e0bf9bc.webp"
+],
+[
+1206,
+"gray-dock-walkway-canal-1206.0e0bf9bc.webp"
+]
+]
+},
+"dock-boxes-moored-boat": {
+"w": 1206,
+"h": 663,
+"alt": "Wood dock with white dock boxes beside a moored boat",
+"files": [
+[
+480,
+"dock-boxes-moored-boat-480.4d8d1468.webp"
+],
+[
+800,
+"dock-boxes-moored-boat-800.4d8d1468.webp"
+],
+[
+1200,
+"dock-boxes-moored-boat-1200.4d8d1468.webp"
+]
+]
+},
+"dock-work-through-ice": {
+"w": 1206,
+"h": 1354,
+"alt": "Excavator working from a marina dock with ice on the water",
+"files": [
+[
+480,
+"dock-work-through-ice-480.b6c915ba.webp"
+],
+[
+800,
+"dock-work-through-ice-800.b6c915ba.webp"
+],
+[
+1200,
+"dock-work-through-ice-1200.b6c915ba.webp"
+]
+]
+},
+"winter-dock-edge": {
+"w": 1206,
+"h": 1595,
+"alt": "Snowy dock edge with yellow equipment on a marina in winter",
+"files": [
+[
+400,
+"winter-dock-edge-400.2207f898.webp"
+],
+[
+720,
+"winter-dock-edge-720.2207f898.webp"
+],
+[
+1000,
+"winter-dock-edge-1000.2207f898.webp"
+],
+[
+1206,
+"winter-dock-edge-1206.2207f898.webp"
+]
+]
+},
+"covered-marina-walkway-sunset": {
+"w": 1206,
+"h": 1591,
+"alt": "Covered marina dock walkway at sunset",
+"files": [
+[
+400,
+"covered-marina-walkway-sunset-400.1cb1d377.webp"
+],
+[
+720,
+"covered-marina-walkway-sunset-720.1cb1d377.webp"
+],
+[
+1000,
+"covered-marina-walkway-sunset-1000.1cb1d377.webp"
+],
+[
+1206,
+"covered-marina-walkway-sunset-1206.1cb1d377.webp"
+]
+]
+},
+"boat-lift-covered-slip": {
+"w": 723,
+"h": 904,
+"alt": "Boat lift bunks and a pontoon boat in a covered canal slip",
+"files": [
+[
+400,
+"boat-lift-covered-slip-400.4a6b655e.webp"
+],
+[
+720,
+"boat-lift-covered-slip-720.4a6b655e.webp"
+]
+]
+},
+"boat-house-hoist-tarped-boat": {
+"w": 1206,
+"h": 895,
+"alt": "Tarp-covered boat on a hoist inside a covered boat house",
+"files": [
+[
+480,
+"boat-house-hoist-tarped-boat-480.47c9d068.webp"
+],
+[
+800,
+"boat-house-hoist-tarped-boat-800.47c9d068.webp"
+],
+[
+1200,
+"boat-house-hoist-tarped-boat-1200.47c9d068.webp"
+]
+]
+},
+"welding-at-night-waterfront": {
+"w": 1206,
+"h": 904,
+"alt": "Welder working at night beside the water with sparks flying",
+"files": [
+[
+480,
+"welding-at-night-waterfront-480.1539c59a.webp"
+],
+[
+800,
+"welding-at-night-waterfront-800.1539c59a.webp"
+],
+[
+1200,
+"welding-at-night-waterfront-1200.1539c59a.webp"
+]
+]
+},
+"welding-shop-grinding-sparks": {
+"w": 1206,
+"h": 904,
+"alt": "Welder grinding in a steel shop with sparks flying",
+"files": [
+[
+480,
+"welding-shop-grinding-sparks-480.a91eff8c.webp"
+],
+[
+800,
+"welding-shop-grinding-sparks-800.a91eff8c.webp"
+],
+[
+1200,
+"welding-shop-grinding-sparks-1200.a91eff8c.webp"
+]
+]
+},
+"welders-frozen-shoreline": {
+"w": 1206,
+"h": 890,
+"alt": "Crew welding on a snowy shoreline in winter",
+"files": [
+[
+480,
+"welders-frozen-shoreline-480.ad3e2de2.webp"
+],
+[
+800,
+"welders-frozen-shoreline-800.ad3e2de2.webp"
+],
+[
+1200,
+"welders-frozen-shoreline-1200.ad3e2de2.webp"
+]
+]
+},
+"welder-helmet-sparks": {
+"w": 1212,
+"h": 611,
+"alt": "Welder in a helmet with bright sparks in a dark shop",
+"files": [
+[
+480,
+"welder-helmet-sparks-480.d6c658b0.webp"
+],
+[
+800,
+"welder-helmet-sparks-800.d6c658b0.webp"
+],
+[
+1200,
+"welder-helmet-sparks-1200.d6c658b0.webp"
+]
+]
+},
+"welder-under-dock": {
+"w": 1206,
+"h": 664,
+"alt": "Welder working beneath a dock near the water",
+"files": [
+[
+480,
+"welder-under-dock-480.58ec242e.webp"
+],
+[
+800,
+"welder-under-dock-800.58ec242e.webp"
+],
+[
+1200,
+"welder-under-dock-1200.58ec242e.webp"
+]
+]
+},
+"welding-large-pipe-fabrication": {
+"w": 1050,
+"h": 1604,
+"alt": "Welder building a large custom metal pipe structure",
+"files": [
+[
+400,
+"welding-large-pipe-fabrication-400.e3a080f3.webp"
+],
+[
+720,
+"welding-large-pipe-fabrication-720.e3a080f3.webp"
+],
+[
+1000,
+"welding-large-pipe-fabrication-1000.e3a080f3.webp"
+]
+]
+},
+"steel-table-frame-fabrication": {
+"w": 1206,
+"h": 1192,
+"alt": "Custom black steel table frame fabricated in a shop",
+"files": [
+[
+480,
+"steel-table-frame-fabrication-480.f164dd18.webp"
+],
+[
+800,
+"steel-table-frame-fabrication-800.f164dd18.webp"
+],
+[
+1200,
+"steel-table-frame-fabrication-1200.f164dd18.webp"
+]
+]
+},
+"steel-stair-railing-brick-home": {
+"w": 1206,
+"h": 888,
+"alt": "Black steel stair railing at a brick home entry",
+"files": [
+[
+480,
+"steel-stair-railing-brick-home-480.df8552d8.webp"
+],
+[
+800,
+"steel-stair-railing-brick-home-800.df8552d8.webp"
+],
+[
+1200,
+"steel-stair-railing-brick-home-1200.df8552d8.webp"
+]
+]
+},
+"black-steel-railing-porch": {
+"w": 1500,
+"h": 1125,
+"alt": "Black steel railing at a home entrance",
+"files": [
+[
+480,
+"black-steel-railing-porch-480.ae946636.webp"
+],
+[
+800,
+"black-steel-railing-porch-800.ae946636.webp"
+],
+[
+1200,
+"black-steel-railing-porch-1200.ae946636.webp"
+],
+[
+1500,
+"black-steel-railing-porch-1500.ae946636.webp"
+]
+]
+},
+"steel-pool-gate": {
+"w": 1206,
+"h": 1553,
+"alt": "Black steel gate at a pool enclosure",
+"files": [
+[
+400,
+"steel-pool-gate-400.7ed3a811.webp"
+],
+[
+720,
+"steel-pool-gate-720.7ed3a811.webp"
+],
+[
+1000,
+"steel-pool-gate-1000.7ed3a811.webp"
+],
+[
+1206,
+"steel-pool-gate-1206.7ed3a811.webp"
+]
+]
+},
+"rust-finish-steel-sign-arch": {
+"w": 1500,
+"h": 2000,
+"alt": "Custom rust-finish steel sign with an arched cutout",
+"files": [
+[
+400,
+"rust-finish-steel-sign-arch-400.63a5c2a1.webp"
+],
+[
+720,
+"rust-finish-steel-sign-arch-720.63a5c2a1.webp"
+],
+[
+1000,
+"rust-finish-steel-sign-arch-1000.63a5c2a1.webp"
+],
+[
+1500,
+"rust-finish-steel-sign-arch-1500.63a5c2a1.webp"
+]
+]
+},
+"rust-finish-steel-sign-cutout": {
+"w": 1500,
+"h": 2000,
+"alt": "Rust-finish steel sign with cut-out lettering",
+"files": [
+[
+400,
+"rust-finish-steel-sign-cutout-400.1b496ba6.webp"
+],
+[
+720,
+"rust-finish-steel-sign-cutout-720.1b496ba6.webp"
+],
+[
+1000,
+"rust-finish-steel-sign-cutout-1000.1b496ba6.webp"
+],
+[
+1500,
+"rust-finish-steel-sign-cutout-1500.1b496ba6.webp"
+]
+]
+},
+"new-concrete-patio": {
+"w": 1500,
+"h": 1000,
+"alt": "Freshly poured concrete patio behind a brick home",
+"files": [
+[
+480,
+"new-concrete-patio-480.8321a135.webp"
+],
+[
+800,
+"new-concrete-patio-800.8321a135.webp"
+],
+[
+1200,
+"new-concrete-patio-1200.8321a135.webp"
+],
+[
+1500,
+"new-concrete-patio-1500.8321a135.webp"
+]
+]
+},
+"concrete-finisher-trowel": {
+"w": 1206,
+"h": 2104,
+"alt": "Finisher smoothing wet concrete with a hand trowel",
+"files": [
+[
+400,
+"concrete-finisher-trowel-400.3538f59c.webp"
+],
+[
+720,
+"concrete-finisher-trowel-720.3538f59c.webp"
+],
+[
+1000,
+"concrete-finisher-trowel-1000.3538f59c.webp"
+],
+[
+1206,
+"concrete-finisher-trowel-1206.3538f59c.webp"
+]
+]
+},
+"concrete-slab-finishing": {
+"w": 776,
+"h": 1396,
+"alt": "Crew finishing a freshly poured concrete slab",
+"files": [
+[
+400,
+"concrete-slab-finishing-400.b7e5f0d0.webp"
+],
+[
+720,
+"concrete-slab-finishing-720.b7e5f0d0.webp"
+]
+]
+},
+"concrete-saw-cutting": {
+"w": 1206,
+"h": 2144,
+"alt": "Worker cutting concrete with a saw near a canal",
+"files": [
+[
+400,
+"concrete-saw-cutting-400.9714dfdf.webp"
+],
+[
+720,
+"concrete-saw-cutting-720.9714dfdf.webp"
+],
+[
+1000,
+"concrete-saw-cutting-1000.9714dfdf.webp"
+],
+[
+1206,
+"concrete-saw-cutting-1206.9714dfdf.webp"
+]
+]
+},
+"broken-concrete-slabs-canal": {
+"w": 1500,
+"h": 2000,
+"alt": "Broken concrete slabs stacked beside a canal after removal",
+"files": [
+[
+400,
+"broken-concrete-slabs-canal-400.f0ca4eaf.webp"
+],
+[
+720,
+"broken-concrete-slabs-canal-720.f0ca4eaf.webp"
+],
+[
+1000,
+"broken-concrete-slabs-canal-1000.f0ca4eaf.webp"
+],
+[
+1500,
+"broken-concrete-slabs-canal-1500.f0ca4eaf.webp"
+]
+]
+},
+"concrete-work-crew": {
+"w": 1206,
+"h": 2094,
+"alt": "Crew working a fresh concrete pour",
+"files": [
+[
+400,
+"concrete-work-crew-400.ca35d41b.webp"
+],
+[
+720,
+"concrete-work-crew-720.ca35d41b.webp"
+],
+[
+1000,
+"concrete-work-crew-1000.ca35d41b.webp"
+],
+[
+1206,
+"concrete-work-crew-1206.ca35d41b.webp"
+]
+]
+},
+"deck-cabin-white-railing": {
+"w": 1206,
+"h": 892,
+"alt": "Wood deck with a white railing on a cabin",
+"files": [
+[
+480,
+"deck-cabin-white-railing-480.bd51fab3.webp"
+],
+[
+800,
+"deck-cabin-white-railing-800.bd51fab3.webp"
+],
+[
+1200,
+"deck-cabin-white-railing-1200.bd51fab3.webp"
+]
+]
+},
+"red-stained-log-cabin-deck": {
+"w": 1206,
+"h": 884,
+"alt": "Red-stained deck and railing on a log cabin",
+"files": [
+[
+480,
+"red-stained-log-cabin-deck-480.82b19add.webp"
+],
+[
+800,
+"red-stained-log-cabin-deck-800.82b19add.webp"
+],
+[
+1200,
+"red-stained-log-cabin-deck-1200.82b19add.webp"
+]
+]
+},
+"beach-stairs-wood-platform": {
+"w": 1206,
+"h": 1209,
+"alt": "Wood stairs and platform leading to a beach shoreline",
+"files": [
+[
+480,
+"beach-stairs-wood-platform-480.8534c08c.webp"
+],
+[
+800,
+"beach-stairs-wood-platform-800.8534c08c.webp"
+],
+[
+1200,
+"beach-stairs-wood-platform-1200.8534c08c.webp"
+]
+]
+},
+"excavator-site-dusk": {
+"w": 1500,
+"h": 1125,
+"alt": "Yellow excavator on a graded site at dusk",
+"files": [
+[
+480,
+"excavator-site-dusk-480.e5b72a61.webp"
+],
+[
+800,
+"excavator-site-dusk-800.e5b72a61.webp"
+],
+[
+1200,
+"excavator-site-dusk-1200.e5b72a61.webp"
+],
+[
+1500,
+"excavator-site-dusk-1500.e5b72a61.webp"
+]
+]
+},
+"dump-trucks-yard": {
+"w": 1500,
+"h": 1125,
+"alt": "Two dump trucks parked in a work yard",
+"files": [
+[
+480,
+"dump-trucks-yard-480.adea1cb3.webp"
+],
+[
+800,
+"dump-trucks-yard-800.adea1cb3.webp"
+],
+[
+1200,
+"dump-trucks-yard-1200.adea1cb3.webp"
+],
+[
+1500,
+"dump-trucks-yard-1500.adea1cb3.webp"
+]
+]
+},
+"excavator-loading-dump-trailer": {
+"w": 1500,
+"h": 1125,
+"alt": "Excavator loading a red dump trailer beside traffic cones",
+"files": [
+[
+480,
+"excavator-loading-dump-trailer-480.fd6d81ee.webp"
+],
+[
+800,
+"excavator-loading-dump-trailer-800.fd6d81ee.webp"
+],
+[
+1200,
+"excavator-loading-dump-trailer-1200.fd6d81ee.webp"
+],
+[
+1500,
+"excavator-loading-dump-trailer-1500.fd6d81ee.webp"
+]
+]
+},
+"skid-steer-yard": {
+"w": 1206,
+"h": 879,
+"alt": "Skid-steer loader on a dirt lot beside a covered boat slip",
+"files": [
+[
+480,
+"skid-steer-yard-480.29abeedb.webp"
+],
+[
+800,
+"skid-steer-yard-800.29abeedb.webp"
+],
+[
+1200,
+"skid-steer-yard-1200.29abeedb.webp"
+]
+]
+},
+"graded-gravel-yard-boathouse": {
+"w": 1500,
+"h": 1125,
+"alt": "Graded gravel yard next to a boat house",
+"files": [
+[
+480,
+"graded-gravel-yard-boathouse-480.73990219.webp"
+],
+[
+800,
+"graded-gravel-yard-boathouse-800.73990219.webp"
+],
+[
+1200,
+"graded-gravel-yard-boathouse-1200.73990219.webp"
+],
+[
+1500,
+"graded-gravel-yard-boathouse-1500.73990219.webp"
+]
+]
+},
+"excavator-trench-lawn": {
+"w": 1206,
+"h": 1556,
+"alt": "Compact excavator digging a trench in a lawn",
+"files": [
+[
+400,
+"excavator-trench-lawn-400.9a66bc0d.webp"
+],
+[
+720,
+"excavator-trench-lawn-720.9a66bc0d.webp"
+],
+[
+1000,
+"excavator-trench-lawn-1000.9a66bc0d.webp"
+],
+[
+1206,
+"excavator-trench-lawn-1206.9a66bc0d.webp"
+]
+]
+},
+"dozer-clearing-field": {
+"w": 1206,
+"h": 1587,
+"alt": "Compact dozer clearing a grassy field",
+"files": [
+[
+400,
+"dozer-clearing-field-400.156d084a.webp"
+],
+[
+720,
+"dozer-clearing-field-720.156d084a.webp"
+],
+[
+1000,
+"dozer-clearing-field-1000.156d084a.webp"
+],
+[
+1206,
+"dozer-clearing-field-1206.156d084a.webp"
+]
+]
+},
+"dump-truck-unloading": {
+"w": 1206,
+"h": 1809,
+"alt": "Dump truck raising its bed to unload dirt",
+"files": [
+[
+400,
+"dump-truck-unloading-400.aaf386c9.webp"
+],
+[
+720,
+"dump-truck-unloading-720.aaf386c9.webp"
+],
+[
+1000,
+"dump-truck-unloading-1000.aaf386c9.webp"
+],
+[
+1206,
+"dump-truck-unloading-1206.aaf386c9.webp"
+]
+]
+},
+"demolition-excavator-canal": {
+"w": 1500,
+"h": 1125,
+"alt": "Excavator breaking up concrete beside a canal",
+"files": [
+[
+480,
+"demolition-excavator-canal-480.bd7eeeb0.webp"
+],
+[
+800,
+"demolition-excavator-canal-800.bd7eeeb0.webp"
+],
+[
+1200,
+"demolition-excavator-canal-1200.bd7eeeb0.webp"
+],
+[
+1500,
+"demolition-excavator-canal-1500.bd7eeeb0.webp"
+]
+]
+},
+"demolition-excavator-tanks": {
+"w": 1500,
+"h": 1125,
+"alt": "Excavator demolishing concrete next to old steel tanks",
+"files": [
+[
+480,
+"demolition-excavator-tanks-480.d9003c04.webp"
+],
+[
+800,
+"demolition-excavator-tanks-800.d9003c04.webp"
+],
+[
+1200,
+"demolition-excavator-tanks-1200.d9003c04.webp"
+],
+[
+1500,
+"demolition-excavator-tanks-1500.d9003c04.webp"
+]
+]
+},
+"stiers-excavator-demo-site": {
+"w": 1500,
+"h": 1125,
+"alt": "Stier’s excavator, skid-steer and dump truck at a demolition site",
+"files": [
+[
+480,
+"stiers-excavator-demo-site-480.fbf1639c.webp"
+],
+[
+800,
+"stiers-excavator-demo-site-800.fbf1639c.webp"
+],
+[
+1200,
+"stiers-excavator-demo-site-1200.fbf1639c.webp"
+],
+[
+1500,
+"stiers-excavator-demo-site-1500.fbf1639c.webp"
+]
+]
+},
+"demolition-debris-pile": {
+"w": 1130,
+"h": 2026,
+"alt": "Excavator sorting a debris pile on a demolition job",
+"files": [
+[
+400,
+"demolition-debris-pile-400.03643323.webp"
+],
+[
+720,
+"demolition-debris-pile-720.03643323.webp"
+],
+[
+1000,
+"demolition-debris-pile-1000.03643323.webp"
+],
+[
+1130,
+"demolition-debris-pile-1130.03643323.webp"
+]
+]
+},
+"excavator-dock-removal": {
+"w": 1500,
+"h": 2000,
+"alt": "Excavator removing old dock decking",
+"files": [
+[
+400,
+"excavator-dock-removal-400.09eadfb7.webp"
+],
+[
+720,
+"excavator-dock-removal-720.09eadfb7.webp"
+],
+[
+1000,
+"excavator-dock-removal-1000.09eadfb7.webp"
+],
+[
+1500,
+"excavator-dock-removal-1500.09eadfb7.webp"
+]
+]
+},
+"hitide-gear-drive-lift": {
+"w": 383,
+"h": 287,
+"alt": "A Hi-Tide Gear Drive boat lift raising a cruiser at a covered dock",
+"files": [
+[
+260,
+"hitide-gear-drive-lift-260.aea6bf89.webp"
+],
+[
+383,
+"hitide-gear-drive-lift-383.05935ecc.webp"
+]
+]
+},
+"hitide-x2-gear-drive": {
+"w": 383,
+"h": 287,
+"alt": "A Hi-Tide X2 Gear Drive lift holding a sport fishing boat beside a palm-lined canal",
+"files": [
+[
+260,
+"hitide-x2-gear-drive-260.9c57eddf.webp"
+],
+[
+383,
+"hitide-x2-gear-drive-383.65ca0090.webp"
+]
+]
+},
+"hitide-t2-topless-x2": {
+"w": 383,
+"h": 287,
+"alt": "A Hi-Tide T2 Topless X2 lift raising a cabin cruiser with no top rail blocking the view",
+"files": [
+[
+260,
+"hitide-t2-topless-x2-260.9a0d20a6.webp"
+],
+[
+383,
+"hitide-t2-topless-x2-383.05f78b59.webp"
+]
+]
+},
+"hitide-cuda-gear": {
+"w": 383,
+"h": 287,
+"alt": "An empty Hi-Tide Cuda Gear 4-post lift frame on a waterfront dock",
+"files": [
+[
+260,
+"hitide-cuda-gear-260.668feaaa.webp"
+],
+[
+383,
+"hitide-cuda-gear-383.63ef9d41.webp"
+]
+]
+},
+"hitide-galva-gear": {
+"w": 383,
+"h": 287,
+"alt": "An empty galvanized Hi-Tide Galva Gear lift at a dock, bunks lowered to the water",
+"files": [
+[
+260,
+"hitide-galva-gear-260.46a1a7d5.webp"
+],
+[
+383,
+"hitide-galva-gear-383.4190654e.webp"
+]
+]
+}
 }
