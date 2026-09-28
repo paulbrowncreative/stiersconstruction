@@ -1231,5 +1231,80 @@
 "hitide-galva-gear-383.4190654e.webp"
 ]
 ]
+},
+"hitide-yacht-lifts": {
+"w": 383,
+"h": 287,
+"alt": "A Hi-Tide Yacht Lift raising a large sport fishing yacht out of the water",
+"files": [
+[
+260,
+"hitide-yacht-lifts-260.351a2ca6.webp"
+],
+[
+383,
+"hitide-yacht-lifts-383.037eb641.webp"
+]
+]
+},
+"hitide-aluminum-elevator-lifts": {
+"w": 383,
+"h": 287,
+"alt": "A Hi-Tide Aluminum Elevator Lift mounted along a narrow residential canal",
+"files": [
+[
+260,
+"hitide-aluminum-elevator-lifts-260.abebdc4c.webp"
+],
+[
+383,
+"hitide-aluminum-elevator-lifts-383.c609fad8.webp"
+]
+]
+},
+"hitide-aluminum-elevator-x2": {
+"w": 383,
+"h": 287,
+"alt": "A Hi-Tide Aluminum Elevator X2 lift on a seawall with a city skyline behind it",
+"files": [
+[
+260,
+"hitide-aluminum-elevator-x2-260.8837e807.webp"
+],
+[
+383,
+"hitide-aluminum-elevator-x2-383.8261612d.webp"
+]
+]
+},
+"hitide-aluminum-pwl-x2": {
+"w": 383,
+"h": 287,
+"alt": "A Hi-Tide Aluminum PWL X2 personal watercraft lift mounted on a red dock frame",
+"files": [
+[
+260,
+"hitide-aluminum-pwl-x2-260.532b5544.webp"
+],
+[
+383,
+"hitide-aluminum-pwl-x2-383.3ffa02ca.webp"
+]
+]
+},
+"hitide-spinner-x2": {
+"w": 383,
+"h": 287,
+"alt": "A Hi-Tide Spinner X2 lift holding a personal watercraft beside a docked boat",
+"files": [
+[
+260,
+"hitide-spinner-x2-260.4a1d7be5.webp"
+],
+[
+383,
+"hitide-spinner-x2-383.e2c3df8f.webp"
+]
+]
 }
 }
