@@ -144,7 +144,7 @@ SERVICES = [
      '<p class="measure">Stier’s Construction sells, installs and services Hi-Tide boat lifts alongside every other hoist brand we work on. Buying the lift and having it installed and maintained through one contractor means one point of contact for the life of the lift.</p>' +
      groups(('Buying a Hi-Tide lift through Stier’s', ['Sized and configured for your boat, slip and water depth', 'Installed by the same crew that services it', 'Backed by our own cable, motor and welding work, not a call to a separate installer']),
             ('Already own a Hi-Tide lift?', ['Cable change-out and motor service', 'Welding repairs to frames and supports, done in-house', 'Seasonal inspection before launch'])) +
-     '<div class="mt-m">' + note('<p>Ask about current Hi-Tide models and pricing when you request a quote. We will confirm what fits your boat, slip and budget.</p>') + '</div>'),
+     '<p class="mt-m"><a class="btn btn-outline" href="/services/boat-hoists/hi-tide/">Browse the full Hi-Tide lineup</a></p>'),
    dict(id='what', h2='Hoist installation and maintenance', html=groups(
      ('Installation', ['Boat house hoists', 'Elevator lifts', '4-point lifts', '8-point lifts', 'PWC (jet ski) lifts', 'Davits']),
      ('Maintenance', ['Cable change-out: worn or damaged cables replaced with quality materials and precise installation, so the lift operates safely and smoothly', 'Motor maintenance: motors inspected, cleaned, lubricated and serviced to prevent costly breakdowns and extend life', 'Welding maintenance: lift frames, supports and structural parts repaired or reinforced to keep the lift strong and reliable for years'])) +
@@ -323,6 +323,37 @@ HOIST_SIZES = [
   ('8-point lifts', 30, 40, '30 to 40 ft', 'Larger cruisers and pontoon boats'),
   ('Boat house hoists', 0, 40, 'Up to 35 to 40 ft', 'Covered storage that protects from weather and corrosion'),
 ]
+
+# Hi-Tide boat lift catalog. Stier's Construction is an authorized Hi-Tide dealer.
+# Model names and categories confirmed by the site owner. Per-model capacity, dimensions
+# and pricing are not yet supplied -- each product page says so plainly rather than guessing,
+# and points visitors to request a quote. Add real specs to the `specs` field per product
+# and real photos to src/data/images.json (see HI_TIDE_PRODUCTS) once available.
+HI_TIDE_CATS = {
+ '4-post-cable-lifts': dict(name='4-Post Cable Lifts', desc='A four-post cable lift supports the boat at four points and raises it clear of the water on a cable-and-pulley system. A common, economical configuration for a wide range of boat sizes.'),
+ 'yacht-lifts': dict(name='Yacht Lifts', desc='Built for larger boats and yachts, with the added capacity and structure bigger hulls need.'),
+ 'elevator-lifts': dict(name='Elevator Lifts', desc='Moves the boat straight up and down on a vertical track, often paired with a dock platform. A good fit where dock space is tight.'),
+ 'pwc-lifts': dict(name='Personal Watercraft Lifts', desc='Sized for jet skis and other personal watercraft, keeping them out of the water between rides.'),
+ 'specialty-lifts': dict(name='Specialty Lifts', desc='Configurations built for a specific site or storage need, from covered boat houses to davit-style lifts.'),
+ 'accessories': dict(name='Accessories', desc='Parts and add-ons for a Hi-Tide lift, from canopies to remote controls.'),
+}
+HI_TIDE_PRODUCTS = [
+ dict(slug='gear-drive-lift', name='Gear Drive Lift', cat='4-post-cable-lifts'),
+ dict(slug='x2-gear-drive', name='X2 Gear Drive', cat='4-post-cable-lifts'),
+ dict(slug='t2-topless-x2', name='T2 Topless X2', cat='4-post-cable-lifts'),
+ dict(slug='cuda-gear', name='The Cuda Gear', cat='4-post-cable-lifts'),
+ dict(slug='galva-gear', name='The Galva Gear', cat='4-post-cable-lifts'),
+ dict(slug='yacht-lifts', name='Yacht Lifts', cat='yacht-lifts'),
+ dict(slug='aluminum-elevator-lifts', name='Aluminum Elevator Lifts', cat='elevator-lifts'),
+ dict(slug='aluminum-elevator-x2', name='Aluminum Elevator X2', cat='elevator-lifts'),
+ dict(slug='aluminum-pwl-x2', name='Aluminum PWL X2', cat='pwc-lifts'),
+ dict(slug='spinner-x2', name='Spinner X2', cat='pwc-lifts'),
+ dict(slug='galvanized-pwl', name='Galvanized PWL', cat='pwc-lifts'),
+ dict(slug='boat-house-lifts', name='Boat House Lifts', cat='specialty-lifts'),
+ dict(slug='davits', name='Davits', cat='specialty-lifts'),
+ dict(slug='lift-accessories', name='Lift Accessories', cat='accessories'),
+]
+HI_TIDE_BY_SLUG = {p['slug']: p for p in HI_TIDE_PRODUCTS}
 
 HOME_FAQS = [
  ('What areas do you serve?', '<p>We work across Metro Detroit, with a focus on the Lake St. Clair and Detroit River waterfront. Not sure we cover your address? Call <a href="tel:+15867037214">586-703-7214</a> and ask.</p>'),
