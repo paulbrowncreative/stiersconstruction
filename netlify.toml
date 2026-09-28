@@ -1,0 +1,8 @@
+[build]
+  publish = "public"
+
+[build.processing]
+  skip_processing = true
+
+[functions]
+  directory = "netlify/functions"

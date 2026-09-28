@@ -1,0 +1,135 @@
+/*
+  X-Content-Type-Options: nosniff
+  X-Frame-Options: DENY
+  Referrer-Policy: strict-origin-when-cross-origin
+  Permissions-Policy: camera=(), microphone=(), geolocation=()
+  Strict-Transport-Security: max-age=31536000; includeSubDomains
+/
+  Content-Security-Policy: default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; font-src 'self'; connect-src 'self'; form-action 'self'; frame-src https://www.enhancify.com; frame-ancestors 'none'; base-uri 'self'; object-src 'none'
+/about/
+  Content-Security-Policy: default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; font-src 'self'; connect-src 'self'; form-action 'self'; frame-src https://www.enhancify.com; frame-ancestors 'none'; base-uri 'self'; object-src 'none'
+/blog/
+  Content-Security-Policy: default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; font-src 'self'; connect-src 'self'; form-action 'self'; frame-src https://www.enhancify.com; frame-ancestors 'none'; base-uri 'self'; object-src 'none'
+/blog/boat-hoist-maintenance-checklist/
+  Content-Security-Policy: default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; font-src 'self'; connect-src 'self'; form-action 'self'; frame-src https://www.enhancify.com; frame-ancestors 'none'; base-uri 'self'; object-src 'none'
+/blog/buying-waterfront-home-inspection-checklist/
+  Content-Security-Policy: default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; font-src 'self'; connect-src 'self'; form-action 'self'; frame-src https://www.enhancify.com; frame-ancestors 'none'; base-uri 'self'; object-src 'none'
+/blog/composite-vs-wood-vs-trex-decks/
+  Content-Security-Policy: default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; font-src 'self'; connect-src 'self'; form-action 'self'; frame-src https://www.enhancify.com; frame-ancestors 'none'; base-uri 'self'; object-src 'none'
+/blog/dredging-101-canals-marinas-boat-wells/
+  Content-Security-Policy: default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; font-src 'self'; connect-src 'self'; form-action 'self'; frame-src https://www.enhancify.com; frame-ancestors 'none'; base-uri 'self'; object-src 'none'
+/blog/floating-vs-fixed-docks/
+  Content-Security-Policy: default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; font-src 'self'; connect-src 'self'; form-action 'self'; frame-src https://www.enhancify.com; frame-ancestors 'none'; base-uri 'self'; object-src 'none'
+/blog/great-lakes-water-levels-waterfront-property/
+  Content-Security-Policy: default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; font-src 'self'; connect-src 'self'; form-action 'self'; frame-src https://www.enhancify.com; frame-ancestors 'none'; base-uri 'self'; object-src 'none'
+/blog/how-to-choose-a-boat-hoist/
+  Content-Security-Policy: default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; font-src 'self'; connect-src 'self'; form-action 'self'; frame-src https://www.enhancify.com; frame-ancestors 'none'; base-uri 'self'; object-src 'none'
+/blog/how-to-pay-for-a-waterfront-project/
+  Content-Security-Policy: default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; font-src 'self'; connect-src 'self'; form-action 'self'; frame-src https://www.enhancify.com; frame-ancestors 'none'; base-uri 'self'; object-src 'none'
+/blog/lake-st-clair-detroit-river-st-clair-river-waterfront-differences/
+  Content-Security-Policy: default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; font-src 'self'; connect-src 'self'; form-action 'self'; frame-src https://www.enhancify.com; frame-ancestors 'none'; base-uri 'self'; object-src 'none'
+/blog/marine-steel-corrosion-welding-fabrication/
+  Content-Security-Policy: default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; font-src 'self'; connect-src 'self'; form-action 'self'; frame-src https://www.enhancify.com; frame-ancestors 'none'; base-uri 'self'; object-src 'none'
+/blog/michigan-permits-seawalls-docks-dredging/
+  Content-Security-Policy: default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; font-src 'self'; connect-src 'self'; form-action 'self'; frame-src https://www.enhancify.com; frame-ancestors 'none'; base-uri 'self'; object-src 'none'
+/blog/michigan-winter-dock-seawall-damage/
+  Content-Security-Policy: default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; font-src 'self'; connect-src 'self'; form-action 'self'; frame-src https://www.enhancify.com; frame-ancestors 'none'; base-uri 'self'; object-src 'none'
+/blog/seasonal-waterfront-maintenance-checklist/
+  Content-Security-Policy: default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; font-src 'self'; connect-src 'self'; form-action 'self'; frame-src https://www.enhancify.com; frame-ancestors 'none'; base-uri 'self'; object-src 'none'
+/blog/seawall-anatomy-tie-rods-caps-french-drains/
+  Content-Security-Policy: default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; font-src 'self'; connect-src 'self'; form-action 'self'; frame-src https://www.enhancify.com; frame-ancestors 'none'; base-uri 'self'; object-src 'none'
+/blog/seawall-guide-metro-detroit/
+  Content-Security-Policy: default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; font-src 'self'; connect-src 'self'; form-action 'self'; frame-src https://www.enhancify.com; frame-ancestors 'none'; base-uri 'self'; object-src 'none'
+/blog/signs-your-seawall-is-failing/
+  Content-Security-Policy: default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; font-src 'self'; connect-src 'self'; form-action 'self'; frame-src https://www.enhancify.com; frame-ancestors 'none'; base-uri 'self'; object-src 'none'
+/blog/vinyl-vs-steel-vs-concrete-seawalls/
+  Content-Security-Policy: default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; font-src 'self'; connect-src 'self'; form-action 'self'; frame-src https://www.enhancify.com; frame-ancestors 'none'; base-uri 'self'; object-src 'none'
+/blog/waterfront-concrete-freeze-thaw/
+  Content-Security-Policy: default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; font-src 'self'; connect-src 'self'; form-action 'self'; frame-src https://www.enhancify.com; frame-ancestors 'none'; base-uri 'self'; object-src 'none'
+/blog/wood-vs-steel-pilings/
+  Content-Security-Policy: default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; font-src 'self'; connect-src 'self'; form-action 'self'; frame-src https://www.enhancify.com; frame-ancestors 'none'; base-uri 'self'; object-src 'none'
+/careers/
+  Content-Security-Policy: default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; font-src 'self'; connect-src 'self'; form-action 'self'; frame-src https://www.enhancify.com; frame-ancestors 'none'; base-uri 'self'; object-src 'none'
+/contact/
+  Content-Security-Policy: default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; font-src 'self'; connect-src 'self'; form-action 'self'; frame-src https://www.enhancify.com; frame-ancestors 'none'; base-uri 'self'; object-src 'none'
+/financing/
+  Content-Security-Policy: default-src 'self'; script-src 'self' https://www.enhancify.com; style-src 'self' 'unsafe-inline' https://www.enhancify.com https://fonts.googleapis.com; img-src 'self' data: https://www.enhancify.com https://cdn.enhancify.com; font-src 'self' https://fonts.gstatic.com https://www.enhancify.com; connect-src 'self' https://www.enhancify.com; form-action 'self' https://www.enhancify.com; frame-src https://www.enhancify.com; frame-ancestors 'none'; base-uri 'self'; object-src 'none'
+/projects/
+  Content-Security-Policy: default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; font-src 'self'; connect-src 'self'; form-action 'self'; frame-src https://www.enhancify.com; frame-ancestors 'none'; base-uri 'self'; object-src 'none'
+/service-area/
+  Content-Security-Policy: default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; font-src 'self'; connect-src 'self'; form-action 'self'; frame-src https://www.enhancify.com; frame-ancestors 'none'; base-uri 'self'; object-src 'none'
+/service-area/algonac/
+  Content-Security-Policy: default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; font-src 'self'; connect-src 'self'; form-action 'self'; frame-src https://www.enhancify.com; frame-ancestors 'none'; base-uri 'self'; object-src 'none'
+/service-area/chesterfield-township/
+  Content-Security-Policy: default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; font-src 'self'; connect-src 'self'; form-action 'self'; frame-src https://www.enhancify.com; frame-ancestors 'none'; base-uri 'self'; object-src 'none'
+/service-area/gibraltar/
+  Content-Security-Policy: default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; font-src 'self'; connect-src 'self'; form-action 'self'; frame-src https://www.enhancify.com; frame-ancestors 'none'; base-uri 'self'; object-src 'none'
+/service-area/grosse-ile/
+  Content-Security-Policy: default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; font-src 'self'; connect-src 'self'; form-action 'self'; frame-src https://www.enhancify.com; frame-ancestors 'none'; base-uri 'self'; object-src 'none'
+/service-area/grosse-pointe-farms/
+  Content-Security-Policy: default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; font-src 'self'; connect-src 'self'; form-action 'self'; frame-src https://www.enhancify.com; frame-ancestors 'none'; base-uri 'self'; object-src 'none'
+/service-area/grosse-pointe-park/
+  Content-Security-Policy: default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; font-src 'self'; connect-src 'self'; form-action 'self'; frame-src https://www.enhancify.com; frame-ancestors 'none'; base-uri 'self'; object-src 'none'
+/service-area/grosse-pointe-shores/
+  Content-Security-Policy: default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; font-src 'self'; connect-src 'self'; form-action 'self'; frame-src https://www.enhancify.com; frame-ancestors 'none'; base-uri 'self'; object-src 'none'
+/service-area/grosse-pointe-woods/
+  Content-Security-Policy: default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; font-src 'self'; connect-src 'self'; form-action 'self'; frame-src https://www.enhancify.com; frame-ancestors 'none'; base-uri 'self'; object-src 'none'
+/service-area/harrison-township/
+  Content-Security-Policy: default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; font-src 'self'; connect-src 'self'; form-action 'self'; frame-src https://www.enhancify.com; frame-ancestors 'none'; base-uri 'self'; object-src 'none'
+/service-area/marine-city/
+  Content-Security-Policy: default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; font-src 'self'; connect-src 'self'; form-action 'self'; frame-src https://www.enhancify.com; frame-ancestors 'none'; base-uri 'self'; object-src 'none'
+/service-area/marysville/
+  Content-Security-Policy: default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; font-src 'self'; connect-src 'self'; form-action 'self'; frame-src https://www.enhancify.com; frame-ancestors 'none'; base-uri 'self'; object-src 'none'
+/service-area/monroe/
+  Content-Security-Policy: default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; font-src 'self'; connect-src 'self'; form-action 'self'; frame-src https://www.enhancify.com; frame-ancestors 'none'; base-uri 'self'; object-src 'none'
+/service-area/new-baltimore/
+  Content-Security-Policy: default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; font-src 'self'; connect-src 'self'; form-action 'self'; frame-src https://www.enhancify.com; frame-ancestors 'none'; base-uri 'self'; object-src 'none'
+/service-area/port-huron/
+  Content-Security-Policy: default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; font-src 'self'; connect-src 'self'; form-action 'self'; frame-src https://www.enhancify.com; frame-ancestors 'none'; base-uri 'self'; object-src 'none'
+/service-area/rockwood/
+  Content-Security-Policy: default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; font-src 'self'; connect-src 'self'; form-action 'self'; frame-src https://www.enhancify.com; frame-ancestors 'none'; base-uri 'self'; object-src 'none'
+/service-area/st-clair-shores/
+  Content-Security-Policy: default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; font-src 'self'; connect-src 'self'; form-action 'self'; frame-src https://www.enhancify.com; frame-ancestors 'none'; base-uri 'self'; object-src 'none'
+/service-area/st-clair/
+  Content-Security-Policy: default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; font-src 'self'; connect-src 'self'; form-action 'self'; frame-src https://www.enhancify.com; frame-ancestors 'none'; base-uri 'self'; object-src 'none'
+/service-area/trenton/
+  Content-Security-Policy: default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; font-src 'self'; connect-src 'self'; form-action 'self'; frame-src https://www.enhancify.com; frame-ancestors 'none'; base-uri 'self'; object-src 'none'
+/service-area/wyandotte/
+  Content-Security-Policy: default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; font-src 'self'; connect-src 'self'; form-action 'self'; frame-src https://www.enhancify.com; frame-ancestors 'none'; base-uri 'self'; object-src 'none'
+/services/
+  Content-Security-Policy: default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; font-src 'self'; connect-src 'self'; form-action 'self'; frame-src https://www.enhancify.com; frame-ancestors 'none'; base-uri 'self'; object-src 'none'
+/services/boat-hoists/
+  Content-Security-Policy: default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; font-src 'self'; connect-src 'self'; form-action 'self'; frame-src https://www.enhancify.com; frame-ancestors 'none'; base-uri 'self'; object-src 'none'
+/services/concrete/
+  Content-Security-Policy: default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; font-src 'self'; connect-src 'self'; form-action 'self'; frame-src https://www.enhancify.com; frame-ancestors 'none'; base-uri 'self'; object-src 'none'
+/services/decks/
+  Content-Security-Policy: default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; font-src 'self'; connect-src 'self'; form-action 'self'; frame-src https://www.enhancify.com; frame-ancestors 'none'; base-uri 'self'; object-src 'none'
+/services/demolition/
+  Content-Security-Policy: default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; font-src 'self'; connect-src 'self'; form-action 'self'; frame-src https://www.enhancify.com; frame-ancestors 'none'; base-uri 'self'; object-src 'none'
+/services/docks/
+  Content-Security-Policy: default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; font-src 'self'; connect-src 'self'; form-action 'self'; frame-src https://www.enhancify.com; frame-ancestors 'none'; base-uri 'self'; object-src 'none'
+/services/dredging/
+  Content-Security-Policy: default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; font-src 'self'; connect-src 'self'; form-action 'self'; frame-src https://www.enhancify.com; frame-ancestors 'none'; base-uri 'self'; object-src 'none'
+/services/excavating-grading/
+  Content-Security-Policy: default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; font-src 'self'; connect-src 'self'; form-action 'self'; frame-src https://www.enhancify.com; frame-ancestors 'none'; base-uri 'self'; object-src 'none'
+/services/pilings/
+  Content-Security-Policy: default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; font-src 'self'; connect-src 'self'; form-action 'self'; frame-src https://www.enhancify.com; frame-ancestors 'none'; base-uri 'self'; object-src 'none'
+/services/seawalls/
+  Content-Security-Policy: default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; font-src 'self'; connect-src 'self'; form-action 'self'; frame-src https://www.enhancify.com; frame-ancestors 'none'; base-uri 'self'; object-src 'none'
+/services/welding-fabrication/
+  Content-Security-Policy: default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; font-src 'self'; connect-src 'self'; form-action 'self'; frame-src https://www.enhancify.com; frame-ancestors 'none'; base-uri 'self'; object-src 'none'
+/thank-you/
+  Content-Security-Policy: default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; font-src 'self'; connect-src 'self'; form-action 'self'; frame-src https://www.enhancify.com; frame-ancestors 'none'; base-uri 'self'; object-src 'none'
+/404.html
+  Content-Security-Policy: default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; font-src 'self'; connect-src 'self'; form-action 'self'; frame-src https://www.enhancify.com; frame-ancestors 'none'; base-uri 'self'; object-src 'none'
+/assets/*
+  Cache-Control: public, max-age=31536000, immutable
+/assets/fonts/*
+  Cache-Control: public, max-age=31536000, immutable
+  Access-Control-Allow-Origin: *
+/assets/favicon.ico
+  Cache-Control: public, max-age=86400
+/assets/og-image.jpg
+  Cache-Control: public, max-age=86400
+/sitemap.xml
+  Cache-Control: public, max-age=3600

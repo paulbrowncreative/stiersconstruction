@@ -1,0 +1,105 @@
+<svg class="xsec" viewBox="0 100 1000 420" role="group" aria-labelledby="xsec-t xsec-d" focusable="false">
+<title id="xsec-t">Cross-section of a waterfront lot</title>
+<desc id="xsec-d">A house, deck and concrete patio on the land side, a steel sheet-pile seawall in the middle, and a dock, boat hoist and dredged channel on the water side. Numbered parts link to the matching service pages.</desc>
+<defs>
+  <pattern id="p-soil" width="16" height="16" patternUnits="userSpaceOnUse"><rect width="16" height="16" fill="#D8D3C8"/><circle cx="3" cy="4" r="1.1" fill="#BDB4A4"/><circle cx="11" cy="9" r="1.3" fill="#BDB4A4"/><circle cx="6" cy="13" r=".9" fill="#BDB4A4"/></pattern>
+  <pattern id="p-gravel" width="10" height="10" patternUnits="userSpaceOnUse"><rect width="10" height="10" fill="#E7EAEA"/><circle cx="2.5" cy="3" r="2" fill="none" stroke="#9AA7AD"/><circle cx="7.5" cy="7.5" r="2" fill="none" stroke="#9AA7AD"/></pattern>
+  <pattern id="p-silt" width="14" height="14" patternUnits="userSpaceOnUse"><rect width="14" height="14" fill="#B4B5A8"/><circle cx="4" cy="4" r="1" fill="#96978B"/><circle cx="10" cy="10" r="1.2" fill="#96978B"/></pattern>
+  <pattern id="p-cut" width="9" height="9" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><line x1="0" y1="0" x2="0" y2="9" stroke="#C8202B" stroke-width="1.6" opacity=".6"/></pattern>
+  <linearGradient id="g-water" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#D3E5EC"/><stop offset="1" stop-color="#9DC0CE"/></linearGradient>
+  <clipPath id="c-water"><rect x="580" y="296" width="420" height="30"/></clipPath>
+</defs>
+
+<!-- ground and water bodies -->
+<rect x="580" y="310" width="420" height="120" fill="url(#g-water)"/>
+<polygon points="580,424 1000,414 1000,520 580,520" fill="url(#p-silt)"/>
+<polygon points="0,250 552,250 552,520 0,520" fill="url(#p-soil)"/>
+<line x1="0" y1="250" x2="552" y2="250" class="ink" stroke-width="2.5"/>
+
+<!-- French drain, tie-rod, anchor -->
+<rect x="522" y="286" width="36" height="80" fill="url(#p-gravel)" class="ink" stroke-width="1.5"/>
+<circle cx="540" cy="340" r="9" fill="#fff" class="ink" stroke-width="1.6"/>
+<circle cx="536" cy="340" r="1.4" fill="#10222B"/><circle cx="544" cy="340" r="1.4" fill="#10222B"/><circle cx="540" cy="344" r="1.4" fill="#10222B"/>
+<line x1="400" y1="300" x2="560" y2="300" stroke="#22343D" stroke-width="4" stroke-linecap="round"/>
+<rect x="391" y="278" width="10" height="44" fill="#22343D"/>
+
+<!-- dredged zone -->
+<path d="M628 421 C700 466 900 470 968 413 L968 416 L628 424 Z" fill="url(#p-cut)"/>
+<path d="M628 422 C700 466 900 470 968 414" fill="none" stroke="#C8202B" stroke-width="2.5" stroke-dasharray="7 6" stroke-linecap="round"/>
+
+<!-- sheet wall + cap -->
+<rect x="560" y="246" width="20" height="226" fill="#22343D"/>
+<g stroke="#5B7784" stroke-width="1.2"><line x1="565" y1="252" x2="565" y2="468"/><line x1="570" y1="252" x2="570" y2="468"/><line x1="575" y1="252" x2="575" y2="468"/></g>
+<rect x="552" y="234" width="36" height="14" fill="#B7C0C4" class="ink" stroke-width="1.8"/>
+
+<!-- dock, piles, gangway, rail -->
+<g fill="#5A4634"><rect x="612" y="290" width="9" height="164"/><rect x="700" y="290" width="9" height="164"/><rect x="760" y="290" width="9" height="164"/></g>
+<rect x="600" y="280" width="170" height="10" fill="#CDA872" class="ink" stroke-width="1.6"/>
+<g stroke="#A88650" stroke-width="1"><line x1="626" y1="281" x2="626" y2="289"/><line x1="652" y1="281" x2="652" y2="289"/><line x1="678" y1="281" x2="678" y2="289"/><line x1="704" y1="281" x2="704" y2="289"/><line x1="730" y1="281" x2="730" y2="289"/><line x1="750" y1="281" x2="750" y2="289"/></g>
+<line x1="586" y1="240" x2="606" y2="281" stroke="#CDA872" stroke-width="7" stroke-linecap="butt"/>
+<g stroke="#22343D" stroke-width="3" stroke-linecap="round" fill="none"><polyline points="592,214 616,256"/><line x1="595" y1="219" x2="595" y2="241"/><line x1="606" y1="238" x2="606" y2="268"/></g>
+
+<!-- boat hoist + boat -->
+<g fill="#22343D"><rect x="796" y="226" width="8" height="216"/><rect x="972" y="226" width="8" height="216"/><rect x="792" y="226" width="192" height="9"/><rect x="806" y="291" width="164" height="6"/></g>
+<g stroke="#22343D" stroke-width="2"><line x1="832" y1="235" x2="832" y2="291"/><line x1="940" y1="235" x2="940" y2="291"/></g>
+<path d="M812 291 L966 291 L948 263 L838 263 Z" fill="#fff" class="ink"/>
+<path d="M872 263 L880 241 L924 241 L934 263 Z" fill="#E9EEF0" class="ink" stroke-width="1.8"/>
+<path d="M886 261 L891 247 L906 247 L906 261 Z M912 261 L912 247 L921 247 L926 261 Z" fill="#9DC0CE"/>
+
+<!-- water surface -->
+<g clip-path="url(#c-water)"><g class="waves"><path d="M572 310 q12 -8 24 0 t24 0 t24 0 t24 0 t24 0 t24 0 t24 0 t24 0 t24 0 t24 0 t24 0 t24 0 t24 0 t24 0 t24 0 t24 0 t24 0 t24 0 t24 0 t24 0" fill="none" stroke="#4F7F92" stroke-width="2.5" stroke-linecap="round"/></g></g>
+
+<!-- land structures -->
+<g class="ink">
+  <rect x="22" y="172" width="118" height="78" fill="#fff"/>
+  <polygon points="12,174 81,116 150,174" fill="#6C8794"/>
+  <rect x="42" y="192" width="28" height="26" fill="#CFE3EA" stroke-width="1.8"/>
+  <rect x="98" y="206" width="24" height="44" fill="#DCE2E3" stroke-width="1.8"/>
+</g>
+<g class="ink" stroke-width="1.8">
+  <rect x="146" y="224" width="102" height="9" fill="#CDA872"/>
+  <rect x="152" y="233" width="6" height="17" fill="#A88650"/><rect x="198" y="233" width="6" height="17" fill="#A88650"/><rect x="240" y="233" width="6" height="17" fill="#A88650"/>
+  <line x1="148" y1="194" x2="246" y2="194"/><line x1="148" y1="194" x2="148" y2="224"/><line x1="246" y1="194" x2="246" y2="224"/>
+</g>
+<g stroke="#10222B" stroke-width="1.3"><line x1="164" y1="196" x2="164" y2="224"/><line x1="180" y1="196" x2="180" y2="224"/><line x1="196" y1="196" x2="196" y2="224"/><line x1="212" y1="196" x2="212" y2="224"/><line x1="228" y1="196" x2="228" y2="224"/></g>
+<rect x="252" y="243" width="92" height="7" fill="#B7C0C4" class="ink" stroke-width="1.8"/>
+<g stroke="#10222B" stroke-width="1.2"><line x1="283" y1="243" x2="283" y2="250"/><line x1="314" y1="243" x2="314" y2="250"/></g>
+
+<!-- excavator -->
+<g stroke-linecap="round" stroke-linejoin="round">
+  <polyline points="462,222 424,168 386,206" fill="none" stroke="#10222B" stroke-width="13"/>
+  <polyline points="462,222 424,168 386,206" fill="none" stroke="#F4B400" stroke-width="9"/>
+  <line x1="386" y1="206" x2="370" y2="240" stroke="#10222B" stroke-width="11"/>
+  <line x1="386" y1="206" x2="370" y2="240" stroke="#F4B400" stroke-width="7"/>
+  <polygon points="356,234 378,238 374,252 353,250" fill="#22343D" stroke="#10222B" stroke-width="1.5"/>
+  <line x1="474" y1="224" x2="432" y2="184" stroke="#10222B" stroke-width="3.5"/>
+  <rect x="446" y="236" width="86" height="14" rx="7" fill="#22343D"/>
+  <rect x="456" y="212" width="62" height="26" rx="3" fill="#F4B400" stroke="#10222B" stroke-width="2"/>
+  <path d="M488 212 v-20 h24 l6 20 z" fill="#F4B400" stroke="#10222B" stroke-width="2"/>
+  <path d="M493 210 v-14 h15 l4 14 z" fill="#CFE3EA"/>
+  <rect x="514" y="217" width="12" height="19" fill="#22343D"/>
+</g>
+<path d="M523 250 l7 -11 l9 4 l5 -9 l8 10 l4 6 z" fill="#B7C0C4" class="ink" stroke-width="1.6"/>
+
+<!-- annotations -->
+<g class="ann">
+  <text x="396" y="350" text-anchor="middle">Tie-rod and anchor</text>
+  <text x="512" y="392" text-anchor="end">French drain</text>
+  <text x="546" y="492" text-anchor="end">Sheet wall, driven below the lake bed</text>
+  <text x="800" y="500" text-anchor="middle">Dredged to restore depth</text>
+  <text x="886" y="344" text-anchor="middle" fill="#2B5D73">Waterline</text>
+  <text x="30" y="290">Soil and fill</text>
+</g>
+
+<!-- linked parts: transparent hit areas + numbered pins -->
+<a class="part" data-part="seawalls" href="/services/seawalls/"><title>1. Seawalls</title><rect class="hit" x="548" y="230" width="46" height="246" rx="4"/><g class="pin"><circle cx="570" cy="356" r="17"/><text x="570" y="356">1</text></g></a>
+<a class="part" data-part="docks" href="/services/docks/"><title>2. Docks</title><rect class="hit" x="596" y="268" width="180" height="30" rx="4"/><g class="pin"><circle cx="684" cy="260" r="17"/><text x="684" y="260">2</text></g></a>
+<a class="part" data-part="pilings" href="/services/pilings/"><title>3. Pilings</title><rect class="hit" x="606" y="300" width="20" height="150" rx="3"/><rect class="hit" x="694" y="300" width="20" height="150" rx="3"/><rect class="hit" x="754" y="300" width="20" height="150" rx="3"/><g class="pin"><circle cx="704" cy="372" r="17"/><text x="704" y="372">3</text></g></a>
+<a class="part" data-part="boat-hoists" href="/services/boat-hoists/"><title>4. Boat hoists</title><rect class="hit" x="788" y="222" width="200" height="222" rx="4"/><g class="pin"><circle cx="884" cy="202" r="17"/><text x="884" y="202">4</text></g></a>
+<a class="part" data-part="dredging" href="/services/dredging/"><title>5. Dredging</title><rect class="hit" x="622" y="410" width="352" height="60" rx="4"/><g class="pin"><circle cx="800" cy="440" r="17"/><text x="800" y="440">5</text></g></a>
+<a class="part" data-part="welding-fabrication" href="/services/welding-fabrication/"><title>6. Welding and fabrication</title><rect class="hit" x="586" y="206" width="38" height="66" rx="4"/><g class="pin"><circle cx="622" cy="194" r="17"/><text x="622" y="194">6</text></g></a>
+<a class="part" data-part="excavating-grading" href="/services/excavating-grading/"><title>7. Excavating and grading</title><rect class="hit" x="340" y="156" width="192" height="98" rx="4"/><g class="pin"><circle cx="470" cy="170" r="17"/><text x="470" y="170">7</text></g></a>
+<a class="part" data-part="demolition" href="/services/demolition/"><title>8. Demolition</title><rect class="hit" x="518" y="230" width="34" height="24" rx="3"/><g class="pin"><circle cx="546" cy="204" r="17"/><text x="546" y="204">8</text></g></a>
+<a class="part" data-part="concrete" href="/services/concrete/"><title>9. Concrete</title><rect class="hit" x="248" y="238" width="100" height="16" rx="3"/><g class="pin"><circle cx="298" cy="218" r="17"/><text x="298" y="218">9</text></g></a>
+<a class="part" data-part="decks" href="/services/decks/"><title>10. Decks</title><rect class="hit" x="142" y="188" width="108" height="66" rx="4"/><g class="pin"><circle cx="196" cy="160" r="17"/><text x="196" y="160">10</text></g></a>
+</svg>

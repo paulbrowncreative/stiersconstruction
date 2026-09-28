@@ -1,0 +1,17 @@
+# Old Squarespace URLs -> new structure (301)
+/all  /services/  301!
+/seawalls  /services/seawalls/  301!
+/docks-pilings  /services/docks/  301!
+/fabrication-install  /services/welding-fabrication/  301!
+/concrete  /services/concrete/  301!
+/excavating-grading  /services/excavating-grading/  301!
+/excavatinggrading  /services/excavating-grading/  301!
+/decks  /services/decks/  301!
+/boat-hoists  /services/boat-hoists/  301!
+/photos  /projects/  301!
+/gallery-5-1  /projects/  301!
+/new-page  /services/seawalls/  301!
+/new-page-1  /services/welding-fabrication/  301!
+/new-page-2  /services/decks/  301!
+/new-page-3  /services/concrete/  301!
+/cart  /  301!
