@@ -301,7 +301,7 @@ def page(path, title, desc, body, active='', trail=None, ld=None, preload=None, 
     html_ = f'''<!doctype html>
 <html lang="en-US"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
 <title>{esc(title)}</title><meta name="description" content="{esc(desc)}"><link rel="canonical" href="{canon}"><meta name="robots" content="{robots}">
-<meta property="og:type" content="website"><meta property="og:site_name" content="{SITE['seo_name']}"><meta property="og:locale" content="en_US"><meta property="og:title" content="{esc(title)}"><meta property="og:description" content="{esc(desc)}"><meta property="og:url" content="{canon}"><meta property="og:image" content="{og}"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="630"><meta property="og:image:alt" content="Stier’s excavator setting steel sheet piling for a seawall in Metro Detroit">
+<meta property="og:type" content="website"><meta property="og:site_name" content="{esc(SITE['seo_name'])}"><meta property="og:locale" content="en_US"><meta property="og:title" content="{esc(title)}"><meta property="og:description" content="{esc(desc)}"><meta property="og:url" content="{canon}"><meta property="og:image" content="{og}"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="630"><meta property="og:image:alt" content="Stier’s excavator setting steel sheet piling for a seawall in Metro Detroit">
 <meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="{esc(title)}"><meta name="twitter:description" content="{esc(desc)}"><meta name="twitter:image" content="{og}">
 <meta name="theme-color" content="#0D2530"><meta name="format-detection" content="telephone=yes">
 <link rel="icon" href="/assets/favicon.ico" sizes="48x48"><link rel="icon" href="/assets/favicon-64.png" type="image/png" sizes="64x64"><link rel="apple-touch-icon" href="/assets/apple-touch-icon.png"><link rel="manifest" href="/site.webmanifest"><link rel="alternate" type="application/rss+xml" title="Stier’s Marine &amp; Construction Blog" href="/blog/feed.xml">
@@ -368,6 +368,10 @@ def home():
 <p class="lead mt-s">We take pride in dependable, high-quality marine and construction services. We believe in honest work, clear communication, and a commitment to doing the job right, every time.</p><div class="btn-row mt-m"><a class="btn btn-primary" href="/contact/">Get a free quote</a></div></div>
 <ul class="why-list">{''.join(f'<li><h3>{a}</h3><p>{b}</p></li>' for a, b in why_items)}</ul></div></section>'''
 
+    hitide = f'''<section class="section section-alt" aria-labelledby="ht-h"><div class="wrap split flip"><figure>{img('boat-lift-covered-slip', '(min-width:900px) 46vw, 92vw')}</figure><div><p class="eyebrow">Authorized dealer</p><h2 id="ht-h">We sell Hi-Tide boat lifts</h2>
+<p class="lead mt-s">Stier’s Construction is an authorized Hi-Tide boat lift dealer. Buy the lift and have it installed and serviced by the same crew, backed by our own cable, motor and welding work.</p>
+<p class="btn-row mt-s"><a class="btn btn-dark" href="/services/boat-hoists/">See Hi-Tide &amp; boat hoist service</a>{tel('btn btn-outline', SITE['phone'], True)}</p></div></div></section>'''
+
     rev = f'''<section class="section section-dark on-dark" aria-labelledby="r-h"><div class="wrap"><div class="section-head"><h2 id="r-h">What customers say</h2></div>
 <div class="reviews"><figure class="quote"><blockquote style="margin:0"><p>“{QUOTES[0][0]}”</p></blockquote><figcaption><cite>{QUOTES[0][1]}</cite></figcaption></figure>
 <figure class="quote"><blockquote style="margin:0"><p>“{QUOTES[1][0]}”</p></blockquote><figcaption><cite>{QUOTES[1][1]}</cite></figcaption></figure></div></div></section>'''
@@ -379,14 +383,14 @@ def home():
 <figure>{img('stiers-excavator-demo-site', '(min-width:900px) 46vw, 92vw')}</figure></div></section>'''
 
     area = f'''<section class="section section-alt" aria-labelledby="a-h"><div class="wrap split flip"><figure>{img('barge-open-water', '(min-width:900px) 46vw, 92vw')}</figure><div><h2 id="a-h">Serving Metro Detroit’s waterfront</h2>
-<p class="lead mt-s">We serve waterfront communities on Lake St. Clair, the St. Clair River, the Detroit River, and Lake Erie.</p>
+<p class="lead mt-s">We serve waterfront communities on Lake St. Clair, the St. Clair River and the Detroit River.</p>
 <ul class="town-links" aria-label="Communities we serve">{''.join(f'<li><a href="/service-area/{t[chr(115)+chr(108)+chr(117)+chr(103)]}/">{t[chr(110)+chr(97)+chr(109)+chr(101)]}</a></li>' for t in TOWNS)}</ul><p class="btn-row mt-s"><a class="btn btn-dark" href="/service-area/">See where we work</a>{tel('btn btn-outline', SITE['phone'], True)}</p></div></div></section>'''
 
     latest = [POST_BY_SLUG[s] for s in ('seawall-guide-metro-detroit', 'michigan-permits-seawalls-docks-dredging', 'michigan-winter-dock-seawall-damage')]
     guides = f'<section class="section section-alt" aria-labelledby="gd-h"><div class="wrap"><div class="section-head"><h2 id="gd-h">Waterfront Guides for Metro Detroit Owners</h2><p>Plain-English answers on seawalls, docks, permits and more.</p></div><ul class="post-list">{"".join(post_row(p) for p in latest)}</ul><p class="mt-m"><a class="btn btn-outline" href="/blog/">Read the Blog</a></p></div></section>'
     faq = f'''<section class="section" aria-labelledby="f-h"><div class="wrap"><div class="section-head"><h2 id="f-h">Questions we hear a lot</h2></div>{faq_html(HOME_FAQS)}</div></section>'''
     fin = f'''<section class="fin-band" aria-labelledby="fb-h"><div class="wrap fin-band-in"><div><h2 id="fb-h">Financing available for your project</h2><p>Spread the cost of a seawall, dock, deck or concrete job into monthly payments. Arranged through Enhancify, subject to credit approval.</p></div><a class="btn btn-dark" href="/financing/">See financing options</a></div></section>'''
-    body = hero + xsec + mosaic + why + rev + fin + team + area + guides + faq + cta_band()
+    body = hero + xsec + mosaic + why + hitide + rev + fin + team + area + guides + faq + cta_band()
     page('/', 'Marine & Seawall Contractor in Metro Detroit | Stier’s',
          'Seawalls, docks, pilings, hoists, dredging, welding, concrete and decks on Lake St. Clair and the Detroit River. Owner-led crew. Free quotes.',
          body, ld=[faq_ld(HOME_FAQS)], preload=HERO_KEY, prio=1.0, sm_images=[img_url(HERO_KEY)])
@@ -489,8 +493,7 @@ def about():
 GROUP_TEXT = {
  'Lake St. Clair': 'Lake St. Clair is shallow, and its northern arm, Anchor Bay, is only about 1 to 11 feet deep across most of its area. Canals, marinas and open lakefront mean walls, docks, hoists and dredging all come up, and record high water in 2019 and 2020 tested shoreline structures.',
  'St. Clair River': 'The St. Clair River runs at roughly 1.3 to 2.1 mph between Algonac and Marysville, according to NOAA, and faster near the Blue Water Bridge at Port Huron. Ships pass close to shore and river ice is a winter fact of life, so anchoring, scour resistance and protected steel matter.',
- 'Detroit River': 'The Detroit River is a busy shipping channel linking Lake St. Clair with Lake Erie. Downriver communities combine river frontage with canals, channels and islands, so current, wakes, silt, ice and island access all shape the work.',
- 'Lake Erie and Tributaries': 'At the region’s southern edge, Lake Erie brings open-water waves and level swings, while tributary rivers such as the River Raisin and Huron River add sediment, current and different permit rules.',
+ 'Detroit River': 'The Detroit River is a busy commercial shipping channel. Its islands, channels and canals combine river frontage with canal lots, so current, wakes, silt and ice all shape the work.',
 }
 def town_label(t):
     return {'city': 'city', 'township': 'township', 'charter township': 'charter township'}[t['kind']]
@@ -503,13 +506,9 @@ def permits_html(t):
         return f'<p>Because Grosse Pointe Woods has no Lake St. Clair shoreline of its own, most projects here are governed by the city building department: permits and inspections for decks, driveways, patios, demolition and grading. If you also own waterfront property elsewhere, state and federal permits may apply to that work. See our <a href="/blog/michigan-permits-seawalls-docks-dredging/">Michigan permit guide</a>.</p>'
     if w in ('lsc', 'anchor'):
         core = 'Work at or below the ordinary high-water mark on Lake St. Clair (574.7 feet on the 1955 datum, or 575.3 feet on the 1985 datum) generally needs a permit from Michigan EGLE and often the U.S. Army Corps of Engineers. Applications go through EGLE’s MiEnviro Portal, which forwards them to the Corps.'
-    elif w in ('scr', 'dr'):
+    else:
         r = WATERS[w]['short']
         core = f'{r[0].upper() + r[1:]} is a federally navigated connecting waterway, and work in or over the water generally involves EGLE and the U.S. Army Corps of Engineers. EGLE district staff can tell you which part of Michigan law applies to your site, such as Part 325 (Great Lakes Submerged Lands) or Part 301 (Inland Lakes and Streams), and applications go through the MiEnviro Portal.'
-    elif w == 'erie':
-        core = 'Lake Erie’s ordinary high-water mark is 571.6 feet on the 1955 datum (572.2 feet on the 1985 datum), and work below it on Great Lakes bottomlands generally needs an EGLE permit and a U.S. Army Corps of Engineers permit. The River Raisin is regulated differently, so ask EGLE which rules apply to your address.'
-    else:
-        core = 'Rivers that flow into the Great Lakes are often regulated as streams, while the Great Lakes shoreline itself is regulated separately. EGLE district staff can tell you which rules apply at your address, and applications go through the MiEnviro Portal. Federal review by the U.S. Army Corps of Engineers may also apply.'
     return f'<p>{core}</p><p>{local}</p><p>Read our <a href="/blog/michigan-permits-seawalls-docks-dredging/">Michigan permit guide for seawalls, docks and dredging</a>.</p>'
 
 def town_page(t):
@@ -555,15 +554,15 @@ def service_area():
         rows = ''.join(f'<li><a href="/service-area/{t["slug"]}/"><b>{t["name"]}</b><span>{t["county"]} County. {t["lead"]}</span></a></li>' for t in ts)
         sections += f'<section id="{slugify(g)}" aria-labelledby="{slugify(g)}-h"><h2 id="{slugify(g)}-h">{g}</h2><div class="prose"><p>{GROUP_TEXT[g]}</p></div><ul class="related one-col">{rows}</ul></section>'
     body = f'''<section class="page-hero on-dark"><div class="wrap">{crumbs(trail)}<div class="page-hero-grid"><div><h1>Marine and Construction Services Across Metro Detroit’s Waterfront</h1>
-<p class="lead">We serve waterfront communities on Lake St. Clair, the St. Clair River, the Detroit River and Lake Erie, along with the excavating, concrete, welding and deck work on the lots beside them.</p>
+<p class="lead">We serve waterfront communities on Lake St. Clair, the St. Clair River and the Detroit River, along with the excavating, concrete, welding and deck work on the lots beside them.</p>
 <div class="btn-row"><a class="btn btn-primary" href="/contact/">Get a free quote</a>{tel('btn btn-ghost', 'Call ' + SITE['phone'], True)}</div></div>
 <figure class="page-hero-media">{img('barge-open-water', '(min-width:940px) 46vw, 92vw', prio=True, lazy=False)}</figure></div></div></section>
-<section class="section"><div class="wrap content-grid"><div class="main"><section><h2>Where We Work</h2><div class="prose"><p>Lake St. Clair sits between the St. Clair River to the north and the Detroit River to the south, and the four waterways behave differently. Depth, current, ship traffic and ice change how a wall, dock or piling should be built. Pick your community below for local details, or read <a href="/blog/lake-st-clair-detroit-river-st-clair-river-waterfront-differences/">how your waterway changes your seawall and dock</a>.</p><p>Not sure we cover your address? Call and ask. Our team works for homeowners, commercial property owners and marinas.</p></div></section>{sections}
+<section class="section"><div class="wrap content-grid"><div class="main"><section><h2>Where We Work</h2><div class="prose"><p>Lake St. Clair sits between the St. Clair River to the north and the Detroit River to the south, and the three waterways behave differently. Depth, current, ship traffic and ice change how a wall, dock or piling should be built. Pick your community below for local details, or read <a href="/blog/lake-st-clair-detroit-river-st-clair-river-waterfront-differences/">how your waterway changes your seawall and dock</a>.</p><p>Not sure we cover your address? Call and ask. Our team works for homeowners, commercial property owners and marinas.</p></div></section>{sections}
 <section><h2>What Waterfront Owners Should Know About Permits</h2><div class="prose"><p>Work in or over Great Lakes waters generally involves state and federal permits. In Michigan that means EGLE, and often the U.S. Army Corps of Engineers, and your city or township may add its own rules. EGLE’s <a href="{EGLE_LINK}" target="_blank" rel="noopener">shoreline protection permit guidance (PDF)</a> explains the process. Requirements depend on your site, so confirm before work starts.</p></div></section></div>
 <aside class="aside-sticky aside-stack"><div class="panel panel-dark"><h3>Not Sure We Cover You?</h3><small>Mon to Fri, 8am to 5pm</small><a class="phone" href="tel:{SITE['phone_e164']}">{SITE['phone']}</a><a class="btn btn-primary" href="/contact/">Send Your Address</a></div>
 <div class="panel"><h3>Popular Services</h3><ul class="related">{''.join(f'<li><a href="/services/{s}/"><b>{BY_SLUG[s]["name"]}</b><span>{BY_SLUG[s]["summary"]}</span></a></li>' for s in ['seawalls','docks','boat-hoists','dredging','pilings'])}</ul></div></aside></div></section>
 {cta_band()}'''
-    page('/service-area/', 'Service Area: Lake St. Clair, Detroit River & More | Stier’s', 'Stier’s Construction serves waterfront towns on Lake St. Clair, the St. Clair River, the Detroit River and Lake Erie, from St. Clair Shores to Monroe.',
+    page('/service-area/', 'Service Area: Lake St. Clair, Detroit River & More | Stier’s', 'Stier’s Construction serves waterfront towns on Lake St. Clair, the St. Clair River and the Detroit River, from Grosse Ile to Port Huron.',
          body, active='area', trail=trail, prio=0.9, sm_images=[img_url('barge-open-water')])
 
 # ============================================================ FORMS

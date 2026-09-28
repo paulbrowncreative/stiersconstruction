@@ -124,13 +124,13 @@ SERVICES = [
   related=['docks', 'seawalls', 'boat-hoists', 'welding-fabrication']),
 
  dict(slug='boat-hoists', name='Boat hoists', group='water',
-  summary='Installs, cable changes, motor service and welding repairs.',
+  summary='Sales, installs, cable changes, motor service and welding repairs. Authorized Hi-Tide dealer.',
   hub_img='boat-house-hoist-tarped-boat',
-  title='Boat Hoist Installation & Repair | Metro Detroit | Stier’s',
-  desc='Boat hoist installs and maintenance: boat house hoists, elevator, 4-point, 8-point, PWC lifts and davits. Cable, motor and welding service.',
-  h1='Boat hoist installation, repair and maintenance',
-  lead='From jet ski lifts to boat house hoists for 35 to 40 foot boats, we install lifts and keep them working: cables, motors and welded frames.',
-  checks=['Boat house, elevator, 4- and 8-point', 'PWC lifts and davits', 'Cable and motor service', 'In-house welding repairs'],
+  title='Boat Hoist Installation & Repair | Hi-Tide Dealer | Stier’s',
+  desc='Boat hoist sales and installs, including Hi-Tide: boat house hoists, elevator, 4-point, 8-point, PWC lifts and davits. Cable, motor and welding service.',
+  h1='Boat hoist sales, installation and maintenance',
+  lead='From jet ski lifts to boat house hoists for 35 to 40 foot boats, we sell, install and keep lifts working: cables, motors and welded frames. Stier’s Construction is an authorized Hi-Tide boat lift dealer.',
+  checks=['Authorized Hi-Tide dealer', 'Boat house, elevator, 4- and 8-point', 'PWC lifts and davits', 'Cable, motor and in-house welding service'],
   hero_img='boat-house-hoist-tarped-boat',
   sections=[
    dict(id='sizes', h2='Match the lift to your boat', html='__SIZECHART__'),
@@ -140,6 +140,11 @@ SERVICES = [
      ('4-point lift', 'Supports the boat at four contact points along the hull, evenly distributing weight for smaller boats. Best for boats up to 25 feet, including runabouts, center consoles and fishing boats. Compact, economical and simple to operate.'),
      ('8-point lift', 'Eight contact points along the hull give extra support for larger boats and wider beams. Typically used for boats 30 to 40 feet, including larger cruisers and pontoon boats, reducing stress on the hull and adding stability.'),
      ('PWC lift', 'Designed for jet skis, WaveRunners and other small watercraft under 15 feet. Keeps your watercraft out of the water, reducing wear and preventing algae buildup. Lightweight and easy to operate.')])),
+   dict(id='hi-tide', h2='An authorized Hi-Tide boat lift dealer', html=
+     '<p class="measure">Stier’s Construction sells, installs and services Hi-Tide boat lifts alongside every other hoist brand we work on. Buying the lift and having it installed and maintained through one contractor means one point of contact for the life of the lift.</p>' +
+     groups(('Buying a Hi-Tide lift through Stier’s', ['Sized and configured for your boat, slip and water depth', 'Installed by the same crew that services it', 'Backed by our own cable, motor and welding work, not a call to a separate installer']),
+            ('Already own a Hi-Tide lift?', ['Cable change-out and motor service', 'Welding repairs to frames and supports, done in-house', 'Seasonal inspection before launch'])) +
+     '<div class="mt-m">' + note('<p>Ask about current Hi-Tide models and pricing when you request a quote. We will confirm what fits your boat, slip and budget.</p>') + '</div>'),
    dict(id='what', h2='Hoist installation and maintenance', html=groups(
      ('Installation', ['Boat house hoists', 'Elevator lifts', '4-point lifts', '8-point lifts', 'PWC (jet ski) lifts', 'Davits']),
      ('Maintenance', ['Cable change-out: worn or damaged cables replaced with quality materials and precise installation, so the lift operates safely and smoothly', 'Motor maintenance: motors inspected, cleaned, lubricated and serviced to prevent costly breakdowns and extend life', 'Welding maintenance: lift frames, supports and structural parts repaired or reinforced to keep the lift strong and reliable for years'])) +
@@ -149,7 +154,8 @@ SERVICES = [
   faqs=[
    ('Which boat hoist fits my boat?', '<p>Length is the starting point: PWC lifts for watercraft under 15 feet, 4-point lifts up to about 25 feet, elevator lifts up to about 30 feet, 8-point lifts for 30 to 40 foot boats, and boat house hoists for boats up to 35 to 40 feet. Weight, beam and hull shape matter too, so send us your boat’s details.</p>'),
    ('What is the difference between a 4-point and an 8-point lift?', '<p>A 4-point lift supports the hull at four contact points and suits smaller runabouts, center consoles and fishing boats. An 8-point lift spreads weight over eight points, which reduces hull stress and adds stability for larger cruisers and pontoon boats.</p>'),
-   ('Can you service a hoist I already have?', '<p>Yes: cable change-out, motor maintenance and welding repairs to frames and supports.</p>'),
+   ('Do you sell Hi-Tide boat lifts?', '<p>Yes. Stier’s Construction is an authorized Hi-Tide dealer. We can size and quote a new Hi-Tide lift, install it, and keep it running with our own cable, motor and welding service.</p>'),
+   ('Can you service a hoist I already have?', '<p>Yes: cable change-out, motor maintenance and welding repairs to frames and supports, on Hi-Tide lifts and other brands.</p>'),
    ('When should hoist cables be replaced?', '<p>Replace cables that are frayed, kinked or corroded, or that no longer lift evenly. If you are not sure, ask us to take a look before the season starts.</p>'),
   ],
   related=['docks', 'welding-fabrication', 'pilings', 'seawalls']),
