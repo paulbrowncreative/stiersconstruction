@@ -400,6 +400,7 @@ dialog.lightbox::backdrop{background:rgba(9,28,37,.92)}
 .acc-card-body{padding:12px 14px 16px}
 .acc-card-body h3{font-size:.98rem;font-stretch:100%;margin:0 0 4px}
 .acc-card-body p{margin:0;font-size:.88rem;color:var(--muted)}
+.acc-photo-wide{aspect-ratio:1/1;max-width:260px}
 
 /* ---------- footer ---------- */
 .site-footer{background:var(--harbor-950);color:#B9CBD2;padding-top:clamp(48px,6vw,84px)}

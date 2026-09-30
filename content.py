@@ -72,13 +72,13 @@ SERVICES = [
   related=['pilings', 'docks', 'dredging', 'excavating-grading', 'concrete']),
 
  dict(slug='docks', name='Docks', group='water',
-  summary='Floating, fixed and custom docks. Repairs, decking upgrades and removal.',
+  summary='Floating, fixed and custom docks. Authorized Candock dealer. Repairs, decking upgrades and removal.',
   hub_img='wood-dock-yellow-flag',
-  title='Dock Installation & Repair in Metro Detroit | Stier’s',
-  desc='Floating, fixed and custom docks built, repaired and removed on Lake St. Clair and the Detroit River. Residential, commercial and marina work.',
+  title='Dock Installation & Repair | Candock Dealer | Stier’s',
+  desc='Floating, fixed and custom docks built and repaired on Lake St. Clair and the Detroit River, including Candock modular floating docks and the JetRoll PWC dock.',
   h1='Dock construction, repair and removal in Metro Detroit',
-  lead='Floating docks, fixed docks and custom designs, built to handle Lake St. Clair and Detroit River conditions and to give you safe, easy access to the water.',
-  checks=['Floating and fixed docks', 'Custom and specialty designs', 'Structural repair, re-decking', 'Dock removal'],
+  lead='Floating docks, fixed docks and custom designs, built to handle Lake St. Clair and Detroit River conditions and to give you safe, easy access to the water. Stier’s Construction is an authorized Candock dealer.',
+  checks=['Authorized Candock dealer', 'Floating and fixed docks', 'Custom and specialty designs', 'Structural repair, re-decking'],
   hero_img='wood-dock-yellow-flag',
   sections=[
    dict(id='what', h2='What we do', html=groups(
@@ -90,10 +90,16 @@ SERVICES = [
      ('Fixed dock', 'Sits on pilings at a set height and feels solid underfoot.'),
      ('Custom dock', 'Designed around an irregular shoreline, a marina layout or a commercial need that a standard dock will not meet.')]) +
      '<div class="mt-m">' + note('<p>Water depth, exposure to waves and boat traffic, and how you use the dock decide the right type. We are happy to talk it through before you commit.</p>') + '</div>'),
+   dict(id='candock', h2='An authorized Candock dealer', html=
+     '<p class="measure">Stier’s Construction sells, installs and services Candock modular floating docks, including the JetRoll drive-on dock for personal watercraft. Candock systems are unsinkable, foam-filled and built to connect, extend or reconfigure as your waterfront needs change.</p>' +
+     groups(('Buying a Candock system through Stier’s', ['Sized and laid out for your shoreline, slip or PWC', 'Installed by the same crew that services it', 'Backed by our own maintenance and repair work']),
+            ('Candock floating docks fit', ['Residential and leisure docks', 'Commercial docks and marinas', 'Canoe, kayak and rowing docks, PWC and boat lift systems'])) +
+     '<p class="mt-m"><a class="btn btn-outline" href="/services/docks/candock/">See the Candock lineup</a></p>'),
   ],
   gallery=['l-shaped-dock-choppy-water', 'gray-dock-walkway-canal', 'dock-work-through-ice'],
   faqs=[
    ('Should I choose a floating dock or a fixed dock?', '<p>A floating dock moves with the water level; a fixed dock stays at one height on pilings. We install both, plus custom designs, so the choice comes down to your water depth, exposure and how you use the dock.</p>'),
+   ('Do you sell Candock floating docks?', '<p>Yes. Stier’s Construction is an authorized Candock dealer, including the JetRoll drive-on dock for personal watercraft. We can size a system for your shoreline and install and service it.</p>'),
    ('Can you repair or re-deck my existing dock?', '<p>Yes. We handle structural repairs and decking upgrades. If a dock is beyond repair, we can remove it and build a new one.</p>'),
    ('Do I need a permit for a dock?', '<p>Often. Permit rules depend on the waterway and on whether the dock is seasonal or permanent, so check with EGLE before building. Send us your address and we can talk through what is typical.</p>'),
   ],
@@ -444,6 +450,33 @@ HI_TIDE_PRODUCTS = [
   ]),
 ]
 HI_TIDE_BY_SLUG = {p['slug']: p for p in HI_TIDE_PRODUCTS}
+
+# Candock floating dock catalog. Stier's Construction is an authorized Candock dealer.
+# JetRoll specs/copy confirmed by the site owner from Candock's own product material.
+# Candock's broader floating-dock lines are sold too but not yet detailed here -- add
+# them to CANDOCK_PRODUCTS the same way once specs and photos are supplied.
+CANDOCK_CATS = {
+ 'pwc-drive-on-docks': dict(name='PWC Drive-On Docks', desc='A drive-on dock for personal watercraft: pull up, drive on and the dock does the rest. No winch or separate lift needed.'),
+}
+CANDOCK_PRODUCTS = [
+ dict(slug='jetroll', name='JetRoll', cat='pwc-drive-on-docks', img='candock-jetroll-installed',
+  tagline='A versatile drive-on dock system that works for all sizes of personal watercraft.',
+  desc='No assembly required. Hassle-free installation. 100% foam-filled and unsinkable. Docking your personal watercraft has never been so easy: the JetRoll is compatible with Candock’s floating dock system as well as other docks on the market, and its fully adjustable wheel configuration offers easy drive-on and launch maneuvers.',
+  material='Medium-density polyethylene (MDPE)',
+  dimensions='H: 30.5 cm (12″) · L: 3.86 m (152″) · W: 1.93 m (76″)',
+  weight='159 kg (350 lbs.)',
+  colors=['Grey', 'Beige'],
+  warranty='7-year warranty on Candock modular floating systems',
+  features=['No assembly required', 'Maintenance free', 'Compatible with all types of docks', 'Fully adjustable wheel configuration', 'Unsinkable, 100% foam-filled', 'Easy berthing and launching maneuvers'],
+  accessories_img='candock-jetroll-accessories',
+  accessories=['Bow stop', 'Hole caps'],
+  configurations=[
+   ('Stand alone', 'Completely autonomous', 'The JetRoll can easily and safely be installed in a “stand alone” configuration. The best environments for this configuration are areas with shallow water and soft lake or sea beds.'),
+   ('Connected to a Candock', 'Seamless transition', 'Connect the JetRoll seamlessly into an existing Candock floating dock with the same connecting pins and threaded tabs used throughout the dock system.'),
+   ('Connected to a fixed structure', 'Simple and efficient', 'Secure the JetRoll to a fixed structure with “Z” brackets. Pair it with pilings and PVC sleeves to accommodate seasonal water-level changes without hindering access.'),
+  ]),
+]
+CANDOCK_BY_SLUG = {p['slug']: p for p in CANDOCK_PRODUCTS}
 
 HOME_FAQS = [
  ('What areas do you serve?', '<p>We work across Metro Detroit, with a focus on the Lake St. Clair and Detroit River waterfront. Not sure we cover your address? Call <a href="tel:+15867037214">586-703-7214</a> and ask.</p>'),
