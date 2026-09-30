@@ -487,6 +487,15 @@ CANDOCK_PRODUCTS = [
    ('Connected to a Candock', 'Seamless transition', 'Connect the JetRoll seamlessly into an existing Candock floating dock with the same connecting pins and threaded tabs used throughout the dock system.'),
    ('Connected to a fixed structure', 'Simple and efficient', 'Secure the JetRoll to a fixed structure with “Z” brackets. Pair it with pilings and PVC sleeves to accommodate seasonal water-level changes without hindering access.'),
   ]),
+ dict(slug='jetslide', name='JetSlide', cat='pwc-drive-on-docks', img='candock-jetslide-installed',
+  tagline='A lightweight and versatile drive-on dock system that works as a jet ski dock or boat dock.',
+  desc='Eliminate unnecessary extra maintenance and premature wear and tear on your watercraft’s hull by keeping your PWC or boat protected from the accumulation of marine life and vegetation. The JetSlide is a dry dock system that is easy to set up, has a clean-looking aesthetic and keeps your personal watercraft conveniently accessible out of the water.',
+  material='High-density polyethylene resin',
+  dimensions='H: 38 cm (15″) · L: 2.88 m (114″) · W: 0.96 m (38″)',
+  weight='68 kg (150 lbs.)',
+  colors=['Grey', 'Beige'],
+  features=['No assembly required', 'Maintenance free', 'Compatible with all types of docks', 'Lightweight and resistant to impact', 'UV and weather resistant', 'Designed to evenly distribute watercraft weight', 'Foam-filled interior keeps it afloat in any conditions', 'Compatible with different types of watercraft'],
+  install_note='Because boats and PWCs vary so much in size, shape and type, Candock Inc. must approve every JetSlide installation, even when it is installed by an authorized Candock distributor — otherwise the warranty cannot be applied. We handle that approval as part of the install.'),
 ]
 CANDOCK_BY_SLUG = {p['slug']: p for p in CANDOCK_PRODUCTS}
 

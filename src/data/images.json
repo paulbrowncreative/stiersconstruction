@@ -1642,5 +1642,24 @@
 "candock-floating-dock-cube-480.ff899ddf.webp"
 ]
 ]
+},
+"candock-jetslide-installed": {
+"w": 1000,
+"h": 240,
+"alt": "Personal watercraft docked side by side on Candock JetSlide drive-on docks",
+"files": [
+[
+260,
+"candock-jetslide-installed-260.4065fe0f.webp"
+],
+[
+383,
+"candock-jetslide-installed-383.801cb025.webp"
+],
+[
+480,
+"candock-jetslide-installed-480.5961e916.webp"
+]
+]
 }
 }

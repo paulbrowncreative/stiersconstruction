@@ -550,6 +550,7 @@ def candock_product(p):
     specs_rows = [('Material', p['material']), ('Dimensions', p['dimensions']), ('Weight', p['weight']), ('Colors', ', '.join(p['colors']))] + p.get('extra_specs', [])
     specs_grid = '<ul class="warranty-grid">' + ''.join(f'<li><span class="w-label">{lbl}</span><strong>{val}</strong></li>' for lbl, val in specs_rows) + '</ul>'
     warranty_note = note(f'<p>{p["warranty"]}.</p>') if p.get('warranty') else ''
+    install_note = note(f'<p>{p["install_note"]}</p>') if p.get('install_note') else ''
     config_html = ''
     if p.get('configurations'):
         rows = ''.join(f'<li><h3>{name}<br><small>{tag}</small></h3><p>{desc}</p></li>' for name, tag, desc in p['configurations'])
@@ -559,7 +560,8 @@ def candock_product(p):
         acc_img = f'<span class="product-photo-frame acc-photo-wide">{img(p["accessories_img"], "260px", alt=p["name"] + " accessories")}</span>' if p.get('accessories_img') else ''
         acc_html = f'<h3 class="mt-l">Compatible Accessories</h3><div class="split" style="align-items:start">{acc_img}{ul(p["accessories"])}</div>'
     uses_html = f'<h3 class="mt-l">Where It Fits</h3>{ul(p["uses"])}' if p.get('uses') else ''
-    specs_html = f'<div class="prose"><p>{p["desc"]}</p></div>{specs_grid}<div class="mt-m">{warranty_note}</div><h3 class="mt-l">Key Features</h3>{ul(p["features"])}{config_html}{acc_html}{uses_html}'
+    notes_html = (f'<div class="mt-m">{warranty_note}</div>' if warranty_note else '') + (f'<div class="mt-m">{install_note}</div>' if install_note else '')
+    specs_html = f'<div class="prose"><p>{p["desc"]}</p></div>{specs_grid}{notes_html}<h3 class="mt-l">Key Features</h3>{ul(p["features"])}{config_html}{acc_html}{uses_html}'
     aside = f'''<aside class="aside-sticky aside-stack" aria-label="Quote and related docks"><div class="panel panel-dark"><h3>Ask About the {p['name']}</h3><small>Mon to Fri, 8am to 5pm</small>
 <a class="phone" href="tel:{SITE['phone_e164']}">{SITE['phone']}</a><a class="btn btn-primary" href="/contact/">Send Project Details</a><p class="fin-line">Financing available. <a href="/financing/">See options</a></p></div>
 <div class="panel"><h3>More {c['name']}</h3><ul class="related">{''.join(f'<li><a href="{CD_ROOT}{q["slug"]}/"><b>{q["name"]}</b><span>{CANDOCK_CATS[q["cat"]]["name"]}</span></a></li>' for q in others) or f'<li><a href="{CD_ROOT}"><b>See the full lineup</b><span>All Candock systems</span></a></li>'}</ul>
