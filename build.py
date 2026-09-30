@@ -547,7 +547,7 @@ def candock_product(p):
     hero = f'''<section class="page-hero on-dark"><div class="wrap">{crumbs(trail)}<div class="page-hero-grid"><div><p class="eyebrow">{c['name']}</p><h1>Candock {p['name']}</h1><p class="lead">{p.get('tagline') or c['desc']}</p>
 <div class="btn-row"><a class="btn btn-primary" href="/contact/">Get a free quote</a>{tel('btn btn-ghost', 'Call ' + SITE['phone'], True)}</div></div>
 <figure class="page-hero-media">{cd_photo(p, '(min-width:940px) 46vw, 92vw')}</figure></div></div></section>'''
-    specs_rows = [('Material', p['material']), ('Dimensions', p['dimensions']), ('Weight', p['weight']), ('Colors', ', '.join(p['colors']))]
+    specs_rows = [('Material', p['material']), ('Dimensions', p['dimensions']), ('Weight', p['weight']), ('Colors', ', '.join(p['colors']))] + p.get('extra_specs', [])
     specs_grid = '<ul class="warranty-grid">' + ''.join(f'<li><span class="w-label">{lbl}</span><strong>{val}</strong></li>' for lbl, val in specs_rows) + '</ul>'
     warranty_note = note(f'<p>{p["warranty"]}.</p>') if p.get('warranty') else ''
     config_html = ''
@@ -558,7 +558,8 @@ def candock_product(p):
     if p.get('accessories'):
         acc_img = f'<span class="product-photo-frame acc-photo-wide">{img(p["accessories_img"], "260px", alt=p["name"] + " accessories")}</span>' if p.get('accessories_img') else ''
         acc_html = f'<h3 class="mt-l">Compatible Accessories</h3><div class="split" style="align-items:start">{acc_img}{ul(p["accessories"])}</div>'
-    specs_html = f'<div class="prose"><p>{p["desc"]}</p></div>{specs_grid}<div class="mt-m">{warranty_note}</div><h3 class="mt-l">Key Features</h3>{ul(p["features"])}{config_html}{acc_html}'
+    uses_html = f'<h3 class="mt-l">Where It Fits</h3>{ul(p["uses"])}' if p.get('uses') else ''
+    specs_html = f'<div class="prose"><p>{p["desc"]}</p></div>{specs_grid}<div class="mt-m">{warranty_note}</div><h3 class="mt-l">Key Features</h3>{ul(p["features"])}{config_html}{acc_html}{uses_html}'
     aside = f'''<aside class="aside-sticky aside-stack" aria-label="Quote and related docks"><div class="panel panel-dark"><h3>Ask About the {p['name']}</h3><small>Mon to Fri, 8am to 5pm</small>
 <a class="phone" href="tel:{SITE['phone_e164']}">{SITE['phone']}</a><a class="btn btn-primary" href="/contact/">Send Project Details</a><p class="fin-line">Financing available. <a href="/financing/">See options</a></p></div>
 <div class="panel"><h3>More {c['name']}</h3><ul class="related">{''.join(f'<li><a href="{CD_ROOT}{q["slug"]}/"><b>{q["name"]}</b><span>{CANDOCK_CATS[q["cat"]]["name"]}</span></a></li>' for q in others) or f'<li><a href="{CD_ROOT}"><b>See the full lineup</b><span>All Candock systems</span></a></li>'}</ul>

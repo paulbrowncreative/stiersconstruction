@@ -1623,5 +1623,24 @@
 "candock-jetroll-accessories-230.939e3228.webp"
 ]
 ]
+},
+"candock-floating-dock-cube": {
+"w": 997,
+"h": 448,
+"alt": "A Candock modular floating dock made of interlocking cubes, arranged in an L-shape walkway",
+"files": [
+[
+260,
+"candock-floating-dock-cube-260.64b31cd1.webp"
+],
+[
+383,
+"candock-floating-dock-cube-383.ec96c01b.webp"
+],
+[
+480,
+"candock-floating-dock-cube-480.ff899ddf.webp"
+]
+]
 }
 }

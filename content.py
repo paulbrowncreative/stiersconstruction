@@ -452,13 +452,25 @@ HI_TIDE_PRODUCTS = [
 HI_TIDE_BY_SLUG = {p['slug']: p for p in HI_TIDE_PRODUCTS}
 
 # Candock floating dock catalog. Stier's Construction is an authorized Candock dealer.
-# JetRoll specs/copy confirmed by the site owner from Candock's own product material.
-# Candock's broader floating-dock lines are sold too but not yet detailed here -- add
-# them to CANDOCK_PRODUCTS the same way once specs and photos are supplied.
+# Specs/copy confirmed by the site owner from Candock's own product material (paraphrased,
+# not copied verbatim, from a regional dealer's reference site). Add further Candock lines
+# to CANDOCK_PRODUCTS the same way once specs and photos are supplied.
 CANDOCK_CATS = {
  'pwc-drive-on-docks': dict(name='PWC Drive-On Docks', desc='A drive-on dock for personal watercraft: pull up, drive on and the dock does the rest. No winch or separate lift needed.'),
+ 'modular-floating-docks': dict(name='Modular Floating Docks', desc='Interlocking dock cubes that connect into any shape or size, anchored to any type of seabed or an existing structure.'),
 }
 CANDOCK_PRODUCTS = [
+ dict(slug='floating-dock-system', name='Floating Dock System', cat='modular-floating-docks', img='candock-floating-dock-cube',
+  tagline='Modular dock cubes that connect into any shape or size — lightweight, sturdy and maintenance-free.',
+  desc='Candock’s modular floating dock system connects individual cubes into any layout, anchored to any type of seabed or to an existing structure. No more heavy wood, metal or cement docks: the layout can be reconfigured any time your needs change, with parts that go together in labeled numerical order and just a couple of specialty tools.',
+  material='High-density polyethylene resin',
+  dimensions='Cube: 48 cm (19″) × 48 cm (19″), H: about 35.6 cm (14″)',
+  weight='Cube: 5.5 kg (12 lbs.)',
+  colors=['Grey', 'Beige'],
+  extra_specs=[('Surface', 'Anti-skid'), ('Half-Cube Size', '48 cm (19″) × 48 cm (19″), H: about 22.9 cm (9″)'), ('Half-Cube Weight', '5 kg (11 lbs.)'), ('Floating Capacity', '68 kg (150 lbs.) per cube')],
+  warranty='20-year warranty on Candock floating systems',
+  features=['Unlimited configurations: rearrange cubes like modular building blocks as your needs change', 'Air-filled, vented cubes with a slightly domed, anti-skid surface', 'HDPE construction resists impact, weather, UV and marine chemicals', 'Maintenance-free: a stiff broom and water, or an occasional power wash, is all it needs', 'Easy, quick assembly with numbered parts and a couple of specialty tools', 'Will not oxidize or deteriorate, and is recyclable'],
+  uses=['Residential and leisure docks', 'Commercial docks and marinas', 'Canoe, kayak and rowing docks', 'Floating pools', 'Boat lift and PWC lift systems']),
  dict(slug='jetroll', name='JetRoll', cat='pwc-drive-on-docks', img='candock-jetroll-installed',
   tagline='A versatile drive-on dock system that works for all sizes of personal watercraft.',
   desc='No assembly required. Hassle-free installation. 100% foam-filled and unsinkable. Docking your personal watercraft has never been so easy: the JetRoll is compatible with Candock’s floating dock system as well as other docks on the market, and its fully adjustable wheel configuration offers easy drive-on and launch maneuvers.',
