@@ -1679,43 +1679,59 @@
 ]
 },
 "candock-service-channel-lit": {
-"w": 1000,
-"h": 166,
-"alt": "A Candock floating dock lit from inside at night by the LED service channel system",
+"w": 480,
+"h": 360,
+"alt": "A Candock Service Channel System light fixture installed on a floating dock, with wiring routed beneath the surface",
 "files": [
 [
 260,
-"candock-service-channel-lit-260.bbd4a57a.webp"
+"candock-service-channel-lit-260.0eb825d9.webp"
 ],
 [
 383,
-"candock-service-channel-lit-383.ccf8980e.webp"
+"candock-service-channel-lit-383.aa4f942d.webp"
 ],
 [
 480,
-"candock-service-channel-lit-480.fa32c30a.webp"
+"candock-service-channel-lit-480.24c18238.webp"
 ]
 ]
 },
 "candock-acc-service-cube-base": {
-"w": 100,
-"h": 95,
+"w": 460,
+"h": 345,
 "alt": "Candock Service Cube Base, the two-part base and cover for routing wires and pipes",
 "files": [
 [
-100,
-"candock-acc-service-cube-base-100.3f230430.webp"
+230,
+"candock-acc-service-cube-base-230.33902d04.webp"
+],
+[
+320,
+"candock-acc-service-cube-base-320.6aa96c6a.webp"
+],
+[
+460,
+"candock-acc-service-cube-base-460.21c1f0be.webp"
 ]
 ]
 },
 "candock-acc-led-light-cube": {
-"w": 100,
-"h": 90,
-"alt": "Candock LED Light Cube accessory",
+"w": 460,
+"h": 345,
+"alt": "Candock LED Light Cube accessory lighting up a floating dock from the cubes at night",
 "files": [
 [
-100,
-"candock-acc-led-light-cube-100.16214002.webp"
+230,
+"candock-acc-led-light-cube-230.9fa2c180.webp"
+],
+[
+320,
+"candock-acc-led-light-cube-320.9afc6e82.webp"
+],
+[
+460,
+"candock-acc-led-light-cube-460.c974f0fb.webp"
 ]
 ]
 },
