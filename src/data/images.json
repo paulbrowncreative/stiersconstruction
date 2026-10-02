@@ -1736,13 +1736,21 @@
 ]
 },
 "candock-edge-line-cubes": {
-"w": 245,
-"h": 200,
-"alt": "Two Candock Edge Line cubes, the beveled trim piece for a dock edge",
+"w": 480,
+"h": 360,
+"alt": "The beveled Candock Edge Line trim running along the edge of a floating dock at sunset",
 "files": [
 [
-245,
-"candock-edge-line-cubes-245.ab7e3153.webp"
+260,
+"candock-edge-line-cubes-260.b620c681.webp"
+],
+[
+383,
+"candock-edge-line-cubes-383.cf54a80c.webp"
+],
+[
+480,
+"candock-edge-line-cubes-480.5612014b.webp"
 ]
 ]
 }
