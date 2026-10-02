@@ -1,0 +1,169 @@
+/* Stier's Construction: small, dependency-free enhancements. The site is fully usable without JavaScript. */
+(function () {
+  'use strict';
+  var d = document;
+  window.dataLayer = window.dataLayer || [];
+  function track(name, params) { window.dataLayer.push(Object.assign({ event: name }, params || {})); }
+
+  /* ----- mobile navigation ----- */
+  var header = d.querySelector('.site-header');
+  var toggle = d.querySelector('.nav-toggle');
+  if (header && toggle) {
+    toggle.addEventListener('click', function () {
+      var open = header.classList.toggle('nav-open');
+      toggle.setAttribute('aria-expanded', String(open));
+      d.body.classList.toggle('nav-locked', open);
+    });
+    d.addEventListener('keydown', function (e) {
+      if (e.key === 'Escape') {
+        if (header.classList.contains('nav-open')) { header.classList.remove('nav-open'); toggle.setAttribute('aria-expanded', 'false'); d.body.classList.remove('nav-locked'); toggle.focus(); }
+        d.querySelectorAll('.has-menu.open').forEach(function (li) { li.classList.remove('open'); li.querySelector('.menu-btn').setAttribute('aria-expanded', 'false'); });
+      }
+    });
+    var mq = window.matchMedia('(min-width:1040px)');
+    (mq.addEventListener ? mq.addEventListener.bind(mq, 'change') : mq.addListener.bind(mq))(function () {
+      header.classList.remove('nav-open'); toggle.setAttribute('aria-expanded', 'false'); d.body.classList.remove('nav-locked');
+    });
+  }
+  d.querySelectorAll('.menu-btn').forEach(function (btn) {
+    btn.addEventListener('click', function () {
+      var li = btn.parentElement, open = li.classList.toggle('open');
+      btn.setAttribute('aria-expanded', String(open));
+    });
+  });
+  d.addEventListener('click', function (e) {
+    if (!e.target.closest('.has-menu')) d.querySelectorAll('.has-menu.open').forEach(function (li) { li.classList.remove('open'); li.querySelector('.menu-btn').setAttribute('aria-expanded', 'false'); });
+  });
+
+  /* ----- cross-section: link legend rows and drawing parts ----- */
+  var xs = d.querySelector('.xsec');
+  if (xs) {
+    var scope = xs.closest('.xsec-grid');
+    function set(part, on) {
+      scope.querySelectorAll('[data-part="' + part + '"]').forEach(function (el) { el.classList.toggle('is-active', on); });
+    }
+    scope.querySelectorAll('[data-part]').forEach(function (el) {
+      var p = el.getAttribute('data-part');
+      el.addEventListener('mouseenter', function () { set(p, true); });
+      el.addEventListener('mouseleave', function () { set(p, false); });
+      el.addEventListener('focusin', function () { set(p, true); });
+      el.addEventListener('focusout', function () { set(p, false); });
+    });
+  }
+
+  /* ----- project gallery: filters + lightbox ----- */
+  var gal = d.querySelector('.gallery');
+  if (gal) {
+    var fbar = d.querySelector('.filters'); if (fbar) fbar.hidden = false;
+    var filters = d.querySelectorAll('.filters button');
+    var status = d.getElementById('gallery-status');
+    filters.forEach(function (b) {
+      b.addEventListener('click', function () {
+        var cat = b.getAttribute('data-filter'), n = 0;
+        filters.forEach(function (x) { x.setAttribute('aria-pressed', String(x === b)); });
+        gal.querySelectorAll('figure').forEach(function (f) {
+          var show = cat === 'all' || f.getAttribute('data-cat') === cat;
+          f.hidden = !show; if (show) n++;
+        });
+        if (status) status.textContent = 'Showing ' + n + ' photos';
+      });
+    });
+    var dlg = d.getElementById('lightbox');
+    if (dlg && dlg.showModal) {
+      var img = dlg.querySelector('img'), cap = dlg.querySelector('figcaption'), last = null;
+      gal.addEventListener('click', function (e) {
+        var b = e.target.closest('button[data-full]'); if (!b) return;
+        last = b; img.src = b.getAttribute('data-full'); img.alt = b.getAttribute('data-alt'); cap.textContent = b.getAttribute('data-alt');
+        dlg.showModal();
+      });
+      dlg.addEventListener('click', function (e) { if (e.target === dlg || e.target.closest('.lb-btn')) dlg.close(); });
+      dlg.addEventListener('close', function () { img.src = 'data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7'; if (last) last.focus(); });
+    }
+  }
+
+  /* ----- forms: prevent double submit, basic status, analytics events ----- */
+  d.querySelectorAll('form[data-netlify]').forEach(function (form) {
+    form.addEventListener('submit', function (e) {
+      var status = form.querySelector('.form-status');
+      if (!form.checkValidity()) {
+        e.preventDefault(); form.reportValidity();
+        if (status) status.textContent = 'Please complete the highlighted fields.';
+        return;
+      }
+      var LIMIT = 4200000; /* Netlify's verified upload limit: 4.2 MB per submission */
+      var total = 0;
+      form.querySelectorAll('input[type=file]').forEach(function (inp) {
+        for (var i = 0; inp.files && i < inp.files.length; i++) total += inp.files[i].size;
+      });
+      if (total > LIMIT) {
+        e.preventDefault();
+        if (status) status.textContent = 'Your attachments are ' + (total / 1000000).toFixed(2) + ' MB, which is over the 4.2 MB limit. Please attach fewer or smaller files, or email them to us.';
+        return;
+      }
+      var btn = form.querySelector('button[type=submit]');
+      if (btn) { btn.disabled = true; btn.textContent = 'Sending...'; }
+      track('generate_lead', { form_name: form.getAttribute('name') });
+    });
+  });
+
+  /* ----- financing widget: load the third-party script only when it is about to be seen ----- */
+  var fw = d.getElementById('fullpagewidget');
+  if (fw) {
+    var loadFw = function () {
+      if (fw.getAttribute('data-loaded')) return;
+      fw.setAttribute('data-loaded', '1');
+      var fail = function () {
+        if (fw.shadowRoot) return;
+        fw.parentElement.classList.add('widget-failed');
+        fw.innerHTML = '<p class="widget-loading">The financing form could not load. <a href="https://www.enhancify.com/stiersconstruction" target="_blank" rel="noopener">Open the financing page on Enhancify</a> or call us.</p>';
+      };
+      var s = d.createElement('script'); s.src = fw.getAttribute('data-src'); s.async = true; s.onerror = fail; d.body.appendChild(s);
+      setTimeout(fail, 12000);
+      track('financing_widget_load');
+    };
+    if ('IntersectionObserver' in window) {
+      var io = new IntersectionObserver(function (es) { if (es[0].isIntersecting) { loadFw(); io.disconnect(); } }, { rootMargin: '1600px 0px' });
+      io.observe(fw);
+    } else { loadFw(); }
+  }
+
+  /* ----- financing launcher: accessible dialog that opens the Enhancify co-branded page on demand ----- */
+  var fin = d.getElementById('fin-dialog');
+  if (fin && fin.showModal) {
+    var finBody = fin.querySelector('.fin-body'), finLast = null;
+    var openFin = function (source) {
+      finLast = d.activeElement;
+      if (!finBody.querySelector('iframe')) {
+        var f = d.createElement('iframe');
+        f.src = fin.getAttribute('data-src');
+        f.title = 'Enhancify financing application and payment calculator';
+        f.referrerPolicy = 'strict-origin-when-cross-origin';
+        finBody.appendChild(f);
+      }
+      fin.showModal();
+      d.documentElement.classList.add('fin-open');
+      track('financing_widget_open', { source: source });
+    };
+    d.addEventListener('click', function (e) {
+      var t = e.target.closest('[data-fin-open]');
+      if (!t) return;
+      e.preventDefault();
+      openFin(t.getAttribute('data-fin-open') || 'link');
+    });
+    fin.addEventListener('click', function (e) { if (e.target === fin || e.target.closest('.fin-close')) fin.close(); });
+    fin.addEventListener('close', function () {
+      d.documentElement.classList.remove('fin-open');
+      if (finLast && finLast.focus) finLast.focus();
+    });
+  }
+
+  /* ----- click tracking hooks (no-ops unless an analytics tag is added) ----- */
+  d.addEventListener('click', function (e) {
+    var a = e.target.closest('a'); if (!a) return;
+    var href = a.getAttribute('href') || '';
+    if (href.indexOf('tel:') === 0) track('phone_click', { link_url: href });
+    else if (href.indexOf('mailto:') === 0) track('email_click', { link_url: href });
+    else if (href.indexOf('enhancify.com') > -1) track('financing_link_click', { link_url: href });
+    else if (a.classList.contains('btn-primary') && href.indexOf('/contact/') === 0) track('quote_cta_click', { link_text: a.textContent.trim() });
+  });
+})();

@@ -62,9 +62,16 @@ CHEV = '<svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width=
 IG = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.3" cy="6.7" r="1" fill="currentColor" stroke="none"/></svg>'
 FB = '<svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M13.5 21v-7.6h2.6l.4-3h-3V8.5c0-.9.3-1.5 1.5-1.5h1.6V4.3c-.3 0-1.2-.1-2.3-.1-2.3 0-3.9 1.4-3.9 4v2.2H7.8v3h2.6V21z"/></svg>'
 CHECK_SVG = '<svg class="thanks-check" viewBox="0 0 64 64" fill="none" aria-hidden="true"><circle class="ring" cx="32" cy="32" r="29" stroke="currentColor" stroke-width="3"/><path class="tick" d="M19 33.5 27.5 42 45 23" stroke="currentColor" stroke-width="4.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/></svg>'
+PHOTO_SVG = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2.5" y="4.5" width="19" height="15" rx="2"/><circle cx="8.5" cy="10" r="1.75"/><path d="m3 16.5 5-5 4 4 3.5-3.5L21 16"/></svg>'
+def product_photo(label):
+    return f'<div class="product-photo" role="img" aria-label="Photo of the {esc(label)} coming soon">{PHOTO_SVG}<span>Photo coming soon</span></div>'
 
 def tel(cls='', label=None, icon=False):
     return f'<a class="{cls}" href="tel:{SITE["phone_e164"]}">{PHONE_SVG if icon else ""}{label or SITE["phone"]}</a>'
+
+def with_article(name, plural=False):
+    if plural or name.lower().startswith('the '): return name
+    return ('an ' if name[:1].upper() in 'AEIOUX' else 'a ') + name
 
 def nav_html(active):
     water = [s for s in SERVICES if s['group'] == 'water']; land = [s for s in SERVICES if s['group'] == 'land']
@@ -72,7 +79,7 @@ def nav_html(active):
     cur = lambda p: ' aria-current="page"' if active == p else ''
     return f'''<nav id="site-nav" class="site-nav" aria-label="Primary"><ul class="nav-list">
 <li class="has-menu"><button type="button" class="nav-link menu-btn" aria-expanded="false" aria-controls="menu-services">Services{CHEV}</button>
-<div class="mega" id="menu-services"><div><p class="mega-h">In and over the water</p><ul>{li(water)}</ul></div><div><p class="mega-h">On the lot</p><ul>{li(land)}</ul></div><div class="mega-foot"><a class="mega-all" href="/services/">See all services</a><a class="mega-all" href="/service-area/">Where we work</a></div></div></li>
+<div class="mega" id="menu-services"><div><p class="mega-h">In and over the water</p><ul>{li(water)}</ul></div><div><p class="mega-h">On the lot</p><ul>{li(land)}</ul></div><div class="mega-foot"><a class="mega-all" href="/services/">See all services</a><a class="mega-all" href="/service-area/">Where we work</a><a class="mega-all" href="/services/boat-hoists/hi-tide/">Hi-Tide boat lifts</a><a class="mega-all" href="/services/docks/candock/">Candock floating docks</a></div></div></li>
 <li><a class="nav-link" href="/projects/"{cur('projects')}>Projects</a></li>
 <li><a class="nav-link" href="/financing/"{cur('financing')}>Financing</a></li>
 <li><a class="nav-link" href="/blog/"{cur('blog')}>Blog</a></li>
@@ -301,7 +308,7 @@ def page(path, title, desc, body, active='', trail=None, ld=None, preload=None, 
     html_ = f'''<!doctype html>
 <html lang="en-US"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
 <title>{esc(title)}</title><meta name="description" content="{esc(desc)}"><link rel="canonical" href="{canon}"><meta name="robots" content="{robots}">
-<meta property="og:type" content="website"><meta property="og:site_name" content="{SITE['seo_name']}"><meta property="og:locale" content="en_US"><meta property="og:title" content="{esc(title)}"><meta property="og:description" content="{esc(desc)}"><meta property="og:url" content="{canon}"><meta property="og:image" content="{og}"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="630"><meta property="og:image:alt" content="Stier’s excavator setting steel sheet piling for a seawall in Metro Detroit">
+<meta property="og:type" content="website"><meta property="og:site_name" content="{esc(SITE['seo_name'])}"><meta property="og:locale" content="en_US"><meta property="og:title" content="{esc(title)}"><meta property="og:description" content="{esc(desc)}"><meta property="og:url" content="{canon}"><meta property="og:image" content="{og}"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="630"><meta property="og:image:alt" content="Stier’s excavator setting steel sheet piling for a seawall in Metro Detroit">
 <meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="{esc(title)}"><meta name="twitter:description" content="{esc(desc)}"><meta name="twitter:image" content="{og}">
 <meta name="theme-color" content="#0D2530"><meta name="format-detection" content="telephone=yes">
 <link rel="icon" href="/assets/favicon.ico" sizes="48x48"><link rel="icon" href="/assets/favicon-64.png" type="image/png" sizes="64x64"><link rel="apple-touch-icon" href="/assets/apple-touch-icon.png"><link rel="manifest" href="/site.webmanifest"><link rel="alternate" type="application/rss+xml" title="Stier’s Marine &amp; Construction Blog" href="/blog/feed.xml">
@@ -368,6 +375,14 @@ def home():
 <p class="lead mt-s">We take pride in dependable, high-quality marine and construction services. We believe in honest work, clear communication, and a commitment to doing the job right, every time.</p><div class="btn-row mt-m"><a class="btn btn-primary" href="/contact/">Get a free quote</a></div></div>
 <ul class="why-list">{''.join(f'<li><h3>{a}</h3><p>{b}</p></li>' for a, b in why_items)}</ul></div></section>'''
 
+    hitide = f'''<section class="section section-alt" aria-labelledby="ht-h"><div class="wrap split flip"><figure>{img('boat-lift-covered-slip', '(min-width:900px) 46vw, 92vw')}</figure><div><p class="eyebrow">Authorized dealer</p><h2 id="ht-h">We sell Hi-Tide boat lifts</h2>
+<p class="lead mt-s">Stier’s Construction is an authorized Hi-Tide boat lift dealer. Buy the lift and have it installed and serviced by the same crew, backed by our own cable, motor and welding work.</p>
+<p class="btn-row mt-s"><a class="btn btn-dark" href="/services/boat-hoists/hi-tide/">Browse the Hi-Tide lineup</a>{tel('btn btn-outline', SITE['phone'], True)}</p></div></div></section>'''
+
+    candock = f'''<section class="section" aria-labelledby="cd-h"><div class="wrap split"><figure>{img('candock-floating-dock-install', '(min-width:900px) 46vw, 92vw')}</figure><div><p class="eyebrow">Authorized dealer</p><h2 id="cd-h">We sell Candock floating docks</h2>
+<p class="lead mt-s">Stier’s Construction is an authorized Candock dealer, including the JetRoll drive-on dock for personal watercraft. One crew for the dock, the install and everything after.</p>
+<p class="btn-row mt-s"><a class="btn btn-dark" href="/services/docks/candock/">Browse Candock floating docks</a>{tel('btn btn-outline', SITE['phone'], True)}</p></div></div></section>'''
+
     rev = f'''<section class="section section-dark on-dark" aria-labelledby="r-h"><div class="wrap"><div class="section-head"><h2 id="r-h">What customers say</h2></div>
 <div class="reviews"><figure class="quote"><blockquote style="margin:0"><p>“{QUOTES[0][0]}”</p></blockquote><figcaption><cite>{QUOTES[0][1]}</cite></figcaption></figure>
 <figure class="quote"><blockquote style="margin:0"><p>“{QUOTES[1][0]}”</p></blockquote><figcaption><cite>{QUOTES[1][1]}</cite></figcaption></figure></div></div></section>'''
@@ -379,14 +394,14 @@ def home():
 <figure>{img('stiers-excavator-demo-site', '(min-width:900px) 46vw, 92vw')}</figure></div></section>'''
 
     area = f'''<section class="section section-alt" aria-labelledby="a-h"><div class="wrap split flip"><figure>{img('barge-open-water', '(min-width:900px) 46vw, 92vw')}</figure><div><h2 id="a-h">Serving Metro Detroit’s waterfront</h2>
-<p class="lead mt-s">We serve waterfront communities on Lake St. Clair, the St. Clair River, the Detroit River, and Lake Erie.</p>
+<p class="lead mt-s">We serve waterfront communities on Lake St. Clair, the St. Clair River and the Detroit River.</p>
 <ul class="town-links" aria-label="Communities we serve">{''.join(f'<li><a href="/service-area/{t[chr(115)+chr(108)+chr(117)+chr(103)]}/">{t[chr(110)+chr(97)+chr(109)+chr(101)]}</a></li>' for t in TOWNS)}</ul><p class="btn-row mt-s"><a class="btn btn-dark" href="/service-area/">See where we work</a>{tel('btn btn-outline', SITE['phone'], True)}</p></div></div></section>'''
 
     latest = [POST_BY_SLUG[s] for s in ('seawall-guide-metro-detroit', 'michigan-permits-seawalls-docks-dredging', 'michigan-winter-dock-seawall-damage')]
     guides = f'<section class="section section-alt" aria-labelledby="gd-h"><div class="wrap"><div class="section-head"><h2 id="gd-h">Waterfront Guides for Metro Detroit Owners</h2><p>Plain-English answers on seawalls, docks, permits and more.</p></div><ul class="post-list">{"".join(post_row(p) for p in latest)}</ul><p class="mt-m"><a class="btn btn-outline" href="/blog/">Read the Blog</a></p></div></section>'
     faq = f'''<section class="section" aria-labelledby="f-h"><div class="wrap"><div class="section-head"><h2 id="f-h">Questions we hear a lot</h2></div>{faq_html(HOME_FAQS)}</div></section>'''
     fin = f'''<section class="fin-band" aria-labelledby="fb-h"><div class="wrap fin-band-in"><div><h2 id="fb-h">Financing available for your project</h2><p>Spread the cost of a seawall, dock, deck or concrete job into monthly payments. Arranged through Enhancify, subject to credit approval.</p></div><a class="btn btn-dark" href="/financing/">See financing options</a></div></section>'''
-    body = hero + xsec + mosaic + why + rev + fin + team + area + guides + faq + cta_band()
+    body = hero + xsec + mosaic + why + hitide + candock + rev + fin + team + area + guides + faq + cta_band()
     page('/', 'Marine & Seawall Contractor in Metro Detroit | Stier’s',
          'Seawalls, docks, pilings, hoists, dredging, welding, concrete and decks on Lake St. Clair and the Detroit River. Owner-led crew. Free quotes.',
          body, ld=[faq_ld(HOME_FAQS)], preload=HERO_KEY, prio=1.0, sm_images=[img_url(HERO_KEY)])
@@ -448,6 +463,127 @@ def services_hub():
          body, active='services', trail=trail, ld=[{'@type': 'ItemList', 'itemListElement': [{'@type': 'ListItem', 'position': i + 1, 'url': f'{URL}/services/{s["slug"]}/', 'name': s['name']} for i, s in enumerate(SERVICES)]}], prio=0.9,
          sm_images=[img_url(s['hub_img']) for s in SERVICES])
 
+# ============================================================ HI-TIDE BOAT LIFTS
+HT_ROOT = '/services/boat-hoists/hi-tide/'
+def ht_photo(p, sizes='260px'):
+    return img(p['img'], sizes, cls='product-photo-img', alt=f'Hi-Tide {p["name"]} boat lift') if p.get('img') else product_photo(p['name'])
+
+def hi_tide_card(p):
+    c = HI_TIDE_CATS[p['cat']]
+    return f'''<li class="product-card"><a class="product-card-link" href="{HT_ROOT}{p['slug']}/"><span class="product-photo-frame">{ht_photo(p, '(min-width:1000px) 22vw, (min-width:640px) 30vw, 46vw')}</span>
+<div class="product-card-body"><p class="eyebrow">{c['name']}</p><h3>{p['name']}</h3><span class="textlink">View details</span></div></a></li>'''
+
+def hi_tide_hub():
+    trail = [('Home', '/'), ('Services', '/services/'), ('Boat Hoists', '/services/boat-hoists/'), ('Hi-Tide Boat Lifts', None)]
+    grid = ''.join(hi_tide_card(p) for p in HI_TIDE_PRODUCTS)
+    body = f'''<section class="page-hero on-dark"><div class="wrap">{crumbs(trail)}<div style="padding-block:clamp(24px,4vw,56px) clamp(36px,5vw,64px)"><p class="eyebrow">Authorized dealer</p><h1 style="max-width:24ch">Hi-Tide boat lifts</h1>
+<p class="lead mt-s" style="max-width:62ch">Stier’s Construction sells, installs and services the full Hi-Tide lineup: 4-post cable lifts, yacht lifts, elevator lifts, personal watercraft lifts and specialty configurations. Pick a model to see what it is built for, or request a quote for pricing sized to your boat and site.</p>
+<div class="btn-row"><a class="btn btn-primary" href="/contact/">Get a free quote</a>{tel('btn btn-ghost', 'Call ' + SITE['phone'], True)}</div></div></div></section>
+<section class="section"><div class="wrap"><ul class="product-grid">{grid}</ul></div></section>
+{cta_band('Not sure which Hi-Tide lift fits your boat?', 'Send your boat’s make, length and weight, plus your slip or water depth, and we will match the lift and quote the install.')}'''
+    ld = [{'@type': 'ItemList', 'itemListElement': [{'@type': 'ListItem', 'position': i + 1, 'url': f'{URL}{HT_ROOT}{p["slug"]}/', 'name': p['name']} for i, p in enumerate(HI_TIDE_PRODUCTS)]}]
+    page(HT_ROOT, 'Hi-Tide Boat Lifts', 'Stier’s Construction is an authorized Hi-Tide boat lift dealer: 4-post cable lifts, yacht lifts, elevator lifts, PWC lifts and specialty configurations, installed and serviced by our own crew.',
+         body, active='services', trail=trail, ld=ld, ptype='CollectionPage', prio=0.8, sm_images=[img_url(p['img']) for p in HI_TIDE_PRODUCTS if p.get('img')])
+
+def hi_tide_product(p):
+    path = f'{HT_ROOT}{p["slug"]}/'
+    c = HI_TIDE_CATS[p['cat']]
+    has_specs = bool(p.get('features'))
+    lead = p.get('tagline') or c['desc']
+    trail = [('Home', '/'), ('Services', '/services/'), ('Boat Hoists', '/services/boat-hoists/'), ('Hi-Tide Boat Lifts', HT_ROOT), (p['name'], None)]
+    others = [q for q in HI_TIDE_PRODUCTS if q['cat'] == p['cat'] and q['slug'] != p['slug']][:4]
+    hero = f'''<section class="page-hero on-dark"><div class="wrap">{crumbs(trail)}<div class="page-hero-grid"><div><p class="eyebrow">{c['name']}</p><h1>Hi-Tide {p['name']}</h1><p class="lead">{lead}</p>
+<div class="btn-row"><a class="btn btn-primary" href="/contact/">Get a free quote</a>{tel('btn btn-ghost', 'Call ' + SITE['phone'], True)}</div></div>
+<figure class="page-hero-media">{ht_photo(p, '(min-width:940px) 46vw, 92vw')}</figure></div></div></section>'''
+    accessories = p.get('accessories')
+    if accessories:
+        acc_grid = ''.join(f'''<li class="acc-card"><span class="product-photo-frame">{ht_photo(dict(img=a["img"], name=a["name"]), "(min-width:800px) 30vw, 46vw")}</span>
+<div class="acc-card-body"><h3>{a["name"]}</h3><p>{a["desc"]}</p></div></li>''' for a in accessories)
+        specs_html = f'<div class="prose"><p>{p["desc"]}</p></div><h3 class="mt-m">Available Accessories</h3><p class="measure">Send us which accessories you want with your quote request.</p><ul class="acc-grid">{acc_grid}</ul>'
+    elif has_specs:
+        cap = f'<p class="cap-line"><strong>Capacity:</strong> {p["capacity"]}</p>' if p.get('capacity') else ''
+        warranty = (('<ul class="warranty-grid">' + ''.join(f'<li><span class="w-label">{lbl}</span><strong>{val}</strong></li>' for lbl, val in p['warranty']) + '</ul>') if p.get('warranty') else '')
+        specs_html = f'<div class="prose">{cap}<p>{p["desc"]}</p></div>{warranty}<h3 class="mt-m">Features</h3>{ul(p["features"])}'
+    else:
+        specs_html = note('<p><strong>Specs and pricing for this model are being confirmed with Hi-Tide.</strong> Send your boat’s make, length and weight, plus your slip or water depth, and we will match capacity and quote the install and any site work it needs.</p>')
+    aside = f'''<aside class="aside-sticky aside-stack" aria-label="Quote and related lifts"><div class="panel panel-dark"><h3>Ask About the {p['name']}</h3><small>Mon to Fri, 8am to 5pm</small>
+<a class="phone" href="tel:{SITE['phone_e164']}">{SITE['phone']}</a><a class="btn btn-primary" href="/contact/">Send Project Details</a><p class="fin-line">Financing available. <a href="/financing/">See options</a></p></div>
+<div class="panel"><h3>More {c['name']}</h3><ul class="related">{''.join(f'<li><a href="{HT_ROOT}{q["slug"]}/"><b>{q["name"]}</b><span>{HI_TIDE_CATS[q["cat"]]["name"]}</span></a></li>' for q in others) or f'<li><a href="{HT_ROOT}"><b>See the full lineup</b><span>All Hi-Tide models</span></a></li>'}</ul>
+<p class="mt-s"><a class="textlink" href="{HT_ROOT}">All Hi-Tide boat lifts</a></p></div></aside>'''
+    buy_line = (f'Buying Hi-Tide {p["name"].lower()} through Stier’s Construction means one contractor for the parts, the install and everything after.' if accessories else
+                f'Buying a Hi-Tide {p["name"]} through Stier’s Construction means one contractor for the lift, the install and everything after: cable change-out, motor maintenance and welding repairs to the frame, all done in-house.')
+    main = f'<div class="main"><section><h2>About the {p["name"]}</h2>{specs_html}</section><section><h2>Installed and Serviced by Stier’s Construction</h2><div class="prose"><p>{buy_line} See our <a href="/services/boat-hoists/">full boat hoist service</a>.</p></div></section></div>'
+    body = hero + f'<div class="section"><div class="wrap content-grid">{main}{aside}</div></div>' + cta_band(f'Ready to talk about {with_article(p["name"], p.get("plural"))}?')
+    svc = {'@type': 'Product', '@id': f'{URL}{path}#product', 'name': f'Hi-Tide {p["name"]}', 'category': c['name'], 'description': p.get('desc') or c['desc'],
+           'brand': {'@type': 'Brand', 'name': 'Hi-Tide'}, 'url': f'{URL}{path}'}
+    if p.get('img'): svc['image'] = f'{URL}{img_url(p["img"])}'
+    page(path, f'Hi-Tide {p["name"]}', f'Hi-Tide {p["name"]} ({c["name"]}): sold, installed and serviced by Stier’s Construction, an authorized Hi-Tide dealer in Metro Detroit. Free quotes.',
+         body, active='services', trail=trail, ld=[svc], prio=0.6, sm_images=[img_url(p['img'])] if p.get('img') else None)
+
+# ============================================================ CANDOCK FLOATING DOCKS
+CD_ROOT = '/services/docks/candock/'
+def cd_photo(p, sizes='260px'):
+    return img(p['img'], sizes, cls='product-photo-img', alt=f'Candock {p["name"]}') if p.get('img') else product_photo(p['name'])
+
+def candock_card(p):
+    c = CANDOCK_CATS[p['cat']]
+    return f'''<li class="product-card"><a class="product-card-link" href="{CD_ROOT}{p['slug']}/"><span class="product-photo-frame">{cd_photo(p, '(min-width:1000px) 22vw, (min-width:640px) 30vw, 46vw')}</span>
+<div class="product-card-body"><p class="eyebrow">{c['name']}</p><h3>{p['name']}</h3><span class="textlink">View details</span></div></a></li>'''
+
+def candock_hub():
+    trail = [('Home', '/'), ('Services', '/services/'), ('Docks', '/services/docks/'), ('Candock Floating Docks', None)]
+    grid = ''.join(candock_card(p) for p in CANDOCK_PRODUCTS)
+    body = f'''<section class="page-hero on-dark"><div class="wrap">{crumbs(trail)}<div style="padding-block:clamp(24px,4vw,56px) clamp(36px,5vw,64px)"><p class="eyebrow">Authorized dealer</p><h1 style="max-width:24ch">Candock floating docks</h1>
+<p class="lead mt-s" style="max-width:62ch">Stier’s Construction sells, installs and services Candock modular floating docks, including the JetRoll drive-on dock for personal watercraft. Unsinkable, foam-filled systems that connect, extend or reconfigure as your waterfront needs change.</p>
+<div class="btn-row"><a class="btn btn-primary" href="/contact/">Get a free quote</a>{tel('btn btn-ghost', 'Call ' + SITE['phone'], True)}</div></div></div></section>
+<section class="section"><div class="wrap"><ul class="product-grid">{grid}</ul>
+<div class="mt-m">{note('<p>More of the Candock lineup (residential, commercial and marina floating dock systems) is being added here. Ask when you request a quote if you don’t see what you need yet.</p>')}</div></div></section>
+{cta_band('Not sure which Candock system fits your waterfront?', 'Send your shoreline or slip details, plus what you want to dock, and we will lay out a system and quote the install.')}'''
+    ld = [{'@type': 'ItemList', 'itemListElement': [{'@type': 'ListItem', 'position': i + 1, 'url': f'{URL}{CD_ROOT}{p["slug"]}/', 'name': p['name']} for i, p in enumerate(CANDOCK_PRODUCTS)]}]
+    page(CD_ROOT, 'Candock Floating Docks', 'Stier’s Construction is an authorized Candock dealer: modular floating docks and the JetRoll drive-on PWC dock, installed and serviced by our own crew.',
+         body, active='services', trail=trail, ld=ld, ptype='CollectionPage', prio=0.8, sm_images=[img_url(p['img']) for p in CANDOCK_PRODUCTS if p.get('img')])
+
+def candock_product(p):
+    path = f'{CD_ROOT}{p["slug"]}/'
+    c = CANDOCK_CATS[p['cat']]
+    trail = [('Home', '/'), ('Services', '/services/'), ('Docks', '/services/docks/'), ('Candock Floating Docks', CD_ROOT), (p['name'], None)]
+    others = [q for q in CANDOCK_PRODUCTS if q['cat'] == p['cat'] and q['slug'] != p['slug']][:4]
+    hero = f'''<section class="page-hero on-dark"><div class="wrap">{crumbs(trail)}<div class="page-hero-grid"><div><p class="eyebrow">{c['name']}</p><h1>Candock {p['name']}</h1><p class="lead">{p.get('tagline') or c['desc']}</p>
+<div class="btn-row"><a class="btn btn-primary" href="/contact/">Get a free quote</a>{tel('btn btn-ghost', 'Call ' + SITE['phone'], True)}</div></div>
+<figure class="page-hero-media">{cd_photo(p, '(min-width:940px) 46vw, 92vw')}</figure></div></div></section>'''
+    specs_grid = ''
+    if p.get('material'):
+        specs_rows = [('Material', p['material']), ('Dimensions', p['dimensions']), ('Weight', p['weight']), ('Colors', ', '.join(p['colors']))] + p.get('extra_specs', [])
+        specs_grid = '<ul class="warranty-grid">' + ''.join(f'<li><span class="w-label">{lbl}</span><strong>{val}</strong></li>' for lbl, val in specs_rows) + '</ul>'
+    warranty_note = note(f'<p>{p["warranty"]}.</p>') if p.get('warranty') else ''
+    install_note = note(f'<p>{p["install_note"]}</p>') if p.get('install_note') else ''
+    config_html = ''
+    if p.get('configurations'):
+        rows = ''.join(f'<li><h3>{name}<br><small>{tag}</small></h3><p>{desc}</p></li>' for name, tag, desc in p['configurations'])
+        config_html = f'<h3 class="mt-l">{p["name"]} Configurations</h3><ol class="steps" style="grid-template-columns:repeat(3,1fr)">{rows}</ol>'
+    acc_html = ''
+    if p.get('accessories') and isinstance(p['accessories'][0], dict):
+        label = p.get('accessories_label', 'Compatible Accessories')
+        cards = ''.join(f'<li class="acc-card"><span class="product-photo-frame">{cd_photo(a, "130px")}</span><div class="acc-card-body"><h3>{a["name"]}</h3><p>{a["desc"]}</p></div></li>' for a in p['accessories'])
+        acc_html = f'<h3 class="mt-l">{label}</h3><ul class="acc-grid">{cards}</ul>'
+    elif p.get('accessories'):
+        acc_img = f'<span class="product-photo-frame acc-photo-wide">{img(p["accessories_img"], "260px", alt=p["name"] + " accessories")}</span>' if p.get('accessories_img') else ''
+        acc_html = f'<h3 class="mt-l">Compatible Accessories</h3><div class="split" style="align-items:start">{acc_img}{ul(p["accessories"])}</div>'
+    uses_html = f'<h3 class="mt-l">Where It Fits</h3>{ul(p["uses"])}' if p.get('uses') else ''
+    notes_html = (f'<div class="mt-m">{warranty_note}</div>' if warranty_note else '') + (f'<div class="mt-m">{install_note}</div>' if install_note else '')
+    specs_html = f'<div class="prose"><p>{p["desc"]}</p></div>{specs_grid}{notes_html}<h3 class="mt-l">Key Features</h3>{ul(p["features"])}{config_html}{acc_html}{uses_html}'
+    aside = f'''<aside class="aside-sticky aside-stack" aria-label="Quote and related docks"><div class="panel panel-dark"><h3>Ask About the {p['name']}</h3><small>Mon to Fri, 8am to 5pm</small>
+<a class="phone" href="tel:{SITE['phone_e164']}">{SITE['phone']}</a><a class="btn btn-primary" href="/contact/">Send Project Details</a><p class="fin-line">Financing available. <a href="/financing/">See options</a></p></div>
+<div class="panel"><h3>More {c['name']}</h3><ul class="related">{''.join(f'<li><a href="{CD_ROOT}{q["slug"]}/"><b>{q["name"]}</b><span>{CANDOCK_CATS[q["cat"]]["name"]}</span></a></li>' for q in others) or f'<li><a href="{CD_ROOT}"><b>See the full lineup</b><span>All Candock systems</span></a></li>'}</ul>
+<p class="mt-s"><a class="textlink" href="{CD_ROOT}">All Candock floating docks</a></p></div></aside>'''
+    main = f'<div class="main"><section><h2>About the {p["name"]}</h2>{specs_html}</section><section><h2>Installed and Serviced by Stier’s Construction</h2><div class="prose"><p>Buying a Candock {p["name"]} through Stier’s Construction means one contractor for the dock, the install and everything after. See our <a href="/services/docks/">full dock service</a>.</p></div></section></div>'
+    body = hero + f'<div class="section"><div class="wrap content-grid">{main}{aside}</div></div>' + cta_band(f'Ready to talk about {with_article(p["name"], p.get("plural"))}?')
+    svc = {'@type': 'Product', '@id': f'{URL}{path}#product', 'name': f'Candock {p["name"]}', 'category': c['name'], 'description': p['desc'],
+           'brand': {'@type': 'Brand', 'name': 'Candock'}, 'url': f'{URL}{path}'}
+    if p.get('img'): svc['image'] = f'{URL}{img_url(p["img"])}'
+    page(path, f'Candock {p["name"]}', f'Candock {p["name"]} ({c["name"]}): sold, installed and serviced by Stier’s Construction, an authorized Candock dealer in Metro Detroit. Free quotes.',
+         body, active='services', trail=trail, ld=[svc], prio=0.6, sm_images=[img_url(p['img'])] if p.get('img') else None)
+
 # ============================================================ PROJECTS
 def projects():
     btns = ''.join(f'<button type="button" data-filter="{k}" aria-pressed="{"true" if k == "all" else "false"}">{n}</button>' for k, n in GALLERY_CATS)
@@ -489,8 +625,7 @@ def about():
 GROUP_TEXT = {
  'Lake St. Clair': 'Lake St. Clair is shallow, and its northern arm, Anchor Bay, is only about 1 to 11 feet deep across most of its area. Canals, marinas and open lakefront mean walls, docks, hoists and dredging all come up, and record high water in 2019 and 2020 tested shoreline structures.',
  'St. Clair River': 'The St. Clair River runs at roughly 1.3 to 2.1 mph between Algonac and Marysville, according to NOAA, and faster near the Blue Water Bridge at Port Huron. Ships pass close to shore and river ice is a winter fact of life, so anchoring, scour resistance and protected steel matter.',
- 'Detroit River': 'The Detroit River is a busy shipping channel linking Lake St. Clair with Lake Erie. Downriver communities combine river frontage with canals, channels and islands, so current, wakes, silt, ice and island access all shape the work.',
- 'Lake Erie and Tributaries': 'At the region’s southern edge, Lake Erie brings open-water waves and level swings, while tributary rivers such as the River Raisin and Huron River add sediment, current and different permit rules.',
+ 'Detroit River': 'The Detroit River is a busy commercial shipping channel. Its islands, channels and canals combine river frontage with canal lots, so current, wakes, silt and ice all shape the work.',
 }
 def town_label(t):
     return {'city': 'city', 'township': 'township', 'charter township': 'charter township'}[t['kind']]
@@ -503,13 +638,9 @@ def permits_html(t):
         return f'<p>Because Grosse Pointe Woods has no Lake St. Clair shoreline of its own, most projects here are governed by the city building department: permits and inspections for decks, driveways, patios, demolition and grading. If you also own waterfront property elsewhere, state and federal permits may apply to that work. See our <a href="/blog/michigan-permits-seawalls-docks-dredging/">Michigan permit guide</a>.</p>'
     if w in ('lsc', 'anchor'):
         core = 'Work at or below the ordinary high-water mark on Lake St. Clair (574.7 feet on the 1955 datum, or 575.3 feet on the 1985 datum) generally needs a permit from Michigan EGLE and often the U.S. Army Corps of Engineers. Applications go through EGLE’s MiEnviro Portal, which forwards them to the Corps.'
-    elif w in ('scr', 'dr'):
+    else:
         r = WATERS[w]['short']
         core = f'{r[0].upper() + r[1:]} is a federally navigated connecting waterway, and work in or over the water generally involves EGLE and the U.S. Army Corps of Engineers. EGLE district staff can tell you which part of Michigan law applies to your site, such as Part 325 (Great Lakes Submerged Lands) or Part 301 (Inland Lakes and Streams), and applications go through the MiEnviro Portal.'
-    elif w == 'erie':
-        core = 'Lake Erie’s ordinary high-water mark is 571.6 feet on the 1955 datum (572.2 feet on the 1985 datum), and work below it on Great Lakes bottomlands generally needs an EGLE permit and a U.S. Army Corps of Engineers permit. The River Raisin is regulated differently, so ask EGLE which rules apply to your address.'
-    else:
-        core = 'Rivers that flow into the Great Lakes are often regulated as streams, while the Great Lakes shoreline itself is regulated separately. EGLE district staff can tell you which rules apply at your address, and applications go through the MiEnviro Portal. Federal review by the U.S. Army Corps of Engineers may also apply.'
     return f'<p>{core}</p><p>{local}</p><p>Read our <a href="/blog/michigan-permits-seawalls-docks-dredging/">Michigan permit guide for seawalls, docks and dredging</a>.</p>'
 
 def town_page(t):
@@ -555,15 +686,15 @@ def service_area():
         rows = ''.join(f'<li><a href="/service-area/{t["slug"]}/"><b>{t["name"]}</b><span>{t["county"]} County. {t["lead"]}</span></a></li>' for t in ts)
         sections += f'<section id="{slugify(g)}" aria-labelledby="{slugify(g)}-h"><h2 id="{slugify(g)}-h">{g}</h2><div class="prose"><p>{GROUP_TEXT[g]}</p></div><ul class="related one-col">{rows}</ul></section>'
     body = f'''<section class="page-hero on-dark"><div class="wrap">{crumbs(trail)}<div class="page-hero-grid"><div><h1>Marine and Construction Services Across Metro Detroit’s Waterfront</h1>
-<p class="lead">We serve waterfront communities on Lake St. Clair, the St. Clair River, the Detroit River and Lake Erie, along with the excavating, concrete, welding and deck work on the lots beside them.</p>
+<p class="lead">We serve waterfront communities on Lake St. Clair, the St. Clair River and the Detroit River, along with the excavating, concrete, welding and deck work on the lots beside them.</p>
 <div class="btn-row"><a class="btn btn-primary" href="/contact/">Get a free quote</a>{tel('btn btn-ghost', 'Call ' + SITE['phone'], True)}</div></div>
 <figure class="page-hero-media">{img('barge-open-water', '(min-width:940px) 46vw, 92vw', prio=True, lazy=False)}</figure></div></div></section>
-<section class="section"><div class="wrap content-grid"><div class="main"><section><h2>Where We Work</h2><div class="prose"><p>Lake St. Clair sits between the St. Clair River to the north and the Detroit River to the south, and the four waterways behave differently. Depth, current, ship traffic and ice change how a wall, dock or piling should be built. Pick your community below for local details, or read <a href="/blog/lake-st-clair-detroit-river-st-clair-river-waterfront-differences/">how your waterway changes your seawall and dock</a>.</p><p>Not sure we cover your address? Call and ask. Our team works for homeowners, commercial property owners and marinas.</p></div></section>{sections}
+<section class="section"><div class="wrap content-grid"><div class="main"><section><h2>Where We Work</h2><div class="prose"><p>Lake St. Clair sits between the St. Clair River to the north and the Detroit River to the south, and the three waterways behave differently. Depth, current, ship traffic and ice change how a wall, dock or piling should be built. Pick your community below for local details, or read <a href="/blog/lake-st-clair-detroit-river-st-clair-river-waterfront-differences/">how your waterway changes your seawall and dock</a>.</p><p>Not sure we cover your address? Call and ask. Our team works for homeowners, commercial property owners and marinas.</p></div></section>{sections}
 <section><h2>What Waterfront Owners Should Know About Permits</h2><div class="prose"><p>Work in or over Great Lakes waters generally involves state and federal permits. In Michigan that means EGLE, and often the U.S. Army Corps of Engineers, and your city or township may add its own rules. EGLE’s <a href="{EGLE_LINK}" target="_blank" rel="noopener">shoreline protection permit guidance (PDF)</a> explains the process. Requirements depend on your site, so confirm before work starts.</p></div></section></div>
 <aside class="aside-sticky aside-stack"><div class="panel panel-dark"><h3>Not Sure We Cover You?</h3><small>Mon to Fri, 8am to 5pm</small><a class="phone" href="tel:{SITE['phone_e164']}">{SITE['phone']}</a><a class="btn btn-primary" href="/contact/">Send Your Address</a></div>
 <div class="panel"><h3>Popular Services</h3><ul class="related">{''.join(f'<li><a href="/services/{s}/"><b>{BY_SLUG[s]["name"]}</b><span>{BY_SLUG[s]["summary"]}</span></a></li>' for s in ['seawalls','docks','boat-hoists','dredging','pilings'])}</ul></div></aside></div></section>
 {cta_band()}'''
-    page('/service-area/', 'Service Area: Lake St. Clair, Detroit River & More | Stier’s', 'Stier’s Construction serves waterfront towns on Lake St. Clair, the St. Clair River, the Detroit River and Lake Erie, from St. Clair Shores to Monroe.',
+    page('/service-area/', 'Service Area: Lake St. Clair, Detroit River & More | Stier’s', 'Stier’s Construction serves waterfront towns on Lake St. Clair, the St. Clair River and the Detroit River, from Grosse Ile to Port Huron.',
          body, active='area', trail=trail, prio=0.9, sm_images=[img_url('barge-open-water')])
 
 # ============================================================ FORMS
@@ -769,6 +900,10 @@ def blog_feed():
 # ============================================================ BUILD
 home(); services_hub()
 for s in SERVICES: service_page(s)
+hi_tide_hub()
+for _hp in HI_TIDE_PRODUCTS: hi_tide_product(_hp)
+candock_hub()
+for _cp in CANDOCK_PRODUCTS: candock_product(_cp)
 blog_hub()
 for _p in POSTS: blog_post(_p)
 blog_feed()

@@ -1,17 +1,15 @@
 # -*- coding: utf-8 -*-
 """Local service-area pages. Every fact below was checked against a public source (EGLE, NOAA Coast Pilot,
 Wayne County, city sites, US Army Corps). Wording is hedged where a detail could not be confirmed.
-water: lsc = Lake St. Clair, anchor = Anchor Bay, scr = St. Clair River, dr = Detroit River, erie = Lake Erie, river = tributary river."""
+water: lsc = Lake St. Clair, anchor = Anchor Bay, scr = St. Clair River, dr = Detroit River."""
 
 WATERS = {
  'lsc':   dict(label='Lake St. Clair', short='Lake St. Clair', group='Lake St. Clair'),
  'anchor':dict(label='Anchor Bay on Lake St. Clair', short='Anchor Bay', group='Lake St. Clair'),
  'scr':   dict(label='the St. Clair River', short='the St. Clair River', group='St. Clair River'),
  'dr':    dict(label='the Detroit River', short='the Detroit River', group='Detroit River'),
- 'erie':  dict(label='Lake Erie and the River Raisin', short='Lake Erie', group='Lake Erie and Tributaries'),
- 'river': dict(label='the Huron River', short='the Huron River', group='Lake Erie and Tributaries'),
 }
-GROUPS = ['Lake St. Clair', 'St. Clair River', 'Detroit River', 'Lake Erie and Tributaries']
+GROUPS = ['Lake St. Clair', 'St. Clair River', 'Detroit River']
 
 TOWNS = [
  dict(slug='st-clair-shores', name='St. Clair Shores', kind='city', county='Macomb', water='lsc', hero='boat-lift-covered-slip',
@@ -23,7 +21,7 @@ TOWNS = [
   faq=('Can you work on a narrow canal lot in St. Clair Shores?','<p>Yes. Narrow lots change how the job is planned rather than whether it can be done. Depending on the site, equipment can work from the land side, from a barge in the canal, or both. Send photos of the lot and the canal when you request a quote.</p>'),
   near=['grosse-pointe-shores','grosse-pointe-woods','harrison-township']),
 
- dict(slug='grosse-pointe-shores', name='Grosse Pointe Shores', kind='city', county='Wayne', water='lsc', hero='sheet-pile-excavator-canal-home',
+ dict(slug='grosse-pointe-shores', title='Grosse Pointe Shores: Seawalls', name='Grosse Pointe Shores', kind='city', county='Wayne', water='lsc', hero='sheet-pile-excavator-canal-home',
   lead='Open Lake St. Clair frontage in the smallest of the Grosse Pointe communities calls for walls built to handle waves, ice and high water.',
   p1='Grosse Pointe Shores is the smallest of the five Grosse Pointe communities, and it is home to the Edsel and Eleanor Ford House on the lakeshore. Much of the waterfront here is residential property facing open Lake St. Clair rather than sheltered canals.',
   p2='Open frontage takes more wave energy than a canal. When Lake St. Clair reached record highs in 2019 and 2020, waves and high water tested shoreline walls all along the lake. For lakefront owners the practical checklist is sound anchoring, working drainage behind the wall, a solid cap and splash protection at the top, plus concrete and steps that can handle freeze-thaw cycles.',
@@ -61,12 +59,12 @@ TOWNS = [
 
  dict(slug='grosse-ile', name='Grosse Ile', kind='township', county='Wayne', water='dr', hero='barge-boathouse-excavator',
   lead='Grosse Ile is the largest island in the Detroit River, and almost every property on it has a shoreline, a canal or a channel to plan around.',
-  p1='Grosse Ile is the largest island in the Detroit River and the most populated island in Michigan. The Trenton Channel runs along its west side, the main river channel along its east side, and two canals divide the island itself. Two bridges, the Grosse Ile Toll Bridge and the Wayne County Bridge, connect it to the mainland.',
+  p1='Grosse Ile is the largest island in the Detroit River and the most populated island in Michigan. A channel runs along its west side, the main river channel along its east side, and two canals divide the island itself. Two bridges, the Grosse Ile Toll Bridge and the Wayne County Bridge, connect it to the mainland.',
   p2='That geography shapes projects. Freighters and pleasure boats pass near the east side, canals and channels bring their own wave and current patterns, and getting equipment onto an island is a planning question in its own right, sometimes solved from the water with a barge. Grosse Ile also sits at the center of the Detroit River International Wildlife Refuge, so ask early how habitat considerations may factor into permit review.',
-  notes=['Grosse Ile Township is in Wayne County and includes more than a dozen islands.', 'The Trenton Channel runs along the west side, and the island is divided by two canals.', 'The township sits at the center of the Detroit River International Wildlife Refuge.'],
+  notes=['Grosse Ile Township is in Wayne County and includes more than a dozen islands.', 'A channel runs along the west side, and the island is divided by two canals.', 'The township sits at the center of the Detroit River International Wildlife Refuge.'],
   svc=[('seawalls','Channel and canal walls built for current, boat wakes and ice.'),('docks','Fixed, floating and custom docks.'),('pilings','Steel and wood pilings for docks and hoists, installed from land or barge.'),('boat-hoists','Lifts for island and canal properties.'),('dredging','Boat well and canal dredging.'),('excavating-grading','Site work and hauling.')],
   faq=('Can you get equipment onto Grosse Ile?','<p>Island access is part of planning every job. The island’s two bridges connect it to the mainland, and barge access from the water can be another option for shoreline work. Tell us your address when you request a quote so we can plan the approach for your site.</p>'),
-  near=['trenton','wyandotte','gibraltar']),
+  near=['grosse-pointe-park','grosse-pointe-woods','st-clair-shores']),
 
  dict(slug='harrison-township', name='Harrison Township', kind='charter township', county='Macomb', water='lsc', hero='barge-excavator-canal',
   lead='With the Clinton River mouth, Lake St. Clair Metropark and dozens of marinas, Harrison Township is built around the water.',
@@ -86,7 +84,7 @@ TOWNS = [
   faq=('How shallow is Anchor Bay, and how does it affect my dock in New Baltimore?','<p>Anchor Bay is only about 1 to 11 feet deep across most of its area. That can mean longer docks to reach usable depth, regular attention to silt in slips and boat wells, and hoists that must lower clear of the bottom. See <a href="/blog/how-to-choose-a-boat-hoist/">how to choose a boat hoist</a> and <a href="/blog/floating-vs-fixed-docks/">floating vs. fixed docks</a>.</p>'),
   near=['chesterfield-township','harrison-township','algonac']),
 
- dict(slug='chesterfield-township', name='Chesterfield Township', kind='township', county='Macomb', water='anchor', hero='gray-dock-walkway-canal',
+ dict(slug='chesterfield-township', title='Chesterfield Township: Seawalls', name='Chesterfield Township', kind='township', county='Macomb', water='anchor', hero='gray-dock-walkway-canal',
   lead='Chesterfield Township borders Anchor Bay, where shallow water, tributary sediment and open-bay waves shape every waterfront project.',
   p1='Chesterfield Township is one of the Macomb County townships that border Anchor Bay, the shallow northern arm of Lake St. Clair. Streams such as the Salt River feed the bay, and the bay drains onward through Lake St. Clair to the Detroit River.',
   p2='Waterfront owners here often need a mix of work: walls and pilings to hold the shoreline, docks that reach usable depth, and dredging or excavating to deal with sediment and drainage. The land side matters too, since grading, concrete and drainage decide whether water is drawn toward or away from the wall.',
@@ -140,49 +138,5 @@ TOWNS = [
   faq=('Is the current stronger near the Blue Water Bridge in Port Huron?','<p>Yes. NOAA’s Coast Pilot notes a rapids section extending from about 1,000 feet above the Blue Water Bridge to 200 or 300 feet below it, and current is generally stronger near the head of the river than farther downstream. That affects how walls, pilings and docks are designed and anchored.</p>'),
   near=['marysville','st-clair','marine-city']),
 
- dict(slug='wyandotte', name='Wyandotte', kind='city', county='Wayne', water='dr', hero='excavator-loading-dump-trailer',
-  lead='Wyandotte’s Detroit River shoreline puts seawalls, docks and pilings up against current, shipping traffic and ice.',
-  p1='Wyandotte is a Downriver community on the Detroit River in Wayne County, a short distance from Grosse Ile, Trenton and Gibraltar. The Detroit River is a busy commercial shipping route linking Lake St. Clair with Lake Erie, and its current and traffic set the conditions for waterfront structures.',
-  p2='Riverfront walls and docks here have to handle steady flow, wakes from large vessels and winter ice. Alongside shoreline work, waterfront owners often need concrete, excavating, grading and demolition: removing an old slab or garage, regrading a yard for drainage, or pouring a new patio.',
-  notes=['Wyandotte is in Wayne County on the Detroit River.', 'Grosse Ile, Trenton and Gibraltar are nearby Downriver communities.', 'The Detroit River is a working shipping channel.'],
-  svc=[('seawalls','Walls and repairs for river frontage.'),('docks','Docks and structural repairs.'),('pilings','Steel and wood pilings and removal.'),('concrete','New flatwork and removal of old concrete.'),('demolition','Demolition, debris hauling and site cleanup.'),('excavating-grading','Site prep and drainage.')],
-  faq=('Which permits apply to dock and seawall work on the Detroit River in Wyandotte?','<p>Work in or over the water generally involves EGLE and the U.S. Army Corps of Engineers, and EGLE district staff can tell you which part of state law applies to your site. Your city’s building department handles local requirements above the waterline. See our <a href="/blog/michigan-permits-seawalls-docks-dredging/">permit guide</a>.</p>'),
-  near=['trenton','grosse-ile','gibraltar']),
-
- dict(slug='trenton', name='Trenton', kind='city', county='Wayne', water='dr', hero='dock-work-through-ice',
-  lead='Trenton faces the Trenton Channel of the Detroit River, where channel current, islands and ice affect every dock and wall.',
-  p1='Trenton is a Downriver city on the Detroit River’s Trenton Channel, the channel that separates the mainland from Grosse Ile. Elizabeth Park, a 162-acre Wayne County park on the channel, is an artificial island formed when a canal was cut in the nineteenth century.',
-  p2='Channel shorelines see current and boat traffic, and sheltered coves and canals add shallow water and silt. Docks, pilings and lifts have to be planned around depth and winter ice, and walls need drainage and anchoring that hold up through freeze-thaw cycles. Dredging can be part of keeping a slip usable.',
-  notes=['Trenton is in Wayne County on the Trenton Channel of the Detroit River.', 'Elizabeth Park, on the channel, is a Wayne County park.', 'Grosse Ile lies across the channel.'],
-  svc=[('seawalls','Walls and repairs on channel frontage.'),('docks','Docks and repairs.'),('pilings','Pilings and covers.'),('boat-hoists','Lifts and maintenance.'),('dredging','Slip and boat well dredging.')],
-  faq=('What is the Trenton Channel, and does it change how my dock is built?','<p>The Trenton Channel is the western channel of the Detroit River, running between the mainland and Grosse Ile. Depth, current, boat traffic and winter ice on your stretch of shoreline decide dock and wall design, so we look at your specific frontage when we quote.</p>'),
-  near=['wyandotte','grosse-ile','gibraltar']),
-
- dict(slug='gibraltar', name='Gibraltar', kind='city', county='Wayne', water='dr', hero='excavator-site-dusk',
-  lead='Canals cut through Gibraltar’s shoreline near the mouth of the Detroit River, so seawalls, boat wells and dredging are everyday concerns.',
-  p1='Gibraltar is a Downriver city near the southern end of the Detroit River, close to Lake Erie. Several of the islands within the city were created by canals, which means many properties sit on canal frontage or on small islands with their own shorelines.',
-  p2='Canal and island lots depend on their walls, and shallow, calm water collects silt over time. Boat wells and slips may need dredging, docks and pilings have to be planned for depth and ice, and walls need drainage and anchoring. Land-side work such as grading and concrete decides where water goes.',
-  notes=['Gibraltar is in Wayne County near the mouth of the Detroit River.', 'Several islands within the city were created by canals.', 'Canal lots make seawalls and boat wells central to home maintenance.'],
-  svc=[('seawalls','Canal and island walls, repairs and caps.'),('docks','Docks and repairs for canal lots.'),('dredging','Boat well and canal dredging.'),('pilings','Pilings and covers.'),('boat-hoists','Lift installs and maintenance.')],
-  faq=('Do canal lots in Gibraltar need dredging?','<p>They can. Calm canal water collects silt, and shallow slips and boat wells are the usual sign. Watch for your boat touching bottom or a lift that no longer lowers clear. See our <a href="/blog/dredging-101-canals-marinas-boat-wells/">dredging guide</a>.</p>'),
-  near=['trenton','grosse-ile','rockwood']),
-
- dict(slug='rockwood', h1='Docks, Riverbank and Site Work in Rockwood, Michigan', title='Rockwood: Docks & Riverbank Work', desc='Docks, riverbank protection, grading, concrete and decks along the Huron River in Rockwood, Michigan. Owner-led crew. Free quotes.', name='Rockwood', kind='city', county='Wayne', water='river', hero='wood-dock-yellow-flag',
-  lead='Rockwood’s waterfront is on the Huron River, which empties into Lake Erie, so river banks, docks and drainage lead the project list.',
-  p1='Rockwood is a Wayne County city on the Huron River, which flows on to Lake Erie. Riverfront properties here deal with banks that can erode, docks that must handle changing river levels, and drainage that has to run off the land without washing soil into the water.',
-  p2='Rivers that flow into the Great Lakes are often regulated as streams under a different part of Michigan’s environmental law than the Great Lakes shoreline itself, so check with EGLE about which rules apply to your site before you plan. On the land side, grading, concrete and decks are common companions to riverfront work.',
-  notes=['Rockwood is in Wayne County on the Huron River.', 'The Huron River empties into Lake Erie downstream.', 'Riverbank stabilization, docks and drainage are typical projects.'],
-  svc=[('docks','Docks and repairs for river properties.'),('seawalls','Bank stabilization and walls where a structure is appropriate.'),('excavating-grading','Grading and drainage that protect the bank.'),('concrete','Patios, drives and walks.'),('decks','Riverside decks.')],
-  faq=('Is a dock permit on the Huron River different from a Great Lakes dock permit?','<p>It can be. Rivers that flow into the Great Lakes are often regulated as streams, while the Great Lakes shoreline itself is regulated separately. EGLE can tell you which rules apply at your address, and permits are applied for through the MiEnviro Portal. See our <a href="/blog/michigan-permits-seawalls-docks-dredging/">permit guide</a>.</p>'),
-  near=['gibraltar','trenton','monroe']),
-
- dict(slug='monroe', name='Monroe', kind='city', county='Monroe', water='erie', hero='l-shaped-dock-choppy-water',
-  lead='Monroe is Michigan’s only Lake Erie port city, with the River Raisin running through town and shallow, exposed water at its mouth.',
-  p1='Monroe sits on the west shore of Lake Erie at the mouth of the River Raisin, and the Port of Monroe is the only port in Michigan on Lake Erie. The river winds through downtown, and Sterling State Park brings the lakeshore to the edge of the city. Monroe County has nearly 30 miles of Lake Erie shoreline.',
-  p2='Lake Erie exposure means waves and water-level swings, and the lower River Raisin channel needs ongoing dredging for ship traffic, according to the city. Private docks, walls and pilings here have to allow for open-water waves, river current and sediment. Permit rules differ between the Lake Erie shoreline and the river, so confirm with EGLE which apply to your site.',
-  notes=['Monroe is in Monroe County on Lake Erie at the mouth of the River Raisin.', 'The Port of Monroe is Michigan’s only port on Lake Erie.', 'Sterling State Park is on the lakeshore.'],
-  svc=[('docks','Docks and repairs for river and lake properties.'),('seawalls','Walls and bank protection.'),('pilings','Steel and wood pilings and covers.'),('dredging','Slip, boat well and canal dredging.'),('boat-hoists','Lifts and maintenance.'),('concrete','Flatwork and removal.')],
-  faq=('Does the River Raisin need dredging, and does that affect private docks in Monroe?','<p>According to the city, the lower River Raisin channel needs ongoing dredging for ship traffic. Private slips and boat wells can silt in over time too, and dredging in Great Lakes waters generally needs permits. See our <a href="/blog/dredging-101-canals-marinas-boat-wells/">dredging guide</a>.</p>'),
-  near=['rockwood','gibraltar','trenton']),
 ]
 TOWN_BY_SLUG = {t['slug']: t for t in TOWNS}
