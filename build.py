@@ -69,6 +69,10 @@ def product_photo(label):
 def tel(cls='', label=None, icon=False):
     return f'<a class="{cls}" href="tel:{SITE["phone_e164"]}">{PHONE_SVG if icon else ""}{label or SITE["phone"]}</a>'
 
+def with_article(name, plural=False):
+    if plural or name.lower().startswith('the '): return name
+    return ('an ' if name[:1].upper() in 'AEIOUX' else 'a ') + name
+
 def nav_html(active):
     water = [s for s in SERVICES if s['group'] == 'water']; land = [s for s in SERVICES if s['group'] == 'land']
     li = lambda ss: ''.join(f'<li><a href="/services/{s["slug"]}/">{s["name"]}</a></li>' for s in ss)
@@ -509,7 +513,7 @@ def hi_tide_product(p):
     buy_line = (f'Buying Hi-Tide {p["name"].lower()} through Stier’s Construction means one contractor for the parts, the install and everything after.' if accessories else
                 f'Buying a Hi-Tide {p["name"]} through Stier’s Construction means one contractor for the lift, the install and everything after: cable change-out, motor maintenance and welding repairs to the frame, all done in-house.')
     main = f'<div class="main"><section><h2>About the {p["name"]}</h2>{specs_html}</section><section><h2>Installed and Serviced by Stier’s Construction</h2><div class="prose"><p>{buy_line} See our <a href="/services/boat-hoists/">full boat hoist service</a>.</p></div></section></div>'
-    body = hero + f'<div class="section"><div class="wrap content-grid">{main}{aside}</div></div>' + cta_band(f'Ready to talk about a {p["name"]}?')
+    body = hero + f'<div class="section"><div class="wrap content-grid">{main}{aside}</div></div>' + cta_band(f'Ready to talk about {with_article(p["name"], p.get("plural"))}?')
     svc = {'@type': 'Product', '@id': f'{URL}{path}#product', 'name': f'Hi-Tide {p["name"]}', 'category': c['name'], 'description': p.get('desc') or c['desc'],
            'brand': {'@type': 'Brand', 'name': 'Hi-Tide'}, 'url': f'{URL}{path}'}
     if p.get('img'): svc['image'] = f'{URL}{img_url(p["img"])}'
@@ -573,7 +577,7 @@ def candock_product(p):
 <div class="panel"><h3>More {c['name']}</h3><ul class="related">{''.join(f'<li><a href="{CD_ROOT}{q["slug"]}/"><b>{q["name"]}</b><span>{CANDOCK_CATS[q["cat"]]["name"]}</span></a></li>' for q in others) or f'<li><a href="{CD_ROOT}"><b>See the full lineup</b><span>All Candock systems</span></a></li>'}</ul>
 <p class="mt-s"><a class="textlink" href="{CD_ROOT}">All Candock floating docks</a></p></div></aside>'''
     main = f'<div class="main"><section><h2>About the {p["name"]}</h2>{specs_html}</section><section><h2>Installed and Serviced by Stier’s Construction</h2><div class="prose"><p>Buying a Candock {p["name"]} through Stier’s Construction means one contractor for the dock, the install and everything after. See our <a href="/services/docks/">full dock service</a>.</p></div></section></div>'
-    body = hero + f'<div class="section"><div class="wrap content-grid">{main}{aside}</div></div>' + cta_band(f'Ready to talk about a {p["name"]}?')
+    body = hero + f'<div class="section"><div class="wrap content-grid">{main}{aside}</div></div>' + cta_band(f'Ready to talk about {with_article(p["name"], p.get("plural"))}?')
     svc = {'@type': 'Product', '@id': f'{URL}{path}#product', 'name': f'Candock {p["name"]}', 'category': c['name'], 'description': p['desc'],
            'brand': {'@type': 'Brand', 'name': 'Candock'}, 'url': f'{URL}{path}'}
     if p.get('img'): svc['image'] = f'{URL}{img_url(p["img"])}'

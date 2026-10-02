@@ -1702,5 +1702,16 @@
 "candock-acc-led-light-cube-100.16214002.webp"
 ]
 ]
+},
+"candock-edge-line-cubes": {
+"w": 245,
+"h": 200,
+"alt": "Two Candock Edge Line cubes, the beveled trim piece for a dock edge",
+"files": [
+[
+245,
+"candock-edge-line-cubes-245.ab7e3153.webp"
+]
+]
 }
 }

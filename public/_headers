@@ -130,6 +130,8 @@
   Content-Security-Policy: default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; font-src 'self'; connect-src 'self'; form-action 'self'; frame-src https://www.enhancify.com; frame-ancestors 'none'; base-uri 'self'; object-src 'none'
 /services/docks/candock/
   Content-Security-Policy: default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; font-src 'self'; connect-src 'self'; form-action 'self'; frame-src https://www.enhancify.com; frame-ancestors 'none'; base-uri 'self'; object-src 'none'
+/services/docks/candock/edge-line/
+  Content-Security-Policy: default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; font-src 'self'; connect-src 'self'; form-action 'self'; frame-src https://www.enhancify.com; frame-ancestors 'none'; base-uri 'self'; object-src 'none'
 /services/docks/candock/floating-dock-system/
   Content-Security-Policy: default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; font-src 'self'; connect-src 'self'; form-action 'self'; frame-src https://www.enhancify.com; frame-ancestors 'none'; base-uri 'self'; object-src 'none'
 /services/docks/candock/jetroll/
