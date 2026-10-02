@@ -1661,5 +1661,46 @@
 "candock-jetslide-installed-480.5961e916.webp"
 ]
 ]
+},
+"candock-service-channel-lit": {
+"w": 1000,
+"h": 166,
+"alt": "A Candock floating dock lit from inside at night by the LED service channel system",
+"files": [
+[
+260,
+"candock-service-channel-lit-260.bbd4a57a.webp"
+],
+[
+383,
+"candock-service-channel-lit-383.ccf8980e.webp"
+],
+[
+480,
+"candock-service-channel-lit-480.fa32c30a.webp"
+]
+]
+},
+"candock-acc-service-cube-base": {
+"w": 100,
+"h": 95,
+"alt": "Candock Service Cube Base, the two-part base and cover for routing wires and pipes",
+"files": [
+[
+100,
+"candock-acc-service-cube-base-100.3f230430.webp"
+]
+]
+},
+"candock-acc-led-light-cube": {
+"w": 100,
+"h": 90,
+"alt": "Candock LED Light Cube accessory",
+"files": [
+[
+100,
+"candock-acc-led-light-cube-100.16214002.webp"
+]
+]
 }
 }

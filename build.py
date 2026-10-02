@@ -547,8 +547,10 @@ def candock_product(p):
     hero = f'''<section class="page-hero on-dark"><div class="wrap">{crumbs(trail)}<div class="page-hero-grid"><div><p class="eyebrow">{c['name']}</p><h1>Candock {p['name']}</h1><p class="lead">{p.get('tagline') or c['desc']}</p>
 <div class="btn-row"><a class="btn btn-primary" href="/contact/">Get a free quote</a>{tel('btn btn-ghost', 'Call ' + SITE['phone'], True)}</div></div>
 <figure class="page-hero-media">{cd_photo(p, '(min-width:940px) 46vw, 92vw')}</figure></div></div></section>'''
-    specs_rows = [('Material', p['material']), ('Dimensions', p['dimensions']), ('Weight', p['weight']), ('Colors', ', '.join(p['colors']))] + p.get('extra_specs', [])
-    specs_grid = '<ul class="warranty-grid">' + ''.join(f'<li><span class="w-label">{lbl}</span><strong>{val}</strong></li>' for lbl, val in specs_rows) + '</ul>'
+    specs_grid = ''
+    if p.get('material'):
+        specs_rows = [('Material', p['material']), ('Dimensions', p['dimensions']), ('Weight', p['weight']), ('Colors', ', '.join(p['colors']))] + p.get('extra_specs', [])
+        specs_grid = '<ul class="warranty-grid">' + ''.join(f'<li><span class="w-label">{lbl}</span><strong>{val}</strong></li>' for lbl, val in specs_rows) + '</ul>'
     warranty_note = note(f'<p>{p["warranty"]}.</p>') if p.get('warranty') else ''
     install_note = note(f'<p>{p["install_note"]}</p>') if p.get('install_note') else ''
     config_html = ''
@@ -556,7 +558,11 @@ def candock_product(p):
         rows = ''.join(f'<li><h3>{name}<br><small>{tag}</small></h3><p>{desc}</p></li>' for name, tag, desc in p['configurations'])
         config_html = f'<h3 class="mt-l">{p["name"]} Configurations</h3><ol class="steps" style="grid-template-columns:repeat(3,1fr)">{rows}</ol>'
     acc_html = ''
-    if p.get('accessories'):
+    if p.get('accessories') and isinstance(p['accessories'][0], dict):
+        label = p.get('accessories_label', 'Compatible Accessories')
+        cards = ''.join(f'<li class="acc-card"><span class="product-photo-frame">{cd_photo(a, "130px")}</span><div class="acc-card-body"><h3>{a["name"]}</h3><p>{a["desc"]}</p></div></li>' for a in p['accessories'])
+        acc_html = f'<h3 class="mt-l">{label}</h3><ul class="acc-grid">{cards}</ul>'
+    elif p.get('accessories'):
         acc_img = f'<span class="product-photo-frame acc-photo-wide">{img(p["accessories_img"], "260px", alt=p["name"] + " accessories")}</span>' if p.get('accessories_img') else ''
         acc_html = f'<h3 class="mt-l">Compatible Accessories</h3><div class="split" style="align-items:start">{acc_img}{ul(p["accessories"])}</div>'
     uses_html = f'<h3 class="mt-l">Where It Fits</h3>{ul(p["uses"])}' if p.get('uses') else ''

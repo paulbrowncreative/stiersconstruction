@@ -458,6 +458,7 @@ HI_TIDE_BY_SLUG = {p['slug']: p for p in HI_TIDE_PRODUCTS}
 CANDOCK_CATS = {
  'pwc-drive-on-docks': dict(name='PWC Drive-On Docks', desc='A drive-on dock for personal watercraft: pull up, drive on and the dock does the rest. No winch or separate lift needed.'),
  'modular-floating-docks': dict(name='Modular Floating Docks', desc='Interlocking dock cubes that connect into any shape or size, anchored to any type of seabed or an existing structure.'),
+ 'dock-accessories': dict(name='Dock Accessories', desc='Add-ons and components for a Candock floating dock system.'),
 }
 CANDOCK_PRODUCTS = [
  dict(slug='floating-dock-system', name='Floating Dock System', cat='modular-floating-docks', img='candock-floating-dock-cube',
@@ -496,6 +497,15 @@ CANDOCK_PRODUCTS = [
   colors=['Grey', 'Beige'],
   features=['No assembly required', 'Maintenance free', 'Compatible with all types of docks', 'Lightweight and resistant to impact', 'UV and weather resistant', 'Designed to evenly distribute watercraft weight', 'Foam-filled interior keeps it afloat in any conditions', 'Compatible with different types of watercraft'],
   install_note='Because boats and PWCs vary so much in size, shape and type, Candock Inc. must approve every JetSlide installation, even when it is installed by an authorized Candock distributor — otherwise the warranty cannot be applied. We handle that approval as part of the install.'),
+ dict(slug='service-channel-system', name='Service Channel System', cat='dock-accessories', img='candock-service-channel-lit',
+  tagline='Insert wires and pipes through your floating dock for easy access to service and lighting systems.',
+  desc='Candock’s patented service channel system routes wiring and piping straight through the dock for lighting and service access. The two-part base and cover assemble without hardware, and the system carries the same complete modularity as the rest of the Candock lineup.',
+  features=['Patented service channel design', 'Two-part base and cover', 'Easy assembly, no hardware required', 'Complete modularity throughout your dock layout', 'Patented LED lighting lights up your dock from the cubes'],
+  accessories_label='Service Channel Components',
+  accessories=[
+   dict(img='candock-acc-service-cube-base', name='Service Cube Base', desc='Base and cover for routing wires and pipes through the dock.'),
+   dict(img='candock-acc-led-light-cube', name='LED Light Cube', desc='Patented LED lighting that lights up your dock from the cubes. Easy to assemble, easy to access.'),
+  ]),
 ]
 CANDOCK_BY_SLUG = {p['slug']: p for p in CANDOCK_PRODUCTS}
 
