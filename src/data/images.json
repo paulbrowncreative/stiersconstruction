@@ -1584,13 +1584,21 @@
 ]
 },
 "candock-jetroll-installed": {
-"w": 263,
-"h": 205,
-"alt": "A Candock JetRoll drive-on personal watercraft dock with a jet ski docked beside other boats",
+"w": 480,
+"h": 360,
+"alt": "Two Candock JetRoll drive-on PWC docks installed side by side off a wooden dock on a wooded lake",
 "files": [
 [
 260,
-"candock-jetroll-installed-260.f3d4fbd4.webp"
+"candock-jetroll-installed-260.90c42026.webp"
+],
+[
+383,
+"candock-jetroll-installed-383.c208c2d1.webp"
+],
+[
+480,
+"candock-jetroll-installed-480.0ec6132f.webp"
 ]
 ]
 },
@@ -1614,13 +1622,21 @@
 ]
 },
 "candock-jetroll-accessories": {
-"w": 230,
-"h": 225,
-"alt": "Candock JetRoll accessories: bow stop and hole caps",
+"w": 460,
+"h": 460,
+"alt": "Candock JetRoll accessories: bow stop and hole caps shown on the JetRoll deck",
 "files": [
 [
 230,
-"candock-jetroll-accessories-230.939e3228.webp"
+"candock-jetroll-accessories-230.d1d864ff.webp"
+],
+[
+320,
+"candock-jetroll-accessories-320.f06e74a0.webp"
+],
+[
+460,
+"candock-jetroll-accessories-460.bec9a608.webp"
 ]
 ]
 },
