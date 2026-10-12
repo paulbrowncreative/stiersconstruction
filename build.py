@@ -335,7 +335,7 @@ def page(path, title, desc, body, active='', trail=None, ld=None, preload=None, 
 def preload_sizes(key):
     return '100vw' if key == HERO_KEY else '(min-width:940px) 46vw, 92vw'
 
-HERO_KEY = 'sheet-pile-excavator-canal-home'
+HERO_KEY = 'stiers-excavator-demo-site'
 
 # ============================================================ HOME
 def home():
@@ -403,7 +403,7 @@ def home():
 <div class="mt-m"><div class="person" style="border-color:var(--concrete-300)"><h3>Kevin</h3><p class="role" style="color:var(--muted)">Owner</p><p>More than 15 years of hands-on welding, marine and construction experience. An active, on-site contractor.</p></div>
 <div class="person" style="border-color:var(--concrete-300)"><h3>Chris</h3><p class="role" style="color:var(--muted)">Project manager</p><p>More than 8 years in construction, specializing in carpentry, concrete and marine work. Also owns a trucking business, Stier’s Enterprise.</p></div></div>
 <p class="mt-s"><a class="textlink" href="/about/">Meet the team</a></p></div>
-<figure>{img('stiers-excavator-demo-site', '(min-width:900px) 46vw, 92vw')}</figure></div></section>'''
+<figure>{img('sheet-pile-excavator-canal-home', '(min-width:900px) 46vw, 92vw')}</figure></div></section>'''
 
     area = f'''<section class="section section-alt" aria-labelledby="a-h"><div class="wrap split flip"><figure>{img('barge-open-water', '(min-width:900px) 46vw, 92vw')}</figure><div><h2 id="a-h">Serving Metro Detroit’s waterfront</h2>
 <p class="lead mt-s">We serve waterfront communities on Lake St. Clair, the St. Clair River and the Detroit River.</p>
