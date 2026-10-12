@@ -623,7 +623,10 @@ def golden_product(p):
     cap = f'<p class="cap-line"><strong>Capacity:</strong> {p["capacity"]}</p>' if p.get('capacity') else ''
     features_html = f'<h3 class="mt-m">Key Features</h3>{ul(p["features"])}' if p.get('features') else ''
     benefits_html = f'<h3 class="mt-l">Benefits</h3>{ul(p["benefits"])}' if p.get('benefits') else ''
-    specs_html = f'<div class="prose">{cap}<p>{p["desc"]}</p></div>{features_html}{benefits_html}'
+    models_html = ''
+    for group_name, rows in p.get('models', []):
+        models_html += f'<h3 class="mt-l">{group_name}</h3><ul class="warranty-grid">' + ''.join(f'<li><span class="w-label">{lbl}</span><strong>{val}</strong></li>' for lbl, val in rows) + '</ul>'
+    specs_html = f'<div class="prose">{cap}<p>{p["desc"]}</p></div>{features_html}{benefits_html}{models_html}'
     aside = f'''<aside class="aside-sticky aside-stack" aria-label="Quote and related lifts"><div class="panel panel-dark"><h3>Ask About the {p['name']}</h3><small>Mon to Fri, 8am to 5pm</small>
 <a class="phone" href="tel:{SITE['phone_e164']}">{SITE['phone']}</a><a class="btn btn-primary" href="/contact/">Send Project Details</a><p class="fin-line">Financing available. <a href="/financing/">See options</a></p></div>
 <div class="panel"><h3>More {c['name']}</h3><ul class="related">{''.join(f'<li><a href="{GD_ROOT}{q["slug"]}/"><b>{q["name"]}</b><span>{GOLDEN_CATS[q["cat"]]["name"]}</span></a></li>' for q in others) or f'<li><a href="{GD_ROOT}"><b>See the full lineup</b><span>All Golden models</span></a></li>'}</ul>

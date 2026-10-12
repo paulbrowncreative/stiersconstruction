@@ -529,6 +529,7 @@ GOLDEN_CATS = {
  'float-a-vator': dict(name='Float-A-Vator', desc='A floating lift system that secures to a floating dock or a conventional mooring, built from marine-grade aluminum, stainless steel and UV-resistant polyethylene tanks.'),
  'sailboat-lifts': dict(name='Sailboat Lifts', desc='Lifts engineered specifically for sailboats, custom-built to the boat and site.'),
  'floating-dock-lifts': dict(name='Floating Dock Lifts', desc='A lift built into a floating dock platform, for reliable performance across changing water levels.'),
+ 'kayak-launch': dict(name='Kayak Launch', desc='A ladder-and-ramp system patented by Golden for stable, hassle-free kayak and paddleboard entry and exit.'),
 }
 GOLDEN_PRODUCTS = [
  dict(slug='invisilift', name='InvisiLift', cat='invisilift', img='golden-invisilift-installed',
@@ -550,6 +551,19 @@ GOLDEN_PRODUCTS = [
   tagline='Floating Dock Lift: seamless access to the water.',
   capacity='7,000 – 50,000 lbs (larger capacities available on request)',
   desc='The Floating Dock Lift is a cutting-edge solution designed to simplify the process of docking and launching boats. Engineered for strength and stability, this exceptional lift accommodates various vessel sizes, ensuring reliable performance across all water conditions. The Floating Dock Lift features user-friendly operation and requires minimal maintenance, making it an ideal choice for boaters who value convenience and efficiency.'),
+ dict(slug='kayak-launch', name='Kayak Launch', cat='kayak-launch', img='golden-kayak-launch-installed',
+  tagline='Easy launching for every adventure. Patent #9,278,735.',
+  desc='Golden Boat Lifts presents its premier Kayak Launch, the incredible solution for hassle-free access to the water. Engineered for stability and ease of use, this launch system provides kayakers and paddleboarders with a secure and stable platform, making entry and exit a breeze. Built with durable, marine-grade materials, it withstands various water conditions while requiring minimal maintenance. Whether you’re a seasoned paddler or a beginner, the Kayak Launch is designed to enhance your kayaking or paddleboarding needs by providing unmatched convenience and safety.',
+  models=[
+   ('5-Step Launch Models', [('Standard', '4′ travel, 6′ bunks, 34″ clear entry'), ('Extra Wide', '4′ travel, 6′ bunks, 43″ clear entry'), ('Heavy Duty', '3′ travel, 6′ bunks, 56″ clear entry')]),
+   ('7-Step Launch Models', [('Standard', '6′ travel, 6′ bunks, 34″ clear entry'), ('Extra Wide', '6′ travel, 6′ bunks, 43″ clear entry'), ('Heavy Duty', '5′ travel, 6′ bunks, 56″ clear entry')]),
+  ]),
+ dict(slug='floating-kayak-launch', name='Floating Kayak Launch', cat='kayak-launch', img='golden-floating-kayak-launch-installed',
+  tagline='Glide into the water with ease and stability.',
+  desc='The Golden Boat Lifts Floating Kayak Launch attaches to most residential floating dock systems. It adjusts to changing water levels, ensuring a smooth and secure entry and exit from your kayak. Constructed from high-quality, marine-grade materials, the Floating Kayak Launch is designed to withstand various weather conditions while requiring minimal maintenance. Its user-friendly design caters to paddlers of all skill levels, offering unparalleled stability and ease of use.',
+  models=[
+   ('Floating Launch Models', [('Standard', '6′ bunks, 34″ clear entry'), ('Extra Wide', '6′ bunks, 43″ clear entry'), ('Heavy Duty', '6′ bunks, 56″ clear entry')]),
+  ]),
 ]
 GOLDEN_BY_SLUG = {p['slug']: p for p in GOLDEN_PRODUCTS}
 

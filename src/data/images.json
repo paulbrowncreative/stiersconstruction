@@ -1829,5 +1829,43 @@
 "golden-floating-dock-lift-installed-480.d39fd2f6.webp"
 ]
 ]
+},
+"golden-kayak-launch-installed": {
+"w": 480,
+"h": 360,
+"alt": "A Golden Kayak Launch ladder and ramp system installed at a residential dock",
+"files": [
+[
+260,
+"golden-kayak-launch-installed-260.45e60ccb.webp"
+],
+[
+383,
+"golden-kayak-launch-installed-383.b1de9c33.webp"
+],
+[
+480,
+"golden-kayak-launch-installed-480.e4fb4df3.webp"
+]
+]
+},
+"golden-floating-kayak-launch-installed": {
+"w": 480,
+"h": 360,
+"alt": "A kayak loaded on a Golden Floating Kayak Launch attached to a wooden dock",
+"files": [
+[
+260,
+"golden-floating-kayak-launch-installed-260.a0cf2801.webp"
+],
+[
+383,
+"golden-floating-kayak-launch-installed-383.ceaf5c51.webp"
+],
+[
+480,
+"golden-floating-kayak-launch-installed-480.ed306947.webp"
+]
+]
 }
 }
