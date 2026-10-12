@@ -621,8 +621,9 @@ def golden_product(p):
 <div class="btn-row"><a class="btn btn-primary" href="/contact/">Get a free quote</a>{tel('btn btn-ghost', 'Call ' + SITE['phone'], True)}</div></div>
 <figure class="page-hero-media">{gd_photo(p, '(min-width:940px) 46vw, 92vw')}</figure></div></div></section>'''
     cap = f'<p class="cap-line"><strong>Capacity:</strong> {p["capacity"]}</p>' if p.get('capacity') else ''
+    features_html = f'<h3 class="mt-m">Key Features</h3>{ul(p["features"])}' if p.get('features') else ''
     benefits_html = f'<h3 class="mt-l">Benefits</h3>{ul(p["benefits"])}' if p.get('benefits') else ''
-    specs_html = f'<div class="prose">{cap}<p>{p["desc"]}</p></div><h3 class="mt-m">Key Features</h3>{ul(p["features"])}{benefits_html}'
+    specs_html = f'<div class="prose">{cap}<p>{p["desc"]}</p></div>{features_html}{benefits_html}'
     aside = f'''<aside class="aside-sticky aside-stack" aria-label="Quote and related lifts"><div class="panel panel-dark"><h3>Ask About the {p['name']}</h3><small>Mon to Fri, 8am to 5pm</small>
 <a class="phone" href="tel:{SITE['phone_e164']}">{SITE['phone']}</a><a class="btn btn-primary" href="/contact/">Send Project Details</a><p class="fin-line">Financing available. <a href="/financing/">See options</a></p></div>
 <div class="panel"><h3>More {c['name']}</h3><ul class="related">{''.join(f'<li><a href="{GD_ROOT}{q["slug"]}/"><b>{q["name"]}</b><span>{GOLDEN_CATS[q["cat"]]["name"]}</span></a></li>' for q in others) or f'<li><a href="{GD_ROOT}"><b>See the full lineup</b><span>All Golden models</span></a></li>'}</ul>

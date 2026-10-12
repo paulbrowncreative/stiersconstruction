@@ -527,6 +527,8 @@ CANDOCK_BY_SLUG = {p['slug']: p for p in CANDOCK_PRODUCTS}
 GOLDEN_CATS = {
  'invisilift': dict(name='InvisiLift', desc='A patented, low-profile boat lift designed to blend into the dock structure rather than stand above it.'),
  'float-a-vator': dict(name='Float-A-Vator', desc='A floating lift system that secures to a floating dock or a conventional mooring, built from marine-grade aluminum, stainless steel and UV-resistant polyethylene tanks.'),
+ 'sailboat-lifts': dict(name='Sailboat Lifts', desc='Lifts engineered specifically for sailboats, custom-built to the boat and site.'),
+ 'floating-dock-lifts': dict(name='Floating Dock Lifts', desc='A lift built into a floating dock platform, for reliable performance across changing water levels.'),
 }
 GOLDEN_PRODUCTS = [
  dict(slug='invisilift', name='InvisiLift', cat='invisilift', img='golden-invisilift-installed',
@@ -540,6 +542,14 @@ GOLDEN_PRODUCTS = [
   capacity='3,000 – 35,000 lbs',
   desc='The Float-A-Vator Boat Lift is built to last with a marine-grade aluminum and stainless steel frame, 300 series stainless hardware, and UV-resistant polyethylene tanks. This versatile lift can be secured to a floating dock or installed using a conventional mooring system.',
   features=['Trouble-free, maintenance-free manual controller standard; self-leveling electronic controller optional', 'Accommodates nearly all boat types: V-hull, catamaran, wake boat, pontoon, tritoon and jet drive boats', 'Compatible with both fixed and floating docks', 'Works seamlessly in U-shaped slips, double-wide slips and L-shaped docks', 'Golden has been certified by DQS Inc. to ISO 9001:2015']),
+ dict(slug='sailboat-lifts', name='Sailboat Lifts', plural=True, cat='sailboat-lifts', img='golden-sailboat-lift-installed',
+  tagline='Precision lifting for your sailing needs.',
+  capacity='Custom — manufactured to any capacity',
+  desc='Golden Sailboat Lifts are meticulously engineered to meet the unique needs of sailboat owners, offering smooth and streaming lifting solutions. Our lifts are constructed from premium marine-grade materials, ensuring durability and longevity even in the most brutal marine environments. Designed for precision and stability, Golden Sailboat Lifts provide confidence by safely lifting and storing your sailboat, protecting it from damage and other elements. Whether you have a compact daysailer or a large cruising yacht, our customizable lifts accommodate various sizes and configurations, making launching and retrieving your sailboat a breeze. All of our exquisite sailboat lifts are customized and can be manufactured in all capacities.'),
+ dict(slug='floating-dock-lift', name='Floating Dock Lift', cat='floating-dock-lifts', img='golden-floating-dock-lift-installed',
+  tagline='Floating Dock Lift: seamless access to the water.',
+  capacity='7,000 – 50,000 lbs (larger capacities available on request)',
+  desc='The Floating Dock Lift is a cutting-edge solution designed to simplify the process of docking and launching boats. Engineered for strength and stability, this exceptional lift accommodates various vessel sizes, ensuring reliable performance across all water conditions. The Floating Dock Lift features user-friendly operation and requires minimal maintenance, making it an ideal choice for boaters who value convenience and efficiency.'),
 ]
 GOLDEN_BY_SLUG = {p['slug']: p for p in GOLDEN_PRODUCTS}
 

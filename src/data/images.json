@@ -1791,5 +1791,43 @@
 "golden-float-a-vator-installed-480.d97ade01.webp"
 ]
 ]
+},
+"golden-sailboat-lift-installed": {
+"w": 480,
+"h": 360,
+"alt": "A sailboat held clear of the water on a Golden Sailboat Lift at a residential dock",
+"files": [
+[
+260,
+"golden-sailboat-lift-installed-260.26dee3b5.webp"
+],
+[
+383,
+"golden-sailboat-lift-installed-383.1f8eb96b.webp"
+],
+[
+480,
+"golden-sailboat-lift-installed-480.ca45bb77.webp"
+]
+]
+},
+"golden-floating-dock-lift-installed": {
+"w": 480,
+"h": 360,
+"alt": "A performance boat held clear of the water on a Golden Floating Dock Lift at a waterfront home",
+"files": [
+[
+260,
+"golden-floating-dock-lift-installed-260.2a4e25c8.webp"
+],
+[
+383,
+"golden-floating-dock-lift-installed-383.e52baa08.webp"
+],
+[
+480,
+"golden-floating-dock-lift-installed-480.d39fd2f6.webp"
+]
+]
 }
 }
