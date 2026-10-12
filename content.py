@@ -151,6 +151,11 @@ SERVICES = [
      groups(('Buying a Hi-Tide lift through Stier’s', ['Sized and configured for your boat, slip and water depth', 'Installed by the same crew that services it', 'Backed by our own cable, motor and welding work, not a call to a separate installer']),
             ('Already own a Hi-Tide lift?', ['Cable change-out and motor service', 'Welding repairs to frames and supports, done in-house', 'Seasonal inspection before launch'])) +
      '<p class="mt-m"><a class="btn btn-outline" href="/services/boat-hoists/hi-tide/">Browse the full Hi-Tide lineup</a></p>'),
+   dict(id='golden', h2='An authorized Golden Boat Lifts dealer', html=
+     '<p class="measure">Stier’s Construction also sells, installs and services select Golden Boat Lifts models, including the low-profile InvisiLift and the floating Float-A-Vator. Buying the lift and having it installed and maintained through one contractor means one point of contact for the life of the lift.</p>' +
+     groups(('Buying a Golden lift through Stier’s', ['Sized and configured for your boat, slip and water depth', 'Installed by the same crew that services it', 'Backed by our own cable, motor and welding work, not a call to a separate installer']),
+            ('Already own a Golden lift?', ['Cable change-out and motor service', 'Welding repairs to frames and supports, done in-house', 'Seasonal inspection before launch'])) +
+     '<p class="mt-m"><a class="btn btn-outline" href="/services/boat-hoists/golden/">Browse the Golden lineup</a></p>'),
    dict(id='what', h2='Hoist installation and maintenance', html=groups(
      ('Installation', ['Boat house hoists', 'Elevator lifts', '4-point lifts', '8-point lifts', 'PWC (jet ski) lifts', 'Davits']),
      ('Maintenance', ['Cable change-out: worn or damaged cables replaced with quality materials and precise installation, so the lift operates safely and smoothly', 'Motor maintenance: motors inspected, cleaned, lubricated and serviced to prevent costly breakdowns and extend life', 'Welding maintenance: lift frames, supports and structural parts repaired or reinforced to keep the lift strong and reliable for years'])) +
@@ -161,7 +166,8 @@ SERVICES = [
    ('Which boat hoist fits my boat?', '<p>Length is the starting point: PWC lifts for watercraft under 15 feet, 4-point lifts up to about 25 feet, elevator lifts up to about 30 feet, 8-point lifts for 30 to 40 foot boats, and boat house hoists for boats up to 35 to 40 feet. Weight, beam and hull shape matter too, so send us your boat’s details.</p>'),
    ('What is the difference between a 4-point and an 8-point lift?', '<p>A 4-point lift supports the hull at four contact points and suits smaller runabouts, center consoles and fishing boats. An 8-point lift spreads weight over eight points, which reduces hull stress and adds stability for larger cruisers and pontoon boats.</p>'),
    ('Do you sell Hi-Tide boat lifts?', '<p>Yes. Stier’s Construction is an authorized Hi-Tide dealer. We can size and quote a new Hi-Tide lift, install it, and keep it running with our own cable, motor and welding service.</p>'),
-   ('Can you service a hoist I already have?', '<p>Yes: cable change-out, motor maintenance and welding repairs to frames and supports, on Hi-Tide lifts and other brands.</p>'),
+   ('Do you sell Golden Boat Lifts?', '<p>Yes. Stier’s Construction is an authorized dealer for select Golden Boat Lifts models, including the InvisiLift and Float-A-Vator. We size, install and service them the same way as every other lift we carry.</p>'),
+   ('Can you service a hoist I already have?', '<p>Yes: cable change-out, motor maintenance and welding repairs to frames and supports, on Hi-Tide lifts, Golden lifts and other brands.</p>'),
    ('When should hoist cables be replaced?', '<p>Replace cables that are frayed, kinked or corroded, or that no longer lift evenly. If you are not sure, ask us to take a look before the season starts.</p>'),
   ],
   related=['docks', 'welding-fabrication', 'pilings', 'seawalls']),
@@ -513,6 +519,29 @@ CANDOCK_PRODUCTS = [
   warranty='20-year warranty on Candock products'),
 ]
 CANDOCK_BY_SLUG = {p['slug']: p for p in CANDOCK_PRODUCTS}
+
+# Golden Boat Lifts & Marine Systems catalog. Stier's Construction is an authorized dealer
+# of specific Golden product lines (confirmed by the site owner). Specs/copy below are
+# transcribed from Golden's own 2026 catalog for the lines Stier's carries. Add further
+# Golden lines to GOLDEN_PRODUCTS the same way once confirmed and photos are supplied.
+GOLDEN_CATS = {
+ 'invisilift': dict(name='InvisiLift', desc='A patented, low-profile boat lift designed to blend into the dock structure rather than stand above it.'),
+ 'float-a-vator': dict(name='Float-A-Vator', desc='A floating lift system that secures to a floating dock or a conventional mooring, built from marine-grade aluminum, stainless steel and UV-resistant polyethylene tanks.'),
+}
+GOLDEN_PRODUCTS = [
+ dict(slug='invisilift', name='InvisiLift', cat='invisilift', img='golden-invisilift-installed',
+  tagline='Blend in with the scenery with Golden’s patented InvisiLift.',
+  capacity='3,500 – 15,000 lbs',
+  desc='Explore the pinnacle of innovation and craftsmanship with the InvisiLift by Golden Boat Lifts. Designed to blend seamlessly with its surroundings while offering unmatched performance, the InvisiLift sets a new standard in boat lifting technology. Whether you’re a boating enthusiast or a marina operator, the InvisiLift promises reliability, ease of use and an elegant solution for all your boat lifting needs.',
+  features=['Sleek, low-profile design: virtually invisible, preserving the natural beauty of your waterfront', 'Superior lifting capacity: lifts a wide range of vessels with ease', 'Durability and strength: built with marine-grade materials to withstand harsh marine environments', 'User-friendly operation: intuitive control system for simple, straightforward use', 'Golden has been certified by DQS Inc. to ISO 9001:2015'],
+  benefits=['Enhanced aesthetics: maintains the pristine look of your dock or marina with an unobtrusive design', 'Increased boat longevity: lifting your boat out of the water helps prevent hull damage, marine growth and corrosion', 'Efficient space utilization: compact design, ideal for narrow canals or private docks']),
+ dict(slug='float-a-vator', name='Float-A-Vator', cat='float-a-vator', img='golden-float-a-vator-installed',
+  tagline='Effortless lifting, unmatched performance.',
+  capacity='3,000 – 35,000 lbs',
+  desc='The Float-A-Vator Boat Lift is built to last with a marine-grade aluminum and stainless steel frame, 300 series stainless hardware, and UV-resistant polyethylene tanks. This versatile lift can be secured to a floating dock or installed using a conventional mooring system.',
+  features=['Trouble-free, maintenance-free manual controller standard; self-leveling electronic controller optional', 'Accommodates nearly all boat types: V-hull, catamaran, wake boat, pontoon, tritoon and jet drive boats', 'Compatible with both fixed and floating docks', 'Works seamlessly in U-shaped slips, double-wide slips and L-shaped docks', 'Golden has been certified by DQS Inc. to ISO 9001:2015']),
+]
+GOLDEN_BY_SLUG = {p['slug']: p for p in GOLDEN_PRODUCTS}
 
 HOME_FAQS = [
  ('What areas do you serve?', '<p>We work across Metro Detroit, with a focus on the Lake St. Clair and Detroit River waterfront. Not sure we cover your address? Call <a href="tel:+15867037214">586-703-7214</a> and ask.</p>'),

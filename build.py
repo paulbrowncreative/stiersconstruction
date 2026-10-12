@@ -79,7 +79,7 @@ def nav_html(active):
     cur = lambda p: ' aria-current="page"' if active == p else ''
     return f'''<nav id="site-nav" class="site-nav" aria-label="Primary"><ul class="nav-list">
 <li class="has-menu"><button type="button" class="nav-link menu-btn" aria-expanded="false" aria-controls="menu-services">Services{CHEV}</button>
-<div class="mega" id="menu-services"><div><p class="mega-h">In and over the water</p><ul>{li(water)}</ul></div><div><p class="mega-h">On the lot</p><ul>{li(land)}</ul></div><div class="mega-foot"><a class="mega-all" href="/services/">See all services</a><a class="mega-all" href="/service-area/">Where we work</a><a class="mega-all" href="/services/boat-hoists/hi-tide/">Hi-Tide boat lifts</a><a class="mega-all" href="/services/docks/candock/">Candock floating docks</a></div></div></li>
+<div class="mega" id="menu-services"><div><p class="mega-h">In and over the water</p><ul>{li(water)}</ul></div><div><p class="mega-h">On the lot</p><ul>{li(land)}</ul></div><div class="mega-foot"><a class="mega-all" href="/services/">See all services</a><a class="mega-all" href="/service-area/">Where we work</a><a class="mega-all" href="/services/boat-hoists/hi-tide/">Hi-Tide boat lifts</a><a class="mega-all" href="/services/boat-hoists/golden/">Golden boat lifts</a><a class="mega-all" href="/services/docks/candock/">Candock floating docks</a></div></div></li>
 <li><a class="nav-link" href="/projects/"{cur('projects')}>Projects</a></li>
 <li><a class="nav-link" href="/financing/"{cur('financing')}>Financing</a></li>
 <li><a class="nav-link" href="/blog/"{cur('blog')}>Blog</a></li>
@@ -194,7 +194,8 @@ def _tc_word(w, force_cap):
         if part == '-' or not part: out.append(part); continue
         pl = part.lower().rstrip('.')
         first_part = (i == 0)
-        if pl in SMALL and not (force_cap and first_part):
+        single_letter_in_compound = len(parts) > 1 and len(part) == 1
+        if pl in SMALL and not single_letter_in_compound and not (force_cap and first_part):
             out.append(part.lower() if part.isalpha() or part.endswith('.') else part)
         elif part[0].isalpha():
             out.append(part[0].upper() + part[1:])
@@ -383,6 +384,10 @@ def home():
 <p class="lead mt-s">Stier’s Construction is an authorized Candock dealer, including the JetRoll drive-on dock for personal watercraft. One crew for the dock, the install and everything after.</p>
 <p class="btn-row mt-s"><a class="btn btn-dark" href="/services/docks/candock/">Browse Candock floating docks</a>{tel('btn btn-outline', SITE['phone'], True)}</p></div></div></section>'''
 
+    golden = f'''<section class="section section-alt" aria-labelledby="gbl-h"><div class="wrap split flip"><figure>{img('golden-invisilift-installed', '(min-width:900px) 46vw, 92vw')}</figure><div><p class="eyebrow">Authorized dealer</p><h2 id="gbl-h">We sell Golden boat lifts</h2>
+<p class="lead mt-s">Stier’s Construction is an authorized dealer for select Golden Boat Lifts models, including the low-profile InvisiLift and the floating Float-A-Vator. Buy the lift and have it installed and serviced by the same crew.</p>
+<p class="btn-row mt-s"><a class="btn btn-dark" href="/services/boat-hoists/golden/">Browse Golden boat lifts</a>{tel('btn btn-outline', SITE['phone'], True)}</p></div></div></section>'''
+
     rev = f'''<section class="section section-dark on-dark" aria-labelledby="r-h"><div class="wrap"><div class="section-head"><h2 id="r-h">What customers say</h2></div>
 <div class="reviews"><figure class="quote"><blockquote style="margin:0"><p>“{QUOTES[0][0]}”</p></blockquote><figcaption><cite>{QUOTES[0][1]}</cite></figcaption></figure>
 <figure class="quote"><blockquote style="margin:0"><p>“{QUOTES[1][0]}”</p></blockquote><figcaption><cite>{QUOTES[1][1]}</cite></figcaption></figure></div></div></section>'''
@@ -401,7 +406,7 @@ def home():
     guides = f'<section class="section section-alt" aria-labelledby="gd-h"><div class="wrap"><div class="section-head"><h2 id="gd-h">Waterfront Guides for Metro Detroit Owners</h2><p>Plain-English answers on seawalls, docks, permits and more.</p></div><ul class="post-list">{"".join(post_row(p) for p in latest)}</ul><p class="mt-m"><a class="btn btn-outline" href="/blog/">Read the Blog</a></p></div></section>'
     faq = f'''<section class="section" aria-labelledby="f-h"><div class="wrap"><div class="section-head"><h2 id="f-h">Questions we hear a lot</h2></div>{faq_html(HOME_FAQS)}</div></section>'''
     fin = f'''<section class="fin-band" aria-labelledby="fb-h"><div class="wrap fin-band-in"><div><h2 id="fb-h">Financing available for your project</h2><p>Spread the cost of a seawall, dock, deck or concrete job into monthly payments. Arranged through Enhancify, subject to credit approval.</p></div><a class="btn btn-dark" href="/financing/">See financing options</a></div></section>'''
-    body = hero + xsec + mosaic + why + hitide + candock + rev + fin + team + area + guides + faq + cta_band()
+    body = hero + xsec + mosaic + why + hitide + candock + golden + rev + fin + team + area + guides + faq + cta_band()
     page('/', 'Marine & Seawall Contractor in Metro Detroit | Stier’s',
          'Seawalls, docks, pilings, hoists, dredging, welding, concrete and decks on Lake St. Clair and the Detroit River. Owner-led crew. Free quotes.',
          body, ld=[faq_ld(HOME_FAQS)], preload=HERO_KEY, prio=1.0, sm_images=[img_url(HERO_KEY)])
@@ -582,6 +587,52 @@ def candock_product(p):
            'brand': {'@type': 'Brand', 'name': 'Candock'}, 'url': f'{URL}{path}'}
     if p.get('img'): svc['image'] = f'{URL}{img_url(p["img"])}'
     page(path, f'Candock {p["name"]}', f'Candock {p["name"]} ({c["name"]}): sold, installed and serviced by Stier’s Construction, an authorized Candock dealer in Metro Detroit. Free quotes.',
+         body, active='services', trail=trail, ld=[svc], prio=0.6, sm_images=[img_url(p['img'])] if p.get('img') else None)
+
+# ============================================================ GOLDEN BOAT LIFTS
+GD_ROOT = '/services/boat-hoists/golden/'
+def gd_photo(p, sizes='260px'):
+    return img(p['img'], sizes, cls='product-photo-img', alt=f'Golden {p["name"]} boat lift') if p.get('img') else product_photo(p['name'])
+
+def golden_card(p):
+    c = GOLDEN_CATS[p['cat']]
+    return f'''<li class="product-card"><a class="product-card-link" href="{GD_ROOT}{p['slug']}/"><span class="product-photo-frame">{gd_photo(p, '(min-width:1000px) 22vw, (min-width:640px) 30vw, 46vw')}</span>
+<div class="product-card-body"><p class="eyebrow">{c['name']}</p><h3>{p['name']}</h3><span class="textlink">View details</span></div></a></li>'''
+
+def golden_hub():
+    trail = [('Home', '/'), ('Services', '/services/'), ('Boat Hoists', '/services/boat-hoists/'), ('Golden Boat Lifts', None)]
+    grid = ''.join(golden_card(p) for p in GOLDEN_PRODUCTS)
+    body = f'''<section class="page-hero on-dark"><div class="wrap">{crumbs(trail)}<div style="padding-block:clamp(24px,4vw,56px) clamp(36px,5vw,64px)"><p class="eyebrow">Authorized dealer</p><h1 style="max-width:24ch">Golden boat lifts</h1>
+<p class="lead mt-s" style="max-width:62ch">Stier’s Construction sells, installs and services select Golden Boat Lifts models, including the low-profile InvisiLift and the floating Float-A-Vator. Pick a model to see what it is built for, or request a quote for pricing sized to your boat and site.</p>
+<div class="btn-row"><a class="btn btn-primary" href="/contact/">Get a free quote</a>{tel('btn btn-ghost', 'Call ' + SITE['phone'], True)}</div></div></div></section>
+<section class="section"><div class="wrap"><ul class="product-grid">{grid}</ul>
+<div class="mt-m">{note('<p>More of the Golden lineup is being added here as we confirm which models Stier’s carries. Ask when you request a quote if you don’t see what you need yet.</p>')}</div></div></section>
+{cta_band('Not sure which Golden lift fits your boat?', 'Send your boat’s make, length and weight, plus your slip or water depth, and we will match the lift and quote the install.')}'''
+    ld = [{'@type': 'ItemList', 'itemListElement': [{'@type': 'ListItem', 'position': i + 1, 'url': f'{URL}{GD_ROOT}{p["slug"]}/', 'name': p['name']} for i, p in enumerate(GOLDEN_PRODUCTS)]}]
+    page(GD_ROOT, 'Golden Boat Lifts', 'Stier’s Construction is an authorized Golden Boat Lifts dealer for select models, including the InvisiLift and Float-A-Vator, installed and serviced by our own crew.',
+         body, active='services', trail=trail, ld=ld, ptype='CollectionPage', prio=0.8, sm_images=[img_url(p['img']) for p in GOLDEN_PRODUCTS if p.get('img')])
+
+def golden_product(p):
+    path = f'{GD_ROOT}{p["slug"]}/'
+    c = GOLDEN_CATS[p['cat']]
+    trail = [('Home', '/'), ('Services', '/services/'), ('Boat Hoists', '/services/boat-hoists/'), ('Golden Boat Lifts', GD_ROOT), (p['name'], None)]
+    others = [q for q in GOLDEN_PRODUCTS if q['cat'] == p['cat'] and q['slug'] != p['slug']][:4]
+    hero = f'''<section class="page-hero on-dark"><div class="wrap">{crumbs(trail)}<div class="page-hero-grid"><div><p class="eyebrow">{c['name']}</p><h1>Golden {p['name']}</h1><p class="lead">{p.get('tagline') or c['desc']}</p>
+<div class="btn-row"><a class="btn btn-primary" href="/contact/">Get a free quote</a>{tel('btn btn-ghost', 'Call ' + SITE['phone'], True)}</div></div>
+<figure class="page-hero-media">{gd_photo(p, '(min-width:940px) 46vw, 92vw')}</figure></div></div></section>'''
+    cap = f'<p class="cap-line"><strong>Capacity:</strong> {p["capacity"]}</p>' if p.get('capacity') else ''
+    benefits_html = f'<h3 class="mt-l">Benefits</h3>{ul(p["benefits"])}' if p.get('benefits') else ''
+    specs_html = f'<div class="prose">{cap}<p>{p["desc"]}</p></div><h3 class="mt-m">Key Features</h3>{ul(p["features"])}{benefits_html}'
+    aside = f'''<aside class="aside-sticky aside-stack" aria-label="Quote and related lifts"><div class="panel panel-dark"><h3>Ask About the {p['name']}</h3><small>Mon to Fri, 8am to 5pm</small>
+<a class="phone" href="tel:{SITE['phone_e164']}">{SITE['phone']}</a><a class="btn btn-primary" href="/contact/">Send Project Details</a><p class="fin-line">Financing available. <a href="/financing/">See options</a></p></div>
+<div class="panel"><h3>More {c['name']}</h3><ul class="related">{''.join(f'<li><a href="{GD_ROOT}{q["slug"]}/"><b>{q["name"]}</b><span>{GOLDEN_CATS[q["cat"]]["name"]}</span></a></li>' for q in others) or f'<li><a href="{GD_ROOT}"><b>See the full lineup</b><span>All Golden models</span></a></li>'}</ul>
+<p class="mt-s"><a class="textlink" href="{GD_ROOT}">All Golden boat lifts</a></p></div></aside>'''
+    main = f'<div class="main"><section><h2>About the {p["name"]}</h2>{specs_html}</section><section><h2>Installed and Serviced by Stier’s Construction</h2><div class="prose"><p>Buying a Golden {p["name"]} through Stier’s Construction means one contractor for the lift, the install and everything after: cable change-out, motor maintenance and welding repairs to the frame, all done in-house. See our <a href="/services/boat-hoists/">full boat hoist service</a>.</p></div></section></div>'
+    body = hero + f'<div class="section"><div class="wrap content-grid">{main}{aside}</div></div>' + cta_band(f'Ready to talk about {with_article(p["name"], p.get("plural"))}?')
+    svc = {'@type': 'Product', '@id': f'{URL}{path}#product', 'name': f'Golden {p["name"]}', 'category': c['name'], 'description': p['desc'],
+           'brand': {'@type': 'Brand', 'name': 'Golden Boat Lifts'}, 'url': f'{URL}{path}'}
+    if p.get('img'): svc['image'] = f'{URL}{img_url(p["img"])}'
+    page(path, f'Golden {p["name"]}', f'Golden {p["name"]} ({c["name"]}): sold, installed and serviced by Stier’s Construction, an authorized Golden Boat Lifts dealer in Metro Detroit. Free quotes.',
          body, active='services', trail=trail, ld=[svc], prio=0.6, sm_images=[img_url(p['img'])] if p.get('img') else None)
 
 # ============================================================ PROJECTS
@@ -904,6 +955,8 @@ hi_tide_hub()
 for _hp in HI_TIDE_PRODUCTS: hi_tide_product(_hp)
 candock_hub()
 for _cp in CANDOCK_PRODUCTS: candock_product(_cp)
+golden_hub()
+for _gp in GOLDEN_PRODUCTS: golden_product(_gp)
 blog_hub()
 for _p in POSTS: blog_post(_p)
 blog_feed()

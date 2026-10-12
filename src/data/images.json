@@ -1753,5 +1753,43 @@
 "candock-edge-line-cubes-480.5612014b.webp"
 ]
 ]
+},
+"golden-invisilift-installed": {
+"w": 480,
+"h": 360,
+"alt": "A Golden InvisiLift boat lift holding a RIB boat clear of the water at a residential canal dock",
+"files": [
+[
+260,
+"golden-invisilift-installed-260.fbaa93b0.webp"
+],
+[
+383,
+"golden-invisilift-installed-383.35bf4f2d.webp"
+],
+[
+480,
+"golden-invisilift-installed-480.1b4d01d3.webp"
+]
+]
+},
+"golden-float-a-vator-installed": {
+"w": 480,
+"h": 360,
+"alt": "A Golden Float-A-Vator floating boat lift holding a center console boat clear of the water at a marina",
+"files": [
+[
+260,
+"golden-float-a-vator-installed-260.8a04d0a9.webp"
+],
+[
+383,
+"golden-float-a-vator-installed-383.b7835d8d.webp"
+],
+[
+480,
+"golden-float-a-vator-installed-480.d97ade01.webp"
+]
+]
 }
 }
