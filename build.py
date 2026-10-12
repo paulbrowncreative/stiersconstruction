@@ -92,7 +92,7 @@ def nav_html(active):
 
 def header(active):
     return f'''<header class="site-header"><div class="wrap header-inner">
-<a class="brand" href="/" aria-label="Stier’s Welding &amp; Construction, home"><img src="/assets/mark-dark.png" width="160" height="88" alt=""><span class="brand-text"><span class="brand-name">Stier’s</span> <span class="brand-sub">Welding &amp; Construction</span></span></a>
+<a class="brand" href="/" aria-label="Stier’s Welding &amp; Construction, home"><img src="/assets/mark-dark.png" width="160" height="88" alt=""><span class="brand-text"><span class="brand-name">Stier’s</span> <span class="brand-sub">Welding <span class="amp">&amp;</span> Construction</span></span></a>
 {nav_html(active)}
 {tel('header-phone', '<span>' + SITE['phone'] + '</span>', True).replace('<a class="header-phone"', '<a class="header-phone" aria-label="Call ' + SITE['phone'] + '"')}
 <a class="btn btn-primary header-cta" href="/contact/">Get a free quote</a>
