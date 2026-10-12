@@ -1867,5 +1867,157 @@
 "golden-floating-kayak-launch-installed-480.ed306947.webp"
 ]
 ]
+},
+"sunstream-sunlift-x": {
+"w": 480,
+"h": 360,
+"alt": "A Sunstream SunLift X freestanding hydraulic boat lift, shown without a boat",
+"files": [
+[
+260,
+"sunstream-sunlift-x-260.b0d55823.webp"
+],
+[
+383,
+"sunstream-sunlift-x-383.5cf78343.webp"
+],
+[
+480,
+"sunstream-sunlift-x-480.e5507794.webp"
+]
+]
+},
+"sunstream-sunlift-legacy": {
+"w": 480,
+"h": 360,
+"alt": "A Sunstream SunLift Legacy freestanding hydraulic boat lift, shown without a boat",
+"files": [
+[
+260,
+"sunstream-sunlift-legacy-260.993d9dd9.webp"
+],
+[
+383,
+"sunstream-sunlift-legacy-383.d8e13572.webp"
+],
+[
+480,
+"sunstream-sunlift-legacy-480.eac1080e.webp"
+]
+]
+},
+"sunstream-floatlift": {
+"w": 480,
+"h": 360,
+"alt": "A deck boat held clear of the water on a Sunstream FloatLift free-floating hydraulic lift",
+"files": [
+[
+260,
+"sunstream-floatlift-260.536b26b3.webp"
+],
+[
+383,
+"sunstream-floatlift-383.c8946631.webp"
+],
+[
+480,
+"sunstream-floatlift-480.364e648a.webp"
+]
+]
+},
+"sunstream-helix2-p": {
+"w": 480,
+"h": 360,
+"alt": "A Sunstream Helix2-P piling boat lift on wood pilings, shown without a boat",
+"files": [
+[
+260,
+"sunstream-helix2-p-260.921700eb.webp"
+],
+[
+383,
+"sunstream-helix2-p-383.a831fc7c.webp"
+],
+[
+480,
+"sunstream-helix2-p-480.2e27e784.webp"
+]
+]
+},
+"sunstream-liftbar": {
+"w": 480,
+"h": 360,
+"alt": "A Sunstream LiftBar ball-screw cable lift, shown without a boat",
+"files": [
+[
+260,
+"sunstream-liftbar-260.911e904a.webp"
+],
+[
+383,
+"sunstream-liftbar-383.5711ab2a.webp"
+],
+[
+480,
+"sunstream-liftbar-480.409c32a1.webp"
+]
+]
+},
+"sunstream-sunport2": {
+"w": 480,
+"h": 360,
+"alt": "A Sunstream SunPort2 floating drive-on PWC dock",
+"files": [
+[
+260,
+"sunstream-sunport2-260.ff66f1e0.webp"
+],
+[
+383,
+"sunstream-sunport2-383.79614ad8.webp"
+],
+[
+480,
+"sunstream-sunport2-480.4af5f403.webp"
+]
+]
+},
+"sunstream-sps": {
+"w": 480,
+"h": 360,
+"alt": "A Sunstream Power System (SPS) hydraulic power pedestal",
+"files": [
+[
+260,
+"sunstream-sps-260.43eeb780.webp"
+],
+[
+383,
+"sunstream-sps-383.03b92ccf.webp"
+],
+[
+480,
+"sunstream-sps-480.e9bd97bd.webp"
+]
+]
+},
+"sunstream-swiftshield": {
+"w": 480,
+"h": 360,
+"alt": "A boat covered by a Sunstream SwiftShield automatic boat cover on its lift",
+"files": [
+[
+260,
+"sunstream-swiftshield-260.9da57f01.webp"
+],
+[
+383,
+"sunstream-swiftshield-383.8ec5f4a2.webp"
+],
+[
+480,
+"sunstream-swiftshield-480.6e40ccd0.webp"
+]
+]
 }
 }

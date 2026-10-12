@@ -156,6 +156,11 @@ SERVICES = [
      groups(('Buying a Golden lift through Stier’s', ['Sized and configured for your boat, slip and water depth', 'Installed by the same crew that services it', 'Backed by our own cable, motor and welding work, not a call to a separate installer']),
             ('Already own a Golden lift?', ['Cable change-out and motor service', 'Welding repairs to frames and supports, done in-house', 'Seasonal inspection before launch'])) +
      '<p class="mt-m"><a class="btn btn-outline" href="/services/boat-hoists/golden/">Browse the Golden lineup</a></p>'),
+   dict(id='sunstream', h2='An authorized Sunstream dealer', html=
+     '<p class="measure">Stier’s Construction also sells, installs and services the Sunstream lineup, including the freestanding SunLift X and SunLift Legacy, the free-floating FloatLift, and the hidden Helix2-P piling lift. Buying the lift and having it installed and maintained through one contractor means one point of contact for the life of the lift.</p>' +
+     groups(('Buying a Sunstream lift through Stier’s', ['Sized and configured for your boat, slip and water depth', 'Installed by the same crew that services it', 'Backed by our own cable, motor and welding work, not a call to a separate installer']),
+            ('Already own a Sunstream lift?', ['Cable change-out and motor service', 'Welding repairs to frames and supports, done in-house', 'Seasonal inspection before launch'])) +
+     '<p class="mt-m"><a class="btn btn-outline" href="/services/boat-hoists/sunstream/">Browse the Sunstream lineup</a></p>'),
    dict(id='what', h2='Hoist installation and maintenance', html=groups(
      ('Installation', ['Boat house hoists', 'Elevator lifts', '4-point lifts', '8-point lifts', 'PWC (jet ski) lifts', 'Davits']),
      ('Maintenance', ['Cable change-out: worn or damaged cables replaced with quality materials and precise installation, so the lift operates safely and smoothly', 'Motor maintenance: motors inspected, cleaned, lubricated and serviced to prevent costly breakdowns and extend life', 'Welding maintenance: lift frames, supports and structural parts repaired or reinforced to keep the lift strong and reliable for years'])) +
@@ -167,7 +172,8 @@ SERVICES = [
    ('What is the difference between a 4-point and an 8-point lift?', '<p>A 4-point lift supports the hull at four contact points and suits smaller runabouts, center consoles and fishing boats. An 8-point lift spreads weight over eight points, which reduces hull stress and adds stability for larger cruisers and pontoon boats.</p>'),
    ('Do you sell Hi-Tide boat lifts?', '<p>Yes. Stier’s Construction is an authorized Hi-Tide dealer. We can size and quote a new Hi-Tide lift, install it, and keep it running with our own cable, motor and welding service.</p>'),
    ('Do you sell Golden Boat Lifts?', '<p>Yes. Stier’s Construction is an authorized dealer for select Golden Boat Lifts models, including the InvisiLift and Float-A-Vator. We size, install and service them the same way as every other lift we carry.</p>'),
-   ('Can you service a hoist I already have?', '<p>Yes: cable change-out, motor maintenance and welding repairs to frames and supports, on Hi-Tide lifts, Golden lifts and other brands.</p>'),
+   ('Do you sell Sunstream boat lifts?', '<p>Yes. Stier’s Construction is an authorized Sunstream dealer, including the SunLift X, SunLift Legacy, FloatLift and Helix2-P. We size, install and service them the same way as every other lift we carry.</p>'),
+   ('Can you service a hoist I already have?', '<p>Yes: cable change-out, motor maintenance and welding repairs to frames and supports, on Hi-Tide, Golden and Sunstream lifts, and other brands.</p>'),
    ('When should hoist cables be replaced?', '<p>Replace cables that are frayed, kinked or corroded, or that no longer lift evenly. If you are not sure, ask us to take a look before the season starts.</p>'),
   ],
   related=['docks', 'welding-fabrication', 'pilings', 'seawalls']),
@@ -566,6 +572,68 @@ GOLDEN_PRODUCTS = [
   ]),
 ]
 GOLDEN_BY_SLUG = {p['slug']: p for p in GOLDEN_PRODUCTS}
+
+# Sunstream Boat Lifts catalog. Stier's Construction is an authorized Sunstream dealer.
+# Specs/copy transcribed from Sunstream's own product pages (sunstreamboatlifts.com).
+# No warranty terms are published on any product page, so none are listed here.
+SUNSTREAM_CATS = {
+ 'freestanding-lifts': dict(name='Freestanding Lifts', desc='A hydraulic lift that stands on its own four legs, independent of pilings or a dock structure.'),
+ 'floating-lifts': dict(name='Floating Lifts', desc='A free-floating hydraulic lift that ties to a dock or mooring buoy, built for shallow water.'),
+ 'piling-lifts': dict(name='Piling Lifts', desc='A hydraulic lift mounted to pilings, with no visible motors or gearboxes above the dock.'),
+ 'cable-lifts': dict(name='Cable Lifts', desc='A low-profile ball-screw cable lift that mounts to pilings or integrates into a fixed or floating dock.'),
+ 'pwc-docks': dict(name='PWC Docks', desc='A floating drive-on, drive-off dock for personal watercraft.'),
+ 'accessories': dict(name='Accessories', desc='Power systems and covers that work across the Sunstream lineup.'),
+}
+SUNSTREAM_PRODUCTS = [
+ dict(slug='sunlift-x', name='SunLift X', cat='freestanding-lifts', img='sunstream-sunlift-x',
+  tagline='Looking this good is no work at all.',
+  capacity='5,000 – 30,000 lbs',
+  desc='A hydraulic freestanding boat lift with adjustable-width Superbunks, a lateral frame shift and an all-stainless-steel hydraulic system, controlled from a smartphone app over Bluetooth. Standard lifting range is 4 feet, extending to 6.5 feet with the adjustable range kit, and up to 21 feet of water depth with the deep water bracing accessory. Patent pending.',
+  features=['All-stainless-steel cylinders with SoftStop technology and a patented shaft boot', 'Pressure balance pump: up to 20% more efficient than a fixed gear pump', 'American-built, blue anodized power unit with German valves and a pressure relief that prevents hydraulic lock', 'Non-oil, water-soluble SunFluid hydraulic fluid', 'Superbunks flexible cushioning bunks, adjustable for boat fit', 'Lateral frame shift reduces boat-to-dock distance', 'Over-center GravityLock secures the lift in the raised position', 'Bluetooth transmitter and smartphone app for voltage, battery health and diagnostics, plus basic up/down control', 'Solar or AC battery charging', 'Usable in saltwater and freshwater (sacrificial zincs required for saltwater)'],
+  models=[('Capacity by Lifting Range', [('4′–5′ Range', '5,000 lbs'), ('6′ Range', '4,500 lbs'), ('6.5′ Range', '4,000 lbs')])]),
+ dict(slug='sunlift-legacy', name='SunLift Legacy', cat='freestanding-lifts', img='sunstream-sunlift-legacy',
+  tagline='There can only be one original.',
+  capacity='1,500 – 2,000 lbs',
+  desc='Sunstream’s original freestanding hydraulic boat lift: a single-cylinder design with a sleek, low profile that keeps the focus on the boat, not the lift. Capacity is 2,000 lbs at standard range, 1,500 lbs at extended lifting ranges.',
+  features=['Stainless steel cylinder with SoftStop and a patented shaft boot', 'Pressure balance pump: up to 20% greater efficiency, higher speed and quieter operation than a basic fixed gear pump', 'Pressure relief prevents hydraulic lock', 'Rubber-capped aluminum Superbunks for smooth loading', 'Fiberglass powerpack box with UV-protective gelcoat', 'American-built blue anodized power unit with German valves', 'Water-soluble, non-oil SunFluid hydraulic fluid', 'Optional Bluetooth transmitter and smartphone app (upgraded remote control unit)'],
+  models=[('Dimensions', [('Standard Range', '44″ (112 cm)'), ('Range w/ Adjustable Range Accessory', '67″ (170 cm)'), ('Bunk Length', '6′ (1.83 m)'), ('Leg Lengths Available', '2′ – 24′'), ('Typical Lifting Speed', '15 seconds')])]),
+ dict(slug='floatlift', name='FloatLift', cat='floating-lifts', img='sunstream-floatlift',
+  tagline='Slip into something comfortable.',
+  capacity='5,500 lbs',
+  desc='A free-floating hydraulic boat lift that ties to a dock or mooring buoy, built for shallow water — needs only about 12 inches of water under the keel or skeg. Foam-filled floats lock under the boat when raised, and the floats can be walked on for hull and prop access.',
+  features=['Patented GravityLock and an over-center locking system to secure the boat', 'Marine-grade aluminum frame and stainless steel hardware', 'Stainless steel cylinders, retracted above the water when raised', 'Remote control, plus a Bluetooth transmitter and smartphone app for voltage, battery health and diagnostics', 'Battery charged by AC or solar', 'Low-profile floats designed to split waves', 'Compatible with the SwiftShield automatic boat cover', 'Sacrificial zincs required for saltwater use'],
+  models=[('Dimensions', [('Lift Length', '20′ (6.1 m)'), ('Lift Width (Up Position)', '10.5′ (3.23 m)'), ('Weight', '1,300 lbs (590 kg)'), ('Water Depth Required', 'Draft + 12″'), ('Minimum Slip Width', '12′ (3.66 m)'), ('Maximum Boat Beam', '8.5′ (2.62 m)')])]),
+ dict(slug='helix2-p', name='Helix2-P', cat='piling-lifts', img='sunstream-helix2-p',
+  tagline='Performance that’s out of sight.',
+  capacity='8,000 – 24,000 lbs',
+  desc='A hydraulic piling lift with a hidden structure and no visible motors, electrical work or gearboxes. The boat does not need to be centered, so it can sit as little as 4 inches from the dock. Patent pending.',
+  features=['Thick marine-grade aluminum structure for stiffness', 'Stainless steel hardware; optional stainless steel spindles for saltwater', 'Lubricated stainless steel ball bearings and rubber-capped aluminum Superbunks', 'Hydraulic DC powerpack, selectable at 6hp or 12hp', 'Runs on a standard 110V extension cord (6A); no power routed underwater', 'Sealed, non-maintenance backup batteries', 'Cradle locks in the up position to limit sway and reduce cable fatigue', 'Cable travel limiter, exclusive to Helix2-P', 'Free smartphone app for control', 'Optional Storm Surge Inserts raise the boat an additional 18″'],
+  models=[('Dimensions', [('Bunk Length', '12′ (3.7 m)'), ('Max Lift Travel', '15′ (4.6 m)'), ('Max Interior Width', '12′4″ (3.8 m)'), ('Lift Length', '16′ (4.9 m)'), ('Pile Spacing', '13′6″ × 13′')])]),
+ dict(slug='liftbar', name='LiftBar', cat='cable-lifts', img='sunstream-liftbar',
+  tagline='The latest twist in lifts.',
+  capacity='8,000 lbs',
+  desc='A ball-screw lifting mechanism sealed inside an aluminum tube — a low-profile lift that mounts to pilings at dock level, builds into a fixed or floating dock, or mounts above the dock as a bench. No electrical limit switches or spindles, so cables never wind or tangle.',
+  features=['Twin 3hp DC motors turn a lead screw, synchronized like a garage door opener', 'IP68 submersible design; components sit out of the water when raised', 'Usable in saltwater', 'No cable keepers needed; ball screw mechanism has no sway', 'Trickle-charged by low-amp 110V or solar power, with built-in backup', 'No external power pack or battery box needed on the dock', 'Synchronized motors let the boat sit off-center for a smaller boarding gap', 'Minimum water depth about 8″ under a V-hull keel (pontoons need about 3″ more)'],
+  models=[('Dimensions', [('Lifting Range', '8.5′'), ('LiftBar Length', '18′'), ('Lift Speed', '118 in/min'), ('Standard Bunk Length', '14′'), ('Number of Piles', '4'), ('Minimum Pile Diameter', '8″'), ('Maximum Pile Width', '13′'), ('Horsepower', '6 hp total')])]),
+ dict(slug='sunport2', name='SunPort2', cat='pwc-docks', img='sunstream-sunport2',
+  tagline='Let the good times roll.',
+  capacity='1,600 lbs',
+  desc='A floating drive-on, drive-off dock for personal watercraft, built from molded, foam-filled polyethylene. A wide, pivoting entry guides the bow and loading needs minimal power.',
+  features=['Pivoting tail and wide mouth guide and align the bow on entry', 'Integrated bow stop positions the craft and protects it from dock accidents', 'Hydrodynamically shaped bottom for support and positioning', 'Dual rows of Stoltz rollers for loading and unloading', 'Unsinkable, molded foam-filled polyethylene construction', 'Slide mount for fluctuating water levels', 'Sunstream Duraflexx mounts reduce stress on floating docks', 'Optional QuickCover attaches to the bow stop and clips to the rear corners'],
+  models=[('Standard Model Dimensions', [('Length', '13′9″ (4.19 m)'), ('Width', '4′11″ (1.49 m)'), ('Height', '2′5″ (76.2 cm)'), ('Draft', '4.2″ (10.7 cm)'), ('Weight', '370 lbs (167.8 kg)')])]),
+ dict(slug='sps', name='Sunstream Power System', cat='accessories', img='sunstream-sps',
+  tagline='Realize your superpower.',
+  capacity='Powers 8,000 – 12,000+ lbs of lift capacity per pedestal',
+  desc='A shared hydraulic power system for Sunstream dock equipment. One pedestal can power several Sunstream lifts or SwiftShield covers, cutting down on separate power units and dock clutter. Choose a 6hp or 12hp DC powerpack; systems can scale up to 24hp combined. Patent pending.',
+  features=['One pedestal serves multiple devices; new equipment plugs into the existing pedestal', 'Submersible pedestal with a domed lid withstands flooding', 'Sealed battery backup keeps lifts and covers running during an outage', 'Runs on low-amperage 110V AC or solar power', 'Each device gets an RC transmitter; the Sunstream app allows control from unlimited phones', '15-inch square pedestal footprint'],
+  models=[('Powerpack Models', [('SPS-P6D', '6 hp, rated 8,000–12,000 lbs'), ('SPS-P12D', '12 hp')])]),
+ dict(slug='swiftshield', name='SwiftShield', cat='accessories', img='sunstream-swiftshield',
+  tagline='Boat more, hassle less.',
+  desc='A hydraulic automatic boat cover system: an aluminum arm-and-roller mechanism guides a custom-made, marine-grade cover on or off with a button press or remote command, covering the boat in about 30 seconds. Compatible with SunLift X, SunLift Legacy, FloatLift and Helix2-P, plus configurations for other pile lifts, elevator lifts and swing-arm airlifts. Not offered for Helix-Sport, SunPort2 or SunLift Mini. Available for some boats up to 40 feet, depending on the boat — ask us to confirm fit for yours.',
+  features=['Automatic operation: covers and uncovers the boat with a remote or button press', 'Full coverage of the top, sides and rear, with open aft venting so the boat dries quickly', 'Cover stores on the roller while the boat is in use', 'Marine-grade aluminum arm and stainless steel hardware, for fresh or salt water', 'Hydraulic system uses water-soluble fluid', 'Custom, digitally measured cover fit', 'Optional Bluetooth app shows voltage, battery health and diagnostics'],
+  warranty='Hurricane, severe weather and other environmental damage is not covered. Secure the cover at 40–70 mph winds, and remove it above 70 mph; do not operate above 25 mph.'),
+]
+SUNSTREAM_BY_SLUG = {p['slug']: p for p in SUNSTREAM_PRODUCTS}
 
 HOME_FAQS = [
  ('What areas do you serve?', '<p>We work across Metro Detroit, with a focus on the Lake St. Clair and Detroit River waterfront. Not sure we cover your address? Call <a href="tel:+15867037214">586-703-7214</a> and ask.</p>'),
