@@ -612,8 +612,7 @@ def golden_hub():
     body = f'''<section class="page-hero on-dark"><div class="wrap">{crumbs(trail)}<div style="padding-block:clamp(24px,4vw,56px) clamp(36px,5vw,64px)"><p class="eyebrow">Authorized dealer</p><h1 style="max-width:24ch">Golden boat lifts</h1>
 <p class="lead mt-s" style="max-width:62ch">Stier’s Construction sells, installs and services select Golden Boat Lifts models, including the low-profile InvisiLift and the floating Float-A-Vator. Pick a model to see what it is built for, or request a quote for pricing sized to your boat and site.</p>
 <div class="btn-row"><a class="btn btn-primary" href="/contact/">Get a free quote</a>{tel('btn btn-ghost', 'Call ' + SITE['phone'], True)}</div></div></div></section>
-<section class="section"><div class="wrap"><ul class="product-grid">{grid}</ul>
-<div class="mt-m">{note('<p>More of the Golden lineup is being added here as we confirm which models Stier’s carries. Ask when you request a quote if you don’t see what you need yet.</p>')}</div></div></section>
+<section class="section"><div class="wrap"><ul class="product-grid">{grid}</ul></div></section>
 {cta_band('Not sure which Golden lift fits your boat?', 'Send your boat’s make, length and weight, plus your slip or water depth, and we will match the lift and quote the install.')}'''
     ld = [{'@type': 'ItemList', 'itemListElement': [{'@type': 'ListItem', 'position': i + 1, 'url': f'{URL}{GD_ROOT}{p["slug"]}/', 'name': p['name']} for i, p in enumerate(GOLDEN_PRODUCTS)]}]
     page(GD_ROOT, 'Golden Boat Lifts', 'Stier’s Construction is an authorized Golden Boat Lifts dealer: the InvisiLift, Float-A-Vator and more, installed and serviced by our own crew.',
