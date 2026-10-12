@@ -73,6 +73,9 @@ def with_article(name, plural=False):
     if plural or name.lower().startswith('the '): return name
     return ('an ' if name[:1].upper() in 'AEIOUX' else 'a ') + name
 
+def the_name(name):
+    return name if name.lower().startswith('the ') else f'the {name}'
+
 def nav_html(active):
     water = [s for s in SERVICES if s['group'] == 'water']; land = [s for s in SERVICES if s['group'] == 'land']
     li = lambda ss: ''.join(f'<li><a href="/services/{s["slug"]}/">{s["name"]}</a></li>' for s in ss)
@@ -376,7 +379,7 @@ def home():
 <p class="lead mt-s">We take pride in dependable, high-quality marine and construction services. We believe in honest work, clear communication, and a commitment to doing the job right, every time.</p><div class="btn-row mt-m"><a class="btn btn-primary" href="/contact/">Get a free quote</a></div></div>
 <ul class="why-list">{''.join(f'<li><h3>{a}</h3><p>{b}</p></li>' for a, b in why_items)}</ul></div></section>'''
 
-    hitide = f'''<section class="section section-alt" aria-labelledby="ht-h"><div class="wrap split flip"><figure>{img('boat-lift-covered-slip', '(min-width:900px) 46vw, 92vw')}</figure><div><p class="eyebrow">Authorized dealer</p><h2 id="ht-h">We sell Hi-Tide boat lifts</h2>
+    hitide = f'''<section class="section section-alt" aria-labelledby="ht-h"><div class="wrap split flip"><figure>{img('boat-lift-covered-slip', '(min-width:900px) 46vw, 92vw')}</figure><div><p class="eyebrow">Authorized dealer</p><h2 id="ht-h">We sell Hi‑Tide boat lifts</h2>
 <p class="lead mt-s">Stier’s Construction is an authorized Hi-Tide boat lift dealer. Buy the lift and have it installed and serviced by the same crew, backed by our own cable, motor and welding work.</p>
 <p class="btn-row mt-s"><a class="btn btn-dark" href="/services/boat-hoists/hi-tide/">Browse the Hi-Tide lineup</a>{tel('btn btn-outline', SITE['phone'], True)}</p></div></div></section>'''
 
@@ -491,7 +494,7 @@ def hi_tide_hub():
 <section class="section"><div class="wrap"><ul class="product-grid">{grid}</ul></div></section>
 {cta_band('Not sure which Hi-Tide lift fits your boat?', 'Send your boat’s make, length and weight, plus your slip or water depth, and we will match the lift and quote the install.')}'''
     ld = [{'@type': 'ItemList', 'itemListElement': [{'@type': 'ListItem', 'position': i + 1, 'url': f'{URL}{HT_ROOT}{p["slug"]}/', 'name': p['name']} for i, p in enumerate(HI_TIDE_PRODUCTS)]}]
-    page(HT_ROOT, 'Hi-Tide Boat Lifts', 'Stier’s Construction is an authorized Hi-Tide boat lift dealer: 4-post cable lifts, yacht lifts, elevator lifts, PWC lifts and specialty configurations, installed and serviced by our own crew.',
+    page(HT_ROOT, 'Hi-Tide Boat Lifts', 'Stier’s Construction is an authorized Hi-Tide boat lift dealer: 4-post, yacht, elevator and PWC lifts, installed and serviced by our own crew.',
          body, active='services', trail=trail, ld=ld, ptype='CollectionPage', prio=0.8, sm_images=[img_url(p['img']) for p in HI_TIDE_PRODUCTS if p.get('img')])
 
 def hi_tide_product(p):
@@ -515,18 +518,18 @@ def hi_tide_product(p):
         specs_html = f'<div class="prose">{cap}<p>{p["desc"]}</p></div>{warranty}<h3 class="mt-m">Features</h3>{ul(p["features"])}'
     else:
         specs_html = note('<p><strong>Specs and pricing for this model are being confirmed with Hi-Tide.</strong> Send your boat’s make, length and weight, plus your slip or water depth, and we will match capacity and quote the install and any site work it needs.</p>')
-    aside = f'''<aside class="aside-sticky aside-stack" aria-label="Quote and related lifts"><div class="panel panel-dark"><h3>Ask About the {p['name']}</h3><small>Mon to Fri, 8am to 5pm</small>
+    aside = f'''<aside class="aside-sticky aside-stack" aria-label="Quote and related lifts"><div class="panel panel-dark"><h3>Ask About {the_name(p['name'])}</h3><small>Mon to Fri, 8am to 5pm</small>
 <a class="phone" href="tel:{SITE['phone_e164']}">{SITE['phone']}</a><a class="btn btn-primary" href="/contact/">Send Project Details</a><p class="fin-line">Financing available. <a href="/financing/">See options</a></p></div>
 <div class="panel"><h3>More {c['name']}</h3><ul class="related">{''.join(f'<li><a href="{HT_ROOT}{q["slug"]}/"><b>{q["name"]}</b><span>{HI_TIDE_CATS[q["cat"]]["name"]}</span></a></li>' for q in others) or f'<li><a href="{HT_ROOT}"><b>See the full lineup</b><span>All Hi-Tide models</span></a></li>'}</ul>
 <p class="mt-s"><a class="textlink" href="{HT_ROOT}">All Hi-Tide boat lifts</a></p></div></aside>'''
     buy_line = (f'Buying Hi-Tide {p["name"].lower()} through Stier’s Construction means one contractor for the parts, the install and everything after.' if accessories else
                 f'Buying a Hi-Tide {p["name"]} through Stier’s Construction means one contractor for the lift, the install and everything after: cable change-out, motor maintenance and welding repairs to the frame, all done in-house.')
-    main = f'<div class="main"><section><h2>About the {p["name"]}</h2>{specs_html}</section><section><h2>Installed and Serviced by Stier’s Construction</h2><div class="prose"><p>{buy_line} See our <a href="/services/boat-hoists/">full boat hoist service</a>.</p></div></section></div>'
+    main = f'<div class="main"><section><h2>About {the_name(p["name"])}</h2>{specs_html}</section><section><h2>Installed and Serviced by Stier’s Construction</h2><div class="prose"><p>{buy_line} See our <a href="/services/boat-hoists/">full boat hoist service</a>.</p></div></section></div>'
     body = hero + f'<div class="section"><div class="wrap content-grid">{main}{aside}</div></div>' + cta_band(f'Ready to talk about {with_article(p["name"], p.get("plural"))}?')
     svc = {'@type': 'Product', '@id': f'{URL}{path}#product', 'name': f'Hi-Tide {p["name"]}', 'category': c['name'], 'description': p.get('desc') or c['desc'],
            'brand': {'@type': 'Brand', 'name': 'Hi-Tide'}, 'url': f'{URL}{path}'}
     if p.get('img'): svc['image'] = f'{URL}{img_url(p["img"])}'
-    page(path, f'Hi-Tide {p["name"]}', f'Hi-Tide {p["name"]} ({c["name"]}): sold, installed and serviced by Stier’s Construction, an authorized Hi-Tide dealer in Metro Detroit. Free quotes.',
+    page(path, f'Hi-Tide {p["name"]}', f'Hi-Tide {p["name"]}: sold, installed and serviced by Stier’s Construction, an authorized Hi-Tide dealer. Free quotes.',
          body, active='services', trail=trail, ld=[svc], prio=0.6, sm_images=[img_url(p['img'])] if p.get('img') else None)
 
 # ============================================================ CANDOCK FLOATING DOCKS
@@ -581,16 +584,16 @@ def candock_product(p):
     uses_html = f'<h3 class="mt-l">Where It Fits</h3>{ul(p["uses"])}' if p.get('uses') else ''
     notes_html = (f'<div class="mt-m">{warranty_note}</div>' if warranty_note else '') + (f'<div class="mt-m">{install_note}</div>' if install_note else '')
     specs_html = f'<div class="prose"><p>{p["desc"]}</p></div>{specs_grid}{notes_html}<h3 class="mt-l">Key Features</h3>{ul(p["features"])}{config_html}{acc_html}{uses_html}'
-    aside = f'''<aside class="aside-sticky aside-stack" aria-label="Quote and related docks"><div class="panel panel-dark"><h3>Ask About the {p['name']}</h3><small>Mon to Fri, 8am to 5pm</small>
+    aside = f'''<aside class="aside-sticky aside-stack" aria-label="Quote and related docks"><div class="panel panel-dark"><h3>Ask About {the_name(p['name'])}</h3><small>Mon to Fri, 8am to 5pm</small>
 <a class="phone" href="tel:{SITE['phone_e164']}">{SITE['phone']}</a><a class="btn btn-primary" href="/contact/">Send Project Details</a><p class="fin-line">Financing available. <a href="/financing/">See options</a></p></div>
 <div class="panel"><h3>More {c['name']}</h3><ul class="related">{''.join(f'<li><a href="{CD_ROOT}{q["slug"]}/"><b>{q["name"]}</b><span>{CANDOCK_CATS[q["cat"]]["name"]}</span></a></li>' for q in others) or f'<li><a href="{CD_ROOT}"><b>See the full lineup</b><span>All Candock systems</span></a></li>'}</ul>
 <p class="mt-s"><a class="textlink" href="{CD_ROOT}">All Candock floating docks</a></p></div></aside>'''
-    main = f'<div class="main"><section><h2>About the {p["name"]}</h2>{specs_html}</section><section><h2>Installed and Serviced by Stier’s Construction</h2><div class="prose"><p>Buying a Candock {p["name"]} through Stier’s Construction means one contractor for the dock, the install and everything after. See our <a href="/services/docks/">full dock service</a>.</p></div></section></div>'
+    main = f'<div class="main"><section><h2>About {the_name(p["name"])}</h2>{specs_html}</section><section><h2>Installed and Serviced by Stier’s Construction</h2><div class="prose"><p>Buying a Candock {p["name"]} through Stier’s Construction means one contractor for the dock, the install and everything after. See our <a href="/services/docks/">full dock service</a>.</p></div></section></div>'
     body = hero + f'<div class="section"><div class="wrap content-grid">{main}{aside}</div></div>' + cta_band(f'Ready to talk about {with_article(p["name"], p.get("plural"))}?')
     svc = {'@type': 'Product', '@id': f'{URL}{path}#product', 'name': f'Candock {p["name"]}', 'category': c['name'], 'description': p['desc'],
            'brand': {'@type': 'Brand', 'name': 'Candock'}, 'url': f'{URL}{path}'}
     if p.get('img'): svc['image'] = f'{URL}{img_url(p["img"])}'
-    page(path, f'Candock {p["name"]}', f'Candock {p["name"]} ({c["name"]}): sold, installed and serviced by Stier’s Construction, an authorized Candock dealer in Metro Detroit. Free quotes.',
+    page(path, f'Candock {p["name"]}', f'Candock {p["name"]}: sold, installed and serviced by Stier’s Construction, an authorized Candock dealer. Free quotes.',
          body, active='services', trail=trail, ld=[svc], prio=0.6, sm_images=[img_url(p['img'])] if p.get('img') else None)
 
 # ============================================================ GOLDEN BOAT LIFTS
@@ -613,7 +616,7 @@ def golden_hub():
 <div class="mt-m">{note('<p>More of the Golden lineup is being added here as we confirm which models Stier’s carries. Ask when you request a quote if you don’t see what you need yet.</p>')}</div></div></section>
 {cta_band('Not sure which Golden lift fits your boat?', 'Send your boat’s make, length and weight, plus your slip or water depth, and we will match the lift and quote the install.')}'''
     ld = [{'@type': 'ItemList', 'itemListElement': [{'@type': 'ListItem', 'position': i + 1, 'url': f'{URL}{GD_ROOT}{p["slug"]}/', 'name': p['name']} for i, p in enumerate(GOLDEN_PRODUCTS)]}]
-    page(GD_ROOT, 'Golden Boat Lifts', 'Stier’s Construction is an authorized Golden Boat Lifts dealer for select models, including the InvisiLift and Float-A-Vator, installed and serviced by our own crew.',
+    page(GD_ROOT, 'Golden Boat Lifts', 'Stier’s Construction is an authorized Golden Boat Lifts dealer: the InvisiLift, Float-A-Vator and more, installed and serviced by our own crew.',
          body, active='services', trail=trail, ld=ld, ptype='CollectionPage', prio=0.8, sm_images=[img_url(p['img']) for p in GOLDEN_PRODUCTS if p.get('img')])
 
 def golden_product(p):
@@ -631,16 +634,16 @@ def golden_product(p):
     for group_name, rows in p.get('models', []):
         models_html += f'<h3 class="mt-l">{group_name}</h3><ul class="warranty-grid">' + ''.join(f'<li><span class="w-label">{lbl}</span><strong>{val}</strong></li>' for lbl, val in rows) + '</ul>'
     specs_html = f'<div class="prose">{cap}<p>{p["desc"]}</p></div>{features_html}{benefits_html}{models_html}'
-    aside = f'''<aside class="aside-sticky aside-stack" aria-label="Quote and related lifts"><div class="panel panel-dark"><h3>Ask About the {p['name']}</h3><small>Mon to Fri, 8am to 5pm</small>
+    aside = f'''<aside class="aside-sticky aside-stack" aria-label="Quote and related lifts"><div class="panel panel-dark"><h3>Ask About {the_name(p['name'])}</h3><small>Mon to Fri, 8am to 5pm</small>
 <a class="phone" href="tel:{SITE['phone_e164']}">{SITE['phone']}</a><a class="btn btn-primary" href="/contact/">Send Project Details</a><p class="fin-line">Financing available. <a href="/financing/">See options</a></p></div>
 <div class="panel"><h3>More {c['name']}</h3><ul class="related">{''.join(f'<li><a href="{GD_ROOT}{q["slug"]}/"><b>{q["name"]}</b><span>{GOLDEN_CATS[q["cat"]]["name"]}</span></a></li>' for q in others) or f'<li><a href="{GD_ROOT}"><b>See the full lineup</b><span>All Golden models</span></a></li>'}</ul>
 <p class="mt-s"><a class="textlink" href="{GD_ROOT}">All Golden boat lifts</a></p></div></aside>'''
-    main = f'<div class="main"><section><h2>About the {p["name"]}</h2>{specs_html}</section><section><h2>Installed and Serviced by Stier’s Construction</h2><div class="prose"><p>Buying a Golden {p["name"]} through Stier’s Construction means one contractor for the lift, the install and everything after: cable change-out, motor maintenance and welding repairs to the frame, all done in-house. See our <a href="/services/boat-hoists/">full boat hoist service</a>.</p></div></section></div>'
+    main = f'<div class="main"><section><h2>About {the_name(p["name"])}</h2>{specs_html}</section><section><h2>Installed and Serviced by Stier’s Construction</h2><div class="prose"><p>Buying a Golden {p["name"]} through Stier’s Construction means one contractor for the lift, the install and everything after: cable change-out, motor maintenance and welding repairs to the frame, all done in-house. See our <a href="/services/boat-hoists/">full boat hoist service</a>.</p></div></section></div>'
     body = hero + f'<div class="section"><div class="wrap content-grid">{main}{aside}</div></div>' + cta_band(f'Ready to talk about {with_article(p["name"], p.get("plural"))}?')
     svc = {'@type': 'Product', '@id': f'{URL}{path}#product', 'name': f'Golden {p["name"]}', 'category': c['name'], 'description': p['desc'],
            'brand': {'@type': 'Brand', 'name': 'Golden Boat Lifts'}, 'url': f'{URL}{path}'}
     if p.get('img'): svc['image'] = f'{URL}{img_url(p["img"])}'
-    page(path, f'Golden {p["name"]}', f'Golden {p["name"]} ({c["name"]}): sold, installed and serviced by Stier’s Construction, an authorized Golden Boat Lifts dealer in Metro Detroit. Free quotes.',
+    page(path, f'Golden {p["name"]}', f'Golden {p["name"]}: sold, installed and serviced by Stier’s Construction, an authorized Golden Boat Lifts dealer. Free quotes.',
          body, active='services', trail=trail, ld=[svc], prio=0.6, sm_images=[img_url(p['img'])] if p.get('img') else None)
 
 # ============================================================ SUNSTREAM BOAT LIFTS
@@ -662,7 +665,7 @@ def sunstream_hub():
 <section class="section"><div class="wrap"><ul class="product-grid">{grid}</ul></div></section>
 {cta_band('Not sure which Sunstream lift fits your boat?', 'Send your boat’s make, length and weight, plus your slip or water depth, and we will match the lift and quote the install.')}'''
     ld = [{'@type': 'ItemList', 'itemListElement': [{'@type': 'ListItem', 'position': i + 1, 'url': f'{URL}{SS_ROOT}{p["slug"]}/', 'name': p['name']} for i, p in enumerate(SUNSTREAM_PRODUCTS)]}]
-    page(SS_ROOT, 'Sunstream Boat Lifts', 'Stier’s Construction is an authorized Sunstream Boat Lifts dealer: SunLift X, SunLift Legacy, FloatLift, Helix2-P, LiftBar, SunPort2 and more, installed and serviced by our own crew.',
+    page(SS_ROOT, 'Sunstream Boat Lifts', 'Stier’s Construction is an authorized Sunstream dealer: SunLift, FloatLift, Helix2-P and more, installed and serviced by our own crew.',
          body, active='services', trail=trail, ld=ld, ptype='CollectionPage', prio=0.8, sm_images=[img_url(p['img']) for p in SUNSTREAM_PRODUCTS if p.get('img')])
 
 def sunstream_product(p):
@@ -680,16 +683,16 @@ def sunstream_product(p):
         models_html += f'<h3 class="mt-l">{group_name}</h3><ul class="warranty-grid">' + ''.join(f'<li><span class="w-label">{lbl}</span><strong>{val}</strong></li>' for lbl, val in rows) + '</ul>'
     warranty_note = f'<div class="mt-m">{note("<p>" + p.get("warranty", "") + "</p>")}</div>' if p.get('warranty') else ''
     specs_html = f'<div class="prose">{cap}<p>{p["desc"]}</p></div>{features_html}{models_html}{warranty_note}'
-    aside = f'''<aside class="aside-sticky aside-stack" aria-label="Quote and related lifts"><div class="panel panel-dark"><h3>Ask About the {p['name']}</h3><small>Mon to Fri, 8am to 5pm</small>
+    aside = f'''<aside class="aside-sticky aside-stack" aria-label="Quote and related lifts"><div class="panel panel-dark"><h3>Ask About {the_name(p['name'])}</h3><small>Mon to Fri, 8am to 5pm</small>
 <a class="phone" href="tel:{SITE['phone_e164']}">{SITE['phone']}</a><a class="btn btn-primary" href="/contact/">Send Project Details</a><p class="fin-line">Financing available. <a href="/financing/">See options</a></p></div>
 <div class="panel"><h3>More {c['name']}</h3><ul class="related">{''.join(f'<li><a href="{SS_ROOT}{q["slug"]}/"><b>{q["name"]}</b><span>{SUNSTREAM_CATS[q["cat"]]["name"]}</span></a></li>' for q in others) or f'<li><a href="{SS_ROOT}"><b>See the full lineup</b><span>All Sunstream models</span></a></li>'}</ul>
 <p class="mt-s"><a class="textlink" href="{SS_ROOT}">All Sunstream boat lifts</a></p></div></aside>'''
-    main = f'<div class="main"><section><h2>About the {p["name"]}</h2>{specs_html}</section><section><h2>Installed and Serviced by Stier’s Construction</h2><div class="prose"><p>Buying a Sunstream {p["name"]} through Stier’s Construction means one contractor for the lift, the install and everything after: cable change-out, motor maintenance and welding repairs to the frame, all done in-house. See our <a href="/services/boat-hoists/">full boat hoist service</a>.</p></div></section></div>'
+    main = f'<div class="main"><section><h2>About {the_name(p["name"])}</h2>{specs_html}</section><section><h2>Installed and Serviced by Stier’s Construction</h2><div class="prose"><p>Buying a Sunstream {p["name"]} through Stier’s Construction means one contractor for the lift, the install and everything after: cable change-out, motor maintenance and welding repairs to the frame, all done in-house. See our <a href="/services/boat-hoists/">full boat hoist service</a>.</p></div></section></div>'
     body = hero + f'<div class="section"><div class="wrap content-grid">{main}{aside}</div></div>' + cta_band(f'Ready to talk about {with_article(p["name"], p.get("plural"))}?')
     svc = {'@type': 'Product', '@id': f'{URL}{path}#product', 'name': f'Sunstream {p["name"]}', 'category': c['name'], 'description': p['desc'],
            'brand': {'@type': 'Brand', 'name': 'Sunstream'}, 'url': f'{URL}{path}'}
     if p.get('img'): svc['image'] = f'{URL}{img_url(p["img"])}'
-    page(path, f'Sunstream {p["name"]}', f'Sunstream {p["name"]} ({c["name"]}): sold, installed and serviced by Stier’s Construction, an authorized Sunstream dealer in Metro Detroit. Free quotes.',
+    page(path, f'Sunstream {p["name"]}', f'Sunstream {p["name"]}: sold, installed and serviced by Stier’s Construction, an authorized Sunstream dealer. Free quotes.',
          body, active='services', trail=trail, ld=[svc], prio=0.6, sm_images=[img_url(p['img'])] if p.get('img') else None)
 
 # ============================================================ PROJECTS

@@ -532,7 +532,7 @@ CANDOCK_BY_SLUG = {p['slug']: p for p in CANDOCK_PRODUCTS}
 # Golden lines to GOLDEN_PRODUCTS the same way once confirmed and photos are supplied.
 GOLDEN_CATS = {
  'invisilift': dict(name='InvisiLift', desc='A patented, low-profile boat lift designed to blend into the dock structure rather than stand above it.'),
- 'float-a-vator': dict(name='Float-A-Vator', desc='A floating lift system that secures to a floating dock or a conventional mooring, built from marine-grade aluminum, stainless steel and UV-resistant polyethylene tanks.'),
+ 'float-a-vator': dict(name='Float‑A‑Vator', desc='A floating lift system that secures to a floating dock or a conventional mooring, built from marine-grade aluminum, stainless steel and UV-resistant polyethylene tanks.'),
  'sailboat-lifts': dict(name='Sailboat Lifts', desc='Lifts engineered specifically for sailboats, custom-built to the boat and site.'),
  'floating-dock-lifts': dict(name='Floating Dock Lifts', desc='A lift built into a floating dock platform, for reliable performance across changing water levels.'),
  'kayak-launch': dict(name='Kayak Launch', desc='A ladder-and-ramp system patented by Golden for stable, hassle-free kayak and paddleboard entry and exit.'),
@@ -544,7 +544,7 @@ GOLDEN_PRODUCTS = [
   desc='Explore the pinnacle of innovation and craftsmanship with the InvisiLift by Golden Boat Lifts. Designed to blend seamlessly with its surroundings while offering unmatched performance, the InvisiLift sets a new standard in boat lifting technology. Whether you’re a boating enthusiast or a marina operator, the InvisiLift promises reliability, ease of use and an elegant solution for all your boat lifting needs.',
   features=['Sleek, low-profile design: virtually invisible, preserving the natural beauty of your waterfront', 'Superior lifting capacity: lifts a wide range of vessels with ease', 'Durability and strength: built with marine-grade materials to withstand harsh marine environments', 'User-friendly operation: intuitive control system for simple, straightforward use', 'Golden has been certified by DQS Inc. to ISO 9001:2015'],
   benefits=['Enhanced aesthetics: maintains the pristine look of your dock or marina with an unobtrusive design', 'Increased boat longevity: lifting your boat out of the water helps prevent hull damage, marine growth and corrosion', 'Efficient space utilization: compact design, ideal for narrow canals or private docks']),
- dict(slug='float-a-vator', name='Float-A-Vator', cat='float-a-vator', img='golden-float-a-vator-installed',
+ dict(slug='float-a-vator', name='Float‑A‑Vator', cat='float-a-vator', img='golden-float-a-vator-installed',
   tagline='Effortless lifting, unmatched performance.',
   capacity='3,000 – 35,000 lbs',
   desc='The Float-A-Vator Boat Lift is built to last with a marine-grade aluminum and stainless steel frame, 300 series stainless hardware, and UV-resistant polyethylene tanks. This versatile lift can be secured to a floating dock or installed using a conventional mooring system.',
@@ -621,7 +621,7 @@ SUNSTREAM_PRODUCTS = [
   desc='A floating drive-on, drive-off dock for personal watercraft, built from molded, foam-filled polyethylene. A wide, pivoting entry guides the bow and loading needs minimal power.',
   features=['Pivoting tail and wide mouth guide and align the bow on entry', 'Integrated bow stop positions the craft and protects it from dock accidents', 'Hydrodynamically shaped bottom for support and positioning', 'Dual rows of Stoltz rollers for loading and unloading', 'Unsinkable, molded foam-filled polyethylene construction', 'Slide mount for fluctuating water levels', 'Sunstream Duraflexx mounts reduce stress on floating docks', 'Optional QuickCover attaches to the bow stop and clips to the rear corners'],
   models=[('Standard Model Dimensions', [('Length', '13′9″ (4.19 m)'), ('Width', '4′11″ (1.49 m)'), ('Height', '2′5″ (76.2 cm)'), ('Draft', '4.2″ (10.7 cm)'), ('Weight', '370 lbs (167.8 kg)')])]),
- dict(slug='sps', name='Sunstream Power System', cat='accessories', img='sunstream-sps',
+ dict(slug='sps', name='Power System (SPS)', cat='accessories', img='sunstream-sps',
   tagline='Realize your superpower.',
   capacity='Powers 8,000 – 12,000+ lbs of lift capacity per pedestal',
   desc='A shared hydraulic power system for Sunstream dock equipment. One pedestal can power several Sunstream lifts or SwiftShield covers, cutting down on separate power units and dock clutter. Choose a 6hp or 12hp DC powerpack; systems can scale up to 24hp combined. Patent pending.',
