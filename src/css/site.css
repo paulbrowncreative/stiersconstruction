@@ -621,7 +621,7 @@ a.tile:focus-visible{outline:3px solid #fff;outline-offset:-6px}
 .thanks-page .section-head{margin-left:auto;margin-right:auto;text-align:center}
 .thanks-page .steps{max-width:900px;margin:0 auto}
 .thanks-page .steps li{text-align:center}
-@media (min-width:900px){.thanks-page .steps li::before{left:50%;transform:translateX(-50%)}.thanks-page .steps li{padding-left:0}}
+@media (min-width:900px){.thanks-page .steps{grid-template-columns:repeat(3,1fr)}.thanks-page .steps li::before{left:50%;transform:translateX(-50%)}.thanks-page .steps li{padding-left:0}}
 .thanks-page p.center{text-align:center}
 
 /* "worth reading" link cards */
