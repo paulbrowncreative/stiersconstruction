@@ -548,8 +548,7 @@ def candock_hub():
     body = f'''<section class="page-hero on-dark"><div class="wrap">{crumbs(trail)}<div style="padding-block:clamp(24px,4vw,56px) clamp(36px,5vw,64px)"><p class="eyebrow">Authorized dealer</p><h1 style="max-width:24ch">Candock floating docks</h1>
 <p class="lead mt-s" style="max-width:62ch">Stier’s Construction sells, installs and services Candock modular floating docks, including the JetRoll drive-on dock for personal watercraft. Unsinkable, foam-filled systems that connect, extend or reconfigure as your waterfront needs change.</p>
 <div class="btn-row"><a class="btn btn-primary" href="/contact/">Get a free quote</a>{tel('btn btn-ghost', 'Call ' + SITE['phone'], True)}</div></div></div></section>
-<section class="section"><div class="wrap"><ul class="product-grid">{grid}</ul>
-<div class="mt-m">{note('<p>More of the Candock lineup (residential, commercial and marina floating dock systems) is being added here. Ask when you request a quote if you don’t see what you need yet.</p>')}</div></div></section>
+<section class="section"><div class="wrap"><ul class="product-grid">{grid}</ul></div></section>
 {cta_band('Not sure which Candock system fits your waterfront?', 'Send your shoreline or slip details, plus what you want to dock, and we will lay out a system and quote the install.')}'''
     ld = [{'@type': 'ItemList', 'itemListElement': [{'@type': 'ListItem', 'position': i + 1, 'url': f'{URL}{CD_ROOT}{p["slug"]}/', 'name': p['name']} for i, p in enumerate(CANDOCK_PRODUCTS)]}]
     page(CD_ROOT, 'Candock Floating Docks', 'Stier’s Construction is an authorized Candock dealer: modular floating docks and the JetRoll drive-on PWC dock, installed and serviced by our own crew.',
