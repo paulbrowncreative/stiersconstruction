@@ -263,11 +263,15 @@ def postprocess(h):
     h = _wrap_amp(h)
     return h
 
+_AMP_RE = re.compile(r'&amp;|&(?!#\d+;|#x[0-9a-fA-F]+;|[a-zA-Z]+;)')
+
 def _wrap_amp(h):
     """Style every '&' in visible text with the serif .amp treatment used in the header wordmark.
-    Skips <script>, <style> and <title>, and only touches text between tags, never attributes."""
+    Matches both the &amp; entity and a bare & (some content is interpolated unescaped), but
+    never other entities like &nbsp;. Skips <script>, <style> and <title>, and only touches text
+    between tags, never attributes."""
     def text_nodes(seg):
-        return re.sub(r'>([^<]*)<', lambda m: '>' + m.group(1).replace('&amp;', '<span class="amp">&amp;</span>') + '<', seg)
+        return re.sub(r'>([^<]*)<', lambda m: '>' + _AMP_RE.sub('<span class="amp">&amp;</span>', m.group(1)) + '<', seg)
     out, last = [], 0
     for m in re.finditer(r'<(script|style|title)\b[^>]*>.*?</\1>', h, flags=re.S):
         out.append(text_nodes(h[last:m.start()]))
