@@ -14,6 +14,8 @@ SRC, OUT = f'{ROOT}/src', f'{ROOT}/public'
 URL = SITE['url']
 IM = json.load(open(f'{SRC}/data/images.json'))
 esc = lambda s: html.escape(s, quote=True)
+_IMG_ALT_BY_URL = {f'/assets/img/{n}': m['alt'] for m in IM.values() for w, n in m['files']}
+_IMG_DIMS_BY_URL = {f'/assets/img/{n}': (w, round(m['h'] * w / m['w'])) for m in IM.values() for w, n in m['files']}
 
 # ---------- reset output + hashed assets ----------
 os.makedirs(OUT, exist_ok=True)
@@ -325,11 +327,18 @@ def page(path, title, desc, body, active='', trail=None, ld=None, preload=None, 
     if preload:
         m = IM[preload]; ss = ', '.join(f'/assets/img/{n} {w}w' for w, n in m['files'])
         pre = f'<link rel="preload" as="image" imagesrcset="{ss}" imagesizes="{preload_sizes(preload)}" fetchpriority="high">'
-    og = f'{URL}/assets/og-image.jpg'
+    og_img_path = sm_images[0] if sm_images else None
+    og = f'{URL}{og_img_path}' if og_img_path else f'{URL}/assets/og-image.jpg'
+    if og_img_path and og_img_path in _IMG_DIMS_BY_URL:
+        og_w, og_h = _IMG_DIMS_BY_URL[og_img_path]
+        og_alt = _IMG_ALT_BY_URL.get(og_img_path, title)
+    else:
+        og_w, og_h = 1200, 630
+        og_alt = 'Stier’s excavator on a work barge on the Detroit River, with the Detroit skyline in the background'
     html_ = f'''<!doctype html>
 <html lang="en-US"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
 <title>{esc(title)}</title><meta name="description" content="{esc(desc)}"><link rel="canonical" href="{canon}"><meta name="robots" content="{robots}">
-<meta property="og:type" content="website"><meta property="og:site_name" content="{esc(SITE['seo_name'])}"><meta property="og:locale" content="en_US"><meta property="og:title" content="{esc(title)}"><meta property="og:description" content="{esc(desc)}"><meta property="og:url" content="{canon}"><meta property="og:image" content="{og}"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="630"><meta property="og:image:alt" content="Stier’s excavator on a work barge on the Detroit River, with the Detroit skyline in the background">
+<meta property="og:type" content="website"><meta property="og:site_name" content="{esc(SITE['seo_name'])}"><meta property="og:locale" content="en_US"><meta property="og:title" content="{esc(title)}"><meta property="og:description" content="{esc(desc)}"><meta property="og:url" content="{canon}"><meta property="og:image" content="{og}"><meta property="og:image:width" content="{og_w}"><meta property="og:image:height" content="{og_h}"><meta property="og:image:alt" content="{esc(og_alt)}">
 <meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="{esc(title)}"><meta name="twitter:description" content="{esc(desc)}"><meta name="twitter:image" content="{og}">
 <meta name="theme-color" content="#0D2530"><meta name="format-detection" content="telephone=yes">
 <link rel="icon" href="/assets/favicon.ico" sizes="48x48"><link rel="icon" href="/assets/favicon-64.png" type="image/png" sizes="64x64"><link rel="apple-touch-icon" href="/assets/apple-touch-icon.png"><link rel="manifest" href="/site.webmanifest"><link rel="alternate" type="application/rss+xml" title="Stier’s Marine &amp; Construction Blog" href="/blog/feed.xml">
