@@ -92,7 +92,7 @@ def nav_html(active):
 
 def header(active):
     return f'''<header class="site-header"><div class="wrap header-inner">
-<a class="brand" href="/" aria-label="Stier’s Welding &amp; Construction, home"><img src="/assets/mark-dark.png" width="160" height="88" alt=""><span class="brand-text"><span class="brand-name">Stier’s</span> <span class="brand-sub">Welding <span class="amp">&amp;</span> Construction</span></span></a>
+<a class="brand" href="/" aria-label="Stier’s Welding &amp; Construction, home"><img src="/assets/mark-dark.png" width="160" height="88" alt=""><span class="brand-text"><span class="brand-name">Stier’s</span> <span class="brand-sub">Welding &amp; Construction</span></span></a>
 {nav_html(active)}
 {tel('header-phone', '<span>' + SITE['phone'] + '</span>', True).replace('<a class="header-phone"', '<a class="header-phone" aria-label="Call ' + SITE['phone'] + '"')}
 <a class="btn btn-primary header-cta" href="/contact/">Get a free quote</a>
@@ -260,7 +260,21 @@ def postprocess(h):
     h = in_block(h, r'<nav class="crumbs".*?</nav>', lambda blk: _sub_tag(_sub_tag(blk, r'(<a\b[^>]*>)(.*?)(</a>)'), r'(<span aria-current="page">)(.*?)(</span>)'))
     h = in_block(h, r'<footer class="site-footer.*?</footer>', lambda blk: _sub_tag(blk, r'(<a\b[^>]*>)(.*?)(</a>)', lambda t: '@' not in t and not re.search(r'\d', t) and _short_label(t)))
     h = re.sub(r'(<meta (?:property="og:title"|name="twitter:title") content=")(.*?)(">)', lambda m: m.group(1) + tc(html.unescape(m.group(2)).replace('&', '&')).replace('&', '&amp;').replace('"', '&quot;') + m.group(3), h)
+    h = _wrap_amp(h)
     return h
+
+def _wrap_amp(h):
+    """Style every '&' in visible text with the serif .amp treatment used in the header wordmark.
+    Skips <script>, <style> and <title>, and only touches text between tags, never attributes."""
+    def text_nodes(seg):
+        return re.sub(r'>([^<]*)<', lambda m: '>' + m.group(1).replace('&amp;', '<span class="amp">&amp;</span>') + '<', seg)
+    out, last = [], 0
+    for m in re.finditer(r'<(script|style|title)\b[^>]*>.*?</\1>', h, flags=re.S):
+        out.append(text_nodes(h[last:m.start()]))
+        out.append(m.group(0))
+        last = m.end()
+    out.append(text_nodes(h[last:]))
+    return ''.join(out)
 
 
 # ---------- SEO titles: "<keyword phrase> | Stier’s Marine & Construction" ----------
