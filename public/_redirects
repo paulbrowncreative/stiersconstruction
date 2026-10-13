@@ -1,10 +1,3 @@
-http://stiers-construction.com/*  https://www.stiersconstruction.com/:splat  301!
-https://stiers-construction.com/*  https://www.stiersconstruction.com/:splat  301!
-http://www.stiers-construction.com/*  https://www.stiersconstruction.com/:splat  301!
-https://www.stiers-construction.com/*  https://www.stiersconstruction.com/:splat  301!
-http://stiersconstruction.netlify.app/*  https://www.stiersconstruction.com/:splat  301!
-https://stiersconstruction.netlify.app/*  https://www.stiersconstruction.com/:splat  301!
-
 # Old Squarespace URLs -> new structure (301)
 /all  /services/  301!
 /seawalls  /services/seawalls/  301!

@@ -1065,10 +1065,7 @@ redirects = [
 # Guard: a redirect whose target equals its source (ignoring a trailing slash) loops forever on Netlify.
 for _a, _b in redirects:
     assert _a.rstrip('/') != _b.rstrip('/'), f'redirect loop: {_a} -> {_b}'
-# Alternate live hostnames -> canonical domain (avoids duplicate-content indexing of the same pages on multiple hosts).
-alt_hosts = ['stiers-construction.com', 'www.stiers-construction.com', 'stiersconstruction.netlify.app']
-host_redirects = ''.join(f'http://{h}/*  {URL}/:splat  301!\nhttps://{h}/*  {URL}/:splat  301!\n' for h in alt_hosts)
-open(f'{OUT}/_redirects', 'w').write(host_redirects + '\n# Old Squarespace URLs -> new structure (301)\n' + ''.join(f'{a}  {b}  301!\n' for a, b in redirects))
+open(f'{OUT}/_redirects', 'w').write('# Old Squarespace URLs -> new structure (301)\n' + ''.join(f'{a}  {b}  301!\n' for a, b in redirects))
 CSP_BASE = "default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; font-src 'self'; connect-src 'self'; form-action 'self'; frame-src https://www.enhancify.com; frame-ancestors 'none'; base-uri 'self'; object-src 'none'"
 CSP_FIN = "default-src 'self'; script-src 'self' https://www.enhancify.com; style-src 'self' 'unsafe-inline' https://www.enhancify.com https://fonts.googleapis.com; img-src 'self' data: https://www.enhancify.com https://cdn.enhancify.com; font-src 'self' https://fonts.gstatic.com https://www.enhancify.com; connect-src 'self' https://www.enhancify.com; form-action 'self' https://www.enhancify.com; frame-src https://www.enhancify.com; frame-ancestors 'none'; base-uri 'self'; object-src 'none'"
 # Netlify merges header rules that match the same path, so each page gets exactly one CSP rule (no /* CSP).
