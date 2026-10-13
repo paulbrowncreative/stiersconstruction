@@ -8,9 +8,11 @@
  *
  * Environment variables (Netlify > Site configuration > Environment variables):
  *   RESEND_API_KEY      required   API key from resend.com
- *   MAIL_FROM           required   e.g.  Stier's Website <forms@stiers-construction.com>
- *                                  (or "Stier's Website <onboarding@resend.dev>" while testing;
- *                                   Resend only delivers that sender to the account owner's own address)
+ *   MAIL_FROM           optional   e.g.  Stier's Website <forms@stiers-construction.com>
+ *                                  Defaults to the onboarding@resend.dev test sender, which Resend
+ *                                  only delivers to the Resend account owner's own address. Once a
+ *                                  sending domain is verified in Resend (Domains tab), set this to
+ *                                  an address on that domain so mail reaches MAIL_TO reliably.
  *   MAIL_TO             optional   defaults to kevin@stiers-construction.com
  *   NETLIFY_API_TOKEN   optional   recommended: lets the function confirm each submission is real
  */
@@ -18,6 +20,7 @@
 
 const RESEND_URL = () => process.env.RESEND_API_URL || 'https://api.resend.com/emails'; // override is for local testing only
 const DEFAULT_TO = 'kevin@stiers-construction.com';
+const DEFAULT_FROM = "Stier's Website <onboarding@resend.dev>";
 const MAX_ATTACH_BYTES = 20 * 1024 * 1024;
 const MAX_FIELD = 5000;
 
@@ -107,9 +110,9 @@ exports.handler = async (event) => {
   }
 
   const key = process.env.RESEND_API_KEY;
-  const from = process.env.MAIL_FROM;
-  if (!key || !from) {
-    console.warn('Email not sent: set RESEND_API_KEY and MAIL_FROM. The submission is still saved in Netlify Forms.');
+  const from = process.env.MAIL_FROM || DEFAULT_FROM;
+  if (!key) {
+    console.warn('Email not sent: set RESEND_API_KEY. The submission is still saved in Netlify Forms.');
     return { statusCode: 200, body: 'Saved in Netlify Forms; email not configured' };
   }
 
