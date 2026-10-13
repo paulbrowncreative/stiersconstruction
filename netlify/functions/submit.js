@@ -8,7 +8,7 @@
  * back to the visitor instead of silently dropped.
  *
  * Environment variables (Netlify > Site configuration > Environment variables):
- *   RESEND_API_KEY   required   API key from resend.com
+ *   RESEND_API_KEY   required   API key from resend.com (RESEND_API also accepted)
  *   MAIL_FROM        optional   e.g.  Stier's Website <forms@stiers-construction.com>
  *                                Defaults to the onboarding@resend.dev test sender, which Resend
  *                                only delivers to the Resend account owner's own address. Once a
@@ -107,9 +107,9 @@ exports.handler = async (event) => {
   if (!FORMS[formName]) return errorPage('We could not tell which form this was.');
   if (data['bot-field']) return { statusCode: 303, headers: { Location: '/thank-you/' } }; // spam trap: pretend success, send nothing
 
-  const key = process.env.RESEND_API_KEY;
+  const key = process.env.RESEND_API_KEY || process.env.RESEND_API;
   if (!key) {
-    console.warn('Email not sent: set RESEND_API_KEY.');
+    console.warn('Email not sent: set RESEND_API_KEY (or RESEND_API).');
     return errorPage('Our email service is not fully set up yet.');
   }
 
