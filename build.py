@@ -816,7 +816,7 @@ def field(id_, label, type_='text', req=True, attrs='', hint=''):
 def contact():
     trail = [('Home', '/'), ('Contact', None)]
     opts = ''.join(f'<option>{o}</option>' for o in ['Seawall', 'Dock', 'Pilings', 'Boat hoist', 'Dredging', 'Welding or fabrication', 'Excavating or grading', 'Demolition', 'Concrete', 'Deck', 'Not sure or something else'])
-    form = f'''<form name="quote" method="POST" action="/thank-you/" data-netlify="true" data-netlify-honeypot="bot-field" enctype="multipart/form-data" aria-labelledby="form-h">
+    form = f'''<form name="quote" method="POST" action="/.netlify/functions/submit" enctype="multipart/form-data" aria-labelledby="form-h">
 <input type="hidden" name="form-name" value="quote"><p class="hp" aria-hidden="true"><label>Leave this empty <input name="bot-field" tabindex="-1" autocomplete="off"></label></p>
 <div class="form-grid g2">{field('name', 'Name', attrs='autocomplete="name"')}{field('phone', 'Phone', 'tel', attrs='autocomplete="tel" inputmode="tel"')}
 <div class="full">{field('email', 'Email', 'email', attrs='autocomplete="email"')}</div>{field('address', 'Address of job', attrs='autocomplete="off"')}
@@ -833,7 +833,7 @@ def contact():
 
 def careers():
     trail = [('Home', '/'), ('Careers', None)]
-    form = f'''<form name="careers" method="POST" action="/thank-you/" data-netlify="true" data-netlify-honeypot="bot-field" enctype="multipart/form-data" aria-labelledby="c-h">
+    form = f'''<form name="careers" method="POST" action="/.netlify/functions/submit" enctype="multipart/form-data" aria-labelledby="c-h">
 <input type="hidden" name="form-name" value="careers"><p class="hp" aria-hidden="true"><label>Leave this empty <input name="bot-field" tabindex="-1" autocomplete="off"></label></p>
 <div class="form-grid g2">{field('name', 'Name', attrs='autocomplete="name"')}{field('phone', 'Phone', 'tel', attrs='autocomplete="tel" inputmode="tel"')}<div class="full">{field('email', 'Email', 'email', attrs='autocomplete="email"')}</div>
 <div class="field full"><label for="experience">Your experience (optional)</label><textarea id="experience" name="experience"></textarea></div>

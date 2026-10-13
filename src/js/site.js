@@ -82,7 +82,7 @@
   }
 
   /* ----- forms: prevent double submit, basic status, analytics events ----- */
-  d.querySelectorAll('form[data-netlify]').forEach(function (form) {
+  d.querySelectorAll('form[action^="/.netlify/functions/"]').forEach(function (form) {
     form.addEventListener('submit', function (e) {
       var status = form.querySelector('.form-status');
       if (!form.checkValidity()) {
