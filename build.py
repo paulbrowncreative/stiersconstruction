@@ -257,7 +257,6 @@ def postprocess(h):
     h = _sub_tag(h, r'(<button type="button" data-filter="[^"]*"[^>]*>)(.*?)(</button>)')
     def in_block(h, open_re, fn):
         return re.sub(open_re, lambda m: fn(m.group(0)), h, flags=re.S)
-    h = in_block(h, r'<ul class="facts">.*?</ul>', lambda blk: _sub_tag(blk, r'(<strong>)(.*?)(</strong>)'))
     h = in_block(h, r'<nav class="crumbs".*?</nav>', lambda blk: _sub_tag(_sub_tag(blk, r'(<a\b[^>]*>)(.*?)(</a>)'), r'(<span aria-current="page">)(.*?)(</span>)'))
     h = in_block(h, r'<footer class="site-footer.*?</footer>', lambda blk: _sub_tag(blk, r'(<a\b[^>]*>)(.*?)(</a>)', lambda t: '@' not in t and not re.search(r'\d', t) and _short_label(t)))
     h = re.sub(r'(<meta (?:property="og:title"|name="twitter:title") content=")(.*?)(">)', lambda m: m.group(1) + tc(html.unescape(m.group(2)).replace('&', '&')).replace('&', '&amp;').replace('"', '&quot;') + m.group(3), h)
@@ -335,20 +334,14 @@ def page(path, title, desc, body, active='', trail=None, ld=None, preload=None, 
 def preload_sizes(key):
     return '100vw' if key == HERO_KEY else '(min-width:940px) 46vw, 92vw'
 
-HERO_KEY = 'stiers-excavator-demo-site'
+HERO_KEY = 'excavator-barge-timber-pilings'
 
 # ============================================================ HOME
 def home():
-    facts = [('Owner on the job', 'Kevin has 15+ years of hands-on welding, marine and construction work.'),
-             ('One crew for the whole lot', 'Wall, dock, hoist, steel, concrete and deck from one contractor.'),
-             ('Our own trucks', 'Hauling and material delivery run on our own fleet.'),
-             ('Homes, businesses, marinas', 'Residential, commercial and marina clients.')]
-    facts_html = ''.join(f'<li><strong>{a}</strong><span>{b}</span></li>' for a, b in facts)
     hero = f'''<section class="hero on-dark" aria-labelledby="h1"><div class="hero-media">{img(HERO_KEY, '100vw', prio=True, lazy=False, alt='')}</div>
 <div class="wrap hero-body"><h1 id="h1">Seawall, dock and marine construction in Metro Detroit</h1>
 <p class="lead">Stier’s Construction builds and repairs seawalls, docks, pilings and boat hoists on Lake St. Clair and the Detroit River, then handles the welding, concrete, excavation and decks on the shore side. Owner-operated and committed to honest work and clear communication.</p>
-<div class="btn-row"><a class="btn btn-primary" href="/contact/">Get a free quote</a>{tel('btn btn-ghost', 'Call ' + SITE['phone'], True)}</div>
-<ul class="facts">{facts_html}</ul></div></section>'''
+<div class="btn-row"><a class="btn btn-primary" href="/contact/">Get a free quote</a>{tel('btn btn-ghost', 'Call ' + SITE['phone'], True)}</div></div></section>'''
 
     def leg(s, n):
         return f'<li data-part="{s["slug"]}"><a href="/services/{s["slug"]}/"><span class="num" aria-hidden="true">{n}</span><span><b>{s["name"]}</b><small>{s["summary"]}</small></span></a></li>'
