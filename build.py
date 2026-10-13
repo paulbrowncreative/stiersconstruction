@@ -312,7 +312,8 @@ def seo_title(path, title):
     t = TITLE_MAP.get(path, title)
     t = re.sub(r'\s*\|\s*Stier’s(?: Construction)?$', '', t)
     t = tc(t)
-    return t if BRAND in t else f'{t} | {BRAND}'
+    short_brand = SITE['name']
+    return t if (BRAND in t or short_brand in t) else f'{t} | {short_brand}'
 
 # ---------- page shell ----------
 SITEMAP = []
@@ -512,7 +513,7 @@ def hi_tide_hub():
     body = f'''<section class="page-hero on-dark"><div class="wrap">{crumbs(trail)}<div style="padding-block:clamp(24px,4vw,56px) clamp(36px,5vw,64px)"><p class="eyebrow">Authorized dealer</p><h1 style="max-width:24ch">Hi-Tide boat lifts</h1>
 <p class="lead mt-s" style="max-width:62ch">Stier’s Construction sells, installs and services the full Hi-Tide lineup: 4-post cable lifts, yacht lifts, elevator lifts, personal watercraft lifts and specialty configurations. Pick a model to see what it is built for, or request a quote for pricing sized to your boat and site.</p>
 <div class="btn-row"><a class="btn btn-primary" href="/contact/">Get a free quote</a>{tel('btn btn-ghost', 'Call ' + SITE['phone'], True)}</div></div></div></section>
-<section class="section"><div class="wrap"><ul class="product-grid">{grid}</ul></div></section>
+<section class="section"><div class="wrap"><h2 class="sr-only">Hi-Tide lift models</h2><ul class="product-grid">{grid}</ul></div></section>
 {cta_band('Not sure which Hi-Tide lift fits your boat?', 'Send your boat’s make, length and weight, plus your slip or water depth, and we will match the lift and quote the install.')}'''
     ld = [{'@type': 'ItemList', 'itemListElement': [{'@type': 'ListItem', 'position': i + 1, 'url': f'{URL}{HT_ROOT}{p["slug"]}/', 'name': p['name']} for i, p in enumerate(HI_TIDE_PRODUCTS)]}]
     page(HT_ROOT, 'Hi-Tide Boat Lifts', 'Stier’s Construction is an authorized Hi-Tide boat lift dealer: 4-post, yacht, elevator and PWC lifts, installed and serviced by our own crew.',
@@ -569,7 +570,7 @@ def candock_hub():
     body = f'''<section class="page-hero on-dark"><div class="wrap">{crumbs(trail)}<div style="padding-block:clamp(24px,4vw,56px) clamp(36px,5vw,64px)"><p class="eyebrow">Authorized dealer</p><h1 style="max-width:24ch">Candock floating docks</h1>
 <p class="lead mt-s" style="max-width:62ch">Stier’s Construction sells, installs and services Candock modular floating docks, including the JetRoll drive-on dock for personal watercraft. Unsinkable, foam-filled systems that connect, extend or reconfigure as your waterfront needs change.</p>
 <div class="btn-row"><a class="btn btn-primary" href="/contact/">Get a free quote</a>{tel('btn btn-ghost', 'Call ' + SITE['phone'], True)}</div></div></div></section>
-<section class="section"><div class="wrap"><ul class="product-grid">{grid}</ul></div></section>
+<section class="section"><div class="wrap"><h2 class="sr-only">Candock floating dock models</h2><ul class="product-grid">{grid}</ul></div></section>
 {cta_band('Not sure which Candock system fits your waterfront?', 'Send your shoreline or slip details, plus what you want to dock, and we will lay out a system and quote the install.')}'''
     ld = [{'@type': 'ItemList', 'itemListElement': [{'@type': 'ListItem', 'position': i + 1, 'url': f'{URL}{CD_ROOT}{p["slug"]}/', 'name': p['name']} for i, p in enumerate(CANDOCK_PRODUCTS)]}]
     page(CD_ROOT, 'Candock Floating Docks', 'Stier’s Construction is an authorized Candock dealer: modular floating docks and the JetRoll drive-on PWC dock, installed and serviced by our own crew.',
@@ -632,7 +633,7 @@ def golden_hub():
     body = f'''<section class="page-hero on-dark"><div class="wrap">{crumbs(trail)}<div style="padding-block:clamp(24px,4vw,56px) clamp(36px,5vw,64px)"><p class="eyebrow">Authorized dealer</p><h1 style="max-width:24ch">Golden boat lifts</h1>
 <p class="lead mt-s" style="max-width:62ch">Stier’s Construction sells, installs and services select Golden Boat Lifts models, including the low-profile InvisiLift and the floating Float-A-Vator. Pick a model to see what it is built for, or request a quote for pricing sized to your boat and site.</p>
 <div class="btn-row"><a class="btn btn-primary" href="/contact/">Get a free quote</a>{tel('btn btn-ghost', 'Call ' + SITE['phone'], True)}</div></div></div></section>
-<section class="section"><div class="wrap"><ul class="product-grid">{grid}</ul></div></section>
+<section class="section"><div class="wrap"><h2 class="sr-only">Golden lift models</h2><ul class="product-grid">{grid}</ul></div></section>
 {cta_band('Not sure which Golden lift fits your boat?', 'Send your boat’s make, length and weight, plus your slip or water depth, and we will match the lift and quote the install.')}'''
     ld = [{'@type': 'ItemList', 'itemListElement': [{'@type': 'ListItem', 'position': i + 1, 'url': f'{URL}{GD_ROOT}{p["slug"]}/', 'name': p['name']} for i, p in enumerate(GOLDEN_PRODUCTS)]}]
     page(GD_ROOT, 'Golden Boat Lifts', 'Stier’s Construction is an authorized Golden Boat Lifts dealer: the InvisiLift, Float-A-Vator and more, installed and serviced by our own crew.',
@@ -681,7 +682,7 @@ def sunstream_hub():
     body = f'''<section class="page-hero on-dark"><div class="wrap">{crumbs(trail)}<div style="padding-block:clamp(24px,4vw,56px) clamp(36px,5vw,64px)"><p class="eyebrow">Authorized dealer</p><h1 style="max-width:24ch">Sunstream boat lifts</h1>
 <p class="lead mt-s" style="max-width:62ch">Stier’s Construction sells, installs and services the Sunstream lineup: freestanding hydraulic lifts, the free-floating FloatLift, the hidden Helix2-P piling lift, the LiftBar cable lift, the SunPort2 PWC dock, and the SPS power system and SwiftShield automatic cover. Pick a model to see what it is built for, or request a quote for pricing sized to your boat and site.</p>
 <div class="btn-row"><a class="btn btn-primary" href="/contact/">Get a free quote</a>{tel('btn btn-ghost', 'Call ' + SITE['phone'], True)}</div></div></div></section>
-<section class="section"><div class="wrap"><ul class="product-grid">{grid}</ul></div></section>
+<section class="section"><div class="wrap"><h2 class="sr-only">Sunstream lift models</h2><ul class="product-grid">{grid}</ul></div></section>
 {cta_band('Not sure which Sunstream lift fits your boat?', 'Send your boat’s make, length and weight, plus your slip or water depth, and we will match the lift and quote the install.')}'''
     ld = [{'@type': 'ItemList', 'itemListElement': [{'@type': 'ListItem', 'position': i + 1, 'url': f'{URL}{SS_ROOT}{p["slug"]}/', 'name': p['name']} for i, p in enumerate(SUNSTREAM_PRODUCTS)]}]
     page(SS_ROOT, 'Sunstream Boat Lifts', 'Stier’s Construction is an authorized Sunstream dealer: SunLift, FloatLift, Helix2-P and more, installed and serviced by our own crew.',
@@ -1064,7 +1065,10 @@ redirects = [
 # Guard: a redirect whose target equals its source (ignoring a trailing slash) loops forever on Netlify.
 for _a, _b in redirects:
     assert _a.rstrip('/') != _b.rstrip('/'), f'redirect loop: {_a} -> {_b}'
-open(f'{OUT}/_redirects', 'w').write('# Old Squarespace URLs -> new structure (301)\n' + ''.join(f'{a}  {b}  301!\n' for a, b in redirects))
+# Alternate live hostnames -> canonical domain (avoids duplicate-content indexing of the same pages on multiple hosts).
+alt_hosts = ['stiers-construction.com', 'www.stiers-construction.com', 'stiersconstruction.netlify.app']
+host_redirects = ''.join(f'http://{h}/*  {URL}/:splat  301!\nhttps://{h}/*  {URL}/:splat  301!\n' for h in alt_hosts)
+open(f'{OUT}/_redirects', 'w').write(host_redirects + '\n# Old Squarespace URLs -> new structure (301)\n' + ''.join(f'{a}  {b}  301!\n' for a, b in redirects))
 CSP_BASE = "default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; font-src 'self'; connect-src 'self'; form-action 'self'; frame-src https://www.enhancify.com; frame-ancestors 'none'; base-uri 'self'; object-src 'none'"
 CSP_FIN = "default-src 'self'; script-src 'self' https://www.enhancify.com; style-src 'self' 'unsafe-inline' https://www.enhancify.com https://fonts.googleapis.com; img-src 'self' data: https://www.enhancify.com https://cdn.enhancify.com; font-src 'self' https://fonts.gstatic.com https://www.enhancify.com; connect-src 'self' https://www.enhancify.com; form-action 'self' https://www.enhancify.com; frame-src https://www.enhancify.com; frame-ancestors 'none'; base-uri 'self'; object-src 'none'"
 # Netlify merges header rules that match the same path, so each page gets exactly one CSP rule (no /* CSP).
