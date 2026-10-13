@@ -75,7 +75,6 @@ h4{font-size:1.05rem;font-stretch:100%;letter-spacing:0}
 .brand img{width:56px;height:auto}
 .brand-text{display:flex;flex-direction:column;line-height:1}
 .brand-name{font-weight:800;font-stretch:118%;font-size:1.32rem;letter-spacing:-.02em}
-.amp{font-family:Georgia,"Times New Roman",serif;font-weight:400}
 .brand-sub{font-size:.74rem;font-weight:500;letter-spacing:.02em;color:var(--lake-200);margin-top:5px}
 .nav-toggle{display:inline-flex;align-items:center;gap:10px;min-height:48px;padding:0 14px;background:transparent;border:2px solid rgba(255,255,255,.35);border-radius:var(--r-sm);color:#fff;font:inherit;font-weight:700;cursor:pointer}
 .nav-toggle .bars{width:20px;height:14px;position:relative;display:block}
