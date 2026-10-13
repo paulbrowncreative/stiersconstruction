@@ -64,29 +64,6 @@
 ]
 ]
 },
-"excavator-barge-timber-pilings": {
-"w": 1500,
-"h": 2000,
-"alt": "Stier’s excavator on a work barge with a load of timber pilings",
-"files": [
-[
-400,
-"excavator-barge-timber-pilings-400.15178f64.webp"
-],
-[
-720,
-"excavator-barge-timber-pilings-720.15178f64.webp"
-],
-[
-1000,
-"excavator-barge-timber-pilings-1000.15178f64.webp"
-],
-[
-1500,
-"excavator-barge-timber-pilings-1500.15178f64.webp"
-]
-]
-},
 "pipe-pilings-barge-sunset": {
 "w": 1206,
 "h": 1589,
@@ -2017,6 +1994,52 @@
 [
 480,
 "sunstream-swiftshield-480.6e40ccd0.webp"
+]
+]
+},
+"excavator-barge-logo-wide": {
+"w": 1500,
+"h": 1000,
+"alt": "Stier’s excavator on a work barge with a load of timber pilings",
+"files": [
+[
+480,
+"excavator-barge-logo-wide-480.099a8fe6.webp"
+],
+[
+800,
+"excavator-barge-logo-wide-800.099a8fe6.webp"
+],
+[
+1200,
+"excavator-barge-logo-wide-1200.099a8fe6.webp"
+],
+[
+1500,
+"excavator-barge-logo-wide-1500.099a8fe6.webp"
+]
+]
+},
+"excavator-barge-timber-pilings": {
+"w": 1500,
+"h": 2000,
+"alt": "Stier’s excavator on a work barge with a load of timber pilings",
+"files": [
+[
+400,
+"excavator-barge-timber-pilings-400.15178f64.webp"
+],
+[
+720,
+"excavator-barge-timber-pilings-720.15178f64.webp"
+],
+[
+1000,
+"excavator-barge-timber-pilings-1000.15178f64.webp"
+],
+[
+1500,
+"excavator-barge-timber-pilings-1500.15178f64.webp"
 ]
 ]
 }

@@ -334,14 +334,15 @@ def page(path, title, desc, body, active='', trail=None, ld=None, preload=None, 
 def preload_sizes(key):
     return '100vw' if key == HERO_KEY else '(min-width:940px) 46vw, 92vw'
 
-HERO_KEY = 'excavator-barge-timber-pilings'
+HERO_KEY = 'excavator-barge-logo-wide'
 
 # ============================================================ HOME
 def home():
-    hero = f'''<section class="hero on-dark" aria-labelledby="h1"><div class="hero-media">{img(HERO_KEY, '100vw', prio=True, lazy=False, alt='')}</div>
-<div class="wrap hero-body"><h1 id="h1">Seawall, dock and marine construction in Metro Detroit</h1>
+    hero = f'''<section class="hero page-hero on-dark" aria-labelledby="h1"><div class="wrap page-hero-grid">
+<div><h1 id="h1">Seawall, dock and marine construction in Metro Detroit</h1>
 <p class="lead">Stier’s Construction builds and repairs seawalls, docks, pilings and boat hoists on Lake St. Clair and the Detroit River, then handles the welding, concrete, excavation and decks on the shore side. Owner-operated and committed to honest work and clear communication.</p>
-<div class="btn-row"><a class="btn btn-primary" href="/contact/">Get a free quote</a>{tel('btn btn-ghost', 'Call ' + SITE['phone'], True)}</div></div></section>'''
+<div class="btn-row"><a class="btn btn-primary" href="/contact/">Get a free quote</a>{tel('btn btn-ghost', 'Call ' + SITE['phone'], True)}</div></div>
+<figure class="page-hero-media">{img(HERO_KEY, '(min-width:940px) 46vw, 92vw', prio=True, lazy=False)}</figure></div></section>'''
 
     def leg(s, n):
         return f'<li data-part="{s["slug"]}"><a href="/services/{s["slug"]}/"><span class="num" aria-hidden="true">{n}</span><span><b>{s["name"]}</b><small>{s["summary"]}</small></span></a></li>'
