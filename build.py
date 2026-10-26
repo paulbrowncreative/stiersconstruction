@@ -122,7 +122,7 @@ def mobile_bar(fin=True):
     return f'<nav class="mobile-bar has-fin" aria-label="Quick contact"><a class="btn btn-ghost" href="tel:{SITE["phone_e164"]}">{PHONE_SVG}Call</a><a class="btn btn-primary" href="/contact/">Free quote</a><a class="btn btn-ghost" href="/financing/" data-fin-open="mobile_bar">Financing</a></nav>'
 
 CALC_SVG = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="5" y="2.5" width="14" height="19" rx="2"/><rect x="8" y="5.5" width="8" height="3.5"/><path d="M8 13h.01M12 13h.01M16 13h.01M8 17h.01M12 17h.01M16 17h.01"/></svg>'
-FIN_FRAME_SRC = 'https://www.enhancify.com/stiersconstruction?siteaction=realwidget&utm_source=realwidget&color1=%23C8202B&color2=%2312323F&color3=%23FFFFFF'
+FIN_FRAME_SRC = 'https://www.enhancify.com/stiersconstruction?siteaction=realwidget&utm_source=realwidget&color1=%233471B5&color2=%2312323F&color3=%23FFFFFF'
 def fin_launcher():
     return f'''<button type="button" class="fin-fab" data-fin-open="sticky_button" aria-haspopup="dialog" aria-controls="fin-dialog" aria-label="Financing options" title="Financing options">{CALC_SVG}</button>
 <dialog id="fin-dialog" class="fin-dialog" aria-labelledby="fin-t" data-src="{esc(FIN_FRAME_SRC)}">
@@ -929,7 +929,7 @@ def financing():
 <figure class="page-hero-media">{img('l-shaped-dock-choppy-water', '(min-width:940px) 46vw, 92vw', prio=True, lazy=False)}</figure></div></div></section>
 <section class="section" aria-labelledby="how-h"><div class="wrap"><div class="section-head"><h2 id="how-h">How financing works</h2></div><ol class="steps">{steps_html}</ol></div></section>
 <section id="apply" aria-labelledby="ap-h"><h2 id="ap-h" class="sr-only">Check your financing options</h2>
-<div class="widget-wrap"><div id="fullpagewidget" data-color1="#C8202B" data-color2="#12323F" data-coBrandedColor="#FFFFFF" data-page="9934698" data-hideLink="0" data-src="https://www.enhancify.com/fullpagewidget/"><p class="widget-loading">Loading financing options...</p></div>
+<div class="widget-wrap"><div id="fullpagewidget" data-color1="#3471B5" data-color2="#12323F" data-coBrandedColor="#FFFFFF" data-page="9934698" data-hideLink="0" data-src="https://www.enhancify.com/fullpagewidget/"><p class="widget-loading">Loading financing options...</p></div>
 <noscript><p class="widget-loading">This form needs JavaScript. <a href="{ENH_PAGE}" target="_blank" rel="noopener">Open the financing page on Enhancify</a>.</p></noscript></div>
 <div class="wrap section-tight"><p><a class="textlink" href="{ENH_PAGE}" target="_blank" rel="noopener">Prefer the full Enhancify page? Open it in a new tab</a></p>
 <div class="mt-s">{note('<p><strong>Disclosure.</strong> The form above is provided by Enhancify.com, an independent marketplace that refers you to participating lenders. Stier’s Construction is not a lender and does not make credit decisions. Offers are subject to credit approval, and rates, terms and availability vary by lender. You are not required to accept any offer.</p>')}</div></div></section>
