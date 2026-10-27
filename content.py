@@ -211,7 +211,7 @@ SERVICES = [
   h1='Custom welding and fabrication in Metro Detroit',
   lead='Welding is central to what we do. We fabricate custom steel from design to finished product, in the shop and on site, for homes, businesses and the waterfront.',
   checks=['MIG, TIG and stick', 'Custom fabrication', 'Mobile welding on site', 'Commercial and residential'],
-  hero_img='welding-shop-grinding-sparks',
+  hero_img='mobile-welding-trench-sparks',
   sections=[
    dict(id='what', h2='What we build and repair', html=groups(
      ('Fabrication', ['Custom fabrication from design to finished product', 'MIG, TIG and stick welding', 'Railings, gates and frames', 'Custom signs and metalwork', 'Installs, commercial and residential']),

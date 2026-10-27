@@ -2042,5 +2042,28 @@
 "excavator-barge-timber-pilings-1500.15178f64.webp"
 ]
 ]
+},
+"mobile-welding-trench-sparks": {
+"w": 1500,
+"h": 1125,
+"alt": "Stier’s welder fusing a pipe joint in a trench, sparks and smoke lit by sunlight",
+"files": [
+[
+480,
+"mobile-welding-trench-sparks-480.26be6404.webp"
+],
+[
+800,
+"mobile-welding-trench-sparks-800.26be6404.webp"
+],
+[
+1200,
+"mobile-welding-trench-sparks-1200.26be6404.webp"
+],
+[
+1500,
+"mobile-welding-trench-sparks-1500.26be6404.webp"
+]
+]
 }
 }
