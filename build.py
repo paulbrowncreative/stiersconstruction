@@ -1085,6 +1085,26 @@ open(f'{OUT}/_headers', 'w').write(f'''/*
   Cache-Control: public, max-age=86400
 /assets/og-image.jpg
   Cache-Control: public, max-age=86400
+/assets/favicon-64.png
+  Cache-Control: public, max-age=86400
+/assets/apple-touch-icon.png
+  Cache-Control: public, max-age=86400
+/assets/icon-192.png
+  Cache-Control: public, max-age=86400
+/assets/icon-512.png
+  Cache-Control: public, max-age=86400
+/assets/mark-dark.png
+  Cache-Control: public, max-age=86400
+/assets/mark-light.png
+  Cache-Control: public, max-age=86400
+/assets/logo-dark-200.png
+  Cache-Control: public, max-age=86400
+/assets/logo-dark-400.png
+  Cache-Control: public, max-age=86400
+/assets/logo-light-200.png
+  Cache-Control: public, max-age=86400
+/assets/logo-light-400.png
+  Cache-Control: public, max-age=86400
 /sitemap.xml
   Cache-Control: public, max-age=3600
 ''')
