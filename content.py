@@ -62,7 +62,7 @@ SERVICES = [
    dict(id='permits', h2='Permits for seawall work', html=
      '<div class="prose"><p>Building or replacing a seawall on Lake St. Clair generally requires a permit from Michigan EGLE, and often from the U.S. Army Corps of Engineers, through a single Joint Permit Application. Some like-for-like repairs can qualify for expedited review, and local rules may also apply. Read EGLE’s <a href="%s" target="_blank" rel="noopener">shoreline protection permit guidance (PDF)</a>, and confirm what your site needs before work starts.</p></div>' % EGLE_LINK),
   ],
-  gallery=['sheet-pile-staging-seawall', 'vibratory-hammer-steel-pile', 'new-deck-over-seawall'],
+  gallery=['sheet-pile-staging-seawall', 'vibratory-hammer-steel-pile', 'new-deck-over-seawall', 'seawall-backyard-aerial', 'seawall-backyard-aerial-close'],
   faqs=[
    ('How do I know if my seawall needs repair or replacement?', '<p>Warning signs include a wall that leans or bows, sinking soil or voids behind it, open seams, a cracked or missing cap, and erosion at the wall ends. Repairs can extend the life of a sound wall; a wall that has moved or lost its footing usually needs replacement. The dependable way to tell is to have someone inspect it, so send photos or request a quote.</p>'),
    ('Which seawall material should I choose?', '<p>We install vinyl, steel, concrete and galvanized systems. Soil, water depth, the loads on the wall and site access decide which one fits. See the comparison above, then send your address and photos.</p>'),
@@ -96,7 +96,7 @@ SERVICES = [
             ('Candock floating docks fit', ['Residential and leisure docks', 'Commercial docks and marinas', 'Canoe, kayak and rowing docks, PWC and boat lift systems'])) +
      '<p class="mt-m"><a class="btn btn-outline" href="/services/docks/candock/">See the Candock lineup</a></p>'),
   ],
-  gallery=['l-shaped-dock-choppy-water', 'gray-dock-walkway-canal', 'dock-work-through-ice'],
+  gallery=['l-shaped-dock-choppy-water', 'gray-dock-walkway-canal', 'dock-work-through-ice', 'canal-aerial-lift-bridge'],
   faqs=[
    ('Should I choose a floating dock or a fixed dock?', '<p>A floating dock moves with the water level; a fixed dock stays at one height on pilings. We install both, plus custom designs, so the choice comes down to your water depth, exposure and how you use the dock.</p>'),
    ('Do you sell Candock floating docks?', '<p>Yes. Stier’s Construction is an authorized Candock dealer, including the JetRoll drive-on dock for personal watercraft. We can size a system for your shoreline and install and service it.</p>'),

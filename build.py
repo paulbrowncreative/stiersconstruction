@@ -819,14 +819,14 @@ def service_area():
     body = f'''<section class="page-hero on-dark"><div class="wrap">{crumbs(trail)}<div class="page-hero-grid"><div><h1>Marine and Construction Services Across Metro Detroit’s Waterfront</h1>
 <p class="lead">We serve waterfront communities on Lake St. Clair, the St. Clair River and the Detroit River, along with the excavating, concrete, welding and deck work on the lots beside them.</p>
 <div class="btn-row"><a class="btn btn-primary" href="/contact/">Get a free quote</a>{tel('btn btn-ghost', 'Call ' + SITE['phone'], True)}</div></div>
-<figure class="page-hero-media">{img('barge-open-water', '(min-width:940px) 46vw, 92vw', prio=True, lazy=False)}</figure></div></div></section>
+<figure class="page-hero-media">{img('marina-dock-aerial-waterfront', '(min-width:940px) 46vw, 92vw', prio=True, lazy=False)}</figure></div></div></section>
 <section class="section"><div class="wrap content-grid"><div class="main"><section><h2>Where We Work</h2><div class="prose"><p>Lake St. Clair sits between the St. Clair River to the north and the Detroit River to the south, and the three waterways behave differently. Depth, current, ship traffic and ice change how a wall, dock or piling should be built. Pick your community below for local details, or read <a href="/blog/lake-st-clair-detroit-river-st-clair-river-waterfront-differences/">how your waterway changes your seawall and dock</a>.</p><p>Not sure we cover your address? Call and ask. Our team works for homeowners, commercial property owners and marinas.</p></div></section>{sections}
 <section><h2>What Waterfront Owners Should Know About Permits</h2><div class="prose"><p>Work in or over Great Lakes waters generally involves state and federal permits. In Michigan that means EGLE, and often the U.S. Army Corps of Engineers, and your city or township may add its own rules. EGLE’s <a href="{EGLE_LINK}" target="_blank" rel="noopener">shoreline protection permit guidance (PDF)</a> explains the process. Requirements depend on your site, so confirm before work starts.</p></div></section></div>
 <aside class="aside-sticky aside-stack"><div class="panel panel-dark"><h3>Not Sure We Cover You?</h3><small>Mon to Fri, 8am to 5pm</small><a class="phone" href="tel:{SITE['phone_e164']}">{SITE['phone']}</a><a class="btn btn-primary" href="/contact/">Send Your Address</a></div>
 <div class="panel"><h3>Popular Services</h3><ul class="related">{''.join(f'<li><a href="/services/{s}/"><b>{BY_SLUG[s]["name"]}</b><span>{BY_SLUG[s]["summary"]}</span></a></li>' for s in ['seawalls','docks','boat-hoists','dredging','pilings'])}</ul></div></aside></div></section>
 {cta_band()}'''
     page('/service-area/', 'Service Area: Lake St. Clair, Detroit River & More | Stier’s', 'Stier’s Construction serves waterfront towns on Lake St. Clair, the St. Clair River and the Detroit River, from Grosse Ile to Port Huron.',
-         body, active='area', trail=trail, prio=0.9, sm_images=[img_url('barge-open-water')])
+         body, active='area', trail=trail, prio=0.9, sm_images=[img_url('marina-dock-aerial-waterfront')])
 
 # ============================================================ FORMS
 def field(id_, label, type_='text', req=True, attrs='', hint=''):

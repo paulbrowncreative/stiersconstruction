@@ -2065,5 +2065,113 @@
 "mobile-welding-trench-sparks-1500.26be6404.webp"
 ]
 ]
+},
+"marina-dock-aerial-waterfront": {
+"w": 2000,
+"h": 1125,
+"alt": "Aerial view of a public marina with many docked boats along a municipal waterfront",
+"files": [
+[
+480,
+"marina-dock-aerial-waterfront-480.705df4b5.webp"
+],
+[
+800,
+"marina-dock-aerial-waterfront-800.705df4b5.webp"
+],
+[
+1200,
+"marina-dock-aerial-waterfront-1200.705df4b5.webp"
+],
+[
+1600,
+"marina-dock-aerial-waterfront-1600.705df4b5.webp"
+],
+[
+2000,
+"marina-dock-aerial-waterfront-2000.705df4b5.webp"
+]
+]
+},
+"canal-aerial-lift-bridge": {
+"w": 2000,
+"h": 1125,
+"alt": "Aerial view of a residential canal lined with docked boats and a lift bridge",
+"files": [
+[
+480,
+"canal-aerial-lift-bridge-480.3a9899ca.webp"
+],
+[
+800,
+"canal-aerial-lift-bridge-800.3a9899ca.webp"
+],
+[
+1200,
+"canal-aerial-lift-bridge-1200.3a9899ca.webp"
+],
+[
+1600,
+"canal-aerial-lift-bridge-1600.3a9899ca.webp"
+],
+[
+2000,
+"canal-aerial-lift-bridge-2000.3a9899ca.webp"
+]
+]
+},
+"seawall-backyard-aerial": {
+"w": 2000,
+"h": 1125,
+"alt": "Aerial view of a landscaped waterfront backyard with a new seawall, patio and covered boat lift",
+"files": [
+[
+480,
+"seawall-backyard-aerial-480.7ad29100.webp"
+],
+[
+800,
+"seawall-backyard-aerial-800.7ad29100.webp"
+],
+[
+1200,
+"seawall-backyard-aerial-1200.7ad29100.webp"
+],
+[
+1600,
+"seawall-backyard-aerial-1600.7ad29100.webp"
+],
+[
+2000,
+"seawall-backyard-aerial-2000.7ad29100.webp"
+]
+]
+},
+"seawall-backyard-aerial-close": {
+"w": 2000,
+"h": 1125,
+"alt": "Closer aerial view of a finished seawall, patio and shade tree on a waterfront lot",
+"files": [
+[
+480,
+"seawall-backyard-aerial-close-480.d5614291.webp"
+],
+[
+800,
+"seawall-backyard-aerial-close-800.d5614291.webp"
+],
+[
+1200,
+"seawall-backyard-aerial-close-1200.d5614291.webp"
+],
+[
+1600,
+"seawall-backyard-aerial-close-1600.d5614291.webp"
+],
+[
+2000,
+"seawall-backyard-aerial-close-2000.d5614291.webp"
+]
+]
 }
 }
