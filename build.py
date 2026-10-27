@@ -367,7 +367,7 @@ HERO_KEY = 'excavator-barge-logo-wide'
 # ============================================================ HOME
 def home():
     hero = f'''<section class="hero page-hero on-dark" aria-labelledby="h1"><div class="wrap page-hero-grid">
-<div><h1 id="h1">Seawall, dock and marine construction in Metro Detroit</h1>
+<div><h1 id="h1">Stier’s Marine Construction</h1>
 <p class="lead">Stier’s Construction builds and repairs seawalls, docks, pilings and boat hoists on Lake St. Clair and the Detroit River, then handles the welding, concrete, excavation and decks on the shore side. Owner-operated and committed to honest work and clear communication.</p>
 <div class="btn-row"><a class="btn btn-primary" href="/contact/">Get a free quote</a>{tel('btn btn-ghost', 'Call ' + SITE['phone'], True)}</div></div>
 <figure class="page-hero-media">{img(HERO_KEY, '(min-width:940px) 46vw, 92vw', prio=True, lazy=False)}</figure></div></section>'''
