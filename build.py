@@ -778,7 +778,7 @@ def town_page(t):
     n = t['name']; path = f'/service-area/{t["slug"]}/'
     w = WATERS[t['water']]
     trail = [('Home', '/'), ('Service Area', '/service-area/'), (n, None)]
-    h1 = t.get('h1') or f'Seawall, Dock and Marine Construction in {n}, Michigan'
+    h1 = t.get('h1') or f'Marine Construction in {n}, Michigan'
     title = t.get('title') or f'{n}: Seawalls & Docks'
     desc = t.get('desc') or f'Seawalls, docks, boat hoists, dredging, concrete and decks in {n}, Michigan. Owner-led crew serving {w["short"]}. Free quotes.'
     checks = [f'{t["county"]} County', w['short'][0].upper() + w['short'][1:], 'Owner-led crew', 'Free quotes']
