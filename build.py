@@ -394,11 +394,11 @@ def home():
         return f'<a class="tile {cls}" href="{href}"><figure>{img(key, sizes)}<figcaption><b>{b}</b>{t}</figcaption></figure></a>'
     mosaic = f'''<section class="section" aria-labelledby="w-h"><div class="wrap"><div class="section-head"><h2 id="w-h">From the job site</h2><p>Real photos from our own jobs, on the water and on shore.</p></div>
 <div class="mosaic">
-{tile('t-a', 'barge-excavator-canal', '/services/pilings/', 'Barge work in a canal', 'Pilings and marine construction from the water.', '(min-width:860px) 40vw, 92vw')}
+{tile('t-a', 'barge-excavator-canal', '/services/pilings/', 'Piling installs in a canal', 'Pilings and marine construction from the water.', '(min-width:860px) 40vw, 92vw')}
 {tile('t-b', 'new-deck-over-seawall', '/services/decks/', 'A new deck along the seawall', 'Waterfront decks and walls, built together.', '(min-width:860px) 33vw, 92vw')}
 {tile('t-c', 'welding-at-night-waterfront', '/services/welding-fabrication/', 'Welding after dark', 'Mobile welding on site.', '(min-width:860px) 25vw, 46vw')}
 {tile('t-d', 'boat-lift-covered-slip', '/services/boat-hoists/', 'Boat lift in a covered slip', 'Hoist installs and service.', '(min-width:860px) 25vw, 46vw')}
-{tile('t-e', 'new-concrete-patio', '/services/concrete/', 'Fresh concrete patio', 'Finished flatwork.', '(min-width:860px) 33vw, 92vw')}
+{tile('t-e', 'sheet-pile-staging-seawall', '/services/seawalls/', 'New seawall going in', 'Steel sheet pile, vinyl and concrete walls.', '(min-width:860px) 33vw, 92vw')}
 </div><p class="mt-m"><a class="btn btn-outline" href="/projects/">See all project photos</a></p></div></section>'''
 
     why_items = [('The owner is on the job', 'Kevin brings more than 15 years of hands-on welding, marine and construction experience and stays directly involved on site.'),
