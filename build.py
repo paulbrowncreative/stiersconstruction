@@ -120,7 +120,7 @@ def footer():
 <div><h2>In and over the water</h2><ul>{ls(water)}</ul></div>
 <div><h2>On the lot</h2><ul>{ls(land)}</ul></div>
 <div><h2>Contact</h2><ul>
-<li><a href="tel:{SITE['phone_e164']}">{SITE['phone']}</a></li><li><a href="mailto:{SITE['email']}">{SITE['email']}</a></li></ul>
+<li><a href="tel:{SITE['phone_e164']}">{SITE['phone']}</a></li><li><a href="mailto:{SITE['email']}">{SITE['email']}</a></li><li><a href="https://maps.google.com/?q={SITE['street']}, {SITE['city']}, {SITE['region']} {SITE['zip']}" rel="noopener" target="_blank">{SITE['street']}<br>{SITE['city']}, {SITE['region']} {SITE['zip']}</a></li></ul>
 <p class="foot-hours mt-s">Monday to Friday, 8am to 5pm<br>Weekends by appointment</p>
 <ul class="mt-s"><li><a href="/contact/">Get a free quote</a></li><li><a href="/financing/">Financing</a></li><li><a href="/blog/">Blog</a></li><li><a href="/projects/">Projects</a></li><li><a href="/about/">About</a></li><li><a href="/service-area/">Service area</a></li><li><a href="/careers/">Careers</a></li></ul></div>
 </div><div class="foot-areas"><h2>Communities We Serve</h2><ul class="area-links">{''.join(f'<li><a href="/service-area/{t[chr(115)+chr(108)+chr(117)+chr(103)]}/">{t[chr(110)+chr(97)+chr(109)+chr(101)]}</a></li>' for t in TOWNS)}</ul></div><div class="footer-base"><span>© {SITE['year']} {SITE['name']}. All rights reserved.</span><span>Metro Detroit, Michigan</span></div></div></footer>'''
@@ -161,7 +161,8 @@ def business_node():
      'logo': {'@type': 'ImageObject', 'url': f'{URL}/assets/logo-light-400.png', 'width': 400, 'height': 298},
      'image': [f'{URL}/assets/og-image.jpg'],
      'description': 'Marine and construction contractor in Metro Detroit: seawalls, docks, pilings, boat hoists, dredging, welding and fabrication, excavating, demolition, concrete and decks.',
-     'telephone': '+1-586-703-2714', 'email': SITE['email'], 'address': {'@type': 'PostalAddress', 'addressRegion': 'MI', 'addressCountry': 'US'},
+     'telephone': '+1-586-703-2714', 'email': SITE['email'],
+     'address': {'@type': 'PostalAddress', 'streetAddress': SITE['street'], 'addressLocality': SITE['city'], 'addressRegion': SITE['region'], 'postalCode': SITE['zip'], 'addressCountry': 'US'},
      'areaServed': [{'@type': 'AdministrativeArea', 'name': 'Metro Detroit, Michigan'}, {'@type': 'Place', 'name': 'Lake St. Clair'}, {'@type': 'Place', 'name': 'Detroit River'}, {'@type': 'Place', 'name': 'St. Clair River'}] + [{'@type': 'City', 'name': t['name'], 'containedInPlace': {'@type': 'AdministrativeArea', 'name': t['county'] + ' County, Michigan'}} for t in TOWNS],
      'openingHoursSpecification': [{'@type': 'OpeningHoursSpecification', 'dayOfWeek': ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday'], 'opens': '08:00', 'closes': '17:00'}],
      'sameAs': [SITE['instagram'], SITE['facebook']],
@@ -875,7 +876,7 @@ def contact():
 <p class="mt-s"><button class="btn btn-primary" type="submit">Send my quote request</button></p><p class="form-status" role="status" aria-live="polite"></p></form>'''
     body = f'''<section class="page-hero on-dark"><div class="wrap">{crumbs(trail)}<div style="padding-block:clamp(24px,4vw,56px) clamp(36px,5vw,64px)"><h1 id="form-top" style="max-width:20ch">Get a free quote</h1><p class="lead mt-s" style="max-width:58ch">Tell us about your project. Reach out by phone, email or through our contact form. We’re happy to help and respond promptly to all inquiries and quote requests.</p></div></div></section>
 <section class="section"><div class="wrap content-grid"><div><h2 id="form-h" class="sr-only">Quote request form</h2>{form}</div>
-<aside class="aside-sticky aside-stack" aria-label="Contact details"><div class="panel panel-dark on-dark"><h3>Prefer to talk?</h3><dl class="contact-card"><div><dt>Call</dt><dd><a class="big" href="tel:{SITE['phone_e164']}">{SITE['phone']}</a></dd></div><div><dt>Email</dt><dd><a href="mailto:{SITE['email']}">{SITE['email']}</a></dd></div><div><dt>Hours</dt><dd>Monday to Friday, 8am to 5pm<br>Weekends by appointment</dd></div></dl></div>
+<aside class="aside-sticky aside-stack" aria-label="Contact details"><div class="panel panel-dark on-dark"><h3>Prefer to talk?</h3><dl class="contact-card"><div><dt>Call</dt><dd><a class="big" href="tel:{SITE['phone_e164']}">{SITE['phone']}</a></dd></div><div><dt>Email</dt><dd><a href="mailto:{SITE['email']}">{SITE['email']}</a></dd></div><div><dt>Address</dt><dd><a href="https://maps.google.com/?q={SITE['street']}, {SITE['city']}, {SITE['region']} {SITE['zip']}" rel="noopener" target="_blank">{SITE['street']}<br>{SITE['city']}, {SITE['region']} {SITE['zip']}</a></dd></div><div><dt>Hours</dt><dd>Monday to Friday, 8am to 5pm<br>Weekends by appointment</dd></div></dl></div>
 <div class="panel"><h3>What to include</h3>{ul(['The address of the job', 'What you want done', 'Photos or video of the area', 'Your timing, if you have one'])}<p class="mt-s"><a class="textlink" href="/financing/">Financing options</a></p></div></aside></div></section>'''
     page('/contact/', 'Get a Free Quote | Stier’s Construction, Metro Detroit', 'Request a free quote from Stier’s Construction for seawalls, docks, hoists, dredging, welding, concrete, excavating and decks. Call 586-703-2714.',
          body, active='contact', trail=trail, ptype='ContactPage', bar=False, prio=0.8)
