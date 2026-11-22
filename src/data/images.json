@@ -2173,5 +2173,120 @@
 "seawall-backyard-aerial-close-2000.d5614291.webp"
 ]
 ]
+},
+"crew-steel-pile-canal-dock": {
+"w": 1500,
+"h": 2000,
+"alt": "Crew guiding a steel piling into place from a dock on a canal",
+"files": [
+[
+400,
+"crew-steel-pile-canal-dock-400.f33f6aea.webp"
+],
+[
+720,
+"crew-steel-pile-canal-dock-720.f33f6aea.webp"
+],
+[
+1000,
+"crew-steel-pile-canal-dock-1000.f33f6aea.webp"
+],
+[
+1500,
+"crew-steel-pile-canal-dock-1500.f33f6aea.webp"
+]
+]
+},
+"stiers-excavator-canal-dock": {
+"w": 1500,
+"h": 2000,
+"alt": "Stier’s Construction excavator parked along a canal dock",
+"files": [
+[
+400,
+"stiers-excavator-canal-dock-400.a0c18d0f.webp"
+],
+[
+720,
+"stiers-excavator-canal-dock-720.a0c18d0f.webp"
+],
+[
+1000,
+"stiers-excavator-canal-dock-1000.a0c18d0f.webp"
+],
+[
+1500,
+"stiers-excavator-canal-dock-1500.a0c18d0f.webp"
+]
+]
+},
+"stiers-excavator-barn-field": {
+"w": 1500,
+"h": 2000,
+"alt": "Stier’s Construction excavator in a field beside an old barn",
+"files": [
+[
+400,
+"stiers-excavator-barn-field-400.d60c45d0.webp"
+],
+[
+720,
+"stiers-excavator-barn-field-720.d60c45d0.webp"
+],
+[
+1000,
+"stiers-excavator-barn-field-1000.d60c45d0.webp"
+],
+[
+1500,
+"stiers-excavator-barn-field-1500.d60c45d0.webp"
+]
+]
+},
+"excavator-demolition-burn-pile": {
+"w": 1500,
+"h": 2000,
+"alt": "Stier’s Construction excavator beside a demolition debris burn pile",
+"files": [
+[
+400,
+"excavator-demolition-burn-pile-400.8b63291b.webp"
+],
+[
+720,
+"excavator-demolition-burn-pile-720.8b63291b.webp"
+],
+[
+1000,
+"excavator-demolition-burn-pile-1000.8b63291b.webp"
+],
+[
+1500,
+"excavator-demolition-burn-pile-1500.8b63291b.webp"
+]
+]
+},
+"excavator-collapsed-metal-building": {
+"w": 1500,
+"h": 2000,
+"alt": "Stier’s Construction excavator beside a partially demolished metal building",
+"files": [
+[
+400,
+"excavator-collapsed-metal-building-400.c31440d6.webp"
+],
+[
+720,
+"excavator-collapsed-metal-building-720.c31440d6.webp"
+],
+[
+1000,
+"excavator-collapsed-metal-building-1000.c31440d6.webp"
+],
+[
+1500,
+"excavator-collapsed-metal-building-1500.c31440d6.webp"
+]
+]
 }
 }

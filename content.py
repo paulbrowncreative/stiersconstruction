@@ -656,7 +656,7 @@ QUOTES = [
 # gallery: (image key, category)
 GALLERY = [
  ('sheet-pile-excavator-canal-home','seawalls'),('sheet-pile-staging-seawall','seawalls'),('vibratory-hammer-steel-pile','seawalls'),
- ('excavator-barge-timber-pilings','seawalls'),('pipe-pilings-barge-sunset','seawalls'),('excavator-pipe-pilings-dusk','seawalls'),
+ ('excavator-barge-timber-pilings','seawalls'),('pipe-pilings-barge-sunset','seawalls'),('excavator-pipe-pilings-dusk','seawalls'),('crew-steel-pile-canal-dock','seawalls'),
  ('barge-excavator-canal','docks'),('barge-open-water','docks'),('barge-excavator-snow','docks'),('barge-boathouse-excavator','docks'),
  ('wood-dock-yellow-flag','docks'),('l-shaped-dock-choppy-water','docks'),('gray-dock-walkway-canal','docks'),('dock-boxes-moored-boat','docks'),
  ('dock-work-through-ice','docks'),('winter-dock-edge','docks'),('covered-marina-walkway-sunset','docks'),('boat-lift-covered-slip','docks'),
@@ -669,6 +669,7 @@ GALLERY = [
  ('excavator-site-dusk','excavating'),('dump-trucks-yard','excavating'),('excavator-loading-dump-trailer','excavating'),('skid-steer-yard','excavating'),
  ('graded-gravel-yard-boathouse','excavating'),('excavator-trench-lawn','excavating'),('dozer-clearing-field','excavating'),('dump-truck-unloading','excavating'),
  ('demolition-excavator-canal','excavating'),('demolition-excavator-tanks','excavating'),('stiers-excavator-demo-site','excavating'),('demolition-debris-pile','excavating'),
- ('broken-concrete-slabs-canal','excavating'),
+ ('broken-concrete-slabs-canal','excavating'),('stiers-excavator-canal-dock','excavating'),('stiers-excavator-barn-field','excavating'),
+ ('excavator-demolition-burn-pile','excavating'),('excavator-collapsed-metal-building','excavating'),
 ]
 GALLERY_CATS = [('all','All projects'),('seawalls','Seawalls and pilings'),('docks','Docks, hoists and barge work'),('welding','Welding and fabrication'),('concrete','Concrete and decks'),('excavating','Excavating and demolition')]
