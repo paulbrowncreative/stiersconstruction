@@ -2288,5 +2288,120 @@
 "excavator-collapsed-metal-building-1500.c31440d6.webp"
 ]
 ]
+},
+"excavator-pole-barn-demo-wide": {
+"w": 1449,
+"h": 2576,
+"alt": "Excavator tearing into a metal pole barn during demolition",
+"files": [
+[
+400,
+"excavator-pole-barn-demo-wide-400.9765c977.webp"
+],
+[
+720,
+"excavator-pole-barn-demo-wide-720.9765c977.webp"
+],
+[
+1000,
+"excavator-pole-barn-demo-wide-1000.9765c977.webp"
+],
+[
+1449,
+"excavator-pole-barn-demo-wide-1449.9765c977.webp"
+]
+]
+},
+"excavator-flattened-pole-barn": {
+"w": 1449,
+"h": 2576,
+"alt": "Stier’s Construction excavator beside a flattened pole barn",
+"files": [
+[
+400,
+"excavator-flattened-pole-barn-400.3acf7b11.webp"
+],
+[
+720,
+"excavator-flattened-pole-barn-720.3acf7b11.webp"
+],
+[
+1000,
+"excavator-flattened-pole-barn-1000.3acf7b11.webp"
+],
+[
+1449,
+"excavator-flattened-pole-barn-1449.3acf7b11.webp"
+]
+]
+},
+"excavator-debris-bonfire-closeup": {
+"w": 1449,
+"h": 2576,
+"alt": "Demolition debris burning in a pile with an excavator at the site",
+"files": [
+[
+400,
+"excavator-debris-bonfire-closeup-400.403dd42e.webp"
+],
+[
+720,
+"excavator-debris-bonfire-closeup-720.403dd42e.webp"
+],
+[
+1000,
+"excavator-debris-bonfire-closeup-1000.403dd42e.webp"
+],
+[
+1449,
+"excavator-debris-bonfire-closeup-1449.403dd42e.webp"
+]
+]
+},
+"excavator-overgrown-trail-crew": {
+"w": 1500,
+"h": 2000,
+"alt": "Stier’s Construction excavator and crew on an overgrown trail",
+"files": [
+[
+400,
+"excavator-overgrown-trail-crew-400.62d16825.webp"
+],
+[
+720,
+"excavator-overgrown-trail-crew-720.62d16825.webp"
+],
+[
+1000,
+"excavator-overgrown-trail-crew-1000.62d16825.webp"
+],
+[
+1500,
+"excavator-overgrown-trail-crew-1500.62d16825.webp"
+]
+]
+},
+"excavator-marina-sunset": {
+"w": 1500,
+"h": 2000,
+"alt": "Stier’s Construction excavator parked at a marina at sunset",
+"files": [
+[
+400,
+"excavator-marina-sunset-400.f483c0a2.webp"
+],
+[
+720,
+"excavator-marina-sunset-720.f483c0a2.webp"
+],
+[
+1000,
+"excavator-marina-sunset-1000.f483c0a2.webp"
+],
+[
+1500,
+"excavator-marina-sunset-1500.f483c0a2.webp"
+]
+]
 }
 }

@@ -660,7 +660,7 @@ GALLERY = [
  ('barge-excavator-canal','docks'),('barge-open-water','docks'),('barge-excavator-snow','docks'),('barge-boathouse-excavator','docks'),
  ('wood-dock-yellow-flag','docks'),('l-shaped-dock-choppy-water','docks'),('gray-dock-walkway-canal','docks'),('dock-boxes-moored-boat','docks'),
  ('dock-work-through-ice','docks'),('winter-dock-edge','docks'),('covered-marina-walkway-sunset','docks'),('boat-lift-covered-slip','docks'),
- ('boat-house-hoist-tarped-boat','docks'),('excavator-dock-removal','docks'),
+ ('boat-house-hoist-tarped-boat','docks'),('excavator-dock-removal','docks'),('excavator-marina-sunset','docks'),
  ('welding-at-night-waterfront','welding'),('welding-shop-grinding-sparks','welding'),('welders-frozen-shoreline','welding'),('welder-helmet-sparks','welding'),
  ('welder-under-dock','welding'),('welding-large-pipe-fabrication','welding'),('steel-table-frame-fabrication','welding'),('steel-stair-railing-brick-home','welding'),
  ('black-steel-railing-porch','welding'),('steel-pool-gate','welding'),('rust-finish-steel-sign-arch','welding'),
@@ -671,5 +671,7 @@ GALLERY = [
  ('demolition-excavator-canal','excavating'),('demolition-excavator-tanks','excavating'),('stiers-excavator-demo-site','excavating'),('demolition-debris-pile','excavating'),
  ('broken-concrete-slabs-canal','excavating'),('stiers-excavator-canal-dock','excavating'),('stiers-excavator-barn-field','excavating'),
  ('excavator-demolition-burn-pile','excavating'),('excavator-collapsed-metal-building','excavating'),
+ ('excavator-pole-barn-demo-wide','excavating'),('excavator-flattened-pole-barn','excavating'),('excavator-debris-bonfire-closeup','excavating'),
+ ('excavator-overgrown-trail-crew','excavating'),
 ]
 GALLERY_CATS = [('all','All projects'),('seawalls','Seawalls and pilings'),('docks','Docks, hoists and barge work'),('welding','Welding and fabrication'),('concrete','Concrete and decks'),('excavating','Excavating and demolition')]
