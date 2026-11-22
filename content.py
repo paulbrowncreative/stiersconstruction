@@ -134,10 +134,10 @@ SERVICES = [
   summary='Sales, installs, cable changes, motor service and welding repairs. Authorized Hi-Tide dealer.',
   hub_img='boat-house-hoist-tarped-boat',
   title='Boat Hoist Installation & Repair | Hi-Tide Dealer | Stier’s',
-  desc='Boat hoist sales and installs, including Hi-Tide: boat house hoists, elevator, 4-point, 8-point, PWC lifts and davits. Cable, motor and welding service.',
+  desc='Boat hoist sales and installs, including Hi-Tide: boat house hoists, elevator, 4-point, PWC lifts and davits. Cable, motor and welding service.',
   h1='Boat hoist sales, installation and maintenance',
   lead='From jet ski lifts to boat house hoists for 35 to 40 foot boats, we sell, install and keep lifts working: cables, motors and welded frames. Stier’s Construction is an authorized Hi-Tide boat lift dealer.',
-  checks=['Authorized Hi-Tide dealer', 'Boat house, elevator, 4- and 8-point', 'PWC lifts and davits', 'Cable, motor and in-house welding service'],
+  checks=['Authorized Hi-Tide dealer', 'Boat house, elevator and 4-point lifts', 'PWC lifts and davits', 'Cable, motor and in-house welding service'],
   dealers=[('Hi-Tide', '/services/boat-hoists/hi-tide/'), ('Golden Boat Lifts', '/services/boat-hoists/golden/'), ('Sunstream', '/services/boat-hoists/sunstream/')],
   hero_img='boat-house-hoist-tarped-boat',
   sections=[
@@ -145,8 +145,7 @@ SERVICES = [
    dict(id='types', h2='Lift types explained', html=compare([
      ('Boat house hoist', 'Built into a covered boat house structure so the boat is stored out of the water, protected from weather and corrosion. Ideal for boats up to 35 to 40 feet, with maximum protection and convenient storage, especially for seasonal or long-term use.'),
      ('Elevator lift', 'Uses vertical movement to raise and lower your boat, often paired with a dock platform. Great for boats up to 30 feet, ideal when dock space is limited or the waterfront is tight, with smooth, controlled lifting for boats that launch often.'),
-     ('4-point lift', 'Supports the boat at four contact points along the hull, evenly distributing weight for smaller boats. Best for boats up to 25 feet, including runabouts, center consoles and fishing boats. Compact, economical and simple to operate.'),
-     ('8-point lift', 'Eight contact points along the hull give extra support for larger boats and wider beams. Typically used for boats 30 to 40 feet, including larger cruisers and pontoon boats, reducing stress on the hull and adding stability.'),
+     ('4-point lift', 'Supports the boat at four contact points along the hull, evenly distributing weight for smaller and mid-size boats. Available from compact, economical configurations up to heavy-duty versions for larger cruisers and pontoon boats.'),
      ('PWC lift', 'Designed for jet skis, WaveRunners and other small watercraft under 15 feet. Keeps your watercraft out of the water, reducing wear and preventing algae buildup. Lightweight and easy to operate.')])),
    dict(id='hi-tide', h2='An authorized Hi-Tide boat lift dealer', html=
      '<p class="measure">Stier’s Construction sells, installs and services Hi-Tide boat lifts alongside every other hoist brand we work on. Buying the lift and having it installed and maintained through one contractor means one point of contact for the life of the lift.</p>' +
@@ -164,14 +163,14 @@ SERVICES = [
             ('Already own a Sunstream lift?', ['Cable change-out and motor service', 'Welding repairs to frames and supports, done in-house', 'Seasonal inspection before launch'])) +
      '<p class="mt-m"><a class="btn btn-outline" href="/services/boat-hoists/sunstream/">Browse the Sunstream lineup</a></p>'),
    dict(id='what', h2='Hoist installation and maintenance', html=groups(
-     ('Installation', ['Boat house hoists', 'Elevator lifts', '4-point lifts', '8-point lifts', 'PWC (jet ski) lifts', 'Davits']),
+     ('Installation', ['Boat house hoists', 'Elevator lifts', '4-point lifts', 'PWC (jet ski) lifts', 'Davits']),
      ('Maintenance', ['Cable change-out: worn or damaged cables replaced with quality materials and precise installation, so the lift operates safely and smoothly', 'Motor maintenance: motors inspected, cleaned, lubricated and serviced to prevent costly breakdowns and extend life', 'Welding maintenance: lift frames, supports and structural parts repaired or reinforced to keep the lift strong and reliable for years'])) +
      '<p class="mt-m measure">Because welding is in-house, frame and support repairs do not need a second contractor.</p>'),
   ],
   gallery=['boat-lift-covered-slip', 'welder-under-dock', 'covered-marina-walkway-sunset'],
   faqs=[
-   ('Which boat hoist fits my boat?', '<p>Length is the starting point: PWC lifts for watercraft under 15 feet, 4-point lifts up to about 25 feet, elevator lifts up to about 30 feet, 8-point lifts for 30 to 40 foot boats, and boat house hoists for boats up to 35 to 40 feet. Weight, beam and hull shape matter too, so send us your boat’s details.</p>'),
-   ('What is the difference between a 4-point and an 8-point lift?', '<p>A 4-point lift supports the hull at four contact points and suits smaller runabouts, center consoles and fishing boats. An 8-point lift spreads weight over eight points, which reduces hull stress and adds stability for larger cruisers and pontoon boats.</p>'),
+   ('Which boat hoist fits my boat?', '<p>Length is the starting point: PWC lifts for watercraft under 15 feet, 4-point lifts for boats up to roughly 40 feet depending on weight, elevator lifts up to about 30 feet, and boat house hoists for boats up to 35 to 40 feet. Weight, beam and hull shape matter too, so send us your boat’s details.</p>'),
+   ('What is the difference between an elevator lift and a boat house hoist?', '<p>An elevator lift moves the boat straight up and down on a vertical track, often paired with a dock platform, which works well where dock space is tight. A boat house hoist is built into a covered structure so the boat is stored out of the water and out of the weather, which suits seasonal or long-term storage.</p>'),
    ('Do you sell Hi-Tide boat lifts?', '<p>Yes. Stier’s Construction is an authorized Hi-Tide dealer. We can size and quote a new Hi-Tide lift, install it, and keep it running with our own cable, motor and welding service.</p>'),
    ('Do you sell Golden Boat Lifts?', '<p>Yes. Stier’s Construction is an authorized dealer for select Golden Boat Lifts models, including the InvisiLift and Float-A-Vator. We size, install and service them the same way as every other lift we carry.</p>'),
    ('Do you sell Sunstream boat lifts?', '<p>Yes. Stier’s Construction is an authorized Sunstream dealer, including the SunLift X, SunLift Legacy, FloatLift and Helix2-P. We size, install and service them the same way as every other lift we carry.</p>'),
@@ -338,9 +337,8 @@ BY_SLUG = {s['slug']: s for s in SERVICES}
 # Boat hoist size guidance, as published on the current site (feet).
 HOIST_SIZES = [
   ('PWC lifts', 0, 15, 'Under 15 ft', 'Jet skis, WaveRunners and small watercraft'),
-  ('4-point lifts', 0, 25, 'Up to 25 ft', 'Runabouts, center consoles, fishing boats'),
+  ('4-point lifts', 0, 40, 'Up to 40 ft, by weight', 'Runabouts and fishing boats up to larger cruisers and pontoon boats'),
   ('Elevator lifts', 0, 30, 'Up to 30 ft', 'Tight spaces; often paired with a dock platform'),
-  ('8-point lifts', 30, 40, '30 to 40 ft', 'Larger cruisers and pontoon boats'),
   ('Boat house hoists', 0, 40, 'Up to 35 to 40 ft', 'Covered storage that protects from weather and corrosion'),
 ]
 

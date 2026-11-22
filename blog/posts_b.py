@@ -43,10 +43,10 @@ dict(slug='wood-vs-steel-pilings', cat='Docks, Pilings and Hoists', date='2026-0
        ('Can I replace a single piling?','<p>Often yes. A single damaged piling can be removed and replaced without rebuilding the whole structure, depending on the condition of the rest.</p>')]),
 
 dict(slug='how-to-choose-a-boat-hoist', cat='Docks, Pilings and Hoists', date='2026-09-20', hero='boat-house-hoist-tarped-boat',
- t='How to Choose a Boat Hoist: 4-Point, 8-Point, Elevator and More',
- h1='How to Choose a Boat Hoist: 4-Point, 8-Point, Elevator, PWC and Boat House Lifts',
- desc='Compare 4-point, 8-point, elevator, PWC and boat house hoists by boat length, hull support and dock layout to pick the right lift.',
- takeaways=['Boat length is the starting point: PWC lifts under 15 ft, 4-point up to about 25 ft, elevator up to about 30 ft, 8-point for 30 to 40 ft, and boat house hoists for boats up to 35 to 40 ft.','Weight, beam and hull shape matter as much as length.','Your dock layout and water depth affect which lift works.','Choose a lift with capacity to spare, and keep it maintained.'],
+ t='How to Choose a Boat Hoist: 4-Point, Elevator and More',
+ h1='How to Choose a Boat Hoist: 4-Point, Elevator, PWC and Boat House Lifts',
+ desc='Compare 4-point, elevator, PWC and boat house hoists by boat length, hull support and dock layout to pick the right lift.',
+ takeaways=['Boat length is a starting point: PWC lifts under 15 ft, 4-point lifts up to about 40 ft depending on weight, elevator lifts up to about 30 ft, and boat house hoists for boats up to 35 to 40 ft.','Weight, beam and hull shape matter as much as length.','Your dock layout and water depth affect which lift works.','Choose a lift with capacity to spare, and keep it maintained.'],
  services=['boat-hoists','docks','welding-fabrication'], related=['boat-hoist-maintenance-checklist','floating-vs-fixed-docks','seasonal-waterfront-maintenance-checklist'],
  body='''
 <p>A boat hoist keeps your boat out of the water, which reduces wear, slows algae growth and makes access easy. But hoists are not one-size-fits-all. Here is how the main types compare, based on the size guidance we use.</p>
@@ -55,9 +55,8 @@ dict(slug='how-to-choose-a-boat-hoist', cat='Docks, Pilings and Hoists', date='2
 <thead><tr><th scope="col">Lift type</th><th scope="col">Typical boat</th><th scope="col">Good to know</th></tr></thead>
 <tbody>
 <tr><th scope="row">PWC lift</th><td>Jet skis, WaveRunners, small watercraft under 15 ft</td><td>Lightweight and easy to operate; keeps the craft out of the water</td></tr>
-<tr><th scope="row">4-point lift</th><td>Boats up to about 25 ft: runabouts, center consoles, fishing boats</td><td>Supports the hull at four contact points; compact, economical, simple to operate</td></tr>
+<tr><th scope="row">4-point lift</th><td>Boats up to about 40 ft, depending on weight: runabouts and fishing boats up to larger cruisers and pontoon boats</td><td>Supports the hull at four contact points; available in capacities from compact and economical up to heavy-duty</td></tr>
 <tr><th scope="row">Elevator lift</th><td>Boats up to about 30 ft</td><td>Vertical lifting, often paired with a dock platform; suits tight waterfront areas and frequent launching</td></tr>
-<tr><th scope="row">8-point lift</th><td>Boats 30 to 40 ft: larger cruisers and pontoon boats</td><td>Eight contact points; reduces hull stress, adds stability, suits wider beams</td></tr>
 <tr><th scope="row">Boat house hoist</th><td>Boats up to 35 to 40 ft</td><td>Built into a covered boat house; protects from weather and corrosion; good for seasonal or long-term storage</td></tr>
 </tbody></table></div>
 <p>Davits are another option for smaller craft. Ask us if they fit your setup.</p>
@@ -73,9 +72,9 @@ dict(slug='how-to-choose-a-boat-hoist', cat='Docks, Pilings and Hoists', date='2
 <h3>Seasonal Use</h3>
 <p>Some owners leave lifts in place year-round; others plan to raise or remove them for winter. Read <a href="/blog/michigan-winter-dock-seawall-damage/">how Michigan winters affect docks and seawalls</a>.</p>
 <h2>Getting the Right Match</h2>
-<p>Send us your boat’s make, length and weight, plus photos of your dock or slip, and we will help match the lift. Stier’s Construction installs boat house hoists, elevator, 4-point and 8-point lifts, PWC lifts and davits, and maintains them, including cable change-outs, motor service and welding repairs. See our <a href="/services/boat-hoists/">boat hoist page</a> or <a href="/contact/">request a free quote</a>.</p>
+<p>Send us your boat’s make, length and weight, plus photos of your dock or slip, and we will help match the lift. Stier’s Construction installs boat house hoists, elevator and 4-point lifts, PWC lifts and davits, and maintains them, including cable change-outs, motor service and welding repairs. See our <a href="/services/boat-hoists/">boat hoist page</a> or <a href="/contact/">request a free quote</a>.</p>
 ''',
- faqs=[('What is the difference between a 4-point and an 8-point lift?','<p>A 4-point lift supports the hull at four contact points and suits smaller boats. An 8-point lift spreads the load over eight points, which reduces hull stress and adds stability for larger boats and wider beams.</p>'),
+ faqs=[('What is the difference between an elevator lift and a boat house hoist?','<p>An elevator lift moves the boat straight up and down on a vertical track, often paired with a dock platform, which suits tight waterfront areas. A boat house hoist is built into a covered structure so the boat is stored out of the water and the weather, which suits seasonal or long-term storage.</p>'),
        ('Can I install a hoist on my existing dock?','<p>Sometimes. The dock has to be designed for the lift’s weight and forces. Have a contractor review it first.</p>')]),
 
 dict(slug='boat-hoist-maintenance-checklist', cat='Docks, Pilings and Hoists', date='2026-09-20', hero='welder-under-dock',
