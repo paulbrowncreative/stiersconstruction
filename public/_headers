@@ -215,5 +215,13 @@
   Cache-Control: public, max-age=86400
 /assets/logo-light-400.png
   Cache-Control: public, max-age=86400
+/assets/dealer-logo-hitide.svg
+  Cache-Control: public, max-age=86400
+/assets/dealer-logo-candock.svg
+  Cache-Control: public, max-age=86400
+/assets/dealer-logo-sunstream.svg
+  Cache-Control: public, max-age=86400
+/assets/dealer-logo-golden.webp
+  Cache-Control: public, max-age=86400
 /sitemap.xml
   Cache-Control: public, max-age=3600

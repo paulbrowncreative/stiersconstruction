@@ -457,6 +457,14 @@ def sizechart():
         rows += f'<li><div><b>{name}</b><span class="rng">{desc}</span></div><div class="track" aria-hidden="true"><i style="left:{lo/40*100:.1f}%;width:{(hi-lo)/40*100:.1f}%"></i></div><strong class="range">{rng}</strong></li>'
     return f'<p class="measure">Length is the starting point. These are the size ranges we work from:</p>{axis}<ul class="sizechart">{rows}</ul><div class="mt-m">{note("<p>Davits are available too. Ranges are general guidance: weight, beam and hull shape also matter, so send us your boat’s make, length and weight and we will match the lift.</p>")}</div>'
 
+# (logo file, needs a light/white card because the source logo is colored for light backgrounds)
+BRAND_LOGOS = {
+    'Hi-Tide': ('dealer-logo-hitide.svg', False),
+    'Candock': ('dealer-logo-candock.svg', False),
+    'Golden Boat Lifts': ('dealer-logo-golden.webp', True),
+    'Sunstream': ('dealer-logo-sunstream.svg', False),
+}
+
 def service_page(s):
     path = f'/services/{s["slug"]}/'
     trail = [('Home', '/'), ('Services', '/services/'), (s['name'], None)]
@@ -464,9 +472,13 @@ def service_page(s):
     dealers = s.get('dealers')
     dealer_html = ''
     if dealers:
-        badges = ''.join(f'<li><a href="{href}">{name}</a></li>' for name, href in dealers)
+        def badge(name, href):
+            logo_file, light_card = BRAND_LOGOS[name]
+            cls = 'dealer-badge light-card' if light_card else 'dealer-badge'
+            return f'<li><a class="{cls}" href="{href}"><img src="/assets/{logo_file}" alt="{esc(name)}" loading="lazy" decoding="async"></a></li>'
+        badges = ''.join(badge(name, href) for name, href in dealers)
         plural = 's' if len(dealers) > 1 else ''
-        dealer_html = f'<p class="dealer-label">Authorized dealer{plural}:</p><ul class="chips dealer-chips">{badges}</ul>'
+        dealer_html = f'<p class="dealer-label">Authorized dealer{plural}:</p><ul class="dealer-chips">{badges}</ul>'
     hero = f'''<section class="page-hero on-dark"><div class="wrap">{crumbs(trail)}<div class="page-hero-grid"><div><h1>{s['h1']}</h1><p class="lead">{s['lead']}</p>
 {dealer_html}<ul class="hero-checks">{checks}</ul><div class="btn-row"><a class="btn btn-primary" href="/contact/">Get a free quote</a>{tel('btn btn-ghost', 'Call ' + SITE['phone'], True)}</div></div>
 {hero_gallery([s['hero_img']] + s['gallery'])}</div></div></section>'''
@@ -1119,6 +1131,14 @@ open(f'{OUT}/_headers', 'w').write(f'''/*
 /assets/logo-light-200.png
   Cache-Control: public, max-age=86400
 /assets/logo-light-400.png
+  Cache-Control: public, max-age=86400
+/assets/dealer-logo-hitide.svg
+  Cache-Control: public, max-age=86400
+/assets/dealer-logo-candock.svg
+  Cache-Control: public, max-age=86400
+/assets/dealer-logo-sunstream.svg
+  Cache-Control: public, max-age=86400
+/assets/dealer-logo-golden.webp
   Cache-Control: public, max-age=86400
 /sitemap.xml
   Cache-Control: public, max-age=3600
