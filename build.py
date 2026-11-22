@@ -461,8 +461,14 @@ def service_page(s):
     path = f'/services/{s["slug"]}/'
     trail = [('Home', '/'), ('Services', '/services/'), (s['name'], None)]
     checks = ''.join(f'<li>{c}</li>' for c in s['checks'])
+    dealers = s.get('dealers')
+    dealer_html = ''
+    if dealers:
+        badges = ''.join(f'<li><a href="{href}">{name}</a></li>' for name, href in dealers)
+        plural = 's' if len(dealers) > 1 else ''
+        dealer_html = f'<p class="dealer-label">Authorized dealer{plural}:</p><ul class="chips dealer-chips">{badges}</ul>'
     hero = f'''<section class="page-hero on-dark"><div class="wrap">{crumbs(trail)}<div class="page-hero-grid"><div><h1>{s['h1']}</h1><p class="lead">{s['lead']}</p>
-<ul class="hero-checks">{checks}</ul><div class="btn-row"><a class="btn btn-primary" href="/contact/">Get a free quote</a>{tel('btn btn-ghost', 'Call ' + SITE['phone'], True)}</div></div>
+{dealer_html}<ul class="hero-checks">{checks}</ul><div class="btn-row"><a class="btn btn-primary" href="/contact/">Get a free quote</a>{tel('btn btn-ghost', 'Call ' + SITE['phone'], True)}</div></div>
 {hero_gallery([s['hero_img']] + s['gallery'])}</div></div></section>'''
     secs = ''
     for sec in s['sections']:

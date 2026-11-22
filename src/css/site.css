@@ -559,6 +559,8 @@ html.fin-open .fin-fab{opacity:0;pointer-events:none}
 .chips{list-style:none;display:flex;flex-wrap:wrap;gap:8px;margin-top:22px}
 .chips a{display:inline-flex;align-items:center;min-height:44px;padding:0 16px;border:2px solid rgba(255,255,255,.5);border-radius:999px;color:#fff;text-decoration:none;font-weight:600}
 .chips a:hover{background:#fff;color:var(--ink)}
+.dealer-label{margin:18px 0 8px;font-size:.85rem;font-weight:700;color:var(--lake-200)}
+.dealer-chips{margin-top:0;margin-bottom:22px}
 .feature{display:grid;gap:24px 40px;align-items:center}
 @media (min-width:900px){.feature{grid-template-columns:1.1fr 1fr}}
 .feature-img img{width:100%;aspect-ratio:16/10;object-fit:cover;border-radius:var(--r-sm)}

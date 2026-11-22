@@ -79,6 +79,7 @@ SERVICES = [
   h1='Dock construction, repair and removal in Metro Detroit',
   lead='Floating docks, fixed docks and custom designs, built to handle Lake St. Clair and Detroit River conditions and to give you safe, easy access to the water. Stier’s Construction is an authorized Candock dealer.',
   checks=['Authorized Candock dealer', 'Floating and fixed docks', 'Custom and specialty designs', 'Structural repair, re-decking'],
+  dealers=[('Candock', '/services/docks/candock/')],
   hero_img='wood-dock-yellow-flag',
   sections=[
    dict(id='what', h2='What we do', html=groups(
@@ -137,6 +138,7 @@ SERVICES = [
   h1='Boat hoist sales, installation and maintenance',
   lead='From jet ski lifts to boat house hoists for 35 to 40 foot boats, we sell, install and keep lifts working: cables, motors and welded frames. Stier’s Construction is an authorized Hi-Tide boat lift dealer.',
   checks=['Authorized Hi-Tide dealer', 'Boat house, elevator, 4- and 8-point', 'PWC lifts and davits', 'Cable, motor and in-house welding service'],
+  dealers=[('Hi-Tide', '/services/boat-hoists/hi-tide/'), ('Golden Boat Lifts', '/services/boat-hoists/golden/'), ('Sunstream', '/services/boat-hoists/sunstream/')],
   hero_img='boat-house-hoist-tarped-boat',
   sections=[
    dict(id='sizes', h2='Match the lift to your boat', html='__SIZECHART__'),
