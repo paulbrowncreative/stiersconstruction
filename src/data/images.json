@@ -2518,5 +2518,120 @@
 "excavator-grapple-piling-marina-1500.d766d03b.webp"
 ]
 ]
+},
+"excavator-grapple-pile-set-canal": {
+"w": 1500,
+"h": 2000,
+"alt": "Excavator grapple setting a steel piling beside a residential canal",
+"files": [
+[
+400,
+"excavator-grapple-pile-set-canal-400.f4490d7f.webp"
+],
+[
+720,
+"excavator-grapple-pile-set-canal-720.f4490d7f.webp"
+],
+[
+1000,
+"excavator-grapple-pile-set-canal-1000.f4490d7f.webp"
+],
+[
+1500,
+"excavator-grapple-pile-set-canal-1500.f4490d7f.webp"
+]
+]
+},
+"barge-excavator-canal-evening": {
+"w": 1500,
+"h": 2000,
+"alt": "Stier’s Construction excavator on a barge moving down a canal in the evening",
+"files": [
+[
+400,
+"barge-excavator-canal-evening-400.8a75442d.webp"
+],
+[
+720,
+"barge-excavator-canal-evening-720.8a75442d.webp"
+],
+[
+1000,
+"barge-excavator-canal-evening-1000.8a75442d.webp"
+],
+[
+1500,
+"barge-excavator-canal-evening-1500.8a75442d.webp"
+]
+]
+},
+"barge-crew-marina-daytime": {
+"w": 1500,
+"h": 2000,
+"alt": "Crew working from a barge at a marina with an excavator and welding equipment",
+"files": [
+[
+400,
+"barge-crew-marina-daytime-400.29367a54.webp"
+],
+[
+720,
+"barge-crew-marina-daytime-720.29367a54.webp"
+],
+[
+1000,
+"barge-crew-marina-daytime-1000.29367a54.webp"
+],
+[
+1500,
+"barge-crew-marina-daytime-1500.29367a54.webp"
+]
+]
+},
+"excavator-barge-open-water-glare": {
+"w": 1500,
+"h": 2000,
+"alt": "Excavator on a barge driving pilings in open water with sun glare",
+"files": [
+[
+400,
+"excavator-barge-open-water-glare-400.cee321ee.webp"
+],
+[
+720,
+"excavator-barge-open-water-glare-720.cee321ee.webp"
+],
+[
+1000,
+"excavator-barge-open-water-glare-1000.cee321ee.webp"
+],
+[
+1500,
+"excavator-barge-open-water-glare-1500.cee321ee.webp"
+]
+]
+},
+"crew-sheet-pile-crane-install": {
+"w": 1500,
+"h": 2000,
+"alt": "Crew guiding a steel sheet pile into place along a canal seawall",
+"files": [
+[
+400,
+"crew-sheet-pile-crane-install-400.6276770b.webp"
+],
+[
+720,
+"crew-sheet-pile-crane-install-720.6276770b.webp"
+],
+[
+1000,
+"crew-sheet-pile-crane-install-1000.6276770b.webp"
+],
+[
+1500,
+"crew-sheet-pile-crane-install-1500.6276770b.webp"
+]
+]
 }
 }
