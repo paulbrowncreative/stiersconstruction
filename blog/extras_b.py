@@ -180,7 +180,7 @@ EXTRAS_B = {
 <li>Call a contractor for structural issues.</li>
 </ol>
 <h2>Build a Contractor List</h2>
-<p>Have contacts ready for a marine contractor, an electrician for hoist work, and your local building department. When something happens, you will know who to call. Save the number for Stier’s Construction: <a href="tel:+15867037214">586-703-7214</a>.</p>
+<p>Have contacts ready for a marine contractor, an electrician for hoist work, and your local building department. When something happens, you will know who to call. Save the number for Stier’s Construction: <a href="tel:+15867032714">586-703-2714</a>.</p>
 <h2>Budget for Maintenance</h2>
 <p>A little money each year on cap sealing, drainage, cables and coatings can prevent large repairs. Keep records of what you spend. Read <a href="/blog/how-to-pay-for-a-waterfront-project/">how to pay for a waterfront project</a> if you are planning a larger job.</p>
 ''',

@@ -7,8 +7,8 @@ SITE = {
     'name': 'Stier’s Construction',
     'seo_name': 'Stier’s Marine & Construction',
     'legal_alt': 'Stier’s Welding & Construction',
-    'phone': '586-703-7214',
-    'phone_e164': '+15867037214',
+    'phone': '586-703-2714',
+    'phone_e164': '+15867032714',
     'email': 'kevin@stiers-construction.com',
     'hours': 'Monday to Friday, 8am to 5pm. Weekends by appointment.',
     'instagram': 'https://www.instagram.com/stiers_marine_construction/',
@@ -636,7 +636,7 @@ SUNSTREAM_PRODUCTS = [
 SUNSTREAM_BY_SLUG = {p['slug']: p for p in SUNSTREAM_PRODUCTS}
 
 HOME_FAQS = [
- ('What areas do you serve?', '<p>We work across Metro Detroit, with a focus on the Lake St. Clair and Detroit River waterfront. Not sure we cover your address? Call <a href="tel:+15867037214">586-703-7214</a> and ask.</p>'),
+ ('What areas do you serve?', '<p>We work across Metro Detroit, with a focus on the Lake St. Clair and Detroit River waterfront. Not sure we cover your address? Call <a href="tel:+15867032714">586-703-2714</a> and ask.</p>'),
  ('Do you work for homeowners or only businesses?', '<p>Both. We work for homeowners, commercial properties and marinas.</p>'),
  ('How do I get a quote?', '<p>Quotes are free. Use the <a href="/contact/">quote form</a> or call us, and include the job address, what you want done, and photos or video if you have them.</p>'),
  ('Do I need a permit for seawall, dock or dredging work?', '<p>Usually. Work on Lake St. Clair and other Great Lakes waters generally needs an EGLE permit and often a U.S. Army Corps of Engineers permit. See our <a href="/services/seawalls/">seawall</a> and <a href="/services/dredging/">dredging</a> pages for links, and confirm the rules for your site.</p>'),

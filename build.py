@@ -161,7 +161,7 @@ def business_node():
      'logo': {'@type': 'ImageObject', 'url': f'{URL}/assets/logo-light-400.png', 'width': 400, 'height': 298},
      'image': [f'{URL}/assets/og-image.jpg'],
      'description': 'Marine and construction contractor in Metro Detroit: seawalls, docks, pilings, boat hoists, dredging, welding and fabrication, excavating, demolition, concrete and decks.',
-     'telephone': '+1-586-703-7214', 'email': SITE['email'], 'address': {'@type': 'PostalAddress', 'addressRegion': 'MI', 'addressCountry': 'US'},
+     'telephone': '+1-586-703-2714', 'email': SITE['email'], 'address': {'@type': 'PostalAddress', 'addressRegion': 'MI', 'addressCountry': 'US'},
      'areaServed': [{'@type': 'AdministrativeArea', 'name': 'Metro Detroit, Michigan'}, {'@type': 'Place', 'name': 'Lake St. Clair'}, {'@type': 'Place', 'name': 'Detroit River'}, {'@type': 'Place', 'name': 'St. Clair River'}] + [{'@type': 'City', 'name': t['name'], 'containedInPlace': {'@type': 'AdministrativeArea', 'name': t['county'] + ' County, Michigan'}} for t in TOWNS],
      'openingHoursSpecification': [{'@type': 'OpeningHoursSpecification', 'dayOfWeek': ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday'], 'opens': '08:00', 'closes': '17:00'}],
      'sameAs': [SITE['instagram'], SITE['facebook']],
@@ -877,7 +877,7 @@ def contact():
 <section class="section"><div class="wrap content-grid"><div><h2 id="form-h" class="sr-only">Quote request form</h2>{form}</div>
 <aside class="aside-sticky aside-stack" aria-label="Contact details"><div class="panel panel-dark on-dark"><h3>Prefer to talk?</h3><dl class="contact-card"><div><dt>Call</dt><dd><a class="big" href="tel:{SITE['phone_e164']}">{SITE['phone']}</a></dd></div><div><dt>Email</dt><dd><a href="mailto:{SITE['email']}">{SITE['email']}</a></dd></div><div><dt>Hours</dt><dd>Monday to Friday, 8am to 5pm<br>Weekends by appointment</dd></div></dl></div>
 <div class="panel"><h3>What to include</h3>{ul(['The address of the job', 'What you want done', 'Photos or video of the area', 'Your timing, if you have one'])}<p class="mt-s"><a class="textlink" href="/financing/">Financing options</a></p></div></aside></div></section>'''
-    page('/contact/', 'Get a Free Quote | Stier’s Construction, Metro Detroit', 'Request a free quote from Stier’s Construction for seawalls, docks, hoists, dredging, welding, concrete, excavating and decks. Call 586-703-7214.',
+    page('/contact/', 'Get a Free Quote | Stier’s Construction, Metro Detroit', 'Request a free quote from Stier’s Construction for seawalls, docks, hoists, dredging, welding, concrete, excavating and decks. Call 586-703-2714.',
          body, active='contact', trail=trail, ptype='ContactPage', bar=False, prio=0.8)
 
 def careers():

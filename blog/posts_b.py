@@ -199,7 +199,7 @@ dict(slug='michigan-winter-dock-seawall-damage', cat='Michigan Waterfront Living
 <p>After the thaw, walk the shoreline again. Compare against your fall photos. Look for new leaning, gaps, heaved pilings and cracked caps. Schedule repairs early, since spring is a busy season for waterfront contractors.</p>
 <h2>Winter Work Is Possible</h2>
 <p>Marine work does not stop entirely in winter. Our <a href="/projects/">project photos</a> include jobs done in snow and on ice. Ask about scheduling for your project.</p>
-<p>Stier’s Construction handles seawall repair, dock work, hoist maintenance and concrete. <a href="/contact/">Request a free quote</a> or call <a href="tel:+15867037214">586-703-7214</a>.</p>
+<p>Stier’s Construction handles seawall repair, dock work, hoist maintenance and concrete. <a href="/contact/">Request a free quote</a> or call <a href="tel:+15867032714">586-703-2714</a>.</p>
 ''',
  faqs=[('Should I remove my dock for winter?','<p>It depends on the dock type and exposure. Follow the manufacturer’s guidance and ask your contractor. Some docks are designed to stay; others are removed or partly removed.</p>'),
        ('Can winter damage show up months later?','<p>Yes. Small cracks and shifts often show up in spring as the ground thaws. Compare against fall photos.</p>')]),

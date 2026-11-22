@@ -270,7 +270,7 @@ dict(slug='how-to-pay-for-a-waterfront-project', cat='Michigan Waterfront Living
 <li>Consider talking to a financial professional about your situation.</li>
 <li>Only borrow an amount that fits your budget.</li>
 </ol>
-<p>Ready to talk about your project? Call <a href="tel:+15867037214">586-703-7214</a> or <a href="/contact/">request a free quote</a>.</p>
+<p>Ready to talk about your project? Call <a href="tel:+15867032714">586-703-2714</a> or <a href="/contact/">request a free quote</a>.</p>
 ''',
  faqs=[('Do I need a quote before applying for financing?','<p>It helps. Your financing request usually starts from the price of the job.</p>'),
        ('Does checking my options hurt my credit?','<p>Enhancify says most lending partners use a soft inquiry to show options, and soft inquiries do not affect your score. Lenders run a credit inquiry before finalizing, and should tell you beforehand.</p>')]),
