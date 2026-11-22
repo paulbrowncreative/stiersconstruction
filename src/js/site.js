@@ -51,6 +51,33 @@
     });
   }
 
+  /* ----- hero photo carousel: swipeable on touch, dots + arrow keys elsewhere ----- */
+  d.querySelectorAll('.hero-carousel').forEach(function (fig) {
+    var track = fig.querySelector('.hc-track');
+    var dots = Array.prototype.slice.call(fig.querySelectorAll('.hc-dots button'));
+    var slideCount = dots.length;
+    function go(i) {
+      i = Math.max(0, Math.min(slideCount - 1, i));
+      track.scrollTo({ left: track.clientWidth * i, behavior: 'smooth' });
+    }
+    function active() { return Math.round(track.scrollLeft / Math.max(track.clientWidth, 1)); }
+    function sync() {
+      var i = active();
+      dots.forEach(function (b, j) { j === i ? b.setAttribute('aria-current', 'true') : b.removeAttribute('aria-current'); });
+    }
+    var raf = null;
+    track.addEventListener('scroll', function () {
+      if (raf) return;
+      raf = requestAnimationFrame(function () { sync(); raf = null; });
+    });
+    dots.forEach(function (b, i) { b.addEventListener('click', function () { go(i); }); });
+    track.addEventListener('keydown', function (e) {
+      if (e.key === 'ArrowRight') { e.preventDefault(); go(active() + 1); }
+      else if (e.key === 'ArrowLeft') { e.preventDefault(); go(active() - 1); }
+    });
+    window.addEventListener('resize', sync);
+  });
+
   /* ----- project gallery: filters + lightbox ----- */
   var gal = d.querySelector('.gallery');
   if (gal) {

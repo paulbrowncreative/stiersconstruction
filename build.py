@@ -54,6 +54,15 @@ def img(key, sizes='100vw', cls='', lazy=True, prio=False, alt=None):
     c = f' class="{cls}"' if cls else ''
     return (f'<img{c} src="/assets/img/{default}" srcset="{srcset}" sizes="{sizes}" width="{m["w"]}" height="{m["h"]}" alt="{a}" {load}{extra}>')
 
+def hero_gallery(keys, sizes='(min-width:940px) 46vw, 92vw'):
+    keys = list(dict.fromkeys(keys))[:5]  # dedupe, cap at 5 slides
+    slides = ''.join(img(k, sizes, prio=(i == 0), lazy=(i != 0)) for i, k in enumerate(keys))
+    if len(keys) < 2:
+        return f'<figure class="page-hero-media">{slides}</figure>'
+    cur_attr = ' aria-current="true"'
+    dots = ''.join(f'<button type="button" aria-label="Photo {i + 1} of {len(keys)}"{cur_attr if i == 0 else ""}></button>' for i in range(len(keys)))
+    return f'<figure class="page-hero-media hero-carousel"><div class="hc-track" tabindex="0" role="group" aria-label="Project photos, swipe or use arrow keys to browse" aria-roledescription="carousel">{slides}</div><div class="hc-dots">{dots}</div></figure>'
+
 def img_url(key, width=None):
     files = IM[key]['files']
     n = files[-1][1] if width is None else min(files, key=lambda f: abs(f[0] - width))[1]
@@ -454,7 +463,7 @@ def service_page(s):
     checks = ''.join(f'<li>{c}</li>' for c in s['checks'])
     hero = f'''<section class="page-hero on-dark"><div class="wrap">{crumbs(trail)}<div class="page-hero-grid"><div><h1>{s['h1']}</h1><p class="lead">{s['lead']}</p>
 <ul class="hero-checks">{checks}</ul><div class="btn-row"><a class="btn btn-primary" href="/contact/">Get a free quote</a>{tel('btn btn-ghost', 'Call ' + SITE['phone'], True)}</div></div>
-<figure class="page-hero-media">{img(s['hero_img'], '(min-width:940px) 46vw, 92vw', prio=True, lazy=False)}</figure></div></div></section>'''
+{hero_gallery([s['hero_img']] + s['gallery'])}</div></div></section>'''
     secs = ''
     for sec in s['sections']:
         h = sec['html'].replace('__SIZECHART__', sizechart())
