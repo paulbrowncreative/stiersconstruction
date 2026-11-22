@@ -115,7 +115,7 @@ def footer():
     ls = lambda ss: ''.join(f'<li><a href="/services/{s["slug"]}/">{s["name"]}</a></li>' for s in ss)
     return f'''<footer class="site-footer on-dark"><div class="wrap"><div class="footer-grid">
 <div class="foot-brand"><img src="/assets/logo-dark-200.png" width="200" height="149" alt="Stier’s Welding &amp; Construction" loading="lazy">
-<p>Marine and construction contractor serving waterfront communities throughout Metro Detroit.</p>
+<p>Marine and construction contractor serving waterfront communities throughout Metro Detroit. Licensed and insured.</p>
 <div class="social"><a href="{SITE['instagram']}" aria-label="Stier’s Construction on Instagram" rel="noopener" target="_blank">{IG}</a><a href="{SITE['facebook']}" aria-label="Stier’s Construction on Facebook" rel="noopener" target="_blank">{FB}</a></div></div>
 <div><h2>In and over the water</h2><ul>{ls(water)}</ul></div>
 <div><h2>On the lot</h2><ul>{ls(land)}</ul></div>
@@ -379,6 +379,7 @@ def home():
     hero = f'''<section class="hero page-hero on-dark" aria-labelledby="h1"><div class="wrap page-hero-grid">
 <div><h1 id="h1">Stier’s Marine Construction</h1>
 <p class="lead">Stier’s Construction builds and repairs seawalls, docks, pilings and boat hoists on Lake St. Clair and the Detroit River, then handles the welding, concrete, excavation and decks on the shore side. Owner-operated and committed to honest work and clear communication.</p>
+<ul class="hero-checks"><li>Licensed and insured</li><li>Owner-operated</li><li>We handle the full permit process</li></ul>
 <div class="btn-row"><a class="btn btn-primary" href="/contact/">Get a free quote</a>{tel('btn btn-ghost', 'Call ' + SITE['phone'], True)}</div></div>
 <figure class="page-hero-media">{img(HERO_KEY, '(min-width:940px) 46vw, 92vw', prio=True, lazy=False)}</figure></div></section>'''
 
@@ -766,6 +767,7 @@ def about():
     trail = [('Home', '/'), ('About', None)]
     body = f'''<section class="page-hero on-dark"><div class="wrap">{crumbs(trail)}<div class="page-hero-grid"><div><h1>The crew behind Stier’s Construction</h1>
 <p class="lead">We are a marine and construction contractor working across Metro Detroit: docks, seawalls, decks, pilings, and custom welding and fabrication. We work with marinas, commercial properties and homeowners.</p>
+<ul class="hero-checks"><li>Licensed and insured</li><li>Owner-operated</li></ul>
 <div class="btn-row"><a class="btn btn-primary" href="/contact/">Get a free quote</a>{tel('btn btn-ghost', 'Call ' + SITE['phone'], True)}</div></div>
 <figure class="page-hero-media">{img('welding-shop-grinding-sparks', '(min-width:940px) 46vw, 92vw', prio=True, lazy=False)}</figure></div></div></section>
 <section class="section"><div class="wrap content-grid"><div class="main"><section><h2>Kevin, owner</h2><div class="prose"><p>Kevin brings more than 15 years of hands-on welding, marine and construction experience to every project. He is an active, on-site contractor who stays directly involved in the work, holding each job to high standards of quality, safety and reliability.</p><p>His deep knowledge of construction lets us take on a wide range of projects with confidence: docks, seawalls, decks, pilings, and custom welding and fabrication.</p></div></section>

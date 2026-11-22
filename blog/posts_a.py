@@ -217,7 +217,7 @@ dict(slug='michigan-permits-seawalls-docks-dredging', cat='Permits and Regulatio
 <li><strong>Keep your permit</strong> and any conditions on file, especially if you later sell the property.</li>
 </ol>
 <h2>Talk to EGLE and Your Contractor</h2>
-<p>EGLE staff can tell you whether your project needs a permit. Stier’s Construction can talk through what is typical for seawalls, docks and dredging on your shoreline. See our service pages for <a href="/services/seawalls/">seawalls</a>, <a href="/services/docks/">docks</a> and <a href="/services/dredging/">dredging</a>, or <a href="/contact/">contact us</a>.</p>
+<p>EGLE staff can tell you whether your project needs a permit, but you do not have to manage the application yourself. Stier’s Construction handles the full permit process for every seawall, dock and dredging job, start to finish. See our service pages for <a href="/services/seawalls/">seawalls</a>, <a href="/services/docks/">docks</a> and <a href="/services/dredging/">dredging</a>, or <a href="/contact/">contact us</a>.</p>
 ''',
  faqs=[('Do I need a permit to replace an existing seawall?','<p>Usually, if the work is at or below the OHWM on Great Lakes bottomlands. Some like-for-like work may qualify for simpler categories. Ask EGLE about your site.</p>'),
        ('Does the Army Corps need a separate application?','<p>No. According to EGLE, once you submit through MiEnviro Portal the application is automatically sent to the Corps.</p>'),

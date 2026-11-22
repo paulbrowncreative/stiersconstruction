@@ -64,14 +64,14 @@ SERVICES = [
      ul(['The wall leans, bows or has shifted', 'Soil is sinking or you can see voids behind the wall', 'Seams are open or separating', 'The cap is cracked, loose or missing', 'Erosion is starting at the ends of the wall', 'Water pools near the wall after rain']) +
      '<div class="prose mt-m"><p>Water pressure builds behind a wall that cannot drain. That is why we install and maintain French drains: relieving pressure protects the wall and the yard behind it.</p><p>Caught early, seam repair, cap work and drainage can extend a sound wall’s life. A wall that has lost its footing usually has to be replaced. The reliable way to know is to have it looked at.</p></div>'),
    dict(id='permits', h2='Permits for seawall work', html=
-     '<div class="prose"><p>Building or replacing a seawall on Lake St. Clair generally requires a permit from Michigan EGLE, and often from the U.S. Army Corps of Engineers, through a single Joint Permit Application. Some like-for-like repairs can qualify for expedited review, and local rules may also apply. Read EGLE’s <a href="%s" target="_blank" rel="noopener">shoreline protection permit guidance (PDF)</a>, and confirm what your site needs before work starts.</p></div>' % EGLE_LINK),
+     '<div class="prose"><p>Building or replacing a seawall on Lake St. Clair generally requires a permit from Michigan EGLE, and often from the U.S. Army Corps of Engineers, through a single Joint Permit Application. Some like-for-like repairs can qualify for expedited review, and local rules may also apply. <strong>Stier’s Construction handles the full permit process for you</strong>, start to finish. Read EGLE’s <a href="%s" target="_blank" rel="noopener">shoreline protection permit guidance (PDF)</a> if you would like the background.</p></div>' % EGLE_LINK),
   ],
   gallery=['sheet-pile-staging-seawall', 'vibratory-hammer-steel-pile', 'new-deck-over-seawall', 'seawall-backyard-aerial', 'seawall-backyard-aerial-close'],
   faqs=[
    ('How do I know if my seawall needs repair or replacement?', '<p>Warning signs include a wall that leans or bows, sinking soil or voids behind it, open seams, a cracked or missing cap, and erosion at the wall ends. Repairs can extend the life of a sound wall; a wall that has moved or lost its footing usually needs replacement. The dependable way to tell is to have someone inspect it, so send photos or request a quote.</p>'),
    ('Which seawall material should I choose?', '<p>We install vinyl, steel, concrete and galvanized systems. Soil, water depth, the loads on the wall and site access decide which one fits. See the comparison above, then send your address and photos.</p>'),
    ('Do you repair seawalls, or only build new ones?', '<p>Both. Repairs include seams, cap replacement or patching, splash guards and French drains, and we offer regular maintenance to catch problems early.</p>'),
-   ('Do I need a permit to build or replace a seawall?', '<p>Usually. Work on Great Lakes waters, including Lake St. Clair, generally needs an EGLE permit and often a U.S. Army Corps of Engineers permit. Rules differ by waterway and by the type of work, so check with EGLE for your site.</p>'),
+   ('Do I need a permit to build or replace a seawall?', '<p>Usually. Work on Great Lakes waters, including Lake St. Clair, generally needs an EGLE permit and often a U.S. Army Corps of Engineers permit. Rules differ by waterway and by the type of work, but you do not have to sort that out yourself: Stier’s Construction handles the full permit process for every job.</p>'),
   ],
   related=['pilings', 'docks', 'dredging', 'excavating-grading', 'concrete']),
 
@@ -106,7 +106,7 @@ SERVICES = [
    ('Should I choose a floating dock or a fixed dock?', '<p>A floating dock moves with the water level; a fixed dock stays at one height on pilings. We install both, plus custom designs, so the choice comes down to your water depth, exposure and how you use the dock.</p>'),
    ('Do you sell Candock floating docks?', '<p>Yes. Stier’s Construction is an authorized Candock dealer, including the JetRoll drive-on dock for personal watercraft. We can size a system for your shoreline and install and service it.</p>'),
    ('Can you repair or re-deck my existing dock?', '<p>Yes. We handle structural repairs and decking upgrades. If a dock is beyond repair, we can remove it and build a new one.</p>'),
-   ('Do I need a permit for a dock?', '<p>Often. Permit rules depend on the waterway and on whether the dock is seasonal or permanent, so check with EGLE before building. Send us your address and we can talk through what is typical.</p>'),
+   ('Do I need a permit for a dock?', '<p>Often. Permit rules depend on the waterway and on whether the dock is seasonal or permanent. Stier’s Construction handles the full permit process for you, so send us your address and we can talk through what is typical for your site.</p>'),
   ],
   related=['pilings', 'boat-hoists', 'seawalls', 'decks']),
 
@@ -198,12 +198,12 @@ SERVICES = [
      ('How the work is done', ['Sediment and debris removed efficiently', 'Depth and navigation restored', 'Planned to minimize environmental impact', 'Equipment matched to the job, including barge work'])) +
      '<p class="mt-m measure">We dredge for homeowners with a boat well or slip, commercial waterfront properties and marinas.</p>'),
    dict(id='signs', h2='Signs you may need dredging', html=ul(['Your boat touches bottom at the dock or in the slip', 'The propeller stirs up mud when you leave', 'Boats that used to clear easily now wait on higher water', 'Your canal or channel has visibly shoaled'])),
-   dict(id='permits', h2='Permits for dredging', html='<div class="prose"><p>Dredging in waters connected to the Great Lakes, including Lake St. Clair, is regulated in Michigan through EGLE, and federal review by the U.S. Army Corps of Engineers may also apply. Check requirements for your site before work begins. EGLE’s <a href="%s" target="_blank" rel="noopener">shoreline permit guidance (PDF)</a> is a good place to start.</p></div>' % EGLE_LINK),
+   dict(id='permits', h2='Permits for dredging', html='<div class="prose"><p>Dredging in waters connected to the Great Lakes, including Lake St. Clair, is regulated in Michigan through EGLE, and federal review by the U.S. Army Corps of Engineers may also apply. <strong>Stier’s Construction handles the full permit process for you</strong>, start to finish. EGLE’s <a href="%s" target="_blank" rel="noopener">shoreline permit guidance (PDF)</a> is a good place to start if you would like the background.</p></div>' % EGLE_LINK),
   ],
   gallery=['barge-open-water', 'barge-excavator-snow', 'pipe-pilings-barge-sunset'],
   faqs=[
    ('How do I know if my canal, marina or boat well needs dredging?', '<p>Common signs are your boat touching bottom, prop wash stirring up mud when you leave the dock, or a channel that has visibly built up sediment. If you are unsure, send us your address and a description.</p>'),
-   ('Do I need a permit to dredge?', '<p>Generally yes. Dredging in Great Lakes waters, including Lake St. Clair, is regulated through EGLE, and Army Corps review may also apply. Confirm the requirements for your site before work starts.</p>'),
+   ('Do I need a permit to dredge?', '<p>Generally yes. Dredging in Great Lakes waters, including Lake St. Clair, is regulated through EGLE, and Army Corps review may also apply. Stier’s Construction handles the full permit process for you, so you do not have to navigate it alone.</p>'),
    ('Do you dredge for homeowners or just marinas?', '<p>Both, along with commercial waterfront properties: canal, marina and boat well dredging.</p>'),
   ],
   related=['seawalls', 'docks', 'pilings', 'boat-hoists']),
@@ -643,7 +643,7 @@ HOME_FAQS = [
  ('What areas do you serve?', '<p>We work across Metro Detroit, with a focus on the Lake St. Clair and Detroit River waterfront. Not sure we cover your address? Call <a href="tel:+15867032714">586-703-2714</a> and ask.</p>'),
  ('Do you work for homeowners or only businesses?', '<p>Both. We work for homeowners, commercial properties and marinas.</p>'),
  ('How do I get a quote?', '<p>Quotes are free. Use the <a href="/contact/">quote form</a> or call us, and include the job address, what you want done, and photos or video if you have them.</p>'),
- ('Do I need a permit for seawall, dock or dredging work?', '<p>Usually. Work on Lake St. Clair and other Great Lakes waters generally needs an EGLE permit and often a U.S. Army Corps of Engineers permit. See our <a href="/services/seawalls/">seawall</a> and <a href="/services/dredging/">dredging</a> pages for links, and confirm the rules for your site.</p>'),
+ ('Do I need a permit for seawall, dock or dredging work?', '<p>Usually. Work on Lake St. Clair and other Great Lakes waters generally needs an EGLE permit and often a U.S. Army Corps of Engineers permit. Stier’s Construction handles the full permit process for you on every job. See our <a href="/services/seawalls/">seawall</a> and <a href="/services/dredging/">dredging</a> pages for more.</p>'),
  ('Do you offer financing?', '<p>Yes. Financing for qualified customers is arranged through Enhancify, subject to credit approval. See our <a href="/financing/">financing page</a> for how it works.</p>'),
  ('Do you work in winter?', '<p>Our <a href="/projects/">project photos</a> include jobs done in snow and on ice. Ask about scheduling for your project.</p>'),
 ]
