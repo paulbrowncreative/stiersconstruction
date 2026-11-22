@@ -2403,5 +2403,120 @@
 "excavator-marina-sunset-1500.f483c0a2.webp"
 ]
 ]
+},
+"excavator-grapple-pile-canal-yard": {
+"w": 1500,
+"h": 844,
+"alt": "Excavator with a pile-driving attachment holding a steel piling at a canal dock",
+"files": [
+[
+480,
+"excavator-grapple-pile-canal-yard-480.518d5a0b.webp"
+],
+[
+800,
+"excavator-grapple-pile-canal-yard-800.518d5a0b.webp"
+],
+[
+1200,
+"excavator-grapple-pile-canal-yard-1200.518d5a0b.webp"
+],
+[
+1500,
+"excavator-grapple-pile-canal-yard-1500.518d5a0b.webp"
+]
+]
+},
+"excavator-pile-driving-worker-dock": {
+"w": 1500,
+"h": 1125,
+"alt": "Excavator driving a steel piling while a worker kneels on the dock",
+"files": [
+[
+480,
+"excavator-pile-driving-worker-dock-480.5e5a46e8.webp"
+],
+[
+800,
+"excavator-pile-driving-worker-dock-800.5e5a46e8.webp"
+],
+[
+1200,
+"excavator-pile-driving-worker-dock-1200.5e5a46e8.webp"
+],
+[
+1500,
+"excavator-pile-driving-worker-dock-1500.5e5a46e8.webp"
+]
+]
+},
+"welder-dock-frame-marina": {
+"w": 1449,
+"h": 2576,
+"alt": "Welder repairing a dock lift frame over the water at a marina",
+"files": [
+[
+400,
+"welder-dock-frame-marina-400.739a0349.webp"
+],
+[
+720,
+"welder-dock-frame-marina-720.739a0349.webp"
+],
+[
+1000,
+"welder-dock-frame-marina-1000.739a0349.webp"
+],
+[
+1449,
+"welder-dock-frame-marina-1449.739a0349.webp"
+]
+]
+},
+"barge-excavator-canal-dusk": {
+"w": 1500,
+"h": 2000,
+"alt": "Stier’s Construction barge and excavator moving down a canal at dusk",
+"files": [
+[
+400,
+"barge-excavator-canal-dusk-400.735198e6.webp"
+],
+[
+720,
+"barge-excavator-canal-dusk-720.735198e6.webp"
+],
+[
+1000,
+"barge-excavator-canal-dusk-1000.735198e6.webp"
+],
+[
+1500,
+"barge-excavator-canal-dusk-1500.735198e6.webp"
+]
+]
+},
+"excavator-grapple-piling-marina": {
+"w": 1500,
+"h": 2000,
+"alt": "Excavator on a barge setting a steel piling at a marina",
+"files": [
+[
+400,
+"excavator-grapple-piling-marina-400.d766d03b.webp"
+],
+[
+720,
+"excavator-grapple-piling-marina-720.d766d03b.webp"
+],
+[
+1000,
+"excavator-grapple-piling-marina-1000.d766d03b.webp"
+],
+[
+1500,
+"excavator-grapple-piling-marina-1500.d766d03b.webp"
+]
+]
 }
 }
