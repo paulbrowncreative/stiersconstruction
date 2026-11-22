@@ -336,8 +336,11 @@ def page(path, title, desc, body, active='', trail=None, ld=None, preload=None, 
     nodes += ld or []
     pre = ''
     if preload:
-        m = IM[preload]; ss = ', '.join(f'/assets/img/{n} {w}w' for w, n in m['files'])
-        pre = f'<link rel="preload" as="image" imagesrcset="{ss}" imagesizes="{preload_sizes(preload)}" fetchpriority="high">'
+        if preload in IM:
+            m = IM[preload]; ss = ', '.join(f'/assets/img/{n} {w}w' for w, n in m['files'])
+            pre = f'<link rel="preload" as="image" imagesrcset="{ss}" imagesizes="{preload_sizes(preload)}" fetchpriority="high">'
+        else:
+            pre = f'<link rel="preload" as="image" href="{preload}" fetchpriority="high">'
     og_img_path = sm_images[0] if sm_images else None
     og = f'{URL}{og_img_path}' if og_img_path else f'{URL}/assets/og-image.jpg'
     if og_img_path and og_img_path in _IMG_DIMS_BY_URL:
@@ -381,7 +384,10 @@ def home():
 <p class="lead">Stier’s Construction builds and repairs seawalls, docks, pilings and boat hoists on Lake St. Clair and the Detroit River, then handles the welding, concrete, excavation and decks on the shore side. Owner-operated and committed to honest work and clear communication.</p>
 <ul class="hero-checks"><li>Licensed and insured</li><li>Owner-operated</li><li>We handle the full permit process</li></ul>
 <div class="btn-row"><a class="btn btn-primary" href="/contact/">Get a free quote</a>{tel('btn btn-ghost', 'Call ' + SITE['phone'], True)}</div></div>
-<figure class="page-hero-media">{img(HERO_KEY, '(min-width:940px) 46vw, 92vw', prio=True, lazy=False)}</figure></div></section>'''
+<figure class="page-hero-media hero-video">
+<img src="/assets/hero-canal-aerial-poster.jpg" alt="Aerial view of a Stier’s Construction barge working a canal on Lake St. Clair" width="1280" height="720" fetchpriority="high">
+<video autoplay muted loop playsinline preload="auto" poster="/assets/hero-canal-aerial-poster.jpg" aria-hidden="true" tabindex="-1" disablepictureinpicture disableremoteplayback><source src="/assets/hero-canal-aerial.mp4" type="video/mp4"></video>
+</figure></div></section>'''
 
     def leg(s, n):
         return f'<li data-part="{s["slug"]}"><a href="/services/{s["slug"]}/"><span class="num" aria-hidden="true">{n}</span><span><b>{s["name"]}</b><small>{s["summary"]}</small></span></a></li>'
@@ -449,7 +455,7 @@ def home():
     body = hero + xsec + mosaic + why + hitide + candock + golden + sunstream + rev + fin + team + area + guides + faq + cta_band()
     page('/', 'Marine & Seawall Contractor in Metro Detroit | Stier’s',
          'Seawalls, docks, pilings, hoists, dredging, welding, concrete and decks on Lake St. Clair and the Detroit River. Owner-led crew. Free quotes.',
-         body, ld=[faq_ld(HOME_FAQS)], preload=HERO_KEY, prio=1.0, sm_images=[img_url(HERO_KEY)])
+         body, ld=[faq_ld(HOME_FAQS)], preload='/assets/hero-canal-aerial-poster.jpg', prio=1.0, sm_images=[img_url(HERO_KEY)])
 
 # ============================================================ SERVICE PAGES
 def sizechart():
@@ -1142,6 +1148,10 @@ open(f'{OUT}/_headers', 'w').write(f'''/*
 /assets/dealer-logo-sunstream.svg
   Cache-Control: public, max-age=86400
 /assets/dealer-logo-golden.webp
+  Cache-Control: public, max-age=86400
+/assets/hero-canal-aerial.mp4
+  Cache-Control: public, max-age=86400
+/assets/hero-canal-aerial-poster.jpg
   Cache-Control: public, max-age=86400
 /sitemap.xml
   Cache-Control: public, max-age=3600

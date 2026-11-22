@@ -223,5 +223,9 @@
   Cache-Control: public, max-age=86400
 /assets/dealer-logo-golden.webp
   Cache-Control: public, max-age=86400
+/assets/hero-canal-aerial.mp4
+  Cache-Control: public, max-age=86400
+/assets/hero-canal-aerial-poster.jpg
+  Cache-Control: public, max-age=86400
 /sitemap.xml
   Cache-Control: public, max-age=3600
