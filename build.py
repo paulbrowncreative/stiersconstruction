@@ -436,11 +436,10 @@ def home():
 <div class="reviews"><figure class="quote"><blockquote style="margin:0"><p>“{QUOTES[0][0]}”</p></blockquote><figcaption><cite>{QUOTES[0][1]}</cite></figcaption></figure>
 <figure class="quote"><blockquote style="margin:0"><p>“{QUOTES[1][0]}”</p></blockquote><figcaption><cite>{QUOTES[1][1]}</cite></figcaption></figure></div></div></section>'''
 
-    team = f'''<section class="section" aria-labelledby="t-h"><div class="wrap split"><div><h2 id="t-h">Kevin and Chris lead the crew</h2>
-<div class="mt-m"><div class="person" style="border-color:var(--concrete-300)"><h3>Kevin</h3><p class="role" style="color:var(--muted)">Owner</p><p>More than 15 years of hands-on welding, marine and construction experience. An active, on-site contractor.</p></div>
+    team = f'''<section class="section" aria-labelledby="t-h"><div class="wrap"><div class="section-head"><h2 id="t-h">Kevin and Chris lead the crew</h2></div>
+<div class="person-grid"><div class="person" style="border-color:var(--concrete-300)"><h3>Kevin</h3><p class="role" style="color:var(--muted)">Owner</p><p>More than 15 years of hands-on welding, marine and construction experience. An active, on-site contractor.</p></div>
 <div class="person" style="border-color:var(--concrete-300)"><h3>Chris</h3><p class="role" style="color:var(--muted)">Project manager</p><p>More than 8 years in construction, specializing in carpentry, concrete and marine work. Also owns a trucking business, Stier’s Enterprise.</p></div></div>
-<p class="mt-s"><a class="textlink" href="/about/">Meet the team</a></p></div>
-<figure>{img('sheet-pile-excavator-canal-home', '(min-width:900px) 46vw, 92vw')}</figure></div></section>'''
+<p class="mt-m"><a class="textlink" href="/about/">Meet the team</a></p></div></section>'''
 
     area = f'''<section class="section section-alt" aria-labelledby="a-h"><div class="wrap split flip"><figure>{img('barge-open-water', '(min-width:900px) 46vw, 92vw')}</figure><div><h2 id="a-h">Serving Metro Detroit’s waterfront</h2>
 <p class="lead mt-s">We serve waterfront communities on Lake St. Clair, the St. Clair River and the Detroit River.</p>

@@ -210,6 +210,8 @@ a.tile:hover img{transform:scale(1.04)}
 @media (min-width:900px){.split{grid-template-columns:1fr 1fr}.split.flip>:first-child{order:2}}
 .split figure{margin:0}
 .split img{width:100%;border-radius:var(--r-sm);aspect-ratio:4/3;object-fit:cover}
+.person-grid{display:grid;gap:0 48px}
+@media (min-width:700px){.person-grid{grid-template-columns:1fr 1fr}}
 .person{padding:20px 0;border-top:1px solid rgba(255,255,255,.2)}
 .person h3{margin-bottom:2px}
 .person .role{color:var(--lake-200);font-weight:600;margin-bottom:8px}
