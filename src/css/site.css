@@ -569,6 +569,9 @@ html.fin-open .fin-fab{opacity:0;pointer-events:none}
 .dealer-badge.light-card{background:#fff;box-shadow:0 2px 8px rgba(0,0,0,.18)}
 .dealer-badge.light-card:hover{background:#fff}
 .dealer-badge.light-card img{height:30px}
+.dealer-chips-home{justify-content:center;gap:28px;margin:28px 0}
+.dealer-chips-home .dealer-badge img{height:46px}
+.dealer-chips-home .dealer-badge.light-card img{height:40px}
 .feature{display:grid;gap:24px 40px;align-items:center}
 @media (min-width:900px){.feature{grid-template-columns:1.1fr 1fr}}
 .feature-img img{width:100%;aspect-ratio:16/10;object-fit:cover;border-radius:var(--r-sm)}

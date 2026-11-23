@@ -418,21 +418,19 @@ def home():
 <p class="lead mt-s">We take pride in dependable, high-quality marine and construction services. We believe in honest work, clear communication, and a commitment to doing the job right, every time.</p><div class="btn-row mt-m"><a class="btn btn-primary" href="/contact/">Get a free quote</a></div></div>
 <ul class="why-list">{''.join(f'<li><h3>{a}</h3><p>{b}</p></li>' for a, b in why_items)}</ul></div></section>'''
 
-    hitide = f'''<section class="section section-alt" aria-labelledby="ht-h"><div class="wrap split flip"><figure>{img('boat-lift-covered-slip', '(min-width:900px) 46vw, 92vw')}</figure><div><p class="eyebrow">Authorized dealer</p><h2 id="ht-h">We sell Hi‑Tide boat lifts</h2>
-<p class="lead mt-s">Stier’s Construction is an authorized Hi-Tide boat lift dealer. Buy the lift and have it installed and serviced by the same crew, backed by our own cable, motor and welding work.</p>
-<p class="btn-row mt-s"><a class="btn btn-dark" href="/services/boat-hoists/hi-tide/">Browse the Hi-Tide lineup</a>{tel('btn btn-outline', SITE['phone'], True)}</p></div></div></section>'''
-
-    candock = f'''<section class="section" aria-labelledby="cd-h"><div class="wrap split"><figure>{img('candock-floating-dock-install', '(min-width:900px) 46vw, 92vw')}</figure><div><p class="eyebrow">Authorized dealer</p><h2 id="cd-h">We sell Candock floating docks</h2>
-<p class="lead mt-s">Stier’s Construction is an authorized Candock dealer, including the JetRoll drive-on dock for personal watercraft. One crew for the dock, the install and everything after.</p>
-<p class="btn-row mt-s"><a class="btn btn-dark" href="/services/docks/candock/">Browse Candock floating docks</a>{tel('btn btn-outline', SITE['phone'], True)}</p></div></div></section>'''
-
-    golden = f'''<section class="section section-alt" aria-labelledby="gbl-h"><div class="wrap split flip"><figure>{img('golden-invisilift-installed', '(min-width:900px) 46vw, 92vw')}</figure><div><p class="eyebrow">Authorized dealer</p><h2 id="gbl-h">We sell Golden boat lifts</h2>
-<p class="lead mt-s">Stier’s Construction is an authorized dealer for select Golden Boat Lifts models, including the low-profile InvisiLift and the floating Float-A-Vator. Buy the lift and have it installed and serviced by the same crew.</p>
-<p class="btn-row mt-s"><a class="btn btn-dark" href="/services/boat-hoists/golden/">Browse Golden boat lifts</a>{tel('btn btn-outline', SITE['phone'], True)}</p></div></div></section>'''
-
-    sunstream = f'''<section class="section" aria-labelledby="ssb-h"><div class="wrap split"><figure>{img('sunstream-floatlift', '(min-width:900px) 46vw, 92vw')}</figure><div><p class="eyebrow">Authorized dealer</p><h2 id="ssb-h">We sell Sunstream boat lifts</h2>
-<p class="lead mt-s">Stier’s Construction is an authorized Sunstream dealer: freestanding hydraulic lifts, the free-floating FloatLift, the hidden Helix2-P piling lift and more. One crew for the lift, the install and everything after.</p>
-<p class="btn-row mt-s"><a class="btn btn-dark" href="/services/boat-hoists/sunstream/">Browse Sunstream boat lifts</a>{tel('btn btn-outline', SITE['phone'], True)}</p></div></div></section>'''
+    dealer_logos = [
+        ('Hi-Tide', 'dealer-logo-hitide.svg', False, '/services/boat-hoists/hi-tide/'),
+        ('Golden Boat Lifts', 'dealer-logo-golden.webp', True, '/services/boat-hoists/golden/'),
+        ('Sunstream', 'dealer-logo-sunstream.svg', False, '/services/boat-hoists/sunstream/'),
+        ('Candock', 'dealer-logo-candock.svg', False, '/services/docks/candock/'),
+    ]
+    def dealer_badge(name, logo_file, light_card, href):
+        cls = 'dealer-badge light-card' if light_card else 'dealer-badge'
+        return f'<li><a class="{cls}" href="{href}"><img src="/assets/{logo_file}" alt="{esc(name)}" loading="lazy" decoding="async"></a></li>'
+    dealers = f'''<section class="section section-dark on-dark" aria-labelledby="deal-h"><div class="wrap"><div class="section-head"><h2 id="deal-h">Authorized dealers we sell and service</h2>
+<p>Buy the lift or dock and have it installed and serviced by the same crew, backed by our own cable, motor and welding work, not a separate call to someone else.</p></div>
+<ul class="dealer-chips dealer-chips-home">{''.join(dealer_badge(*d) for d in dealer_logos)}</ul>
+<p class="btn-row mt-m"><a class="btn btn-primary" href="/services/boat-hoists/">Browse boat hoists</a><a class="btn btn-ghost" href="/services/docks/">Browse docks</a></p></div></section>'''
 
     rev = f'''<section class="section section-dark on-dark" aria-labelledby="r-h"><div class="wrap"><div class="section-head"><h2 id="r-h">What customers say</h2></div>
 <div class="reviews"><figure class="quote"><blockquote style="margin:0"><p>“{QUOTES[0][0]}”</p></blockquote><figcaption><cite>{QUOTES[0][1]}</cite></figcaption></figure>
@@ -452,7 +450,7 @@ def home():
     guides = f'<section class="section section-alt" aria-labelledby="gd-h"><div class="wrap"><div class="section-head"><h2 id="gd-h">Waterfront Guides for Metro Detroit Owners</h2><p>Plain-English answers on seawalls, docks, permits and more.</p></div><ul class="post-list">{"".join(post_row(p) for p in latest)}</ul><p class="mt-m"><a class="btn btn-outline" href="/blog/">Read the Blog</a></p></div></section>'
     faq = f'''<section class="section" aria-labelledby="f-h"><div class="wrap"><div class="section-head"><h2 id="f-h">Questions we hear a lot</h2></div>{faq_html(HOME_FAQS)}</div></section>'''
     fin = f'''<section class="fin-band" aria-labelledby="fb-h"><div class="wrap fin-band-in"><div><h2 id="fb-h">Financing available for your project</h2><p>Spread the cost of a seawall, dock, deck or concrete job into monthly payments. Arranged through Enhancify, subject to credit approval.</p></div><a class="btn btn-dark" href="/financing/">See financing options</a></div></section>'''
-    body = hero + xsec + mosaic + why + hitide + candock + golden + sunstream + rev + fin + team + area + guides + faq + cta_band()
+    body = hero + xsec + mosaic + why + dealers + rev + fin + team + area + guides + faq + cta_band()
     page('/', 'Marine & Seawall Contractor in Metro Detroit | Stier’s',
          'Seawalls, docks, pilings, hoists, dredging, welding, concrete and decks on Lake St. Clair and the Detroit River. Owner-led crew. Free quotes.',
          body, ld=[faq_ld(HOME_FAQS)], preload='/assets/hero-canal-aerial-poster.jpg', prio=1.0, sm_images=[img_url(HERO_KEY)])
