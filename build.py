@@ -427,19 +427,19 @@ def home():
     def dealer_badge(name, logo_file, light_card, href):
         cls = 'dealer-badge light-card' if light_card else 'dealer-badge'
         return f'<li><a class="{cls}" href="{href}"><img src="/assets/{logo_file}" alt="{esc(name)}" loading="lazy" decoding="async"></a></li>'
-    dealers = f'''<section class="section section-dark on-dark" aria-labelledby="deal-h"><div class="wrap"><div class="section-head"><h2 id="deal-h">Authorized dealers we sell and service</h2>
+    dealers = f'''<section class="section section-dark on-dark" aria-labelledby="deal-h"><div class="wrap"><div class="section-head center"><h2 id="deal-h">Authorized dealers we sell and service</h2>
 <p>Buy the lift or dock and have it installed and serviced by the same crew, backed by our own cable, motor and welding work, not a separate call to someone else.</p></div>
 <ul class="dealer-chips dealer-chips-home">{''.join(dealer_badge(*d) for d in dealer_logos)}</ul>
-<p class="btn-row mt-m"><a class="btn btn-primary" href="/services/boat-hoists/">Browse boat hoists</a><a class="btn btn-ghost" href="/services/docks/">Browse docks</a></p></div></section>'''
+<p class="btn-row mt-m" style="justify-content:center"><a class="btn btn-primary" href="/services/boat-hoists/">Browse boat hoists</a><a class="btn btn-ghost" href="/services/docks/">Browse docks</a></p></div></section>'''
 
-    rev = f'''<section class="section section-dark on-dark" aria-labelledby="r-h"><div class="wrap"><div class="section-head"><h2 id="r-h">What customers say</h2></div>
+    rev = f'''<section class="section section-dark on-dark" aria-labelledby="r-h"><div class="wrap"><div class="section-head center"><h2 id="r-h">What customers say</h2></div>
 <div class="reviews"><figure class="quote"><blockquote style="margin:0"><p>“{QUOTES[0][0]}”</p></blockquote><figcaption><cite>{QUOTES[0][1]}</cite></figcaption></figure>
 <figure class="quote"><blockquote style="margin:0"><p>“{QUOTES[1][0]}”</p></blockquote><figcaption><cite>{QUOTES[1][1]}</cite></figcaption></figure></div></div></section>'''
 
-    team = f'''<section class="section" aria-labelledby="t-h"><div class="wrap"><div class="section-head"><h2 id="t-h">Kevin and Chris lead the crew</h2></div>
+    team = f'''<section class="section" aria-labelledby="t-h"><div class="wrap"><div class="section-head center"><h2 id="t-h">Kevin and Chris lead the crew</h2></div>
 <div class="person-grid"><div class="person" style="border-color:var(--concrete-300)"><h3>Kevin</h3><p class="role" style="color:var(--muted)">Owner</p><p>More than 15 years of hands-on welding, marine and construction experience. An active, on-site contractor.</p></div>
 <div class="person" style="border-color:var(--concrete-300)"><h3>Chris</h3><p class="role" style="color:var(--muted)">Project manager</p><p>More than 8 years in construction, specializing in carpentry, concrete and marine work. Also owns a trucking business, Stier’s Enterprise.</p></div></div>
-<p class="mt-m"><a class="textlink" href="/about/">Meet the team</a></p></div></section>'''
+<p class="mt-m" style="text-align:center"><a class="textlink" href="/about/">Meet the team</a></p></div></section>'''
 
     area = f'''<section class="section section-alt" aria-labelledby="a-h"><div class="wrap split flip"><figure>{img('barge-open-water', '(min-width:900px) 46vw, 92vw')}</figure><div><h2 id="a-h">Serving Metro Detroit’s waterfront</h2>
 <p class="lead mt-s">We serve waterfront communities on Lake St. Clair, the St. Clair River and the Detroit River.</p>
@@ -447,7 +447,7 @@ def home():
 
     latest = [POST_BY_SLUG[s] for s in ('seawall-guide-metro-detroit', 'michigan-permits-seawalls-docks-dredging', 'michigan-winter-dock-seawall-damage')]
     guides = f'<section class="section section-alt" aria-labelledby="gd-h"><div class="wrap"><div class="section-head"><h2 id="gd-h">Waterfront Guides for Metro Detroit Owners</h2><p>Plain-English answers on seawalls, docks, permits and more.</p></div><ul class="post-list">{"".join(post_row(p) for p in latest)}</ul><p class="mt-m"><a class="btn btn-outline" href="/blog/">Read the Blog</a></p></div></section>'
-    faq = f'''<section class="section" aria-labelledby="f-h"><div class="wrap"><div class="section-head"><h2 id="f-h">Questions we hear a lot</h2></div>{faq_html(HOME_FAQS)}</div></section>'''
+    faq = f'''<section class="section" aria-labelledby="f-h"><div class="wrap"><div class="section-head center"><h2 id="f-h">Questions we hear a lot</h2></div>{faq_html(HOME_FAQS)}</div></section>'''
     fin = f'''<section class="fin-band" aria-labelledby="fb-h"><div class="wrap fin-band-in"><div><h2 id="fb-h">Financing available for your project</h2><p>Spread the cost of a seawall, dock, deck or concrete job into monthly payments. Arranged through Enhancify, subject to credit approval.</p></div><a class="btn btn-dark" href="/financing/">See financing options</a></div></section>'''
     body = hero + xsec + mosaic + why + dealers + rev + fin + team + area + guides + faq + cta_band()
     page('/', 'Marine & Seawall Contractor in Metro Detroit | Stier’s',
@@ -496,10 +496,10 @@ def service_page(s):
 <a class="phone" href="tel:{SITE['phone_e164']}">{SITE['phone']}</a><a class="btn btn-primary" href="/contact/">Send project details</a><p class="fin-line">Financing available. <a href="/financing/">See options</a></p></div>
 <div class="panel"><h3>Related work</h3><ul class="related">{''.join(f'<li><a href="/services/{r["slug"]}/"><b>{r["name"]}</b><span>{r["summary"]}</span></a></li>' for r in rel)}</ul></div></aside>'''
     figs = ''.join(f'<figure>{img(k, "(min-width:800px) 30vw, 46vw")}</figure>' for k in s['gallery'][:6])
-    strip = f'<section class="section section-alt" aria-labelledby="g-h"><div class="wrap"><div class="section-head"><h2 id="g-h">{s["name"]} work from our jobs</h2></div><div class="strip">{figs}</div><p class="mt-m"><a class="textlink" href="/projects/">See all project photos</a></p></div></section>'
+    strip = f'<section class="section section-alt" aria-labelledby="g-h"><div class="wrap"><div class="section-head center"><h2 id="g-h">{s["name"]} work from our jobs</h2></div><div class="strip">{figs}</div><p class="mt-m" style="text-align:center"><a class="textlink" href="/projects/">See all project photos</a></p></div></section>'
     gs = guides_for(s['slug'])
     guides = (f'<section class="section" aria-labelledby="sg-h"><div class="wrap"><div class="section-head"><h2 id="sg-h">{s["name"]} Guides From Our Blog</h2></div><ul class="post-list">{"".join(post_row(p) for p in gs)}</ul></div></section>') if gs else ''
-    faq = f'<section class="section section-alt" aria-labelledby="q-h"><div class="wrap"><div class="section-head"><h2 id="q-h">{s["name"]}: common questions</h2></div>{faq_html(s["faqs"])}</div></section>'
+    faq = f'<section class="section section-alt" aria-labelledby="q-h"><div class="wrap"><div class="section-head center"><h2 id="q-h">{s["name"]}: common questions</h2></div>{faq_html(s["faqs"])}</div></section>'
     main = f'<div class="section"><div class="wrap content-grid"><div class="main">{secs}</div>{aside}</div></div>'
     body = hero + main + strip + guides + faq + cta_band('Ready to talk about your ' + s['name'].lower() + ' project?')
     svc = {'@type': 'Service', '@id': f'{URL}{path}#service', 'name': s['name'], 'serviceType': s['name'], 'description': s['desc'], 'url': f'{URL}{path}',
@@ -779,7 +779,7 @@ def about():
 <div class="mt-m">{note('<p>A customer review says it best: “Owner’s communication was terrific and job was complete on time zero issues!”</p>')}</div></section></div>
 <aside class="aside-sticky aside-stack"><div class="panel panel-dark"><h3>Work with us</h3><small>Mon to Fri, 8am to 5pm</small><a class="phone" href="tel:{SITE['phone_e164']}">{SITE['phone']}</a><a class="btn btn-primary" href="/contact/">Get a free quote</a></div>
 <div class="panel"><h3>Our clients</h3>{ul(['Homeowners', 'Commercial properties', 'Marinas'])}<p class="mt-s"><a class="textlink" href="/careers/">We are hiring. See careers</a></p></div></aside></div></section>
-<section class="section section-alt"><div class="wrap"><div class="section-head"><h2>Equipment and crew at work</h2></div><div class="strip">
+<section class="section section-alt"><div class="wrap"><div class="section-head center"><h2>Equipment and crew at work</h2></div><div class="strip">
 <figure>{img('stiers-excavator-demo-site', '(min-width:800px) 30vw, 46vw')}</figure><figure>{img('dump-trucks-yard', '(min-width:800px) 30vw, 46vw')}</figure><figure>{img('welder-helmet-sparks', '(min-width:800px) 30vw, 46vw')}</figure></div></div></section>
 {cta_band()}'''
     page('/about/', 'About Stier’s Construction | Owner-Led Marine Contractor', 'Meet Kevin and Chris of Stier’s Construction: a Metro Detroit marine and construction contractor for homeowners, commercial properties and marinas.',
@@ -835,7 +835,7 @@ def town_page(t):
             if p['slug'] not in seen: seen.append(p['slug']); gs.append(p)
     gs = gs[:3]
     guides = f'<section class="section section-alt" aria-labelledby="tg-h"><div class="wrap"><div class="section-head"><h2 id="tg-h">Guides for {n} Waterfront Owners</h2></div><ul class="post-list">{"".join(post_row(p) for p in gs)}</ul></div></section>'
-    faq = f'<section class="section" aria-labelledby="tq-h"><div class="wrap"><div class="section-head"><h2 id="tq-h">{n} Questions</h2></div>{faq_html(faqs)}</div></section>'
+    faq = f'<section class="section" aria-labelledby="tq-h"><div class="wrap"><div class="section-head center"><h2 id="tq-h">{n} Questions</h2></div>{faq_html(faqs)}</div></section>'
     body = hero + f'<div class="section"><div class="wrap content-grid">{main}{aside}</div></div>' + guides + faq + cta_band(f'Ready to Start Your {n} Project?')
     city = {'@type': 'City', 'name': n, 'containedInPlace': {'@type': 'AdministrativeArea', 'name': f'{t["county"]} County, Michigan'}}
     svc = {'@type': 'Service', '@id': f'{URL}{path}#service', 'name': f'Waterfront and marine construction in {n}, Michigan', 'serviceType': 'Marine and waterfront construction', 'url': f'{URL}{path}',
@@ -960,13 +960,13 @@ def financing():
 <ul class="hero-checks"><li>Check options online</li><li>No obligation to accept an offer</li><li>For work with Stier’s Construction</li></ul>
 <div class="btn-row"><a class="btn btn-primary" href="#apply">Check financing options</a>{tel('btn btn-ghost', 'Call ' + SITE['phone'], True)}</div></div>
 <figure class="page-hero-media">{img('l-shaped-dock-choppy-water', '(min-width:940px) 46vw, 92vw', prio=True, lazy=False)}</figure></div></div></section>
-<section class="section" aria-labelledby="how-h"><div class="wrap"><div class="section-head"><h2 id="how-h">How financing works</h2></div><ol class="steps">{steps_html}</ol></div></section>
+<section class="section" aria-labelledby="how-h"><div class="wrap"><div class="section-head center"><h2 id="how-h">How financing works</h2></div><ol class="steps">{steps_html}</ol></div></section>
 <section id="apply" aria-labelledby="ap-h"><h2 id="ap-h" class="sr-only">Check your financing options</h2>
 <div class="widget-wrap"><div id="fullpagewidget" data-color1="#3471B5" data-color2="#12323F" data-coBrandedColor="#FFFFFF" data-page="9934698" data-hideLink="0" data-src="https://www.enhancify.com/fullpagewidget/"><p class="widget-loading">Loading financing options...</p></div>
 <noscript><p class="widget-loading">This form needs JavaScript. <a href="{ENH_PAGE}" target="_blank" rel="noopener">Open the financing page on Enhancify</a>.</p></noscript></div>
 <div class="wrap section-tight"><p><a class="textlink" href="{ENH_PAGE}" target="_blank" rel="noopener">Prefer the full Enhancify page? Open it in a new tab</a></p>
 <div class="mt-s">{note('<p><strong>Disclosure.</strong> The form above is provided by Enhancify.com, an independent marketplace that refers you to participating lenders. Stier’s Construction is not a lender and does not make credit decisions. Offers are subject to credit approval, and rates, terms and availability vary by lender. You are not required to accept any offer.</p>')}</div></div></section>
-<section class="section" aria-labelledby="fq-h"><div class="wrap"><div class="section-head"><h2 id="fq-h">Financing questions</h2></div>{faq_html(FIN_FAQS)}</div></section>
+<section class="section" aria-labelledby="fq-h"><div class="wrap"><div class="section-head center"><h2 id="fq-h">Financing questions</h2></div>{faq_html(FIN_FAQS)}</div></section>
 {cta_band('Get your quote first', 'A quote tells you what the project costs, which is where every financing request starts. Quotes are free.')}'''
     page('/financing/', 'Financing for Seawalls, Docks & Waterfront Projects | Stier’s',
          'Spread the cost of a seawall, dock, deck or concrete project into monthly payments. Check financing options through Enhancify, subject to credit approval.',
@@ -1022,7 +1022,7 @@ def blog_post(p):
     hero = f'''<section class="page-hero post-hero on-dark"><div class="wrap">{crumbs(trail[:2] + [(crumb_label(p), None)])}<div class="page-hero-grid"><div>{meta}<h1>{p['h1']}</h1><p class="lead">{p['desc']}</p></div>
 <figure class="page-hero-media">{img(p['hero'], '(min-width:940px) 46vw, 92vw', prio=True, lazy=False)}</figure></div></div></section>'''
     rel = [POST_BY_SLUG[s] for s in p['related']]
-    faq = f'<section class="section section-alt" aria-labelledby="pq-h"><div class="wrap"><div class="section-head"><h2 id="pq-h">Frequently Asked Questions</h2></div>{faq_html(p["faqs"])}</div></section>'
+    faq = f'<section class="section section-alt" aria-labelledby="pq-h"><div class="wrap"><div class="section-head center"><h2 id="pq-h">Frequently Asked Questions</h2></div>{faq_html(p["faqs"])}</div></section>'
     more = f'<section class="section" aria-labelledby="km-h"><div class="wrap"><div class="section-head"><h2 id="km-h">Keep Reading</h2></div><ul class="post-list">{"".join(post_row(r) for r in rel)}</ul></div></section>'
     m0 = re.match(r'\s*(<p>.*?</p>)', body, flags=re.S)
     intro, rest = (m0.group(1), body[m0.end():]) if m0 else ('', body)

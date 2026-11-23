@@ -135,6 +135,7 @@ body.nav-locked{overflow:hidden}
 .section-alt{background:var(--concrete-100)}
 .section-dark{background:var(--harbor-900);color:#D7E3E8}
 .section-head{max-width:760px;margin-bottom:clamp(28px,4vw,52px)}
+.section-head.center{margin-left:auto;margin-right:auto;text-align:center}
 .section-head p{margin:16px 0 0;font-size:1.12rem;color:var(--muted)}
 .section-dark .section-head p{color:#CBDAE0}
 .gauge{height:14px;background:repeating-linear-gradient(90deg,var(--concrete-300) 0 2px,transparent 2px 24px),linear-gradient(var(--concrete-300),var(--concrete-300));background-size:auto 14px,100% 2px;background-position:0 0,0 0;background-repeat:repeat-x,no-repeat;opacity:.9}
