@@ -22,7 +22,7 @@ const RESEND_URL = () => process.env.RESEND_API_URL || 'https://api.resend.com/e
 const DEFAULT_TO = 'kevin@stiers-construction.com';
 const DEFAULT_FROM = "Stier's Website <onboarding@resend.dev>";
 const MAX_FIELD = 5000;
-const PHONE = '586-703-7214';
+const PHONE = '586-703-2714';
 
 const FORMS = {
   quote: { label: 'Quote request', subject: (d) => `New quote request: ${d.name || 'website visitor'}${d.service ? ' (' + d.service + ')' : ''}` },
