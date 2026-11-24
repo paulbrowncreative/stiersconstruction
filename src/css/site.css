@@ -257,10 +257,11 @@ a.tile:hover img{transform:scale(1.04)}
 .hero-carousel .hc-track::-webkit-scrollbar{display:none}
 .hero-carousel .hc-track:focus-visible{outline:3px solid #fff;outline-offset:3px}
 .hero-carousel .hc-track img{flex:0 0 100%;width:100%;aspect-ratio:4/3;object-fit:cover;border-radius:var(--r-sm);scroll-snap-align:start}
-.hero-carousel .hc-dots{position:absolute;left:50%;bottom:14px;transform:translateX(-50%);display:flex;gap:7px;z-index:2}
-.hero-carousel .hc-dots button{width:8px;height:8px;padding:0;border:0;border-radius:50%;background:rgba(255,255,255,.55);cursor:pointer;transition:background-color .15s,width .15s}
-.hero-carousel .hc-dots button:hover{background:rgba(255,255,255,.8)}
-.hero-carousel .hc-dots button[aria-current=true]{background:#fff;width:22px;border-radius:5px}
+.hero-carousel .hc-dots{position:absolute;left:50%;bottom:4px;transform:translateX(-50%);display:flex;gap:2px;z-index:2}
+.hero-carousel .hc-dots button{width:24px;height:24px;padding:0;border:0;background:transparent;cursor:pointer;display:grid;place-items:center}
+.hero-carousel .hc-dots button::before{content:"";width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,.55);transition:background-color .15s,width .15s}
+.hero-carousel .hc-dots button:hover::before{background:rgba(255,255,255,.8)}
+.hero-carousel .hc-dots button[aria-current=true]::before{background:#fff;width:22px;border-radius:5px}
 @media (prefers-reduced-motion:reduce){.hero-carousel .hc-track{scroll-behavior:auto}}
 .crumbs{font-size:.92rem;padding-top:18px;color:var(--lake-300)}
 .crumbs ol{list-style:none;display:flex;flex-wrap:wrap;gap:6px}

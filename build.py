@@ -419,14 +419,14 @@ def home():
 <ul class="why-list">{''.join(f'<li><h3>{a}</h3><p>{b}</p></li>' for a, b in why_items)}</ul></div></section>'''
 
     dealer_logos = [
-        ('Hi-Tide', 'dealer-logo-hitide.svg', False, '/services/boat-hoists/hi-tide/'),
-        ('Golden Boat Lifts', 'dealer-logo-golden.webp', True, '/services/boat-hoists/golden/'),
-        ('Sunstream', 'dealer-logo-sunstream.svg', False, '/services/boat-hoists/sunstream/'),
-        ('Candock', 'dealer-logo-candock.svg', False, '/services/docks/candock/'),
+        ('Hi-Tide', 'dealer-logo-hitide.svg', False, 123, 80, '/services/boat-hoists/hi-tide/'),
+        ('Golden Boat Lifts', 'dealer-logo-golden.webp', True, 2988, 904, '/services/boat-hoists/golden/'),
+        ('Sunstream', 'dealer-logo-sunstream.svg', False, 205, 14, '/services/boat-hoists/sunstream/'),
+        ('Candock', 'dealer-logo-candock.svg', False, 145, 50, '/services/docks/candock/'),
     ]
-    def dealer_badge(name, logo_file, light_card, href):
+    def dealer_badge(name, logo_file, light_card, w, h, href):
         cls = 'dealer-badge light-card' if light_card else 'dealer-badge'
-        return f'<li><a class="{cls}" href="{href}"><img src="/assets/{logo_file}" alt="{esc(name)}" loading="lazy" decoding="async"></a></li>'
+        return f'<li><a class="{cls}" href="{href}"><img src="/assets/{logo_file}" width="{w}" height="{h}" alt="{esc(name)}" loading="lazy" decoding="async"></a></li>'
     dealers = f'''<section class="section section-dark on-dark" aria-labelledby="deal-h"><div class="wrap"><div class="section-head center"><h2 id="deal-h">Authorized dealers we sell and service</h2>
 <p>Buy the lift or dock and have it installed and serviced by the same crew, backed by our own cable, motor and welding work, not a separate call to someone else.</p></div>
 <ul class="dealer-chips dealer-chips-home">{''.join(dealer_badge(*d) for d in dealer_logos)}</ul>
@@ -464,10 +464,10 @@ def sizechart():
 
 # (logo file, needs a light/white card because the source logo is colored for light backgrounds)
 BRAND_LOGOS = {
-    'Hi-Tide': ('dealer-logo-hitide.svg', False),
-    'Candock': ('dealer-logo-candock.svg', False),
-    'Golden Boat Lifts': ('dealer-logo-golden.webp', True),
-    'Sunstream': ('dealer-logo-sunstream.svg', False),
+    'Hi-Tide': ('dealer-logo-hitide.svg', False, 123, 80),
+    'Candock': ('dealer-logo-candock.svg', False, 145, 50),
+    'Golden Boat Lifts': ('dealer-logo-golden.webp', True, 2988, 904),
+    'Sunstream': ('dealer-logo-sunstream.svg', False, 205, 14),
 }
 
 def service_page(s):
@@ -478,9 +478,9 @@ def service_page(s):
     dealer_html = ''
     if dealers:
         def badge(name, href):
-            logo_file, light_card = BRAND_LOGOS[name]
+            logo_file, light_card, w, h = BRAND_LOGOS[name]
             cls = 'dealer-badge light-card' if light_card else 'dealer-badge'
-            return f'<li><a class="{cls}" href="{href}"><img src="/assets/{logo_file}" alt="{esc(name)}" loading="lazy" decoding="async"></a></li>'
+            return f'<li><a class="{cls}" href="{href}"><img src="/assets/{logo_file}" width="{w}" height="{h}" alt="{esc(name)}" loading="lazy" decoding="async"></a></li>'
         badges = ''.join(badge(name, href) for name, href in dealers)
         plural = 's' if len(dealers) > 1 else ''
         dealer_html = f'<p class="dealer-label">Authorized dealer{plural}:</p><ul class="dealer-chips">{badges}</ul>'
