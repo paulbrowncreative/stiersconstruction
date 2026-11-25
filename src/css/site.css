@@ -253,10 +253,8 @@ a.tile:hover img{transform:scale(1.04)}
 .page-hero .lead{margin:18px 0 26px;max-width:56ch;color:#E3ECEF}
 .page-hero-media{margin:0;position:relative}
 .page-hero-media img{width:100%;aspect-ratio:4/3;object-fit:cover;border-radius:var(--r-sm)}
-.page-hero-media::after{content:"";position:absolute;left:-10px;bottom:-10px;width:38%;height:8px;background:var(--accent-600)}
 .hero-video video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;border-radius:var(--r-sm)}
 @media (prefers-reduced-motion: reduce){.hero-video video{display:none}}
-.hero-carousel::after{display:none}
 .hero-carousel .hc-track{display:flex;overflow-x:auto;overscroll-behavior-x:contain;scroll-snap-type:x mandatory;border-radius:var(--r-sm);scrollbar-width:none}
 .hero-carousel .hc-track::-webkit-scrollbar{display:none}
 .hero-carousel .hc-track:focus-visible{outline:3px solid #fff;outline-offset:3px}
