@@ -133,6 +133,8 @@ body.nav-locked{overflow:hidden}
 /* ---------- sections ---------- */
 .section{padding-block:var(--sec)}
 .section-alt{background:var(--concrete-100)}
+.section-alt+.section-alt{padding-top:clamp(36px,5vw,64px);border-top:1px solid var(--concrete-300)}
+.section-alt:has(+.section-alt){padding-bottom:clamp(36px,5vw,64px)}
 .section-dark{background:var(--harbor-900);color:#D7E3E8}
 .section-dark+.section-dark{padding-top:clamp(36px,5vw,64px);border-top:1px solid rgba(255,255,255,.12)}
 .section-dark:has(+.section-dark){padding-bottom:clamp(36px,5vw,64px)}
